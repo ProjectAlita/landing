@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./assets/style.css">
     <link rel="stylesheet" href="./assets/mobile.css">
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <!-- Flowbite -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     <title>ELITEA</title>
@@ -95,46 +96,63 @@
                 <img src="./assets/images/bubble.png" alt="">
             </div>
         </section>
-        <div class="flex flex-col md:flex-row gap-24 md:mt-44 mt-24">
-            <div class="md:w-5/12">
-                <h1 class="fo font-bold">Observed impact of ELITEA on engineering productivity</h1>
+        <section>
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-semibold">Our Clients</h2>
+                <p class="text-gray-400">We are proud to work with amazing companies.</p>
             </div>
-            <div class="md:w-7/12 mx-auto md:px-0">
-                <div class="flex flex-col md:flex-row justify-between gap-12 md:gap-0">
-                    <div class="flex items-start gap-3">
-                        <img height="24" width="24" class="text-white__shadow-pink" src="./assets/images/icons/arrow.svg" alt="">
-                        <div>
-                            <p class="text-white__shadow-pink mb-3">15-35% faster</p>
-                            <p>Productivity gain</p>
+            <div id="default-carousel" class="relative w-full" data-carousel="static">
+                <div class="relative carousel-content overflow-hidden rounded-lg md:h-24">
+                    <div id="carousel-item-1" class="hidden duration-700 ease-in-out flex flex-col items-center md:px-12 font-bold" data-carousel-item>
+                        <div class="grid grid-cols-3 gap-12 items-center justify-center h-full">
+                            <img src="assets/images/icons/astra.svg">
+                            <img src="assets/images/icons/canadian.svg">
+                            <img src="assets/images/icons/ebsco.svg">
                         </div>
-                    </div>
-                    <div class="flex items-start gap-3">
-                        <img height="24" width="24" class="text-white__shadow-pink" src="./assets/images/icons/arrow.svg" alt="">
-                        <div>
-                            <p class="text-white__shadow-pink mb-3">35% cheaper</p>
-                            <p>Cost reduction</p>
-                        </div>
-                    </div>
+                    </div>  
                 </div>
-                <div class="flex flex-col md:flex-row justify-between gap-12 md:gap-0 mt-12">
-                    <div class="flex items-start gap-3">
-                        <img height="24" width="24" class="text-white__shadow-pink" src="./assets/images/icons/arrow.svg" alt="">
-                        <div>
-                            <p class="text-white__shadow-pink mb-3">up to 30%</p>
-                            <p>Headcount optimization</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start gap-3">
-                        <img height="24" width="24" class="text-white__shadow-pink" src="./assets/images/icons/arrow.svg" alt="">
-                        <div>
-                            <p class="text-white__shadow-pink mb-3">x4 time decrease</p>
-                            <p>Onboarding time</p>
-                        </div>
-                    </div>
-                </div>
-                <span id="features"></span>
             </div>
-        </div>
+            <div class="flex flex-col md:flex-row gap-24 md:mt-24">
+                <div class="md:w-5/12">
+                    <h1 class="fo font-bold">Observed impact of ELITEA on engineering productivity</h1>
+                </div>
+                <div class="md:w-7/12 mx-auto md:px-0">
+                    <div class="flex flex-col md:flex-row justify-between gap-12 md:gap-0">
+                        <div class="flex items-start gap-3">
+                            <img height="24" width="24" class="text-white__shadow-pink" src="./assets/images/icons/arrow.svg" alt="">
+                            <div>
+                                <p class="text-white__shadow-pink mb-3">15-35% faster</p>
+                                <p>Productivity gain</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <img height="24" width="24" class="text-white__shadow-pink" src="./assets/images/icons/arrow.svg" alt="">
+                            <div>
+                                <p class="text-white__shadow-pink mb-3">35% cheaper</p>
+                                <p>Cost reduction</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row justify-between gap-12 md:gap-0 mt-12">
+                        <div class="flex items-start gap-3">
+                            <img height="24" width="24" class="text-white__shadow-pink" src="./assets/images/icons/arrow.svg" alt="">
+                            <div>
+                                <p class="text-white__shadow-pink mb-3">up to 30%</p>
+                                <p>Headcount optimization</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <img height="24" width="24" class="text-white__shadow-pink" src="./assets/images/icons/arrow.svg" alt="">
+                            <div>
+                                <p class="text-white__shadow-pink mb-3">x4 time decrease</p>
+                                <p>Onboarding time</p>
+                            </div>
+                        </div>
+                    </div>
+                    <span id="features"></span>
+                </div>
+            </div>
+        </section>
         <section>
             <div class="grid md:grid-cols-2 grid-cols-1 gap-12 mt-44">
                 <h2 class="font-bold text-center md:text-left">Our core features</h2>
@@ -196,7 +214,6 @@
                     </div>
                 </div>
             </div>
-
         </section>
         <section class="mt-48">
             <div class="text-center">
@@ -248,7 +265,7 @@
             </div>
         </section>
         <section id="prices">
-            <div class="text-center md:w-1/2 mx-auto mt-60">
+            <div class="text-center md:w-1/2 mx-auto mt-40">
                 <h1 class="font-bold">Pricing</h1>
                 <h6 class="text-center mt-2">ELITEA instance deployed on-premise behind your firewall or in the Cloud. All your data is located on your instance, and it is 100% secured.</h6>
             </div>
@@ -412,124 +429,6 @@
                     </button>
                 </div>
             </div>
-        </section>
-        <section style="display: none;">
-            <div class="text-center md:w-1/2 mx-auto md:mt-44 mt-36">
-                <h1 class="font-bold">Our clients and success stories</h1>
-                <h6 class="text-center mt-2">We helped our clients to achieve their goals and boost their innovations</h6>
-            </div>
-            <div id="default-carousel" class="relative w-full" data-carousel="static">
-                <!-- Carousel wrapper -->
-                <div class="relative carousel-content md:h-56 overflow-hidden rounded-lg md:h-96">
-                    <!-- Item 1 -->
-                    <div id="carousel-item-1" class="hidden duration-700 ease-in-out flex flex-col items-center md:px-36 font-bold" data-carousel-item>
-                        <img src="assets/images/icons/ebsco.svg" class="my-10">
-                        <p class="text-center text-xl">“Thank you for this great work!<br> The challenge was significant, and it is impressive to see how well the challenge was met. And on personal note, it’s impressive to how knowledgeable and experienced there are.”</p>
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 my-5">
-                            <div class="flex items-start gap-3">
-                                <img height="24" width="24" class="text-white__shadow-pink" src="assets/images/icons/arrow.svg" alt="">
-                                <div>
-                                    <p class="text-white__shadow-pink mb-3">1000+</p>
-                                    <p>Test cases automated</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-3">
-                                <img height="24" width="24" class="text-white__shadow-pink" src="assets/images/icons/arrow.svg" alt="">
-                                <div>
-                                    <p class="text-white__shadow-pink mb-3">+38%</p>
-                                    <p>Cost savings</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-3">
-                                <img height="24" width="24" class="text-white__shadow-pink" src="assets/images/icons/arrow.svg" alt="">
-                                <div>
-                                    <p class="text-white__shadow-pink mb-3">20%</p>
-                                    <p>Time saving</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="carousel-item-2" class="hidden duration-700 ease-in-out flex flex-col items-center md:px-36 font-bold bg-dark" data-carousel-item>
-                        <img src="assets/images/icons/canadian.svg" class="my-20">
-                        <p class="text-center text-xl">“Elit tortor bibendum nunc congue dignissim sagittis a nullam.<br>
-                            Mauris arcu bibendum nibh gravida leo leo nibh nullam dolor. Congue blandit molestie cursus morbi commodo sagittis lectus!”</p>
-                    </div>
-                    <div id="carousel-item-3" class="hidden duration-700 ease-in-out flex flex-col items-center md:px-36 font-bold" data-carousel-item>
-                        <img src="assets/images/icons/astra.svg" class="my-20">
-                        <p class="text-center text-xl">“Elit tortor bibendum nunc!<br>
-                            Mauris arcu bibendum nibh gravida leo leo nibh nullam dolor. Congue blandit molestie cursus morbi commodo sagittis lectus!”</p>
-                    </div>
-                </div>
-                <!-- Slider indicators -->
-                <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse carousel-controls items-center gap-3">
-                    <button type="button" class="w-2 h-2 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-                    <button type="button" class="w-2 h-2 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-                    <button type="button" class="w-2 h-2 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-                </div>
-                <!-- Slider controls -->
-                <button type="button" class="absolute top-0 start-0 z-30 hidden md:flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-                    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full group-focus:outline-none">
-                        <img src="assets/images/icons/carousel-arrow__left.svg" alt="">
-                        <span class="sr-only">Previous</span>
-                    </span>
-                </button>
-                <button type="button" class="absolute top-0 end-0 z-30 hidden md:flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-                    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full group-focus:outline-none">
-                        <img src="assets/images/icons/carousel-arrow__right.svg" alt="">
-                        <span class="sr-only">Next</span>
-                    </span>
-                </button>
-            </div>
-
-            <!-- <div class="container-case grid grid-cols-1 md:grid-cols-2 md:px-12 py-16 gap-12 px-6 md:px-6" style="background: linear-gradient(360deg, rgba(21, 32, 50, 0.6) 0%, #0B0F16 100%); border-radius: 24px">
-                <div>
-                    <p class="text-blue text-sm font-bold">EBSCO CASE</p>
-                    <p class="font-bold text-2xl mt-8">Uplifting automation test coverage at speed with low cost</p>
-                    <p class="mt-8">Accelerating the release cycle with automated QA tests.</p>
-                </div>
-                <div class="ml-12 md:mx-auto">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                        <div class="flex flex-col md:flex-row justify-between gap-12 md:gap-0">
-                            <div class="flex items-start gap-3">
-                                <img height="24" width="24" class="text-white__shadow-pink" src="assets/images/icons/arrow.svg" alt="">
-                                <div>
-                                    <p class="text-white__shadow-pink mb-3">1000+</p>
-                                    <p>Test cases automated</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex flex-col md:flex-row justify-between gap-12 md:gap-0">
-                            <div class="flex items-start gap-3">
-                                <img height="24" width="24" class="text-white__shadow-pink" src="assets/images/icons/arrow.svg" alt="">
-                                <div>
-                                    <p class="text-white__shadow-pink mb-3">+38%</p>
-                                    <p>Cost savings</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 mt-12 gap-12">
-                        <div class="flex flex-col md:flex-row justify-between gap-12 md:gap-0">
-                            <div class="flex items-start gap-3">
-                                <img height="24" width="24" class="text-white__shadow-pink" src="assets/images/icons/arrow.svg" alt="">
-                                <div>
-                                    <p class="text-white__shadow-pink mb-3">4 month</p>
-                                    <p>Duration</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex flex-col md:flex-row justify-between gap-12 md:gap-0">
-                            <div class="flex items-start gap-3">
-                                <img height="24" width="24" class="text-white__shadow-pink" src="assets/images/icons/arrow.svg" alt="">
-                                <div>
-                                    <p class="text-white__shadow-pink mb-3">20%</p>
-                                    <p>Time saving</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
         </section>
     </main>
     <footer class="footer mt-44">
