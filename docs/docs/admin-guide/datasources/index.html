@@ -1,0 +1,2102 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://elitea.ai/docs/admin-guide/datasources/">
+      
+      
+        <link rel="prev" href="../prompts/prompts-examples/">
+      
+      
+        <link rel="next" href="../agents/agents/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Datasources - ELITEA Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#datasources" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ELITEA Documentation" class="md-header__button md-logo" aria-label="ELITEA Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ELITEA Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Datasources
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ELITEA Documentation" class="md-nav__button md-logo" aria-label="ELITEA Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ELITEA Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Release Notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Release Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release-notes/rn_current/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RN 1.4.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Archive
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Archive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release-notes/archived/rn5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RN 1.3.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release-notes/archived/rn4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RN 1.2.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release-notes/archived/rn3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RN 1.1.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release-notes/archived/rn2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RN 1.0.1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release-notes/archived/rn1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RN 1.0.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Admin Guide
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Admin Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Get Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../settings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Settings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Prompts
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Prompts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prompts/prompts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prompts/prompts-examples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompts Examples and Materials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Datasources
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Datasources
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#private-project-datasources-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Private project - Datasources menu
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Private project - Datasources menu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-datasource" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a Datasource
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exploring-datasources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exploring Datasources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connecting-a-dataset-to-the-datasource" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connecting a Dataset to the Datasource
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Connecting a Dataset to the Datasource">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#source-type-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Source type - File
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#source-type-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Source type - Table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#source-type-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Source type - GIT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#source-type-confluence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Source type - Confluence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#source-type-qtest" class="md-nav__link">
+    <span class="md-ellipsis">
+      Source type - QTest
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transformers" class="md-nav__link">
+    <span class="md-ellipsis">
+      TRANSFORMERS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summarization" class="md-nav__link">
+    <span class="md-ellipsis">
+      SUMMARIZATION
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#context" class="md-nav__link">
+    <span class="md-ellipsis">
+      CONTEXT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#welcome-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      WELCOME MESSAGE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversation-starters" class="md-nav__link">
+    <span class="md-ellipsis">
+      CONVERSATION STARTERS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#working-with-your-dataset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working with Your Dataset
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Working with Your Dataset">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deduplicate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deduplicate
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-project-datasources-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Public project - Datasources menu
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Public project - Datasources menu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#layout-of-the-datasources-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Layout of the Datasources Menu
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#engaging-with-published-datasources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Engaging with Published Datasources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liking-published-datasources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Liking Published Datasources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-actions-for-published-datasources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other Actions for Published Datasources
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Agents
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            Agents
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agents/agents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agents
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agents/agents-examples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agents Examples and Materials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../collections/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Collections
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ELITEA Extensions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            ELITEA Extensions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extensions/alita-code/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Alita Code
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extensions/alita-chat/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Alita Code Chat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    User Guides
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            User Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/public-project/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Public Project Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/integrations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Integrations Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Manuals
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Manuals
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../manuals/alita-dial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ELITEA and EPAM AI DIAL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../manuals/creating-prompts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    QA - Prompting and Sharing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../manuals/roles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Roles Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    FAQs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            FAQs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faqs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Frequently Asked Questions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#private-project-datasources-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Private project - Datasources menu
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Private project - Datasources menu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-datasource" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a Datasource
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exploring-datasources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exploring Datasources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connecting-a-dataset-to-the-datasource" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connecting a Dataset to the Datasource
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Connecting a Dataset to the Datasource">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#source-type-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Source type - File
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#source-type-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Source type - Table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#source-type-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Source type - GIT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#source-type-confluence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Source type - Confluence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#source-type-qtest" class="md-nav__link">
+    <span class="md-ellipsis">
+      Source type - QTest
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transformers" class="md-nav__link">
+    <span class="md-ellipsis">
+      TRANSFORMERS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summarization" class="md-nav__link">
+    <span class="md-ellipsis">
+      SUMMARIZATION
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#context" class="md-nav__link">
+    <span class="md-ellipsis">
+      CONTEXT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#welcome-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      WELCOME MESSAGE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversation-starters" class="md-nav__link">
+    <span class="md-ellipsis">
+      CONVERSATION STARTERS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#working-with-your-dataset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working with Your Dataset
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Working with Your Dataset">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deduplicate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deduplicate
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-project-datasources-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Public project - Datasources menu
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Public project - Datasources menu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#layout-of-the-datasources-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Layout of the Datasources Menu
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#engaging-with-published-datasources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Engaging with Published Datasources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liking-published-datasources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Liking Published Datasources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-actions-for-published-datasources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other Actions for Published Datasources
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="datasources">Datasources</h1>
+<h2 id="private-project-datasources-menu">Private project - Datasources menu</h2>
+<p>Datasources play a pivotal role in broadening and enriching the functionalities of ELITEA and AI technologies. They enable the extension of LLMs by integrating user-specific or project-specific data, which is not initially part of the model’s training set, thereby enhancing the LLM's context with tailored information.</p>
+<p><img alt="Datasources-Menu_Private" src="../../img/admin-guide/datasources/Datasources-Menu_Private.png" /></p>
+<h3 id="creating-a-datasource">Creating a Datasource</h3>
+<p>To set up a new datasource and augment your model's capabilities:</p>
+<ol>
+<li>Click the <strong>+ Datasource</strong> button located at the top right corner.</li>
+<li>Fill out the <strong>Name</strong> and <strong>Description</strong> fields.</li>
+<li>Choose an <strong>Embedding model</strong> from the dropdown list provided.</li>
+<li>Select the desired <strong>Storage type</strong> from another dropdown menu.</li>
+<li>Optionally, add tags by typing a tag name or selecting from pre-existing tags in the Tags input box.</li>
+<li>Click <strong>Save</strong> to finalize the creation.</li>
+</ol>
+<p><img alt="Datasources-Create_New_Datasource" src="../../img/admin-guide/datasources/Datasources-Create_New_Datasource.png" /></p>
+<h3 id="exploring-datasources">Exploring Datasources</h3>
+<p>Discovering the intricacies of a datasource is both simple and insightful:
+Click on the card or the name of a datasource to unveil its configurations, providing a detailed overview of its setup and usage.</p>
+<h3 id="connecting-a-dataset-to-the-datasource">Connecting a Dataset to the Datasource</h3>
+<p>The initial step involves linking your dataset to the desired datasource:</p>
+<ol>
+<li>Press the <strong><code>+</code></strong> icon to start adding a new dataset.</li>
+<li>Enter a name for your dataset.</li>
+<li>From the dropdown list, select the source type of your dataset. Available options include:<ul>
+<li><strong>File</strong>: Any supported file type for upload.</li>
+<li><strong>Table</strong>: Supported file types with a table structure, such as CSV or XLSX.</li>
+<li><strong>GIT</strong>: Any accessible Git repository.</li>
+<li><strong>Confluence</strong>: Any Confluence page accessible to you.</li>
+<li><strong>QTest</strong>: Any QTest project accessible to you.</li>
+</ul>
+</li>
+</ol>
+<p><img alt="Datasources-Dataset" src="../../img/admin-guide/datasources/Datasources-Dataset.png" /></p>
+<p>Depending on the selected source type, various configurations may be necessary to access the dataset source, primarily involving authentication and authorization parameters. This step is exempt for File and Table options since the files will be directly uploaded.</p>
+<h4 id="source-type-file">Source type - File</h4>
+<p>ELITEA supports a variety of file types and offers flexible settings to handle your documents effectively. Below is an easy-to-understand breakdown of the options, settings, and parameters available for configuration.</p>
+<ul>
+<li><strong>Name</strong> - specify a unique name for your source configuration. This helps in easily identifying and managing multiple sources.</li>
+<li><strong>Choose File Option</strong> - select the file you wish to process. ELITEA supports a range of commonly used file types, ensuring compatibility and ease of use. Supported file types: PDF, DOCX, TXT, JSON.</li>
+<li><strong>Advanced Settings</strong> - under this section, additional features enable further customization of how your file is processed.<ul>
+<li><strong>Split Pages</strong> - when enabled, each page of your document is treated as a separate entity. This is particularly useful when dealing with PDF documents, enabling more granular control over the analysis or processing of individual pages.</li>
+<li><strong>Parse Tables by Rows</strong> Selecting this option ensures that any tables within your document are parsed row by row, maintaining the structure and context. This setting is valuable when dealing with documents that contain tabular information, ensuring the data remains organized and comprehensible.</li>
+</ul>
+</li>
+<li><strong>Default Document Loader</strong> - choose the mechanism by which your document is loaded into the system. Each loader handles your file differently, catering to specific needs.<ul>
+<li><strong>TextLoader</strong> - optimized for plain text documents, ensuring swift and efficient loading.</li>
+<li><strong>PythonLoader</strong> - best suited for technical or coded documents, offering more sophisticated parsing capabilities.</li>
+</ul>
+</li>
+<li><strong>Extension Whitelist</strong> - specify file extensions that are explicitly allowed. This security measure ensures only designated file types are processed, safeguarding against unwanted or potentially harmful files. List the extensions separated by commas (e.g., <code>.pdf</code>, <code>.docx</code>, <code>.txt</code>), overriding the default supported types if necessary.</li>
+<li><strong>Extension Blacklist</strong> - conversely, list file extensions you wish to exclude from processing. Any file type (e.g., <code>.exe</code>, <code>.bin</code>, <code>.png</code>) mentioned here will be automatically rejected, further enhancing security and control over the documents your system handles.</li>
+</ul>
+<p><img alt="Datasources-Dataset_File" src="../../img/admin-guide/datasources/Datasources-Dataset_File.png" /></p>
+<h4 id="source-type-table">Source type - Table</h4>
+<p>This functionality is crucial for users who work with structured data in formats such as spreadsheets or structured text files. The aim is to make the process straightforward for users without requiring deep technical knowledge. Here, we outline the options, settings, and parameters available for your table data sources.</p>
+<ul>
+<li><strong>Name</strong> - specify a unique name for your source configuration. This helps in easily identifying and managing multiple sources.</li>
+<li><strong>Choose File Option</strong> - select the file you wish to process. ELITEA supports a range of commonly used file types, ensuring compatibility and ease of use. Supported File Types: CSV, JSON, XLSX.</li>
+<li><strong>Columns</strong> - specify which column(s) within your table you want to focus on. These columns should contain the data you wish to analyze or use for generating embeddings. You can select single or multiple columns depending on your requirement. This flexibility allows you to tailor the analysis to the specific data points that are most valuable to your objectives. To select multiple columns, separate each column name with a comma (",").</li>
+<li><strong>JSON Documents</strong> - enable this option if your table data is structured as JSON documents, particularly relevant when dealing with JSON files. This tells the system to parse the file as a collection of JSON entries, allowing for a more nuanced understanding and utilization of nested data structures within the file.</li>
+<li><strong>Raw Content</strong> - when enabled, this setting ensures that your selected data is treated as raw content, bypassing any default preprocessing or formatting. This is particularly useful when you want the data to be ingested in its purest form, without any alterations that might affect its original structure or meaning.</li>
+</ul>
+<p><img alt="Datasources-Dataset_Table" src="../../img/admin-guide/datasources/Datasources-Dataset_Table.png" /></p>
+<h4 id="source-type-git">Source type - GIT</h4>
+<p>For users who rely on Git repositories to manage their code, documents, or other types of projects, this source type allows to streamline the process of linking and extracting data from these repositories. Here, we outline the options, settings, and parameters available for your GIT source type.</p>
+<ul>
+<li><strong>Name</strong> - specify a unique name for your source configuration. This helps in easily identifying and managing multiple sources.</li>
+<li><strong>URL</strong> - link to Git Repo. To connect to your Git repository, you'll need to provide the URL. ELITEA supports two types of Git repository links:<ul>
+<li><strong>SSH</strong> - for a secure and password-less connection. If you choose this option, an SSH key pair is required, with the public key added to your Git account and the private key entered in the subsequent SSH Key field. For <strong>SSH</strong>: input the SSH Key in the designated field.</li>
+<li><strong>HTTPS</strong> - a widely used method that might require username and password authentication based on the repository's access settings. For <strong>HTTPS</strong>: if prompted, enter the username and password to authenticate.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Important Note</strong>:
+To ensure a successful connection, <strong>you must clone your Git repository and provide the cloned Git link</strong>. Simply copying the Git repository address from your browser's address bar is not sufficient. Cloning the repository ensures that you're using a valid, accessible link that ELITEA can connect to without issues.</p>
+<ul>
+<li><strong>Branch</strong> - here, specify the branch within your Git repository you wish to access. By default, the '<strong>main</strong>' branch is selected, but you may adjust this to any branch name that suits your current focus or project needs.</li>
+<li><strong>Advanced Settings</strong> - under this tab, we offer options to further customize how data is retrieved from your Git repository.</li>
+<li><strong>Multithreading</strong> - enabling multithreading can significantly speed up the process of fetching data from your Git repo, especially beneficial for large repositories or when network latency is a concern. This option allows the system to perform multiple operations in parallel, reducing overall extraction time.</li>
+<li><strong>Default Document Loader</strong> - choose the mechanism by which your document is loaded into the system. Each loader handles your file differently, catering to specific needs.<ul>
+<li><strong>TextLoader</strong>: - optimized for plain text documents, ensuring swift and efficient loading.</li>
+<li><strong>PythonLoader</strong>: - best suited for technical or coded documents, offering more sophisticated parsing capabilities.</li>
+</ul>
+</li>
+<li><strong>Extension Whitelist</strong> - specify file extensions that are explicitly allowed. This security measure ensures only designated file types are processed, safeguarding against unwanted or potentially harmful files. List the extensions separated by commas (e.g., <code>.pdf</code>, <code>.docx</code>, <code>.txt</code>), overriding the default supported types if necessary.</li>
+<li><strong>Extension Blacklist</strong> - conversely, list file extensions you wish to exclude from processing. Any file type (e.g., <code>.exe</code>, <code>.bin</code>, <code>.png</code>) mentioned here will be automatically rejected, further enhancing security and control over the documents your system handles.</li>
+</ul>
+<p><img alt="Datasources-Dataset_GIT" src="../../img/admin-guide/datasources/Datasources-Dataset_GIT.png" /></p>
+<h4 id="source-type-confluence">Source type - Confluence</h4>
+<p>For users who rely on Confluence pages to manage their information, documents, or other types of projects, this source type allows to streamline the process of linking and extracting data from these knowledge pages. Here, we outline the options, settings, and parameters available for your Confluence source type.</p>
+<ul>
+<li><strong>Name</strong> - specify a unique name for your source configuration. This helps in easily identifying and managing multiple sources.</li>
+<li><strong>URL</strong> - link to Confluence. To connect to your Confluence KB, you'll need to provide the URL. No need to provide the full link as the page (e.g. <code>https://www.kb.epam.com/</code> is enough) handling must be done with the help of <strong>Filters</strong> option. Regarding authentication, you have two options to securely connect to Confluence:<ul>
+<li><strong>API Key</strong>: If you choose the API Key option, you'll need to generate an API Key from your Confluence account and input it in the provided API Key field. The <strong>Secret</strong> and <strong>Password</strong> options are available.</li>
+<li><strong>Token</strong>: Similarly, if the Token option suits you better, you'll have to create an authentication Token from your Confluence user settings and enter it in the Token field. The <strong>Secret</strong> and <strong>Password</strong> options are available.
+<strong>Note</strong>: These authentication methods ensure secure access to your Confluence content, maintaining the integrity and confidentiality of your data.</li>
+</ul>
+</li>
+<li><strong>Username</strong> - input the username associated with your Confluence account. This is the same username you use to log in to your Confluence site.</li>
+<li><strong>Hosting Option</strong> - choose the appropriate hosting type for your Confluence setup:<ul>
+<li><strong>Cloud</strong> - if your Confluence is hosted on Atlassian’s cloud.</li>
+<li><strong>Server</strong> - if your Confluence is hosted on your own servers or enterprise environment. <strong>Important Note</strong>: When connecting to Epam's Confluence, ensure you select the <strong>Server</strong> option to establish the correct configuration.
+<strong>Note</strong>:This distinction is crucial for establishing the correct connection and accessing your data appropriately.</li>
+</ul>
+</li>
+<li><strong>Filter</strong> - use the filter option to refine which Confluence pages you wish to fetch. You can filter by:<ul>
+<li><strong>Space Key</strong> - to fetch pages from specific Confluence spaces.</li>
+<li><strong>Page IDs</strong> - to target specific pages.</li>
+<li><strong>Labels</strong> - to retrieve pages tagged with specific labels.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Important Note</strong>: To establish a successful connection to Confluence from ELITEA, you <strong>must select one of these filters</strong> and provide the corresponding value for it. This step is crucial as it defines the scope of content that ELITEA will access and import from Confluence, aligning the integration process with your project's specific requirements.</p>
+<ul>
+<li><strong>Advanced Settings</strong> - these settings offer additional controls over how your Confluence content is fetched and presented:<ul>
+<li><strong>Include Attachment</strong> - check this if you want to include page attachments in your data fetch. Useful for cases where documents or images are integral to your content.</li>
+<li><strong>Content Format</strong> - select the format in which you wish to view or receive the content. Options include:<ul>
+<li><strong>View</strong> - the page content as displayed in Confluence.</li>
+<li><strong>Storage</strong> - the raw storage format (HTML/XML) used by Confluence.</li>
+<li><strong>Anonymous</strong> - content as it appears to users not logged in.</li>
+<li><strong>Editor</strong> - content in an editable format.</li>
+</ul>
+</li>
+<li><strong>Pages Limit Per Request</strong> - define how many pages you want to fetch in a single request, with a default setting of 50. This helps manage data volume and response times.</li>
+<li><strong>Max Total Pages</strong> - set the maximum number of pages the system should fetch, defaulting to 1000. Useful for limiting data scope and ensuring performance.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Datasources-Dataset_Confluence" src="../../img/admin-guide/datasources/Datasources-Dataset_Confluence.png" /></p>
+<h4 id="source-type-qtest">Source type - QTest</h4>
+<p>Integrating QTest with ELITEA enhances your test management by connecting directly to QTest Test Case Management System (TCMS). This integration allows you to select test cases for duplication checks, search functionalities, and leverage manual test cases for future automation with Generative AI. Below, we detail the configuration options, settings, and parameters available for the QTest source type.</p>
+<ul>
+<li><strong>URL</strong> - the link to your QTest. <strong>Note</strong>: You must provide the link to your QTest in the following format <code>https://&lt;host of your installation of QTest&gt;/api/&lt;api version used&gt;</code></li>
+<li><strong>QTest Project ID</strong> - the specific project ID within QTest you wish to connect to. Enter the project ID to direct ELITEA to the correct QTest project.</li>
+<li><strong>API Key</strong> - ELITEA supports two types of authentication methods for QTest API Keys to ensure secure access:<ul>
+<li><strong>Secret</strong> - Utilize a confidential key configured in the <strong>Secrets</strong> feature within ELITEA HUB for enhanced security during API requests. This secret can be selected from the secrets you have set up previously.</li>
+<li><strong>Password</strong> - an option for API access, that verifies authorized requesters through a password.</li>
+</ul>
+</li>
+<li><strong>Test Cases per Page</strong> - configures the number of test cases displayed per page within the QTest for selection.</li>
+<li><strong>DQL for QTest</strong> - this setting allows you to query and filter data before indexing it. Utilize DQL (Data Query Language) to define specific criteria that refine the data fetched from QTest, ensuring that only relevant data is processed and indexed.</li>
+<li><strong>Columns</strong> - specify the columns within your test cases that you wish to focus on for analysis or embedding generation.  Select single or multiple columns to tailor the analysis to your project's specific needs. To select multiple columns, separate each column name with a comma (",").</li>
+</ul>
+<h3 id="transformers">TRANSFORMERS</h3>
+<p>Transformers enhance your documents by extracting significant keywords, summarizing content, and improving searchability. <em>Please note if you don't clearly understand the purpose of the parameters and options available here than leave them as is. Don't make any changes.</em></p>
+<ul>
+<li><strong>Extract Keywords</strong> - options include:<ul>
+<li><strong>For Document</strong> - analyses the entire document for keyword extraction.</li>
+<li><strong>For Chunks</strong> - processes document sections independently for more granular insights.</li>
+</ul>
+</li>
+<li><strong>Keyword Extractor</strong> - the only available option is <strong>KeyBert</strong>, designed for efficient keyword extraction.</li>
+<li><strong>Keyword Strategy</strong> - choices range from <strong>Max Sum</strong>, to <strong>Max MMR High</strong>, and <strong>Max MMR Low</strong>, each offering different focuses on relevance and diversity.</li>
+<li><strong>Maximum Keyword Count</strong> - defines the limit on the number of keywords to be extracted.</li>
+<li><strong>Split By</strong> - determines how the document is sectioned for analysis, with options like Chunks, Lines, Paragraphs, Sentences, or Nothing.</li>
+</ul>
+<p><img alt="Datasources-Dataset_Transformers" src="../../img/admin-guide/datasources/Datasources-Dataset_Transformers.png" /></p>
+<h3 id="summarization">SUMMARIZATION</h3>
+<p>Summarization utilizes LLMs to condense documents into their core messages. Due to the high computational demand, use of this feature incurs additional costs. Please note if you don't clearly understand the purpose of the parameters and options available here than leave them as is. Don't make any changes.</p>
+<ol>
+<li>
+<ul>
+<li><strong>Summarization model</strong> - select from available LLMs based on your document’s complexity.</li>
+</ul>
+</li>
+<li>
+<ul>
+<li><strong>Document summarization</strong> - enables summarization of the entire document.</li>
+</ul>
+</li>
+<li>
+<ul>
+<li><strong>Chunk summarization</strong> - applies summarization to specific sections or chunks of the document.</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>Finally, click <strong>Create</strong> to index the dataset for use. Note that processing time can take up to 10 minutes, depending on the source type and size.</li>
+</ul>
+</li>
+</ol>
+<p><img alt="Datasources-Dataset_Summarization" src="../../img/admin-guide/datasources/Datasources-Dataset_Summarization.png" /></p>
+<p><strong>Note</strong>: Multiple datasets can be utilized within the same datasource, enhancing versatility and depth of analysis.</p>
+<h3 id="context">CONTEXT</h3>
+<p><strong>Context</strong> input field is a designated area for providing instructions (prompt'), that facilitates the utilization of information from configured datasets via LLMs. This prompt guides the LLM on how to interpret and analyze the dataset, ensuring that the generated output aligns with the user's specific objectives. <strong>Note</strong>: By providing detailed and clear instructions in the <strong>Context</strong> field, users effectively guide the processing and analysis of their datasets, leveraging the robust capabilities of LLMs for tailored insights and actions.</p>
+<p><img alt="Datasources-Context" src="../../img/admin-guide/datasources/Datasources-Context.png" /></p>
+<h3 id="welcome-message">WELCOME MESSAGE</h3>
+<p>The <strong>Welcome Message</strong> feature allows you to provide additional context for prompts, datasources, and agents. Currently, the Welcome Message is sent to LLM along with other instructions.</p>
+<p><strong>How to Add the Welcome Message</strong>:</p>
+<ol>
+<li><strong>Add the Welcome Message</strong>: Type the welcome message text in the input field.</li>
+<li><strong>Save the Configuration</strong>: After entering the desired text, ensure to save the changes to the datasource. This action makes the configured welcome message available to user in the <strong>Chat</strong> section.</li>
+</ol>
+<p><strong>Using the Welcome Message</strong>:</p>
+<p>Go to the <strong>Chat</strong> section of the datasource. Here, you will see the configured <strong>Welcome Message</strong>. It will provide additional notification, instruction to the user.</p>
+<p><strong>Examples of Welcome Message</strong>:</p>
+<ul>
+<li>"Use this datasource for asking questions about FT Armenia"</li>
+<li>"Don't forget to double-check the generated responses"</li>
+</ul>
+<p><img alt="Datasources-Welcome_Message" src="../../img/admin-guide/datasources/Datasources-Welcome_Message.png" /></p>
+<h3 id="conversation-starters">CONVERSATION STARTERS</h3>
+<p>The <strong>Conversation Starter</strong> feature enables you to configure and add predefined text that can be used to initiate a conversation when executing an agent. This feature is particularly useful for setting a consistent starting point for interactions facilitated by the datasource.</p>
+<p><strong>How to Add a Conversation Starter</strong>:</p>
+<ol>
+<li><strong>Access the Configuration Panel</strong>: Navigate to the <strong>Conversation Starter</strong>  section.</li>
+<li><strong>Add a Conversation Starter</strong>: Click the <code>+</code> icon to open the text input field where you can type the text you wish to use as a conversation starter.</li>
+<li><strong>Save the Configuration</strong>: After entering the desired text, ensure to save the changes to the prompt. This action makes the configured conversation starter available for use.</li>
+</ol>
+<p><strong>Using a Conversation Starter</strong>:</p>
+<p><strong>Initiate a Conversation</strong>: Go to the <strong>Chat</strong> section of the datasource. Here, you will find the saved conversation starters listed. Click on the desired starter to automatically populate the chat input and execute the datasource.</p>
+<p><strong>Examples of Conversation Starters</strong>:</p>
+<ul>
+<li>"How to create a prompt?"</li>
+<li>"I am on bench, and want to know what activities can be done"</li>
+</ul>
+<p><img alt="Datasources-Conversation_Starters" src="../../img/admin-guide/datasources/Datasources-Conversation_Starters.png" /></p>
+<p>By setting up conversation starters, you streamline the process of initiating specific tasks or queries, making your interactions with the datasource more efficient and standardized.</p>
+<h3 id="working-with-your-dataset">Working with Your Dataset</h3>
+<p>After you've successfully created your dataset(s), a variety of features become available for you to explore and utilize. These features are designed to help you interact with your dataset in a more intuitive and productive manner. Here's a brief overview of what you can do:</p>
+<h4 id="chat">Chat</h4>
+<p>The <strong>Chat</strong> feature is tailored for conversational AI models, enabling you to engage in dialogues or interactions akin to conversing with a human. Whether you're asking a question, making a statement, or giving a command, this feature is designed to generate responses that mimic human conversation.</p>
+<p><strong>To use the Chat and query info</strong>:</p>
+<ol>
+<li>Select the <strong>Embedding model</strong> from the dropdown list. <strong>Note</strong>: It must be the same one which is used for creating the datasource.</li>
+<li>Choose an <strong>Chat model</strong> (e.g., gpt-4-0125-preview, gpt-35-turbo, etc.) suited to your conversation needs.</li>
+<li>Optionally, you can configure Advanced Settings for more tailord outputs by clicking the <strong>Settings</strong> icon. <strong>Note</strong>: Please exercise caution with these settings. If unsure about their functions, it's advisable to leave them at their default values. The following settings are available:<ul>
+<li><strong>Initial Lookup Result (1 – 50)</strong> - specifies the number of initial results retrieved from the indexed dataset(s) for further processing. <ul>
+<li><strong>Higher values</strong>: More initial results are retrieved, which can increase the chances of finding relevant information but may slow down processing.</li>
+<li><strong>Lower values</strong>: Fewer initial results are retrieved, which can speed up processing but might miss some relevant information.</li>
+</ul>
+</li>
+<li><strong>Pages Per Document (1 – 30)</strong> - defines the number of pages to be considered per document during the retrieval or processing phase.<ul>
+<li><strong>Higher values</strong>: More pages per document are considered, which can provide more comprehensive information but may slow down processing.</li>
+<li><strong>Lower values</strong>: Fewer pages per document are considered, which can speed up processing but might miss some important details.</li>
+</ul>
+</li>
+<li><strong>Expected Search Results (1 – 40)</strong> - sets the anticipated number of search results to be returned, guiding the system's retrieval scope.<ul>
+<li><strong>Higher values</strong>: More search results are returned, which can provide a broader range of information but may include less relevant results.</li>
+<li><strong>Lower values</strong>: Fewer search results are returned, which can provide more focused and relevant information but might miss some useful results.</li>
+</ul>
+</li>
+<li><strong>Temperature (0.1-1.0)</strong> - adjusts the level of creativity or unpredictability in responses.<ul>
+<li><strong>Higher values</strong>: Responses are more creative and varied, but may be less consistent and more unpredictable.</li>
+<li><strong>Lower values</strong>: Responses are more consistent and predictable, but may be less creative and varied.</li>
+</ul>
+</li>
+<li><strong>Top P (0-1)</strong> - determines the cumulative probability threshold for selecting words, balancing between creativity and consistency.<ul>
+<li><strong>Higher values</strong>: A wider range of words is considered, leading to more creative and diverse responses.</li>
+<li><strong>Lower values</strong>: A narrower range of words is considered, leading to more consistent and predictable responses.</li>
+</ul>
+</li>
+<li><strong>Top K (1-40)</strong> - limits the choice of words to the K most probable, affecting the response's diversity and predictability.<ul>
+<li><strong>Higher values</strong>: More words are considered, leading to more diverse and potentially creative responses.</li>
+<li><strong>Lower values</strong>: Fewer words are considered, leading to more predictable and focused responses.</li>
+</ul>
+</li>
+<li><strong>Maximum length</strong> - sets the cap on the response length, helping tailor responses to be as concise or detailed as desired.<ul>
+<li><strong>Higher values</strong>: Responses can be longer and more detailed.</li>
+<li><strong>Lower values</strong>: Responses are shorter and more concise.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Type your text in the chat box and click the <strong>Send</strong> icon to initiate the dialogue.</li>
+</ol>
+<p><img alt="Datasources-Chat" src="../../img/admin-guide/datasources/Datasources-Chat.png" /></p>
+<p><strong>Additional Interaction Features:</strong></p>
+<ul>
+<li><strong>Auto scroll to bottom</strong>: This option can be toggled on or off to automatically scroll to the bottom of the output as it is being generated. This feature is helpful during long outputs to keep the most recent content visible.</li>
+<li><strong>Full Screen Mode</strong>: Increase the size of the output window for better visibility and focus. This mode can be activated to expand the output interface to the full screen.</li>
+</ul>
+<p><strong>Post-Output Actions:</strong></p>
+<ul>
+<li><strong>Continue the Dialogue</strong>: To keep the conversation going, simply type your next question or command in the chat box and click the <strong>Send</strong> icon.</li>
+<li><strong>Copy the Output</strong>: Click the <strong>Copy to clipboard</strong> icon to copy the generated text for use elsewhere.</li>
+<li><strong>Regenerate Response</strong>: If the output isn't satisfactory, click the <strong>Regenerate</strong> icon to prompt the Gen AI to produce a new response.</li>
+<li><strong>Delete Output</strong>: To remove the current output from the chat, click the <strong>Delete</strong> icon.</li>
+<li><strong>Purge Chat History</strong>: For a fresh start or to clear sensitive data, click the <strong>Clean</strong> icon to erase the chat history.</li>
+<li><strong>Specialized Download Options</strong> for <strong>Tabular</strong> outputs. When the Gen AI generates output in a tabular format, additional options become available to manage and utilize this structured data:<ul>
+<li><strong>Download as xlsx</strong>: Allows you to save the tabular output directly in an Excel spreadsheet format, facilitating easy data manipulation and analysis.</li>
+<li><strong>Copy as markdown</strong>: Enables copying the tabular output in markdown format, suitable for use in markdown-supported environments like GitHub or blogging platforms.</li>
+<li><strong>Copy as html</strong>: Permits copying the tabular output in HTML format, ideal for integration into web pages or emails, preserving the formatting and structure.</li>
+</ul>
+</li>
+</ul>
+<h4 id="search">Search</h4>
+<p>The <strong>Search</strong> feature allows you to quickly locate specific information within your indexed dataset.</p>
+<p><strong>How to Conduct a Search</strong>:</p>
+<ol>
+<li>Select the <strong>Embedding model</strong> from the dropdown list. <strong>Note</strong>: It must be the same one which is used for creating the datasource.</li>
+<li>Optionally, you can configure <strong>Advanced Settings</strong> for more tailord outputs by clicking the <strong>Settings</strong> icon. <strong>Note</strong>: Please exercise caution with these settings. If unsure about their functions, it's advisable to leave them at their default values. The following settings are available:<ul>
+<li><strong>Initial Lookup Result (1 – 50)</strong> - specifies the number of initial results retrieved from the indexed dataset(s) for further processing. <ul>
+<li><strong>Higher values</strong>: More initial results are retrieved, which can increase the chances of finding relevant information but may slow down processing.</li>
+<li><strong>Lower values</strong>: Fewer initial results are retrieved, which can speed up processing but might miss some relevant information.</li>
+</ul>
+</li>
+<li><strong>Pages Per Document (1 – 30)</strong> - defines the number of pages to be considered per document during the retrieval or processing phase.<ul>
+<li><strong>Higher values</strong>: More pages per document are considered, which can provide more comprehensive information but may slow down processing.</li>
+<li><strong>Lower values</strong>: Fewer pages per document are considered, which can speed up processing but might miss some important details.</li>
+</ul>
+</li>
+<li><strong>Expected Search Results (1 – 40)</strong> - sets the anticipated number of search results to be returned, guiding the system's retrieval scope.<ul>
+<li><strong>Higher values</strong>: More search results are returned, which can provide a broader range of information but may include less relevant results.</li>
+<li><strong>Lower values</strong>: Fewer search results are returned, which can provide more focused and relevant information but might miss some useful results.</li>
+</ul>
+</li>
+<li><strong>String content</strong> - determines whether the system should include or consider specific text data in its processing or generation.</li>
+</ul>
+</li>
+<li>Type your query into the input field and hit the <strong>Send</strong> icon.</li>
+</ol>
+<p><img alt="Datasources-Search" src="../../img/admin-guide/datasources/Datasources-Search.png" /></p>
+<p><strong>Post-Output Actions:</strong></p>
+<ul>
+<li><strong>View Selection</strong>:  A tool for quickly switching between <strong>Code view</strong> and <strong>List view</strong> views.</li>
+<li><strong>Copy the Output</strong>: Click the <strong>Copy to clipboard</strong> icon to copy the generated text for use elsewhere.</li>
+<li><strong>Full Screen Mode</strong>: Increase the size of the output window for better visibility and focus. This mode can be activated to expand the output interface to the full screen.</li>
+<li><strong>Purge Chat History</strong>: For a fresh start or to clear sensitive data, click the <strong>Clean</strong> icon to erase the chat history.</li>
+</ul>
+<h4 id="deduplicate">Deduplicate</h4>
+<p>The <strong>Deduplication</strong> is a handy feature for identifying duplicate information.</p>
+<p><strong>How to Run Deduplication</strong>:</p>
+<ol>
+<li>Select the <strong>Embedding model</strong> from the dropdown list. <strong>Note</strong>: It must be the same one which is used for creating the datasource.</li>
+<li>Configure the following settings:<ul>
+<li><strong>Cut-off Score (0.1-1.0)</strong> - determines the threshold for identifying duplicate content based on similarity scores.<ul>
+<li><strong>Higher values</strong>: More items will be <strong>excluded</strong>, as they will not be considered similar enough. This can be useful if you want to ensure that only highly unique content remains.</li>
+<li><strong>Lower values</strong>: More items will be <strong>retained</strong>, as they will be considered similar enough. This can be useful if you want to keep more variations of the content.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Optionally, you can configure <strong>Advanced Settings</strong> for more tailord outputs by clicking the <strong>Settings</strong> icon. <strong>Note</strong>: Please exercise caution with these settings. If unsure about their functions, it's advisable to leave them at their default values. The following settings are available:<ul>
+<li><strong>Show Additional Metadata</strong> - a checkbox option that determines whether to display extra information about the content.<ul>
+<li><strong>Selected</strong>: Additional metadata will be shown, providing more context and details about the content.</li>
+<li><strong>Not Selected</strong>: Additional metadata will not be shown, resulting in a cleaner and simpler display of the content.</li>
+</ul>
+</li>
+<li><strong>Exclude Fields</strong> - a comma-separated list of field names that should be excluded from the deduplication process.<ul>
+<li><strong>Specified fields</strong>: The fields listed will be ignored during deduplication, which means differences in these fields will not affect whether content is considered a duplicate. This can be useful if certain fields (like timestamps or IDs) are not relevant to the deduplication criteria.</li>
+<li><strong>No fields specified</strong>: All fields will be considered during deduplication, which means any differences in any field can affect whether content is considered a duplicate.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Click the <strong>Run</strong> button to start the process.</li>
+</ol>
+<p><strong>Note:</strong> Remember, deduplication efforts will hinge upon the parameters you've set for the dataset.</p>
+<p>By using these features, you’re equipped to enhance your dataset, making it a more efficient and effective tool for your AI applications. Proceed with adjustments only if you're confident in your understanding of their implications.</p>
+<p><img alt="Datasources-Deduplicate" src="../../img/admin-guide/datasources/Datasources-Deduplicate.png" /></p>
+<p><strong>Post-Output Actions:</strong></p>
+<ul>
+<li><strong>View Selection</strong>:  A tool for quickly switching between <strong>Code view</strong> and <strong>List view</strong> views.</li>
+<li><strong>Show differences</strong>: An option allowing to quickly show/hide differences.</li>
+<li><strong>Download result</strong>: Allows you to save the deduplication results directly in an Excel spreadsheet format, facilitating easy data manipulation and analysis. </li>
+<li><strong>Copy the Output</strong>: Click the <strong>Copy to clipboard</strong> icon to copy the generated text for use elsewhere.</li>
+<li><strong>Full Screen Mode</strong>: Increase the size of the output window for better visibility and focus. This mode can be activated to expand the output interface to the full screen.</li>
+<li><strong>Purge Chat History</strong>: For a fresh start or to clear sensitive data, click the <strong>Clean</strong> icon to erase the chat history.</li>
+</ul>
+<h2 id="public-project-datasources-menu">Public project - Datasources menu</h2>
+<p>The <strong>Datasources</strong> menu within <strong>Public</strong> project showcases a collection of published and shared datasources within the community.</p>
+<h3 id="layout-of-the-datasources-menu">Layout of the Datasources Menu</h3>
+<p>The Datasources menu is organized into three distinct pages, each designed to offer a unique perspective on the available datasources:</p>
+<ul>
+<li><strong>Latest</strong>: Displays all recently published datasources, providing a fresh look at the newest contributions to the community.</li>
+<li><strong>My Likes</strong>: Highlights the datasources that you have liked. This personalized page allows you to revisit favorites effortlessly.</li>
+<li><strong>Trending</strong>: Showcases the datasources with the highest number of likes, serving as a valuable resource for discovering top-rated datasources that hold significant value and popularity within the community.</li>
+</ul>
+<p><img alt="Datasources-Menu_Public" src="../../img/admin-guide/datasources/Datasources-Menu_Public.png" /></p>
+<h3 id="engaging-with-published-datasources">Engaging with Published Datasources</h3>
+<p>Interaction within the community is highly encouraged to recognize and appreciate valuable datasources. The following actions enable active participation:</p>
+<h3 id="liking-published-datasources">Liking Published Datasources</h3>
+<p>Upon publication, a datasource becomes a crucial resource for the community. To support and acknowledge a datasource, use the <strong>Like</strong> functionality:</p>
+<ul>
+<li>To like a datasource, click on the <strong>Heart</strong> icon associated with it.</li>
+<li>If you wish to withdraw your like, simply click the <strong>Heart</strong> icon again to Unlike the datasource.</li>
+</ul>
+<h3 id="other-actions-for-published-datasources">Other Actions for Published Datasources</h3>
+<p><strong>Using Published Datasources</strong>:</p>
+<ul>
+<li>View and run datasources by clicking on the datasource card or name. Refer to the <a href="#exploring-datasources">Exploring Datasources</a> section for guidance on using datasource.</li>
+<li><strong>Note</strong>: Modifications to a published datasource cannot be saved for future use.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>
