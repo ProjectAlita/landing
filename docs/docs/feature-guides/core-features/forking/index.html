@@ -8,9 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://elitea.ai/docs/admin-guide/agents/agents-examples/">
+        <link rel="canonical" href="https://elitea.ai/docs/feature-guides/core-features/forking/">
       
       
+        <link rel="prev" href="../export-import/">
+      
+      
+        <link rel="next" href="../integrations/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -18,7 +22,7 @@
     
     
       
-        <title>Agents Examples and Materials - ELITEA Documentation</title>
+        <title>Forking Guide - ELITEA Documentation</title>
       
     
     
@@ -70,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#agents-examples-and-materials" class="md-skip">
+        <a href="#forking-guide-transferring-entities-between-projects-in-elitea" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Agents Examples and Materials
+              Forking Guide
             
           </span>
         </div>
@@ -823,17 +827,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -847,7 +853,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Features Guides
@@ -858,17 +864,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" checked>
         
           
           <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
@@ -882,7 +890,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_1">
             <span class="md-nav__icon md-icon"></span>
             ELITEA Core Features
@@ -896,7 +904,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../feature-guides/core-features/export-import/" class="md-nav__link">
+      <a href="../export-import/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -914,10 +922,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../feature-guides/core-features/forking/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Forking Guide
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -926,6 +954,119 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forking-feature-a-general-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Forking Feature: A General Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-fork-entities" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Fork Entities
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to Fork Entities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#forking-a-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Forking a Prompt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forking-a-datasource" class="md-nav__link">
+    <span class="md-ellipsis">
+      Forking a Datasource
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forking-an-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Forking an Agent
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forking-master-agents-with-connected-entities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Forking Master Agents with Connected Entities
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices-and-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices and Use Cases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices and Use Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-forking-vs-exportimport" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use Forking vs Export/Import
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -938,7 +1079,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../feature-guides/core-features/integrations/" class="md-nav__link">
+      <a href="../integrations/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -959,7 +1100,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../feature-guides/core-features/prompt-magic-assistant/" class="md-nav__link">
+      <a href="../prompt-magic-assistant/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -980,7 +1121,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../feature-guides/core-features/public-project/" class="md-nav__link">
+      <a href="../public-project/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1001,7 +1142,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../feature-guides/core-features/monitoring.md" class="md-nav__link">
+      <a href="../monitoring.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1065,7 +1206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../feature-guides/advanced-features/roles.md" class="md-nav__link">
+      <a href="../../advanced-features/roles.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1396,19 +1537,64 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#agents-helpful-materials" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      Agents - Helpful Materials
+      Introduction
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Agents - Helpful Materials">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forking-feature-a-general-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Forking Feature: A General Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-fork-entities" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Fork Entities
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to Fork Entities">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#video-tutorials" class="md-nav__link">
+  <a href="#forking-a-prompt" class="md-nav__link">
     <span class="md-ellipsis">
-      Video Tutorials
+      Forking a Prompt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forking-a-datasource" class="md-nav__link">
+    <span class="md-ellipsis">
+      Forking a Datasource
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forking-an-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Forking an Agent
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forking-master-agents-with-connected-entities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Forking Master Agents with Connected Entities
     </span>
   </a>
   
@@ -1420,20 +1606,26 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#agent-frameworks" class="md-nav__link">
+  <a href="#best-practices-and-use-cases" class="md-nav__link">
     <span class="md-ellipsis">
-      Agent Frameworks
+      Best Practices and Use Cases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices and Use Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-forking-vs-exportimport" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use Forking vs Export/Import
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#practical-examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      Practical Examples
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1452,113 +1644,144 @@
                   
 
 
-<h1 id="agents-examples-and-materials">Agents Examples and Materials</h1>
-<h2 id="agents-helpful-materials">Agents - Helpful Materials</h2>
-<p>To assist you in maximizing the capabilities of Agents within the ELITEA platform, we have compiled a selection of helpful materials. These resources are designed to guide you through the processes of creating, setting up, configuring, and effectively using Agents.</p>
-<h3 id="video-tutorials">Video Tutorials</h3>
-<p>Explore our curated video tutorials that provide step-by-step instructions and insights on various aspects of working with Agents:</p>
+<h1 id="forking-guide-transferring-entities-between-projects-in-elitea">Forking Guide: Transferring Entities Between Projects in ELITEA</h1>
+<h2 id="introduction">Introduction</h2>
+<p>This user guide provides a comprehensive overview of the <strong>Forking</strong> feature within ELITEA. Forking offers a streamlined method for transferring your valuable entities – <strong>Prompts</strong>, <strong>Datasources</strong>, and <strong>Agents</strong> – between different projects within the same ELITEA environment.</p>
+<p>The ability to fork entities provides a convenient and efficient way to manage your ELITEA assets. You can leverage this feature in various scenarios, including:</p>
 <ul>
-<li><a href="https://videoportal.epam.com/playlist/1JebbZ7v/play/WY43Ljea">Alita AQA Agent for QAvaJS autromation</a></li>
-<li><a href="https://videoportal.epam.com/playlist/1JebbZ7v/play/e738vP5a">EBSCO Automated test generation</a></li>
+<li><strong>Moving Entities Between Projects:</strong> Easily transfer prompts, datasources, and agents from one project to another within your current ELITEA environment. This is useful for reorganizing your work, sharing resources between teams, or consolidating entities into a central project.</li>
+<li><strong>Duplicating Entities for Experimentation:</strong> Create a copy of an existing entity in a different project to experiment with modifications or new configurations without affecting the original entity.</li>
+<li><strong>Sharing Resources Within an Environment:</strong> Make your carefully crafted prompts, configured datasources, and intelligent agents available to other projects within the same ELITEA instance.</li>
 </ul>
-<h2 id="agent-frameworks">Agent Frameworks</h2>
-<p><strong>General Guidelines for Both Agent Types</strong></p>
-<p>When working with either the React or Raw agent types, it is imperative to adhere to the following general guidelines:</p>
+<p>This guide will detail the process of forking each entity type, along with best practices and practical use cases to help you effectively utilize this feature.</p>
+<h2 id="forking-feature-a-general-overview">Forking Feature: A General Overview</h2>
+<p>The <strong>Forking</strong> feature in ELITEA provides a direct way to copy an existing entity (Prompt, Datasource, or Agent) from its current project to another project within the same ELITEA environment. Think of it as creating a branch or a copy of your entity in a new location.</p>
+<p>The forking process is conceptually similar to exporting and importing, but it is more direct and integrated within the ELITEA interface, eliminating the need to download and upload files.</p>
+<p><strong>Important Considerations:</strong></p>
 <ul>
-<li><strong>Toolkit Interaction</strong>: Ensure to address the appropriate toolkits (e.g., JIRA, GitHub) and address the specific tools available within these toolkits (e.g., Create issue, Add comments).</li>
-<li><strong>Execution Constraints</strong>: Always provide clear instructions or constraints to ensure that each toolkit is executed only once to avoid loops. This is crucial for maintaining efficient and error-free operations.</li>
+<li><strong>Same Environment Only:</strong> Forking is limited to transferring entities between projects within the same ELITEA environment. To move entities between different ELITEA environments (e.g., from  an ELITEA <a href="https://alita.lab.epam.com">Alita LAB</a> environment to a new <a href="https://nexus.elitea.ai/">Nexus</a> environment ), you should use the <strong>Export</strong> and <strong>Import</strong> features.</li>
+<li><strong>Exclusion of Sensitive Data:</strong> For security reasons, the authentication information (such as API Keys, usernames, tokens, and passwords) are <strong>NOT</strong> being forked automatically. You will need to re-enter this information when forking the entity.</li>
+<li><strong>No Collection Forking:</strong> Currently, forking of Collections is not supported.</li>
+<li><strong>Preventing Duplicates:</strong> You cannot fork the same entity to the same project twice. ELITEA checks the uniqueness of the entity's 'object id' to prevent the creation of duplicates within a single project. If you need to create a duplicate of an entity within the same project, you can use the <strong>Export</strong> and <strong>Import</strong> features.</li>
 </ul>
-<p><strong>ReAct Agent Type</strong></p>
-<p>For the <strong>ReAct</strong> agent type, follow these detailed instructions to effectively integrate and utilize various toolkits and tools:</p>
-<pre><code>Example: Test Case Generation
-
-### Objective: 
-You are an expert Software Testing engineer. Your task is to connect to a Git repository using the GitHub toolkit, read files related to &quot;Alita Documentation&quot; to find information about datasources, analyze this information, create three test cases covering datasource creation functionality, and save the generated test cases in a newly created Jira ticket using the Jira toolkit.
-
-### Instructions:
-1. Connect to GitHub Repository:
-   - Use the GitHub toolkit to connect to the specified Git repository.
-   - Ensure you have the necessary permissions to read files from the repository.
-2. Read Files:
-   - Use the &quot;Read file&quot; tool to read files related to &quot;Alita Documentation&quot; from the repository.
-   - Focus on finding information about datasources.
-3. Analyze Information:
-   - As an expert Software Testing engineer, analyze the information about datasources.
-   - Identify key functionalities and requirements for datasource creation.
-4. Create Test Cases:
-   - Based on your analysis, create three test cases covering datasource creation functionality.
-   - Ensure the test cases are detailed, clear, and follow industry best practices.
-5. Save Test Cases in Jira:
-   - Use the Jira toolkit to create a new Jira Task.
-   - Use the following project: ETSTCC
-   - The created Issue type must be Task.
-   - Ensure the Jira Task has the next available issue ID. 
-   - Save the generated test cases in the Description field.
-   - Use the following Label: AI_Generated.
-   - Generate a corresponding Summary and apply it to the Summary field of the Task.
-   - Use only standard fields in Jira, do not use neither custom fileds or fields from plugins, they are not available.
-
-### Constraints:
-- Execute each toolkit only once.
-- Do not get into a loop.
-- Provide the best possible output based on the available information.
-
-### Example Test Case Format:
-Test Case ID: TC001 Title: Verify datasource creation with valid inputs Description: Ensure that a datasource can be created successfully when valid inputs are provided. Preconditions: User is logged in and has access to the datasource creation page. Steps:
-
-1. Navigate to the datasource creation page.
-2. Enter valid inputs in all required fields.
-3. Click on the &quot;Create&quot; button. Expected Result: The datasource is created successfully, and a confirmation message is displayed.
-
-Test Case ID: TC002 Title: Verify error message for missing required fields Description: Ensure that an appropriate error message is displayed when required fields are left blank during datasource creation. Preconditions: User is logged in and has access to the datasource creation page. Steps:
-
-1. Navigate to the datasource creation page.
-2. Leave one or more required fields blank.
-3. Click on the &quot;Create&quot; button. Expected Result: An error message is displayed indicating that required fields must be filled.
-
-### Execution:
-- Follow the instructions step-by-step.
-- Ensure each toolkit is executed only once.
-- Provide the best possible output based on the available information.
-</code></pre>
-<p><strong>Raw Agent Type</strong></p>
-<p>For the <strong>Raw</strong> agent type, adhere to these specific guidelines to ensure the agent operates correctly:</p>
+<h2 id="how-to-fork-entities">How to Fork Entities</h2>
+<p>The process for forking Agents, Prompts, and Datasources is similar.</p>
+<ol>
+<li><strong>Log in to ELITEA</strong>: Access the ELITEA platform using your credentials.</li>
+<li><strong>Navigate to the Project</strong>: Go to the specific project that contains the prompt, datasource, or agent you wish to fork.</li>
+<li><strong>Access the Relevant Menu</strong>: Within the project, navigate to the menu corresponding to the entity type you want to fork (e.g., <strong>Prompts</strong>, <strong>Datasources</strong>, or <strong>Agents</strong>).</li>
+<li><strong>Locate the Entity for Fork</strong>: Find the specific entity you want to fork within the list. ELITEA offers two view options, and the fork process varies slightly depending on the view you are using:
+    a. <strong>Card List View</strong>: If you are viewing your entities in a card format, click on the specific entity's card that you wish to fork. This will open the entity's details. Once open, locate and click the <strong>Fork [entity type]</strong> icon (e.g., <strong>Fork prompt</strong>, <strong>Fork datasource</strong>, or <strong>Fork agent</strong>).
+    b. <strong>Table View</strong>: If you are viewing your entities in a table format, locate the entity you want to fork in the list. In the <strong>Actions</strong> column, which is usually the last column in the table, click on the ellipsis icon (<code>...</code>) next to the entity. A dropdown menu will appear. Select the <strong>Fork</strong> option from this menu.</li>
+<li>A <strong>Forking wizard</strong> will appear.</li>
+<li>In the dialog, select the <strong>Target Project</strong> where you want to create a copy of the entity.</li>
+<li>Click the <strong>Fork</strong> button.</li>
+<li>A copy of the entity will now be created in the selected target project. You will be forwarded to that entity created in the target project.</li>
+</ol>
+<p><img alt="Datasource-Fork" src="../../../img/guides/forking/Datasource-Fork.png" /></p>
+<p><img alt="Fork-Table_view" src="../../../img/guides/forking/Fork-Table_view.png" /></p>
+<h3 id="forking-a-prompt">Forking a Prompt</h3>
+<ol>
+<li>Navigate to the <strong>Prompts</strong> menu within the project containing the prompt you wish to for.</li>
+<li>Locate the specific prompt you want to fork.</li>
+<li>Open the prompt and click the <strong>Fork prompt</strong> icon.</li>
+<li><strong>Forking Wizard - Prompt Options:</strong><ul>
+<li><strong>Select Project:</strong> Choose the target project where you want to fork the prompt. You can select your <strong>Private</strong> workspace or any other project where you have the necessary permissions.</li>
+<li><strong>Select Versions to Fork:</strong> You can choose to fork all versions of the prompt or select specific versions. <strong>Note:</strong> It is always highly recommended to select and fork the 'latest' version of the prompt, otherwise you might have validation errors, preventing successful fork, or latest version will be cloned from one of the versions</li>
+<li><strong>Select LLM Model:</strong> For each version you are forking, you can select the desired LLM Model. You can manually change the selected model to your preferred choice before completing the fork.</li>
+</ul>
+</li>
+<li>Click the <strong>Fork</strong> button in the <strong>Forking Wizard</strong>.</li>
+<li>A copy of the prompt will now be created in the selected target project. You will be forwarded to that prompt created in the target project.</li>
+</ol>
+<p><img alt="Prompt-Forking_Wizard" src="../../../img/guides/forking/Prompt-Forking_Wizard.png" /></p>
+<h3 id="forking-a-datasource">Forking a Datasource</h3>
+<ol>
+<li>Navigate to the <strong>Datasources</strong> menu within the project containing the datasource you wish to fork.</li>
+<li>Locate the specific datasource you want to fork.</li>
+<li>Open the datasource and click the <strong>Fork datasource</strong> icon.</li>
+<li><strong>Forking Wizard - Datasource Options:</strong><ul>
+<li><strong>Select Project:</strong> Choose the target project where you want to fork the datasource.</li>
+<li><strong>Select Embedding Model:</strong> Choose the desired Embedding Model for the datasource.        <ul>
+<li>You can manually change the selected model to your preferred choice.</li>
+</ul>
+</li>
+<li><strong>Configure Models for Chat, Search, and Deduplicate:</strong> Select the desired LLM models for the Chat, Search, and Deduplicate functionalities of the datasource.</li>
+<li><strong>Provide Mandatory Parameters:</strong> Fill in all mandatory fields and parameters, which are highlighted with an asterisk <code>*</code>. This typically includes the <strong>Storage</strong> type and various authentication parameters for the datasets.</li>
+<li><strong>Select Datasets to Fork:</strong> Choose which datasets you want to fork along with the datasource.</li>
+<li><strong>Provide Dataset Authentication:</strong> For any datasets requiring authentication, you will need to manually provide the necessary credentials (API Keys, usernames, tokens, passwords).</li>
+</ul>
+</li>
+<li>Click the <strong>Fork</strong> button in the <strong>Forking Wizard</strong>.</li>
+<li>A copy of the datasource will now be created in the selected target project. You will be forwarded to that datasource created in the target project.</li>
+<li><strong>Reindexing Datasets:</strong> After successfully forking the datasource, you <strong>must</strong> initiate the reindexing of the forked datasets. This step is crucial as the actual vector databases are not forked.</li>
+</ol>
+<p><img alt="Datasource-Forking_Wizard" src="../../../img/guides/forking/Datasource-Forking_Wizard.png" /></p>
+<p><strong>Important Note:</strong> When forking a datasource, the actual datasets and authentication details are not copied to the new project:</p>
 <ul>
-<li><strong>Preserve Existing Variables</strong>: Do not remove any pre-existing variables in the configuration as they are crucial for the agent's functionality.</li>
-<li><strong>Avoid Assigning Values to Variables</strong>: Leave variables unassigned; they will be automatically populated during execution.</li>
-<li>Include the following essential sections in your configuration:</li>
+<li><strong>Reconfigure Dataset Connections:</strong> You will need to re-enter the storage details and connection parameters, including authentication credentials (API Keys, usernames, tokens, passwords) while forking.</li>
+<li><strong>Reindex Datasets:</strong> You will need to initiate the reindexing of the datasets in the forked datasource within the target project.</li>
 </ul>
-<pre><code>  ### Tools:
-{{tools}} 
-- Say to user: tool: &quot;complete_task&quot;, args: &quot;final_answer&quot;  - complete message to be communicated to the user, shoudl contain as much details as possible
-
-### Scratchpad
-{{agent_scratchpad}}
-
-### Chat History
-{{chat_history}}
-
-### User Input:
-{{input}}
-
-### Response format
-{
-    &quot;thoughts&quot;: {
-        &quot;text&quot;: &quot;message to a user follow the style of your persona&quot;,
-        &quot;plan&quot;: &quot;short bulleted, list that conveys long-term plan&quot;,
-        &quot;criticism&quot;: &quot;constructive self-criticism&quot;,
-    },
-    &quot;tool&quot;: {
-        &quot;name&quot;: &quot;tool name&quot;,
-        &quot;args&quot;: { &quot;arg name&quot;: &quot;value&quot; }
-    }
-}
-You must answer with only JSON and it could be parsed by Python json.loads
-</code></pre>
-<p><img alt="Agents-Raw" src="../../img/user-guide/agents/Agents-Raw.png" /></p>
-<p>By following these guidelines and including the necessary code snippet, you ensure that the Raw Agent functions correctly and integrates seamlessly with the intended processes.</p>
-<h2 id="practical-examples">Practical Examples</h2>
-<p>Gain hands-on experience with our detailed examples that illustrate the practical application of Agents in real-world scenarios:</p>
+<p><img alt="Datasource-Reindex" src="../../../img/guides/forking/Datasource-Reindex.png" /></p>
+<h3 id="forking-an-agent">Forking an Agent</h3>
+<ol>
+<li>Navigate to the <strong>Agents</strong> menu within the project containing the agent you wish to fork.</li>
+<li>Locate the specific agent you want to fork.</li>
+<li>Open the agent and click the <strong>Fork agent</strong> icon.</li>
+<li><strong>Forking Wizard - Agent Options:</strong></li>
+<li><strong>Select Project:</strong> Choose the target project where you want to fork the agent.<ul>
+<li><strong>Select Versions to Fork:</strong> You can choose to fork all versions of the agent or select specific versions. <strong>Note:</strong> It is always highly recommended to select and fork the 'latest' version of the agent, otherwise you might have validation errors, preventing successful fork, or latest version will be cloned from one of the versions.</li>
+<li><strong>Select LLM Model:</strong> For each version you are forking, you can select the desired LLM Model. You can manually change the selected model to your preferred choice before completing the import.</li>
+<li><strong>Provide Mandatory Parameters:</strong> Fill in all mandatory fields and parameters, which are highlighted with an asterisk <code>*</code>. This typically includes various authentication parameters for the agent's toolkits.</li>
+<li><strong>Select Tools to Fork:</strong> Choose which tools you want to fork along with the agent.</li>
+<li><strong>Configure Tool Parameters:</strong> You can review and reconfigure the available options and parameters for each tool being forked. You can either use the default values from the toolkit or customize them as needed.</li>
+<li><strong>Provide Toolkit Authentication:</strong> For any toolkits requiring authentication, you will need to manually provide the necessary credentials (API Keys, usernames, tokens, passwords).</li>
+</ul>
+</li>
+<li>Click the <strong>Fork</strong> button in the <strong>Forking Wizard</strong>.</li>
+<li>A copy of the agent will now be created in the selected target project. You will be forwarded to that agent created in the target project.</li>
+</ol>
+<p><strong>Important Note:</strong> When forking an agent, the authentication details for any configured toolkits are not copied to the new project. You will need to re-enter the authentication credentials (API Keys, usernames, tokens, passwords) for any toolkits while forking the agent.</p>
+<p><img alt="Agent-Forking_Wizard" src="../../../img/guides/forking/Agent-Forking_Wizard.png" /></p>
+<h3 id="forking-master-agents-with-connected-entities">Forking Master Agents with Connected Entities</h3>
+<p>ELITEA's forking feature extends its convenience to complex AI workflows by allowing you to fork a 'master' agent along with all its directly connected entities. When you fork a 'master' agent that has other agents, prompts, or datasources configured as toolkits, these nested entities will also be automatically forked to the target project.</p>
+<p>This capability significantly simplifies the process of transferring complex AI workflows between projects. Instead of forking each individual component separately, you can fork the main agent, and ELITEA will ensure that all the necessary supporting entities are also copied to the new project.</p>
+<p><strong>Benefits of Forking Master Agents with Connected Entities:</strong></p>
+<ul>
+<li><strong>Simplified Transfer of Complex Workflows:</strong> Move entire AI workflows, including agents and their dependencies, in a single operation.</li>
+<li><strong>Preservation of Relationships:</strong> Maintain the connections and configurations between the 'master' agent and its toolkits in the forked version.</li>
+<li><strong>Time Efficiency:</strong> Avoid the manual effort of locating and forking each connected entity individually.</li>
+</ul>
+<p><strong>How it Works:</strong></p>
+<p>When you initiate the forking process for a 'master' agent, ELITEA identifies all the prompts, datasources, and child agents that are configured as toolkits for that 'master' agent. During the forking operation, copies of these connected entities are also created in the target project, ensuring that the forked 'master' agent has access to the necessary resources to function correctly.</p>
+<p><img alt="MasterAgent-Forking_Wizard" src="../../../img/guides/forking/MasterAgent-Forking_Wizard.png" /></p>
+<p><strong>Important Considerations:</strong></p>
+<ul>
+<li>As with individual entity forking, the actual datasets within datasources will need to be reindexed in the target project after forking the 'master' agent and its connected entities.</li>
+<li>As with individual entity forking, the authentication details for any configured toolkits and datasets are not copied to the new project. You will need to re-enter the authentication credentials (API Keys, usernames, tokens, passwords) for any toolkits and datasets while forking the 'master' agent.</li>
+<li>The forked connected entities will have the same names as their originals. If entities with the same names already exist in the target project, you may encounter naming conflicts.</li>
+</ul>
+<p>This feature makes it much easier to replicate and share complex AI workflows across different projects within your ELITEA environment.</p>
+<h2 id="best-practices-and-use-cases">Best Practices and Use Cases</h2>
+<ul>
+<li><strong>Project Reorganization:</strong> Use forking to move prompts, datasources, or agents from a temporary or experimental project to a more permanent or production-ready project within the same environment.</li>
+<li><strong>Team Collaboration:</strong> Fork entities into a shared project where multiple team members can access and utilize them.</li>
+<li><strong>Experimentation and Development:</strong> Fork a production prompt or agent into a development project to test new ideas or modifications without risking changes to the original entity.</li>
+<li><strong>Creating Project-Specific Copies:</strong> Fork a general-purpose prompt, agent or datasource into a specific project and then customize it further to meet the unique needs of that project.</li>
+<li><strong>Streamlining Workflow:</strong> Instead of exporting and importing, use forking for quick transfers within the same ELITEA environment, especially when dealing with multiple entities.</li>
+</ul>
+<h3 id="when-to-use-forking-vs-exportimport">When to Use Forking vs Export/Import</h3>
+<ul>
+<li><strong>Forking:</strong> Use forking when you need to transfer entities between projects within the <strong>same ELITEA environment</strong>. It's a faster and more integrated process for internal transfers.</li>
+<li><strong>Export/Import:</strong> Use Export and Import when you need to:<ul>
+<li>Transfer entities between <strong>different ELITEA environments</strong>.</li>
+<li>Create <strong>backups</strong> of your entities.</li>
+<li>Create <strong>duplicates</strong> of entities within the <strong>same project</strong>.</li>
+<li>Share entities with users who may not have access to the same ELITEA environment.</li>
+</ul>
+</li>
+</ul>
+<p>By understanding and utilizing the Forking feature effectively, you can significantly streamline your workflow within ELITEA, improve collaboration within your environment, and efficiently manage your AI assets across different projects.</p>
 
 
 

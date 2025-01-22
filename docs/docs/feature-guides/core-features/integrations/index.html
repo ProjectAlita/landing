@@ -1,0 +1,2125 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://elitea.ai/docs/feature-guides/core-features/integrations/">
+      
+      
+        <link rel="prev" href="../forking/">
+      
+      
+        <link rel="next" href="../prompt-magic-assistant/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Integrations Guide - ELITEA Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#integrations-and-configurations-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="ELITEA Documentation" class="md-header__button md-logo" aria-label="ELITEA Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ELITEA Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Integrations Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="ELITEA Documentation" class="md-nav__button md-logo" aria-label="ELITEA Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ELITEA Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../home/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Release Notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Release Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../release-notes/rn_current/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RN 1.4.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Archive
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Archive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../release-notes/archived/rn5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RN 1.3.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../release-notes/archived/rn4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RN 1.2.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../release-notes/archived/rn3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RN 1.1.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../release-notes/archived/rn2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RN 1.0.1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../release-notes/archived/rn1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RN 1.0.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Platform Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Platform Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ELITEA Menus & Settings
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            ELITEA Menus & Settings
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../platform-documentation/menus/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../platform-documentation/menus/settings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Settings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../platform-documentation/menus/chat/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../platform-documentation/menus/prompts/prompts.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../platform-documentation/menus/datasources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Datasources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../platform-documentation/menus/agents/agents.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agents
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../platform-documentation/menus/collections/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Collections
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ELITEA Extensions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            ELITEA Extensions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../platform-documentation/extensions/alita-code/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Alita Code
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../platform-documentation/extensions/alita-chat/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Alita Code Chat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Features Guides
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Features Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ELITEA Core Features
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            ELITEA Core Features
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../export-import/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Export and Import Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../forking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Forking Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Integrations Guide
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Integrations Guide
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-feature-connecting-elitea-with-external-platforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration Feature: Connecting ELITEA with External Platforms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integration Feature: Connecting ELITEA with External Platforms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#confluence-integration-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confluence Integration Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github-integration-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      GitHub Integration Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jira-integration-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jira Integration Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testrail-integration-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      TestRail Integration Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#important-considerations-for-integrations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Considerations for Integrations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configurations-applying-integrations-to-agent-toolkits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurations: Applying Integrations to Agent Toolkits
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configurations: Applying Integrations to Agent Toolkits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-manual-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create manual configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-private-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create private configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-project-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create project configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurations-selecting-existing-integrations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurations: Selecting existing Integrations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices-and-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices and Use Cases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices and Use Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-case-1-individual-jira-credentials-for-user-story-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 1: Individual Jira Credentials for User Story Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-2-service-account-for-github-code-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 2: Service Account for GitHub Code Access
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-3-mixed-authentication-for-confluence-and-testrail-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 3: Mixed Authentication for Confluence and TestRail Workflow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prompt-magic-assistant/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt Magic Assistant Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../public-project/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Public Project Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../monitoring.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Monitoring Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ELITEA Advanced Features
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            ELITEA Advanced Features
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced-features/roles.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Roles Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    How TOs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            How TOs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Agents & Toolkits
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            Agents & Toolkits
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../how-tos/agents-toolkits/pipeline-agent-framework/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pipeline Agent Framework
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    General How-Tos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            General How-Tos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../how-tos/creating-prompts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to Create and Publish Useful Prompts for Testing and QA Activities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faqs.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Support & Resources
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Support & Resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../support-resources/contact-support/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact Us
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../support-resources/additional-resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resources & Materials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-feature-connecting-elitea-with-external-platforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration Feature: Connecting ELITEA with External Platforms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integration Feature: Connecting ELITEA with External Platforms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#confluence-integration-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confluence Integration Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github-integration-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      GitHub Integration Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jira-integration-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jira Integration Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testrail-integration-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      TestRail Integration Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#important-considerations-for-integrations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Considerations for Integrations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configurations-applying-integrations-to-agent-toolkits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurations: Applying Integrations to Agent Toolkits
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configurations: Applying Integrations to Agent Toolkits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-manual-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create manual configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-private-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create private configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-project-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create project configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurations-selecting-existing-integrations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurations: Selecting existing Integrations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices-and-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices and Use Cases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices and Use Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-case-1-individual-jira-credentials-for-user-story-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 1: Individual Jira Credentials for User Story Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-2-service-account-for-github-code-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 2: Service Account for GitHub Code Access
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-3-mixed-authentication-for-confluence-and-testrail-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case 3: Mixed Authentication for Confluence and TestRail Workflow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="integrations-and-configurations-guide">Integrations and Configurations Guide</h1>
+<h2 id="introduction">Introduction</h2>
+<p>This user guide provides a comprehensive overview of the <strong>Integrations</strong> feature in ELITEA and how to leverage these integrations through <strong>Configurations</strong> within Agent toolkits. These powerful functionalities enable seamless connections with external platforms, streamlining workflows and enhancing collaboration across different tools.</p>
+<p>The ability to integrate with external services and manage their configurations within ELITEA offers significant benefits, including:</p>
+<ul>
+<li><strong>Enhanced Workflow Efficiency:</strong> Connect ELITEA with your existing tools like Jira, Confluence, GitHub, and TestRail to automate tasks, share information, and reduce manual data entry.</li>
+<li><strong>Centralized Management:</strong> Manage connections to various external services from a single location within ELITEA, simplifying administration and improving visibility.</li>
+<li><strong>Customized Authentication:</strong> Configure authentication settings for external tools at different levels (personal or project-specific) to meet various security and access requirements.</li>
+<li><strong>Flexibility and Reusability:</strong> Create reusable integration configurations that can be easily applied to multiple Agent toolkits, saving time and effort.</li>
+</ul>
+<p>This guide will detail the process of setting up Integrations and utilizing Configurations within Agent toolkits, along with best practices and practical use cases to help you effectively leverage these features. </p>
+<p><strong>Important Note:</strong></p>
+<p>In ELITEA, your work is organized within three distinct types of spaces:</p>
+<ul>
+<li><strong>Private Workspace:</strong> This is your personal area within ELITEA. You have exclusive access to all the content you create and manage here. Think of it as your individual sandbox where you can experiment and build your AI solutions. This includes your personal Chats, Agents, Prompts, Datasources, Collections and Artifacts.</li>
+<li><strong>Team Project:</strong> These are collaborative spaces where multiple users are added as team members. Within a Team project, all members have access to the project's content, fostering collaboration and shared development. This shared content includes Chats, Agents, Prompts, Datasources, Collections and Artifacts that belong to that specific project.</li>
+<li><strong>Public Project:</strong> This space allows you to engage with the wider ELITEA community and explore content shared by other users. This shared content includes Chats, Agents, Prompts, Datasources, and Collections.</li>
+</ul>
+<p>Understanding the distinction between your <strong>Private Workspace</strong>, where you have exclusive access to your content, and <strong>Team Projects</strong>, which are collaborative spaces where team members share access to project resources, is crucial for effectively managing <strong>Integrations</strong> and <strong>Configurations</strong> within ELITEA.</p>
+<h2 id="integration-feature-connecting-elitea-with-external-platforms">Integration Feature: Connecting ELITEA with External Platforms</h2>
+<p>The <strong>Integrations</strong> menu in ELITEA serves as a central hub for establishing connections with external platforms. By configuring integrations, you make these external services available for use within your Agent toolkits.</p>
+<p><strong>Key Aspects of the Integration Feature:</strong></p>
+<ul>
+<li><strong>Centralized Connection Management:</strong> The Integrations menu provides a single point of control for managing connections to various external services.</li>
+<li><strong>Supported Platforms:</strong> ELITEA currently supports integrations with <strong>Jira</strong>, <strong>Confluence</strong>, <strong>GitHub</strong>, and <strong>TestRail</strong>, with plans to add more services in future releases.</li>
+<li><strong>Reusable Configurations:</strong> Once an integration is configured, it can be reused across multiple Agent toolkits within the <strong>same project</strong> or your <strong>Private</strong> workspace.</li>
+<li><strong>Private and Project Level Integrations:</strong> You can create integrations within your <strong>Private</strong> workspace for personal use or within <strong>Team</strong> projects for shared access among project members.</li>
+<li><strong>Secure Authentication:</strong> ELITEA offers various secure authentication methods for connecting to external platforms, including API Keys, Tokens, Passwords, and Private Keys, with the option to store sensitive credentials securely using <strong><a href="../admin-guide/settings.md#secrets">Secrets</a></strong>.</li>
+</ul>
+<p><strong>Accessing the Integrations Menu:</strong></p>
+<ol>
+<li>Log in to ELITEA.</li>
+<li>Navigate to either your <strong>Private</strong> workspace or the specific <strong>Team</strong> project where you want to configure the integration.</li>
+<li>Click on the <strong>Your Avatar</strong> icon located at the top right corner of the page to open the <strong>Settings</strong> sidebar menu.</li>
+<li>Click the <strong>Integrations</strong> to navigate to that section.</li>
+</ol>
+<p><img alt="Settings-Integrations" src="../../../img/guides/integrations/Settings-Integrations.png" /></p>
+<p><img alt="Integrations-Menu" src="../../../img/guides/integrations/Integrations-Menu.png" /></p>
+<p><strong>Setting up an Integration:</strong></p>
+<ol>
+<li>In the Integrations menu, click the <strong>+</strong> icon to create a new integration.</li>
+<li>A pop-up window will appear, prompting you to <strong>Select Integration Type</strong>. Choose the service you want to integrate with (e.g., Confluence, GitHub, Jira, TestRail).</li>
+<li>You will be presented with a configuration form specific to the selected integration type. Follow the detailed steps below for each service.</li>
+<li>Configure the Intergation parameters.</li>
+<li>Click the <strong>Save</strong> button to finalize the integration setup.</li>
+</ol>
+<p><img alt="Integrations-Create_New_Integration" src="../../../img/guides/integrations/Integrations-Create_New_Integration.png" /></p>
+<p>After saving, the newly created integration will be added to the <strong>Integrations</strong> table, making it available for selection and reuse in the Configurations section of your Agent toolkits. You can manage your saved integrations directly from the <strong>Integrations</strong> table. In the <strong>Actions</strong> column, click on the ellipsis icon (<code>...</code>) next to a specific integration, you will reveal options to <strong>Edit</strong> the integration details, <strong>Set as Default</strong> to make it the default one for that Integration type, or <strong>Delete</strong> the integration if it's no longer needed.</p>
+<h3 id="confluence-integration-setup">Confluence Integration Setup</h3>
+<p>To enable connection with your <strong>Confluence</strong> instance:</p>
+<ol>
+<li><strong>Initiate New Integration:</strong> Click the <code>+</code> icon in the Integrations menu and select <strong>Confluence</strong>.</li>
+<li><strong>Enter Integration Details:</strong><ul>
+<li><strong>Name:</strong> Provide a descriptive name for this integration (e.g., "Confluence - KB Name").</li>
+<li><strong>URL:</strong> Enter the base URL of your Confluence instance (e.g., <code>https://kb.epam.com/</code>).</li>
+<li><strong>Authentication Options:</strong> Choose your preferred authentication method:<ul>
+<li><strong>API Key:</strong><ul>
+<li>Select <strong>API Key</strong>.</li>
+<li>Enter your Confluence API key in the <strong>Password</strong> field or select a pre-configured <strong>Secret</strong> from the dropdown.</li>
+<li>Enter the associated <strong>Username</strong> for the API key.</li>
+</ul>
+</li>
+<li><strong>Token:</strong><ul>
+<li>Select <strong>Token</strong>.</li>
+<li>Enter your Confluence API token in the <strong>Password</strong> field or select a pre-configured <strong>Secret</strong> from the dropdown.</li>
+</ul>
+</li>
+<li><strong>Username:</strong><ul>
+<li>Select <strong>Username</strong>.</li>
+<li>Enter your Confluence <strong>Username</strong>.</li>
+<li>Enter your Confluence <strong>Password</strong> or select a pre-configured <strong>Secret</strong> from the dropdown.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Hosting Option:</strong> Select the appropriate hosting type:<ul>
+<li><strong>Cloud:</strong> For Confluence instances hosted on Atlassian's cloud.</li>
+<li><strong>Server:</strong> For self-hosted or enterprise Confluence instances. <strong>Important Note:</strong> For connecting to Epam's Confluence, select <strong>Server</strong>.</li>
+</ul>
+</li>
+<li><strong>Set as Default:</strong> Optionally, check this box to make this integration the default <strong>Confluence</strong> connection for the <strong>Private</strong> workspace or <strong>Team</strong> project.</li>
+</ul>
+</li>
+<li><strong>Save the Integration:</strong> Click the <strong>Save</strong> button.</li>
+</ol>
+<p><img alt="Integrations-Confluence" src="../../../img/guides/integrations/Integrations-Confluence.png" /></p>
+<h3 id="github-integration-setup">GitHub Integration Setup</h3>
+<p>To connect with your <strong>GitHub</strong> repositories:</p>
+<ol>
+<li><strong>Initiate New Integration:</strong> Click the <code>+</code> icon in the Integrations menu and select <strong>GitHub</strong>.</li>
+<li><strong>Enter Integration Details:</strong><ul>
+<li><strong>Name:</strong> Provide a descriptive name for this integration (e.g., "GitHub - Repo Name").</li>
+<li><strong>Authentication Options:</strong> Choose your preferred authentication method:<ul>
+<li><strong>Private Key:</strong><ul>
+<li>Select <strong>Private Key</strong>.</li>
+<li>Enter the <strong>App ID</strong> for your GitHub App.</li>
+<li>Enter the <strong>Private Key</strong> in the <strong>Password</strong> field or select a pre-configured <strong>Secret</strong>.</li>
+</ul>
+</li>
+<li><strong>Token:</strong><ul>
+<li>Select <strong>Token</strong>.</li>
+<li>Enter your GitHub Personal Access Token in the <strong>Password</strong> field or select a pre-configured <strong>Secret</strong>.</li>
+</ul>
+</li>
+<li><strong>Password:</strong><ul>
+<li>Select <strong>Password</strong>.</li>
+<li>Enter your GitHub <strong>Username</strong>.</li>
+<li>Enter your GitHub account <strong>Password</strong> in the <strong>Password</strong> field or select a pre-configured <strong>Secret</strong>.</li>
+</ul>
+</li>
+<li><strong>Anonymous:</strong> Select <strong>Anonymous</strong> if no authentication is required for the specific GitHub repository you intend to access (typically for public repositories).</li>
+</ul>
+</li>
+<li><strong>Set as Default:</strong> Optionally, check this box to make this integration the default <strong>GitHub</strong> connection for the <strong>Private</strong> workspace or <strong>Team</strong> project.</li>
+</ul>
+</li>
+<li><strong>Save the Integration:</strong> Click the <strong>Save</strong> button.</li>
+</ol>
+<p><img alt="Integrations-GitHub" src="../../../img/guides/integrations/Integrations-GitHub.png" /></p>
+<h3 id="jira-integration-setup">Jira Integration Setup</h3>
+<p>To enable connection with your <strong>Jira</strong> instance:</p>
+<ol>
+<li><strong>Initiate New Integration:</strong> Click the <code>+</code> icon in the Integrations menu and select <strong>Jira</strong>.</li>
+<li><strong>Enter Integration Details:</strong><ul>
+<li><strong>Name:</strong> Provide a descriptive name for this integration (e.g., "Jira - Project Name").</li>
+<li><strong>URL:</strong> Enter the base URL of your Jira instance (e.g., <code>https://jiraeu.epam.com/</code>).</li>
+<li><strong>Authentication Options:</strong> Choose your preferred authentication method:<ul>
+<li><strong>API Key:</strong><ul>
+<li>Select <strong>API Key</strong>.</li>
+<li>Enter your Jira API key in the <strong>Password</strong> field or select a pre-configured <strong>Secret</strong>.</li>
+<li>Enter the associated <strong>Username</strong> for the API key.</li>
+</ul>
+</li>
+<li><strong>Token:</strong><ul>
+<li>Select <strong>Token</strong>.</li>
+<li>Enter your Jira API token in the <strong>Password</strong> field or select a pre-configured <strong>Secret</strong>.</li>
+</ul>
+</li>
+<li><strong>Username:</strong><ul>
+<li>Select <strong>Username</strong>.</li>
+<li>Enter your Jira <strong>Username</strong>.</li>
+<li>Enter your Jira <strong>Password</strong> or select a pre-configured <strong>Secret</strong>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Hosting Option:</strong> Select the appropriate hosting type:<ul>
+<li><strong>Cloud:</strong> For Jira instances hosted on Atlassian's cloud.</li>
+<li><strong>Server:</strong> For self-hosted or enterprise Jira instances. <strong>Important Note:</strong> For connecting to Epam's Jira, select <strong>Server</strong>.</li>
+</ul>
+</li>
+<li><strong>Set as Default:</strong> Optionally, check this box to make this integration the default <strong>Jira</strong> connection for the <strong>Private</strong> workspace or <strong>Team</strong> project.</li>
+</ul>
+</li>
+<li><strong>Save the Integration:</strong> Click the <strong>Save</strong> button.</li>
+</ol>
+<p><img alt="Integrations-Jira" src="../../../img/guides/integrations/Integrations-Jira.png" /></p>
+<h3 id="testrail-integration-setup">TestRail Integration Setup</h3>
+<p>To connect with your <strong>TestRail</strong> instance:</p>
+<ol>
+<li><strong>Initiate New Integration:</strong> Click the <code>+</code> icon in the Integrations menu and select <strong>TestRail</strong>.</li>
+<li><strong>Enter Integration Details:</strong><ul>
+<li><strong>Name:</strong> Provide a descriptive name for this integration (e.g., "TestRail - Project Name").</li>
+<li><strong>URL:</strong> Enter the base URL of your TestRail instance (e.g., <code>https://testrail.epam.com/</code>).</li>
+<li><strong>Email:</strong> Enter the email address associated with your TestRail account.</li>
+<li><strong>Authentication Options:</strong> Choose your preferred authentication method:<ul>
+<li><strong>Password:</strong> Enter your TestRail account <strong>Password</strong> in the <strong>Password</strong> field or select a pre-configured <strong>Secret</strong>.</li>
+</ul>
+</li>
+<li><strong>Set as Default:</strong> Optionally, check this box to make this integration the default <strong>TestRail</strong> connection for the <strong>Private</strong> workspace or <strong>Team</strong> project.</li>
+</ul>
+</li>
+<li><strong>Save the Integration:</strong> Click the <strong>Save</strong> button.</li>
+</ol>
+<p><img alt="Integrations-TestRail" src="../../../img/guides/integrations/Integrations-TestRail.png" /></p>
+<h3 id="important-considerations-for-integrations">Important Considerations for Integrations</h3>
+<p>When setting up integrations in ELITEA, it's important to understand the following constraints and best practices:</p>
+<ul>
+<li>
+<p><strong>Uniqueness per Integration Type:</strong></p>
+<ul>
+<li><strong>Jira, Confluence, and TestRail:</strong> Within your Private workspace or a Team project, you can create multiple integrations for Jira, Confluence, and TestRail. The uniqueness of these integrations is determined by the <strong>URL</strong> of the respective service. This means you can connect to different Jira instances, Confluence spaces, or TestRail accounts by creating separate integrations for each unique URL.</li>
+<li><strong>GitHub:</strong>  In contrast to Jira, Confluence, and TestRail, you can create <strong>only one</strong> GitHub integration within your <strong>Private</strong> workspace or a <strong>Team</strong> project. This single integration will serve as the connection point for all your GitHub interactions within that space.</li>
+</ul>
+</li>
+<li>
+<p><strong>Authentication Verification:</strong>  Always double-check the authentication details you provide for each integration. Incorrect credentials will prevent ELITEA from successfully connecting to the external service. Ensure that the API keys, tokens, passwords, or private keys you enter are accurate and have the necessary permissions to access the desired resources on the external platform. Verifying the authentication setup is <strong>crucial</strong> for ensuring your integrations (and the configurations that use them) function correctly.</p>
+</li>
+</ul>
+<h2 id="configurations-applying-integrations-to-agent-toolkits">Configurations: Applying Integrations to Agent Toolkits</h2>
+<p><strong>Configurations</strong> provide the mechanism to utilize the integrations you've set up within your Agent toolkits. When configuring a toolkit for Jira, Confluence, GitHub, or TestRail within an Agent, you have the option to select a <strong>pre-configured integration</strong>, eliminating the need to enter authentication details directly into the toolkit settings.</p>
+<p><strong>Configuration Options:</strong></p>
+<p>When configuring a toolkit, you will typically find a dropdown menu or a selection field related to "Configuration" or "Integration." This section offers three primary options:</p>
+<ul>
+<li><strong>Create manual configuration:</strong> This option allows you to enter all the necessary connection details (URL, authentication credentials) directly within the toolkit settings. This is useful for one-off connections or when you don't want to create a reusable integration.</li>
+<li><strong>Create private configuration:</strong> Selecting this option will create a new integration configuration specifically for this toolkit. The entered details will be used for this toolkit and will also be saved as a reusable integration in your <strong>Private</strong> workspace's Integrations page. This allows you to reuse this configuration in other toolkits within your <strong>Private</strong> workspace or <strong>Team</strong> projects.</li>
+<li><strong>Create project configuration:</strong> Similar to the private configuration, this option creates a new integration configuration for the toolkit. The details will be used for this toolkit and will also be saved as a reusable integration in the current <strong>Team</strong> project's Integrations page, making it available for other agents and toolkits within <strong>that project</strong>.</li>
+<li><strong>Select existing integration:</strong> This option allows you to choose from the list of integrations that have already been configured in your <strong>Private</strong> workspace or the current <strong>Team</strong> project's Integrations page. Selecting an existing integration automatically populates the toolkit's connection details, simplifying the setup process.</li>
+</ul>
+<p><img alt="Configuration-Options" src="../../../img/guides/integrations/Configuration-Options.png" /></p>
+<h3 id="create-manual-configuration">Create manual configuration</h3>
+<ol>
+<li>Click the <strong>+ Agent</strong> button located at the top right corner or open already created Agent.</li>
+<li>Click the <strong>+ icon</strong> or open already created toolkit under <strong>TOOLS</strong> section.</li>
+<li>Select the desired tool (Confluence, Jira, GitHub, TestRail) from the dropdown list. The <strong>New tool</strong> configuration section is opened.</li>
+<li>Select the <strong>Manual configuration</strong> under the <strong>Configuration</strong> option.</li>
+<li>Depending on the selected toolkit fill all <strong>required fields</strong> and <strong>options</strong>.</li>
+<li>Click the <strong>Save</strong> button to apply changes.</li>
+</ol>
+<p><img alt="Configuration-Manual_Configuration" src="../../../img/guides/integrations/Configuration-Manual_Configuration.png" /></p>
+<h3 id="create-private-configuration">Create private configuration</h3>
+<ol>
+<li>Click the <strong>+ Agent</strong> button located at the top right corner or open already created Agent.</li>
+<li>Click the <strong>+ icon</strong> or open already created toolkit under <strong>TOOLS</strong> section.</li>
+<li>Select the desired tool (Confluence, Jira, GitHub, TestRail) from the dropdown list. The <strong>New tool</strong> configuration section is opened.</li>
+<li>Select the <strong>Create private configuration</strong> under the <strong>Configuration</strong> option.</li>
+<li>Provide the <strong>Configuration Name</strong>.</li>
+<li>Depending on the selected toolkit fill all <strong>required fields</strong> and <strong>options</strong>.</li>
+<li>Click the <strong>Save configuration</strong> button to save the changes and add this configuration as reusable integration in your <strong>Private</strong> workspace's Integrations page.</li>
+</ol>
+<p><img alt="Configuration-Private_Configuration" src="../../../img/guides/integrations/Configuration-Private_Configuration.png" /></p>
+<h3 id="create-project-configuration">Create project configuration</h3>
+<ol>
+<li>Click the <strong>+ Agent</strong> button located at the top right corner or open already created Agent.</li>
+<li>Click the <strong>+ icon</strong> or open already created toolkit under <strong>TOOLS</strong> section.</li>
+<li>Select the desired tool (Confluence, Jira, GitHub, TestRail) from the dropdown list. The <strong>New tool</strong> configuration section is opened.</li>
+<li>Select the <strong>Create project configuration</strong> under the <strong>Configuration</strong> option.</li>
+<li>Provide the <strong>Configuration Name</strong>.</li>
+<li>Depending on the selected toolkit fill all <strong>required fields</strong> and <strong>options</strong>.</li>
+<li>Click the <strong>Save configuration</strong> button to save the changes and add this configuration as reusable integration in your <strong>Team</strong> project's Integrations page.</li>
+</ol>
+<p><img alt="Configuration-Project_Configuration" src="../../../img/guides/integrations/Configuration-Project_Configuration.png" /></p>
+<h3 id="configurations-selecting-existing-integrations">Configurations: Selecting existing Integrations</h3>
+<p>Once you have configured integrations in your <strong>Private</strong> workspace or within a <strong>Team</strong> project, these integrations become available for selection when configuring toolkits in your Agents. This allows you to easily reuse established connections to external platforms.</p>
+<p>When adding or editing a Jira, Confluence, GitHub, or TestRail toolkit in an Agent, you will find a <strong>Configuration</strong> dropdown list. This list displays all the available integrations of the corresponding type that you can use for that specific toolkit.</p>
+<p><strong>Identifying Integration Scope:</strong></p>
+<p>To help you distinguish between integrations configured in your Private workspace and those configured within the current Team project, ELITEA uses distinct icons:</p>
+<ul>
+<li><strong>Private Integration</strong>: Integrations configured in your <strong>Private</strong> workspace are indicated by a person icon (👤) at the beginning of the integration URL or name in the dropdown list.</li>
+<li><strong>Project Integration</strong>: Integrations configured within the current <strong>Team</strong> project are indicated by a folder icon (📁) at the beginning of the integration URL or name.</li>
+</ul>
+<p><img alt="Configuration-Select_Private_Integration" src="../../../img/guides/integrations/Configuration-Select_Private_Integration.png" /></p>
+<p><img alt="Configuration-Select_Project_Integration" src="../../../img/guides/integrations/Configuration-Select_Project_Integration.png" /></p>
+<p><strong>Integration Naming Convention:</strong></p>
+<p>The naming convention for integrations in the dropdown list also helps you identify the specific connection:</p>
+<ul>
+<li><strong>Jira</strong>, <strong>Confluence</strong>, and <strong>TestRail</strong> Integrations: These integrations are listed using their configured URL. This ensures you can easily differentiate between connections to different instances of these tools (e.g., different Jira servers or Confluence spaces).</li>
+<li><strong>GitHub</strong> Integrations: Since only one <strong>GitHub</strong> integration is allowed per workspace or project, these integrations are simply listed as <strong>GitHub</strong>.</li>
+</ul>
+<p><strong>Toolkit-Specific Integration Filtering</strong>:</p>
+<p>The <strong>Configuration</strong> dropdown list is context-aware. When configuring a specific type of toolkit (e.g., a Jira toolkit), only integrations of that specific type (Jira integrations) will be displayed for selection. This prevents you from accidentally selecting an integration intended for a different tool.</p>
+<p>By understanding these visual cues and naming conventions, you can easily select the appropriate pre-configured integration for your Agent toolkit, simplifying the setup process and ensuring consistent authentication.</p>
+<h2 id="best-practices-and-use-cases">Best Practices and Use Cases</h2>
+<p>Here are some examples of how to effectively utilize Integrations and Configurations in your ELITEA workflows:</p>
+<h3 id="use-case-1-individual-jira-credentials-for-user-story-management">Use Case 1: Individual Jira Credentials for User Story Management</h3>
+<ul>
+<li><strong>Scenario:</strong> You are building an agent workflow to create and publish user stories in Jira. You want each Business Analyst (BA) using the agent to authenticate with their own Jira credentials to ensure traceability of who created which user story.</li>
+<li><strong>Solution:</strong><ol>
+<li>Instruct each BA to configure their personal Jira integration in their <strong>Private</strong> workspace's Integrations page.</li>
+<li>In the project where the agent is being configured, when setting up the Jira toolkit for publishing user stories, select already created <strong>Private configuration</strong> option. This will allow each BA running the agent to use their own private Jira integration, using their personal credentials for authentication.</li>
+</ol>
+</li>
+</ul>
+<h3 id="use-case-2-service-account-for-github-code-access">Use Case 2: Service Account for GitHub Code Access</h3>
+<ul>
+<li><strong>Scenario:</strong> You are creating an agent workflow to read code from a GitHub repository to generate automation test cases. You have a dedicated service account for accessing the GitHub repository and want to use these credentials consistently for this purpose.</li>
+<li><strong>Solution:</strong><ol>
+<li>The team manager or a designated member configures a GitHub integration in the <strong>Team</strong> project Integrations page using the service account's credentials.</li>
+<li>When configuring the GitHub toolkit in the agent for reading code, select already created <strong>Project configuration</strong> option and choose the integration configured with the service account.</li>
+</ol>
+</li>
+</ul>
+<h3 id="use-case-3-mixed-authentication-for-confluence-and-testrail-workflow">Use Case 3: Mixed Authentication for Confluence and TestRail Workflow</h3>
+<ul>
+<li><strong>Scenario:</strong> You are building an agent workflow to read information from Confluence pages and then publish manual test cases in TestRail. You want to use a service account for accessing Confluence but require each Quality Assurance (QA) engineer to use their own TestRail credentials for publishing test cases.</li>
+<li><strong>Solution:</strong><ol>
+<li>The team manager configures a Confluence integration in the <strong>Team</strong> project Integrations page using the service account's credentials.</li>
+<li>Instruct each QA engineer to configure their personal TestRail integration in their <strong>Private</strong> workspace's Integrations page.</li>
+<li>When configuring the agent:<ul>
+<li>For the Confluence toolkit, use already created <strong>Project configuration</strong> and choose the service account integration.</li>
+<li>For the TestRail toolkit, use already created <strong>Private configuration</strong> option, allowing each QA to use their own TestRail integration.</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<p>By strategically using <strong>Integrations</strong> and <strong>Configurations</strong>, you can create flexible and secure agent workflows that cater to various authentication needs and enhance collaboration within your ELITEA environment.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>
