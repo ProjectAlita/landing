@@ -1438,6 +1438,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#deduplication-artifacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deduplication Artifacts
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1530,6 +1539,28 @@
   
   <span class="md-ellipsis">
     BitBucket Integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../browser_toolkit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Browser toolkit
     
   </span>
   
@@ -1767,11 +1798,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../xray_toolkit/" class="md-nav__link">
+      <a href="../sonar_toolkit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    XRAY Cloud Integration
+    Sonar Integration
     
   </span>
   
@@ -1838,6 +1869,28 @@
   
   <span class="md-ellipsis">
     TestRail Integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xray_toolkit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    XRAY Cloud Integration
     
   </span>
   
@@ -2196,6 +2249,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#deduplication-artifacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deduplication Artifacts
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2416,7 +2478,21 @@
 <li><strong>Retention Management:</strong> You can view and potentially modify the retention period for artifacts within the "Artifacts" section of the ELITEA application.(More details on managing retention can be found in <a href="../../../platform-documentation/menus/artifacts/#artifacts">ELITEA Artifacts page</a>).</li>
 <li><strong>Manual Deletion:</strong> Files and entire buckets can also be manually deleted at any time from the <a href="../../../platform-documentation/menus/artifacts/#artifacts">ELITEA Artifacts page</a>.</li>
 </ul>
-<p><img alt="artifact-artifacts_page" src="../../img/how-tos/artifact/artifacts_page.png" /></p>
+<p><img alt="artifact-artifacts_page" src="../../../img/how-tos/artifact/Artifacts_page.png" /></p>
+<p><img alt="artifact-artifacts_retention" src="../../../img/how-tos/artifact/Artifacts_retention.png" /></p>
+<h3 id="deduplication-artifacts">Deduplication Artifacts</h3>
+<p>After the first execution of the <a href="../../../platform-documentation/menus/datasources/#deduplicate">Datasource deduplication</a> functionality, an Artifact bucket named <strong>"datasource-deduplicate"</strong> is automatically created.  The result files from each deduplication process of current project are saved within this bucket.</p>
+<p>It is possible to:</p>
+<ul>
+<li><strong>Download Results:</strong> Download the Excel (.xlsx) files containing the deduplication results for further analysis or record-keeping.</li>
+<li><strong>Delete Results:</strong> Delete individual result files or clear out older deduplication results from the bucket as needed.</li>
+</ul>
+<p><strong>Bucket Management:</strong></p>
+<ul>
+<li><strong>Automatic Creation:</strong> The <strong>"datasource-deduplicate"</strong> bucket is created automatically the first time the Datasource deduplication feature is used within the project.</li>
+<li><strong>Recreation after Deletion:</strong> If <strong>"datasource-deduplicate"</strong> bucket will be deleted manually from the Artifacts menu, it will be automatically recreated the next time you perform a datasource deduplication operation. </li>
+</ul>
+<p><img alt="artifact-deduplication" src="../../../img/how-tos/artifact/deduplication-artifact.png" /></p>
 <h2 id="artifact-functionality-section">Artifact Functionality Section</h2>
 <h3 id="use-cases">Use Cases</h3>
 <p>The Artifact Toolkit provides a versatile set of tools to enhance agent workflows within ELITEA. Below are key use cases, illustrating how each tool can be applied to streamline data handling and improve agent capabilities:</p>
