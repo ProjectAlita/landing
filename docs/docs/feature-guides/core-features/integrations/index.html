@@ -1126,6 +1126,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#important-considerations-for-integrations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Considerations for Integrations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#confluence-integration-setup" class="md-nav__link">
     <span class="md-ellipsis">
       Confluence Integration Setup
@@ -1153,18 +1162,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#testrail-integration-setup" class="md-nav__link">
+  <a href="#qtest-integration-setup" class="md-nav__link">
     <span class="md-ellipsis">
-      TestRail Integration Setup
+      QTest Integration Setup
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#important-considerations-for-integrations" class="md-nav__link">
+  <a href="#testrail-integration-setup" class="md-nav__link">
     <span class="md-ellipsis">
-      Important Considerations for Integrations
+      TestRail Integration Setup
     </span>
   </a>
   
@@ -2302,6 +2311,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#important-considerations-for-integrations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Considerations for Integrations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#confluence-integration-setup" class="md-nav__link">
     <span class="md-ellipsis">
       Confluence Integration Setup
@@ -2329,18 +2347,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#testrail-integration-setup" class="md-nav__link">
+  <a href="#qtest-integration-setup" class="md-nav__link">
     <span class="md-ellipsis">
-      TestRail Integration Setup
+      QTest Integration Setup
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#important-considerations-for-integrations" class="md-nav__link">
+  <a href="#testrail-integration-setup" class="md-nav__link">
     <span class="md-ellipsis">
-      Important Considerations for Integrations
+      TestRail Integration Setup
     </span>
   </a>
   
@@ -2484,10 +2502,10 @@
 <p><strong>Key Aspects of the Integration Feature:</strong></p>
 <ul>
 <li><strong>Centralized Connection Management:</strong> The Integrations menu provides a single point of control for managing connections to various external services.</li>
-<li><strong>Supported Platforms:</strong> ELITEA currently supports integrations with <strong>Jira</strong>, <strong>Confluence</strong>, <strong>GitHub</strong>, and <strong>TestRail</strong>, with plans to add more services in future releases.</li>
+<li><strong>Supported Platforms:</strong> ELITEA currently supports integrations with <strong>Jira</strong>, <strong>Confluence</strong>, <strong>GitHub</strong>, <strong>QTest</strong> and <strong>TestRail</strong>, with plans to add more services in future releases.</li>
 <li><strong>Reusable Configurations:</strong> Once an integration is configured, it can be reused across multiple Agent toolkits within the <strong>same project</strong> or your <strong>Private</strong> workspace.</li>
 <li><strong>Private and Project Level Integrations:</strong> You can create integrations within your <strong>Private</strong> workspace for personal use or within <strong>Team</strong> projects for shared access among project members.</li>
-<li><strong>Secure Authentication:</strong> ELITEA offers various secure authentication methods for connecting to external platforms, including API Keys, Tokens, Passwords, and Private Keys, with the option to store sensitive credentials securely using <strong><a href="../admin-guide/settings.md#secrets">Secrets</a></strong>.</li>
+<li><strong>Secure Authentication:</strong> ELITEA offers various secure authentication methods for connecting to external platforms, including Basic, Bearer, Passwords, and Private Keys, with the option to store sensitive credentials securely using <strong><a href="../admin-guide/settings.md#secrets">Secrets</a></strong>.</li>
 </ul>
 <p><strong>Accessing the Integrations Menu:</strong></p>
 <ol>
@@ -2503,11 +2521,32 @@
 <li>In the Integrations menu, click the <strong>+</strong> icon to create a new integration.</li>
 <li>A pop-up window will appear, prompting you to <strong>Select Integration Type</strong>. Choose the service you want to integrate with (e.g., Confluence, GitHub, Jira, TestRail).</li>
 <li>You will be presented with a configuration form specific to the selected integration type. Follow the detailed steps below for each service.</li>
-<li>Configure the Intergation parameters.</li>
+<li>Configure the Integration parameters.</li>
 <li>Click the <strong>Save</strong> button to finalize the integration setup.</li>
 </ol>
 <p><img alt="Integrations-Create_New_Integration" src="../../../img/guides/integrations/Integrations-Create_New_Integration.png" /></p>
 <p>After saving, the newly created integration will be added to the <strong>Integrations</strong> table, making it available for selection and reuse in the Configurations section of your Agent toolkits. You can manage your saved integrations directly from the <strong>Integrations</strong> table. In the <strong>Actions</strong> column, click on the ellipsis icon (<code>...</code>) next to a specific integration, you will reveal options to <strong>Edit</strong> the integration details, <strong>Set as Default</strong> to make it the default one for that Integration type, or <strong>Delete</strong> the integration if it's no longer needed.</p>
+<h3 id="important-considerations-for-integrations">Important Considerations for Integrations</h3>
+<p>When setting up integrations in ELITEA, it's important to understand the following constraints and best practices:</p>
+<ul>
+<li>
+<p><strong>Uniqueness per Integration Type:</strong></p>
+<ul>
+<li><strong>Jira, Confluence, QTest and TestRail:</strong> Within your Private workspace or a Team project, you can create multiple integrations for Jira, Confluence, and TestRail. The uniqueness of these integrations is determined by the <strong>URL</strong> of the respective service. This means you can connect to different Jira instances, Confluence spaces, or TestRail accounts by creating separate integrations for each unique URL.</li>
+<li><strong>GitHub:</strong>  In contrast to Jira, Confluence, and TestRail, you can create <strong>only one</strong> GitHub integration within your <strong>Private</strong> workspace or a <strong>Team</strong> project. This single integration will serve as the connection point for all your GitHub interactions within that space.</li>
+</ul>
+</li>
+<li>
+<p><strong>Authentication Verification:</strong>  Always double-check the authentication details you provide for each integration. Incorrect credentials will prevent ELITEA from successfully connecting to the external service. Ensure that the Basic credentials, Bearer tokens, passwords, or private keys you enter are accurate and have the necessary permissions to access the desired resources on the external platform. Verifying the authentication setup is <strong>crucial</strong> for ensuring your integrations (and the configurations that use them) function correctly.</p>
+</li>
+</ul>
+<p><strong>Credential Entry Options for Integrations</strong></p>
+<p>For any integration that requires credentials (such as API Key, Basic, Bearer, Token, Password, etc.), you have two secure options for providing the value:</p>
+<ul>
+<li><strong>Manual Entry (Password):</strong> When you select the <strong>Password</strong> option for any authentication field (such as Basic, Bearer, API Token, etc.), you can enter the credential directly into the provided field. Use this if you want to input the value each time or for quick, one-off integrations.</li>
+<li><strong>Using a Secret (Recommended):</strong> For enhanced security and easier management, select the <strong>Secret</strong> option from the dropdown. This allows you to choose a pre-configured secret from the Secrets page. To use this option, you must first create and store the required credential (API Key, Bearer token, password, etc.) as a secret in the <strong>Secrets</strong> section of ELITEA. Once configured, simply select the secret from the dropdown when setting up your integration. This approach avoids exposing sensitive information in configuration forms and makes it easier to update credentials in the future.</li>
+</ul>
+<p>Whenever you see a credential field in any integration setup, you may use either method above. For more details on managing secrets, see the <a href="../../../platform-documentation/menus/settings/#secrets/">Secrets documentation</a>.</p>
 <h3 id="confluence-integration-setup">Confluence Integration Setup</h3>
 <p>To enable connection with your <strong>Confluence</strong> instance:</p>
 <ol>
@@ -2515,24 +2554,10 @@
 <li><strong>Enter Integration Details:</strong><ul>
 <li><strong>Name:</strong> Provide a descriptive name for this integration (e.g., "Confluence - KB Name").</li>
 <li><strong>URL:</strong> Enter the base URL of your Confluence instance (e.g., <code>https://kb.epam.com/</code>).</li>
-<li><strong>Authentication Options:</strong> Choose your preferred authentication method:<ul>
-<li><strong>API Key:</strong><ul>
-<li>Select <strong>API Key</strong>.</li>
-<li>Enter your Confluence API key in the <strong>Password</strong> field or select a pre-configured <strong>Secret</strong> from the dropdown.</li>
-<li>Enter the associated <strong>Username</strong> for the API key.</li>
-</ul>
-</li>
-<li><strong>Token:</strong><ul>
-<li>Select <strong>Token</strong>.</li>
-<li>Enter your Confluence API token in the <strong>Password</strong> field or select a pre-configured <strong>Secret</strong> from the dropdown.</li>
-</ul>
-</li>
-<li><strong>Username:</strong><ul>
-<li>Select <strong>Username</strong>.</li>
-<li>Enter your Confluence <strong>Username</strong>.</li>
-<li>Enter your Confluence <strong>Password</strong> or select a pre-configured <strong>Secret</strong> from the dropdown.</li>
-</ul>
-</li>
+<li><strong>Authentication Options:</strong><ul>
+<li><strong>Basic:</strong> Provide your Confluence Token and username.</li>
+<li><strong>Bearer:</strong> Provide your Confluence API token.      <br />
+  For each credential, you may enter it manually or select a Secret as described <a href="#important-considerations-for-integrations">above</a>.</li>
 </ul>
 </li>
 <li><strong>Hosting Option:</strong> Select the appropriate hosting type:<ul>
@@ -2552,25 +2577,12 @@
 <li><strong>Initiate New Integration:</strong> Click the <code>+</code> icon in the Integrations menu and select <strong>GitHub</strong>.</li>
 <li><strong>Enter Integration Details:</strong><ul>
 <li><strong>Name:</strong> Provide a descriptive name for this integration (e.g., "GitHub - Repo Name").</li>
-<li><strong>Authentication Options:</strong> Choose your preferred authentication method:<ul>
-<li><strong>Private Key:</strong><ul>
-<li>Select <strong>Private Key</strong>.</li>
-<li>Enter the <strong>App ID</strong> for your GitHub App.</li>
-<li>Enter the <strong>Private Key</strong> in the <strong>Password</strong> field or select a pre-configured <strong>Secret</strong>.</li>
-</ul>
-</li>
-<li><strong>Token:</strong><ul>
-<li>Select <strong>Token</strong>.</li>
-<li>Enter your GitHub Personal Access Token in the <strong>Password</strong> field or select a pre-configured <strong>Secret</strong>.</li>
-</ul>
-</li>
-<li><strong>Password:</strong><ul>
-<li>Select <strong>Password</strong>.</li>
-<li>Enter your GitHub <strong>Username</strong>.</li>
-<li>Enter your GitHub account <strong>Password</strong> in the <strong>Password</strong> field or select a pre-configured <strong>Secret</strong>.</li>
-</ul>
-</li>
-<li><strong>Anonymous:</strong> Select <strong>Anonymous</strong> if no authentication is required for the specific GitHub repository you intend to access (typically for public repositories).</li>
+<li><strong>Authentication Options:</strong><ul>
+<li><strong>Private Key:</strong> Provide your GitHub App ID and private key.</li>
+<li><strong>Token:</strong> Provide your GitHub Personal Access Token.</li>
+<li><strong>Password:</strong> Provide your GitHub username and password.</li>
+<li><strong>Anonymous:</strong> No authentication required (for public repositories).
+  For each credential, you may enter it manually or select a Secret as described <a href="#important-considerations-for-integrations">above</a>.</li>
 </ul>
 </li>
 <li><strong>Set as Default:</strong> Optionally, check this box to make this integration the default <strong>GitHub</strong> connection for the <strong>Private</strong> workspace or <strong>Team</strong> project.</li>
@@ -2586,24 +2598,10 @@
 <li><strong>Enter Integration Details:</strong><ul>
 <li><strong>Name:</strong> Provide a descriptive name for this integration (e.g., "Jira - Project Name").</li>
 <li><strong>URL:</strong> Enter the base URL of your Jira instance (e.g., <code>https://jiraeu.epam.com/</code>).</li>
-<li><strong>Authentication Options:</strong> Choose your preferred authentication method:<ul>
-<li><strong>API Key:</strong><ul>
-<li>Select <strong>API Key</strong>.</li>
-<li>Enter your Jira API key in the <strong>Password</strong> field or select a pre-configured <strong>Secret</strong>.</li>
-<li>Enter the associated <strong>Username</strong> for the API key.</li>
-</ul>
-</li>
-<li><strong>Token:</strong><ul>
-<li>Select <strong>Token</strong>.</li>
-<li>Enter your Jira API token in the <strong>Password</strong> field or select a pre-configured <strong>Secret</strong>.</li>
-</ul>
-</li>
-<li><strong>Username:</strong><ul>
-<li>Select <strong>Username</strong>.</li>
-<li>Enter your Jira <strong>Username</strong>.</li>
-<li>Enter your Jira <strong>Password</strong> or select a pre-configured <strong>Secret</strong>.</li>
-</ul>
-</li>
+<li><strong>Authentication Options:</strong><ul>
+<li><strong>Basic:</strong> Provide your Jira Token and username.</li>
+<li><strong>Bearer:</strong> Provide your Jira API token.      <br />
+  For each credential, you may enter it manually or select a Secret as described <a href="#important-considerations-for-integrations">above</a>.</li>
 </ul>
 </li>
 <li><strong>Hosting Option:</strong> Select the appropriate hosting type:<ul>
@@ -2617,6 +2615,23 @@
 <li><strong>Save the Integration:</strong> Click the <strong>Save</strong> button.</li>
 </ol>
 <p><img alt="Integrations-Jira" src="../../../img/guides/integrations/Integrations-Jira.png" /></p>
+<h3 id="qtest-integration-setup">QTest Integration Setup</h3>
+<p>To enable connection with your <strong>QTest</strong> instance:</p>
+<ol>
+<li><strong>Initiate New Integration:</strong> Click the <code>+</code> icon in the Integrations menu and select <strong>QTest</strong>.</li>
+<li><strong>Enter Integration Details:</strong><ul>
+<li><strong>Name:</strong> Provide a descriptive name for this integration (e.g., "QTest - Project Name").</li>
+<li><strong>Base URL:</strong> Enter the base URL of your QTest instance (e.g., <code>https://qtest.yourcompany.com/</code>).</li>
+<li><strong>Authentication Options:</strong><ul>
+<li><strong>API Token:</strong> Provide your QTest API token.
+  For the API token, you may enter it manually or select a Secret as described <a href="#important-considerations-for-integrations">above</a>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Save the Integration:</strong> Click the <strong>Save</strong> button.</li>
+</ol>
+<p><img alt="Integrations-QTest" src="../../../img/guides/integrations/Integrations-QTest.png" /></p>
 <h3 id="testrail-integration-setup">TestRail Integration Setup</h3>
 <p>To connect with your <strong>TestRail</strong> instance:</p>
 <ol>
@@ -2625,8 +2640,9 @@
 <li><strong>Name:</strong> Provide a descriptive name for this integration (e.g., "TestRail - Project Name").</li>
 <li><strong>URL:</strong> Enter the base URL of your TestRail instance (e.g., <code>https://testrail.epam.com/</code>).</li>
 <li><strong>Email:</strong> Enter the email address associated with your TestRail account.</li>
-<li><strong>Authentication Options:</strong> Choose your preferred authentication method:<ul>
-<li><strong>Password:</strong> Enter your TestRail account <strong>Password</strong> in the <strong>Password</strong> field or select a pre-configured <strong>Secret</strong>.</li>
+<li><strong>Authentication Options:</strong><ul>
+<li><strong>Password:</strong> Provide your TestRail account password.
+  For the password, you may enter it manually or select a Secret as described <a href="#important-considerations-for-integrations">above</a>.</li>
 </ul>
 </li>
 <li><strong>Set as Default:</strong> Optionally, check this box to make this integration the default <strong>TestRail</strong> connection for the <strong>Private</strong> workspace or <strong>Team</strong> project.</li>
@@ -2635,20 +2651,6 @@
 <li><strong>Save the Integration:</strong> Click the <strong>Save</strong> button.</li>
 </ol>
 <p><img alt="Integrations-TestRail" src="../../../img/guides/integrations/Integrations-TestRail.png" /></p>
-<h3 id="important-considerations-for-integrations">Important Considerations for Integrations</h3>
-<p>When setting up integrations in ELITEA, it's important to understand the following constraints and best practices:</p>
-<ul>
-<li>
-<p><strong>Uniqueness per Integration Type:</strong></p>
-<ul>
-<li><strong>Jira, Confluence, and TestRail:</strong> Within your Private workspace or a Team project, you can create multiple integrations for Jira, Confluence, and TestRail. The uniqueness of these integrations is determined by the <strong>URL</strong> of the respective service. This means you can connect to different Jira instances, Confluence spaces, or TestRail accounts by creating separate integrations for each unique URL.</li>
-<li><strong>GitHub:</strong>  In contrast to Jira, Confluence, and TestRail, you can create <strong>only one</strong> GitHub integration within your <strong>Private</strong> workspace or a <strong>Team</strong> project. This single integration will serve as the connection point for all your GitHub interactions within that space.</li>
-</ul>
-</li>
-<li>
-<p><strong>Authentication Verification:</strong>  Always double-check the authentication details you provide for each integration. Incorrect credentials will prevent ELITEA from successfully connecting to the external service. Ensure that the API keys, tokens, passwords, or private keys you enter are accurate and have the necessary permissions to access the desired resources on the external platform. Verifying the authentication setup is <strong>crucial</strong> for ensuring your integrations (and the configurations that use them) function correctly.</p>
-</li>
-</ul>
 <h2 id="configurations-applying-integrations-to-agent-toolkits">Configurations: Applying Integrations to Agent Toolkits</h2>
 <p><strong>Configurations</strong> provide the mechanism to utilize the integrations you've set up within your Agent toolkits. When configuring a toolkit for Jira, Confluence, GitHub, or TestRail within an Agent, you have the option to select a <strong>pre-configured integration</strong>, eliminating the need to enter authentication details directly into the toolkit settings.</p>
 <p><strong>Configuration Options:</strong></p>
@@ -2706,7 +2708,7 @@
 <p><strong>Integration Naming Convention:</strong></p>
 <p>The naming convention for integrations in the dropdown list also helps you identify the specific connection:</p>
 <ul>
-<li><strong>Jira</strong>, <strong>Confluence</strong>, and <strong>TestRail</strong> Integrations: These integrations are listed using their configured URL. This ensures you can easily differentiate between connections to different instances of these tools (e.g., different Jira servers or Confluence spaces).</li>
+<li><strong>Jira</strong>, <strong>Confluence</strong>, <strong>QTest</strong> and <strong>TestRail</strong> Integrations: These integrations are listed using their configured URL. This ensures you can easily differentiate between connections to different instances of these tools (e.g., different Jira servers or Confluence spaces).</li>
 <li><strong>GitHub</strong> Integrations: Since only one <strong>GitHub</strong> integration is allowed per workspace or project, these integrations are simply listed as <strong>GitHub</strong>.</li>
 </ul>
 <p><strong>Toolkit-Specific Integration Filtering</strong>:</p>
