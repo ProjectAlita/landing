@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://elitea.ai/docs/how-tos/agents-toolkits/github_toolkit/">
       
       
-        <link rel="prev" href="../custom_toolkit/">
+        <link rel="prev" href="../figma_toolkit/">
       
       
         <link rel="next" href="../gitlab_toolkit/">
@@ -1513,6 +1513,29 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../figma_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Figma Integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1828,6 +1851,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../google_places_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Google Places Integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../jira_toolkit/" class="md-nav__link">
         
   
@@ -1857,6 +1903,29 @@
   
   <span class="md-ellipsis">
     OpenAPI Integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pandas_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pandas Integration
     
   </span>
   
@@ -2087,29 +2156,6 @@
   
   <span class="md-ellipsis">
     Zephyr Scale Integration
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../google_places_toolkit/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Google Places Integration
     
   </span>
   
@@ -2691,7 +2737,7 @@
 <li><strong>Name:</strong>  Enter a descriptive <strong>Name</strong> for your GitHub toolkit instance. This name will be used to reference the toolkit within your Agent's instructions (e.g., "MyGitHubRepo", "CodeRepoAccess"). Choose a name that clearly indicates its purpose.</li>
 <li><strong>Description:</strong> Provide a concise <strong>Description</strong> of the toolkit's purpose or the specific GitHub repository it will access (e.g., "Access to the main development code repository").</li>
 <li><strong>URL:</strong>  This field is pre-filled with the standard GitHub API URL: <code>https://api.github.com</code>. <strong>In the vast majority of cases, you should not modify this URL.</strong> Only change it if you are connecting to a self-hosted <strong>GitHub Enterprise Server</strong> instance, in which case you should enter the specific API URL for your Enterprise Server.</li>
-<li><strong>Repository:</strong> Enter the <strong>Repository name</strong> that you want to access with this toolkit. Use the format: <code>repository_owner/repository_name</code> (e.g., <code>MyOrganization/my-project-repo</code>). Ensure you use the correct owner/organization and repository name.</li>
+<li><strong>Repository:</strong> Enter the <strong>Repository name</strong> that you want to access with this toolkit. Use the format: <code>repository_owner/repository_name</code> (e.g., <code>MyOrganization/my-project-repo</code>). Ensure you use the correct owner/organization and repository name. You don't need to add ".git" at the end of the repo.</li>
 <li><strong>Main branch:</strong> Specify the <strong>Main branch</strong> of your repository. This is typically <code>main</code> or <code>master</code>.</li>
 <li><strong>Authentication Options - Token:</strong> Select the <strong>"Token"</strong> authentication option.<ul>
 <li><strong>Password/Secret:</strong> Choose <strong>"Password"</strong> and then paste the <strong>Personal Access Token (Classic)</strong> you generated in GitHub (during the "Software-Specific Setup" section of this guide) into the <strong>"Password"</strong> field.</li>
@@ -2700,6 +2746,7 @@
 </li>
 </ul>
 <p><img alt="GitHub-Toolkit_Configuration.png" src="../../../img/how-tos/github/GitHub-Toolkit_Configuration.png" /></p>
+<p><img alt="GitHub-Toolkit_Configuration.png" src="..//..//img/how-tos/github/GitHub-setup.png" /></p>
 </li>
 <li>
 <p><strong>Enable Desired Tools:</strong> In the <strong>"Tools"</strong> section within the GitHub toolkit configuration, <strong>carefully select the checkboxes next to only the specific GitHub tools</strong> that your Agent will actually need to use. <strong>Enable only the tools that are absolutely necessary</strong> to adhere to the principle of least privilege and minimize potential security risks. Available tools include:</p>
