@@ -860,9 +860,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#source-type-qtest" class="md-nav__link">
+  <a href="#source-type-jira" class="md-nav__link">
     <span class="md-ellipsis">
-      Source type - QTest
+      Source type - Jira
     </span>
   </a>
   
@@ -884,6 +884,39 @@
         
           <li class="md-nav__item">
   <a href="#summarization" class="md-nav__link">
+    <span class="md-ellipsis">
+      SUMMARIZATION
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SUMMARIZATION">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#source-type-qtest" class="md-nav__link">
+    <span class="md-ellipsis">
+      Source type - QTest
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transformers_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      TRANSFORMERS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summarization_1" class="md-nav__link">
     <span class="md-ellipsis">
       SUMMARIZATION
     </span>
@@ -2042,6 +2075,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../how-tos/agents-toolkits/salesfores_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SalesForce Integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../how-tos/agents-toolkits/sharepoint_toolkit/" class="md-nav__link">
         
   
@@ -2518,9 +2574,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#source-type-qtest" class="md-nav__link">
+  <a href="#source-type-jira" class="md-nav__link">
     <span class="md-ellipsis">
-      Source type - QTest
+      Source type - Jira
     </span>
   </a>
   
@@ -2542,6 +2598,39 @@
         
           <li class="md-nav__item">
   <a href="#summarization" class="md-nav__link">
+    <span class="md-ellipsis">
+      SUMMARIZATION
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SUMMARIZATION">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#source-type-qtest" class="md-nav__link">
+    <span class="md-ellipsis">
+      Source type - QTest
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transformers_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      TRANSFORMERS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summarization_1" class="md-nav__link">
     <span class="md-ellipsis">
       SUMMARIZATION
     </span>
@@ -2806,6 +2895,7 @@ To ensure a successful connection, <strong>you must clone your Git repository an
 <ul>
 <li><strong>Advanced Settings</strong> - these settings offer additional controls over how your Confluence content is fetched and presented:<ul>
 <li><strong>Include Attachment</strong> - check this if you want to include page attachments in your data fetch. Useful for cases where documents or images are integral to your content.</li>
+<li><strong>Include restricted content</strong> - check this if you want to include not only public but private pages that are accessible with the provided token.</li>
 <li><strong>Content Format</strong> - select the format in which you wish to view or receive the content. Options include:<ul>
 <li><strong>View</strong> - the page content as displayed in Confluence.</li>
 <li><strong>Storage</strong> - the raw storage format (HTML/XML) used by Confluence.</li>
@@ -2819,6 +2909,110 @@ To ensure a successful connection, <strong>you must clone your Git repository an
 </li>
 </ul>
 <p><img alt="Datasources-Dataset_Confluence" src="../../../img/platform/menus/datasources/Datasources-Dataset_Confluence.png" /></p>
+<h4 id="source-type-jira">Source type - Jira</h4>
+<p>Integrating Jira with ELITEA allows you to connect directly to your Jira instance and leverage issues as a data source. This integration enables you to index Jira issues for various purposes, such as knowledge retrieval, issue analysis, and more. Below, we detail the configuration options, settings, and parameters available for the Jira source type.</p>
+<ul>
+<li><strong>Name</strong> - specify a unique name for dataset configuration. This helps in easily identifying and managing multiple sources.</li>
+<li><strong>URL</strong> - the base URL of your Jira instance.<ul>
+<li>For <strong>Server</strong> Jira instances, provide the base URL, e.g., <code>https://jiraeu.epam.com</code>.</li>
+<li>For <strong>Cloud</strong> Jira instances, provide the base URL, e.g., <code>https://yourproject.atlassian.net</code>.</li>
+</ul>
+</li>
+<li><strong>API Key</strong> -  Required for Jira dataset.<ul>
+<li>Input your Jira API Key manually or select a pre-configured secret from the <strong><a href="../settings/#secrets">ELITEA Secrets Management</a></strong></li>
+</ul>
+</li>
+<li><strong>Username</strong> - Enter your Jira username, which is used to authenticate with your Jira instance.</li>
+<li>
+<p><strong>Hosting Option</strong> - Choose the appropriate hosting type for your Jira setup:</p>
+<ul>
+<li><strong>Cloud</strong> - Select this option if your Jira instance is hosted on Atlassian’s cloud.</li>
+<li><strong>Server</strong> - Select this option if your Jira instance is a self-hosted server version, like <code>https://jiraeu.epam.com</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Filter</strong> - This section allows you to filter Jira issues to be indexed. You must select one of the following filter options:</p>
+<ol>
+<li><strong>Project Key</strong> - To index all issues from a specific Jira project, select this option and input the <strong>Project Key</strong>.  The Project Key is typically a short code used to identify your Jira project (e.g., "CRM", "EPMXYZ").</li>
+</ol>
+<p><img alt="Datasources-Dataset_Jira_ProjectKey" src="../../../img/platform/menus/datasources/Datasources-Dataset_Jira_ProjectKey.png" /></p>
+<p><img alt="Datasources-Dataset_Jira_ProjectKey" src="../../../img/platform/menus/datasources/Datasources-Dataset_Jira_ProjectKey2.png" /></p>
+<ol>
+<li><strong>Epic ID</strong> - To index issues linked to a specific Epic, select this option and input the <strong>Epic ID</strong>. This will include all issues that are children of the specified Epic. ( e.g. CRM-1 , or EPMSPAI-252)</li>
+</ol>
+<p><strong>Important</strong>: JQL syntax and functionality can vary between Jira Cloud and Server versions. With the Epic ID filter, Alita will include issues that are retrieved using the following JQL.Verify your JQL query within your Jira instance to ensure it selects the desired issues.
+  <strong>Jira Cloud</strong>: <code>parentEpic = CRM-4</code>, 
+  <strong>Jira Server</strong>: <code>"Parent Link" = EPMXYZ-39</code></p>
+<ol>
+<li>
+<p><strong>JQL</strong> - For more advanced filtering, select <strong>JQL</strong> and input a custom Jira Query Language (JQL) query. This allows you to define complex criteria to select specific issues.</p>
+<p><strong>Note</strong>: You can use JQL within your Jira instance to test and refine your query before copying it to ELITEA. </p>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>Fields to extract</strong> and  <strong>Fields to Index</strong> - Specify a comma-separated list of Jira field IDs that you want to extract and store in the dataset. These fields will be available for analysis, to create embeddings and facilitate information retrieval.</p>
+<p><strong>Note</strong>: Field IDs can be distinct from the field names displayed in the Jira user interface. Use your browser's developer tools or consult your Jira administrator to obtain the correct Field IDs, especially for custom fields. If you specify non-existent or invalid field IDs, they will be ignored.</p>
+<p><strong>Note</strong>:  A default set of fields will always be indexed, even if not explicitly mentioned here: <strong>status,summary,reporter,description</strong>.</p>
+</li>
+<li>
+<p><strong>Advanced Settings</strong> - These settings offer further customization for Jira data ingestion.</p>
+<ul>
+<li><strong>Include Attachment</strong> - Enable this checkbox to include attachments from Jira issues in the indexing process. ELITEA supports indexing text-based attachments, images with text and e.g. diagrams, and PDF files with text and images.</li>
+<li><strong>Skip attachment</strong> -  If <strong>Include Attachment</strong> is enabled, use this field to specify a comma-separated list of file extensions to exclude from attachment indexing (e.g., <code>.mp4, .ico, .avi, .xlsx</code>). This can help reduce indexing time and resource consumption by skipping irrelevant or large file types like videos or non-text images.</li>
+<li><strong>Max total issue number</strong> -  Set a limit on the maximum number of Jira issues to be indexed. This is useful to control dataset size and indexing time, especially when your filter might include a large number of issues.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Datasources-Dataset_Jira" src="../../../img/platform/menus/datasources/Datasources-Dataset_Jira.png" /></p>
+<h3 id="transformers">TRANSFORMERS</h3>
+<p>Transformers enhance your documents by extracting significant keywords, summarizing content, and improving searchability. <em>Please note if you don't clearly understand the purpose of the parameters and options available here than leave them as is. Don't make any changes.</em></p>
+<ul>
+<li><strong>Extract Keywords</strong> - options include:<ul>
+<li><strong>For Document</strong> - analyses the entire document for keyword extraction.</li>
+<li><strong>For Chunks</strong> - processes document sections independently for more granular insights.</li>
+</ul>
+</li>
+<li><strong>Keyword Extractor</strong> - the only available option is <strong>KeyBert</strong>, designed for efficient keyword extraction.</li>
+<li><strong>Keyword Strategy</strong> - choices range from <strong>Max Sum</strong>, to <strong>Max MMR High</strong>, and <strong>Max MMR Low</strong>, each offering different focuses on relevance and diversity.</li>
+<li><strong>Maximum Keyword Count</strong> - defines the limit on the number of keywords to be extracted.</li>
+<li><strong>Split By</strong> - determines how the document is sectioned for analysis, with options like Chunks, Lines, Paragraphs, Sentences, or Nothing.</li>
+</ul>
+<p><img alt="Datasources-Dataset_Transformers" src="../../../img/platform/menus/datasources/Datasources-Jira-Dataset_Transformers.png" /></p>
+<h3 id="summarization">SUMMARIZATION</h3>
+<p>Summarization utilizes LLMs to condense documents into their core messages. Due to the high computational demand, use of this feature incurs additional costs. Please note if you don't clearly understand the purpose of the parameters and options available here than leave them as is. Don't make any changes.</p>
+<ol>
+<li>
+<ul>
+<li><strong>Summarization model</strong> - select from available LLMs based on your document’s complexity.</li>
+</ul>
+</li>
+<li>
+<ul>
+<li><strong>Document summarization</strong> - enables summarization of the entire document.</li>
+</ul>
+</li>
+<li>
+<ul>
+<li><strong>Process Binary Files with LLM</strong> - enables summarization of non text files like images </li>
+</ul>
+</li>
+<li>
+<ul>
+<li><strong>Extract metadata</strong> - enables summarization for metadata.</li>
+</ul>
+</li>
+<li>
+<p>If you have enabled <strong>Include Attachment</strong>, ensure you select a <strong>Multi-model summarization model</strong> in the Summarization section. Multi-model models, such as <strong>GPT-4o</strong>, are required to process and index attachments that may contain images.</p>
+</li>
+</ol>
+<p><img alt="Datasources-Dataset_Jira" src="../../../img/platform/menus/datasources/Datasources-Dataset_Jira_summarization.png" /></p>
+<p><strong>Important Notes:</strong></p>
+<ul>
+<li><strong>Skipped Issues</strong>: Jira issues with an empty <strong>Description</strong> field will be skipped and not indexed.</li>
+<li><strong>Field IDs</strong>: Ensure you are using Field IDs and not Field Names when specifying "Fields to extract" and "Fields to Index".</li>
+</ul>
+<p>Click <strong>Create</strong> to begin the Jira dataset indexing process. The processing time will depend on the number of issues and attachments being indexed and overall load on system.</p>
 <h4 id="source-type-qtest">Source type - QTest</h4>
 <p>Integrating QTest with ELITEA enhances your test management by connecting directly to QTest Test Case Management System (TCMS). This integration allows you to select test cases for duplication checks, search functionalities, and leverage manual test cases for future automation with Generative AI. Below, we detail the configuration options, settings, and parameters available for the QTest source type.</p>
 <ul>
@@ -2833,7 +3027,7 @@ To ensure a successful connection, <strong>you must clone your Git repository an
 <li><strong>DQL for QTest</strong> - this setting allows you to query and filter data before indexing it. Utilize DQL (Data Query Language) to define specific criteria that refine the data fetched from QTest, ensuring that only relevant data is processed and indexed.</li>
 <li><strong>Columns</strong> - specify the columns within your test cases that you wish to focus on for analysis or embedding generation.  Select single or multiple columns to tailor the analysis to your project's specific needs. To select multiple columns, separate each column name with a comma (",").</li>
 </ul>
-<h3 id="transformers">TRANSFORMERS</h3>
+<h3 id="transformers_1">TRANSFORMERS</h3>
 <p>Transformers enhance your documents by extracting significant keywords, summarizing content, and improving searchability. <em>Please note if you don't clearly understand the purpose of the parameters and options available here than leave them as is. Don't make any changes.</em></p>
 <ul>
 <li><strong>Extract Keywords</strong> - options include:<ul>
@@ -2847,7 +3041,7 @@ To ensure a successful connection, <strong>you must clone your Git repository an
 <li><strong>Split By</strong> - determines how the document is sectioned for analysis, with options like Chunks, Lines, Paragraphs, Sentences, or Nothing.</li>
 </ul>
 <p><img alt="Datasources-Dataset_Transformers" src="../../../img/platform/menus/datasources/Datasources-Dataset_Transformers.png" /></p>
-<h3 id="summarization">SUMMARIZATION</h3>
+<h3 id="summarization_1">SUMMARIZATION</h3>
 <p>Summarization utilizes LLMs to condense documents into their core messages. Due to the high computational demand, use of this feature incurs additional costs. Please note if you don't clearly understand the purpose of the parameters and options available here than leave them as is. Don't make any changes.</p>
 <ol>
 <li>
