@@ -2782,9 +2782,7 @@
 <li>
 <p><strong>Configure Azure Repos (ADO Repos) Toolkit Settings:</strong> Carefully fill in the following configuration fields within the "New Azure Repos (ADO Repo) tool" section:</p>
 <ul>
-<li><strong>Name:</strong>  Enter a descriptive <strong>Name</strong> for this specific Azure Repos toolkit instance. Choose a name that is easily recognizable and helps you identify its purpose within your Agent's instructions. For example, you might use names like "ProjectAzureRepos", "CodeRepositoryAccess", or "ADOReposIntegration".</li>
-<li><strong>Description:</strong> Provide a concise <strong>Description</strong> for the toolkit. This description should clarify the toolkit's purpose or the specific Azure Repos repository or project it is intended to access. For example, you could describe it as "Toolkit for accessing and managing the main project code repository on Azure Repos" or "Integration for Azure Repos project 'MyProject'".</li>
-<li><strong>URL:</strong> Enter the base URL of your Azure DevOps organization. <strong>It is crucial to use the correct format</strong>, including your organization name: <code>https://dev.azure.com/{YourOrganizationName}</code> (Replace <code>{YourOrganizationName}</code> with your actual Azure DevOps organization name).</li>
+<li><strong>Organization URL:</strong> Enter the base URL of your Azure DevOps organization. <strong>It is crucial to use the correct format</strong>, including your organization name: <code>https://dev.azure.com/{YourOrganizationName}</code> (Replace <code>{YourOrganizationName}</code> with your actual Azure DevOps organization name).</li>
 <li><strong>Personal Access Token:</strong> In the "Personal Access Token" field, paste the <strong>Personal Access Token</strong> that you generated in Azure DevOps during the "Software-Specific Setup" section of this guide.<ul>
 <li><strong>Enhanced Security with Secrets (Recommended):</strong> For enhanced security, it is strongly recommended to use ELITEA's <strong>Secrets Management</strong> feature to store your Azure DevOps Personal Access Token securely. Instead of directly pasting the token into the "Personal Access Token" field, select the <strong>"Secret"</strong> option and choose the pre-configured secret containing your Azure DevOps token from the dropdown list. This prevents hardcoding sensitive credentials in your toolkit configuration.</li>
 </ul>
@@ -2833,6 +2831,7 @@ curl -u your_personal_access_token:  https://dev.azure.com/AlitaTest/MyProject/_
 <li><strong>Update File</strong> - Allows the Agent to update the content of existing files within the repository.</li>
 <li><strong>Delete File</strong> - Allows the Agent to delete files from the repository.</li>
 <li><strong>Get Work Items</strong> - Allows the Agent to retrieve lists of work items (issues).</li>
+<li><strong>Loader</strong> - Allows the agent to retrieve data from repo.</li>
 </ul>
 </li>
 <li>
@@ -2917,7 +2916,7 @@ curl -u your_personal_access_token:  https://dev.azure.com/AlitaTest/MyProject/_
 <li>
 <p><strong>Comment Pull Request:</strong> <strong>Tool Name:</strong> <code>comment_pull_request</code></p>
 <ul>
-<li><strong>Functionality:</strong> Adds a comment to a specific pull request in an Azure Repos repository.</li>
+<li><strong>Functionality:</strong> Adds a comment to a specific pull request in an Azure Repos repository or to a specific line of a pull request.</li>
 <li><strong>Purpose:</strong> Automate adding comments to Azure Repos pull requests directly from ELITEA, facilitating communication, updates, and feedback within code review workflows.</li>
 </ul>
 </li>
@@ -2933,6 +2932,13 @@ curl -u your_personal_access_token:  https://dev.azure.com/AlitaTest/MyProject/_
 <ul>
 <li><strong>Functionality:</strong> Retrieves a list of work items (issues) from the specified Azure DevOps project.</li>
 <li><strong>Purpose:</strong> Allow Agents to fetch work item lists for task prioritization, reporting, or to provide users with issue summaries within ELITEA workflows.</li>
+</ul>
+</li>
+<li>
+<p><strong>Loader:</strong> <strong>Tool Name:</strong> <code>loader</code></p>
+<ul>
+<li><strong>Functionality:</strong> Generates file content from a branch, respecting whitelist and blacklist patterns.</li>
+<li><strong>Purpose:</strong> Allows Agents to list and fetch content from files in a specified branch, filtered by whitelist and blacklist patterns, to facilitate tasks like code analysis, reporting, or content extraction within ELITEA workflows.</li>
 </ul>
 </li>
 </ul>

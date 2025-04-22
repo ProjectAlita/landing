@@ -2751,8 +2751,6 @@
 <li>
 <p><strong>Configure GitLab Toolkit Settings:</strong> Carefully fill in the following configuration fields within the "New GitLab tool" section:</p>
 <ul>
-<li><strong>Name:</strong>  Enter a descriptive <strong>Name</strong> for this specific GitLab toolkit instance. Choose a name that is easily recognizable and helps you identify its purpose within your Agent's instructions. For example, you might use names like "ProjectGitLab", "CodeRepositoryAccess", or "GitLabIntegration".</li>
-<li><strong>Description:</strong> Provide a concise <strong>Description</strong> for the toolkit. This description should clarify the toolkit's purpose or the specific GitLab repository or project it is intended to access. For example, you could describe it as "Toolkit for accessing and managing the main project code repository on GitLab" or "Integration for GitLab project 'MyProject'".</li>
 <li><strong>GitLab URL:</strong> Enter the base URL of your GitLab instance.<ul>
 <li>For <strong>GitLab.com (Cloud)</strong>: Use the standard GitLab.com URL: <code>https://gitlab.com</code>.</li>
 <li>For <strong>Self-Hosted GitLab Instances</strong>: If you are using a self-hosted GitLab instance (GitLab Community Edition or GitLab Enterprise Edition), enter the specific URL of your GitLab server. For example, <code>https://your-gitlab-instance.com</code>. <strong>Ensure you include <code>https://</code> or <code>http://</code> at the beginning of the URL.</strong></li>
@@ -2785,6 +2783,8 @@
 <li><strong>Set active branch</strong> - Enables the Agent to set a specific branch as the active branch for subsequent operations.</li>
 <li><strong>Update file</strong> - Allows the Agent to update the content of existing files within the repository.</li>
 <li><strong>Append file</strong> - Allows the Agent to append content to existing files within the repository.</li>
+<li><strong>List Folders</strong> - Allows to List Folders for better navigation within repositories.
+List Folders</li>
 </ul>
 </li>
 <li>
@@ -2877,6 +2877,13 @@
 <ul>
 <li><strong>Functionality:</strong> Appends content to the end of an existing file within the GitLab repository. Requires the file path, branch name, and content to append as parameters.</li>
 <li><strong>Purpose:</strong> Enables automated appending of data to log files, documentation files, or other files where incremental content addition is needed. Useful for adding timestamps, generating audit trails, or accumulating data within repository files through automated workflows.</li>
+</ul>
+</li>
+<li>
+<p><strong>List folders:</strong> <strong>Tool Name:</strong> <code>list_folders</code></p>
+<ul>
+<li><strong>Functionality:</strong> Retrieves a list of folders from a GitLab repository. Allows specifying a path, branch, and whether to list folders recursively.</li>
+<li><strong>Purpose:</strong> Enables exploration of the repository's folder structure, identification of specific directories, or retrieval of all folders in a directory or branch. Useful for automating tasks that require knowledge of the repository's directory organization.</li>
 </ul>
 </li>
 </ul>

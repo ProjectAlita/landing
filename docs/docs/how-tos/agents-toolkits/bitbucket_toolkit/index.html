@@ -2734,8 +2734,6 @@
 <li>
 <p><strong>Configure Toolkit Details:</strong> Fill in the following fields:</p>
 <ul>
-<li><strong>Name:</strong>  Enter a <strong>Name</strong> for this Bitbucket toolkit instance. Choose a descriptive name that helps you identify its purpose within your Agent's instructions (e.g., "ProjectCodeRepo", "BitbucketAccess").</li>
-<li><strong>Description:</strong> Provide a <strong>Description</strong> for the toolkit, clarifying its purpose or the specific Bitbucket repository it accesses (e.g., "Toolkit to access and manage the main project repository").</li>
 <li><strong>URL:</strong>  Enter the Bitbucket API URL. <strong>It is crucial to use the correct format:</strong> <code>https://api.bitbucket.org/</code>. This is the base URL for the Bitbucket API endpoint.</li>
 <li><strong>Username:</strong> Enter your Bitbucket <strong>Username</strong>. This is the username associated with the Bitbucket account for which you created the App Password.</li>
 <li><strong>Project / Workspace:</strong>  Specify the <strong>Project or Workspace</strong> in Bitbucket where your repository is located.<ul>
@@ -2766,6 +2764,8 @@
 <li><strong>List branches in repo:</strong> Enables the Agent to list branches in the repository.</li>
 <li><strong>Set active branch:</strong> Allows the Agent to set a specific branch as active.</li>
 <li><strong>Create branch:</strong> Enables the Agent to create new branches.</li>
+<li><strong>Get Files:</strong>  Allows the Agent to get file from the repository.</li>
+<li><strong>Loader:</strong>  Allows the Agent to load repository data.</li>
 </ul>
 </li>
 <li>
@@ -2783,6 +2783,8 @@
 <li><strong>List branches in repo:</strong> <code>list_branches_in_repo</code> - Provides a list of all branches in the repository for branch management tasks.</li>
 <li><strong>Set active branch:</strong> <code>set_active_branch</code> - Sets a specific branch as the target for subsequent repository operations.</li>
 <li><strong>Create branch:</strong> <code>create_branch</code> -  Automates the creation of new branches for feature development or bug fixes.</li>
+<li><strong>Get Files:</strong> <code>get_files</code>  Allows the Agent to get file from the repository.</li>
+<li><strong>Loader:</strong>  <code>loader</code> Allows the Agent to load repository data.</li>
 </ul>
 <h2 id="instructions-and-prompts-for-using-the-toolkit">Instructions and Prompts for Using the Toolkit</h2>
 <p>To instruct your ELITEA Agent to use the Bitbucket toolkit, you need to provide clear instructions within the Agent's "Instructions" field. These instructions guide the Agent on <em>when</em> and <em>how</em> to use the available tools.</p>

@@ -2754,7 +2754,8 @@
 </ul>
 </li>
 </ul>
-<p><img alt="Jira-Toolkit_Configuration" src="../../../img/how-tos/jira/Jira-Toolkit_Configuration.png" /></p>
+<p><img alt="Jira-Toolkit_Configuration" src="../../../img/how-tos/jira/Jira-Toolkit_Configuration1.png" />
+<img alt="Jira-Toolkit_Configuration" src="../../../img/how-tos/jira/Jira-Toolkit_Configuration2.png" /></p>
 </li>
 <li>
 <p><strong>Enable Desired Tools:</strong> In the "Tools" section within the Jira toolkit configuration panel, <strong>select the checkboxes next to the specific Jira tools</strong> that you want to enable for your Agent. <strong>It is crucial to enable only the tools that your Agent will actually need to use</strong> to adhere to the principle of least privilege and minimize potential security risks. Available tools include:</p>
@@ -2772,6 +2773,7 @@
 <li><strong>Link issues</strong> - Enables the Agent to create links between Jira issues.</li>
 <li><strong>Modify labels</strong> - Allows the Agent to add or remove labels from a Jira issue.</li>
 <li><strong>Generic request</strong> - Allows to send custom HTTP requests to Jira API.</li>
+<li><strong>Loader</strong> - Extracts content of jira issue and attachments related to Jira issue.</li>
 </ul>
 </li>
 <li>
@@ -2871,6 +2873,13 @@
 <ul>
 <li><strong>Functionality:</strong> Allows sending custom HTTP requests to the Jira API endpoint. Provides advanced users with the flexibility to interact with the Jira API directly for actions not covered by other pre-built tools.</li>
 <li><strong>Purpose:</strong> Enables advanced and customized interactions with the Jira API, allowing experienced users to extend the toolkit's capabilities, access specific Jira API endpoints, and perform actions beyond the scope of the standard Jira tools, providing maximum flexibility for complex or specialized Jira integrations.</li>
+</ul>
+</li>
+<li>
+<p><strong>Loader:</strong>  <strong>Tool Name:</strong> <code>Loader</code></p>
+<ul>
+<li><strong>Functionality:</strong> Extracts content of all attachments related to specified Jira issue key. NOTE: only parsable attachments will be considered.</li>
+<li><strong>Purpose:</strong> Enables users to retrieve and analyze the content of attachments associated with a Jira issue, providing insights and information that may be contained within the attached files. This tool is useful for accessing detailed data and documentation that are linked to specific issues.</li>
 </ul>
 </li>
 </ul>

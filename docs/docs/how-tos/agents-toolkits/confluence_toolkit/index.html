@@ -2723,8 +2723,6 @@
 <li>
 <p><strong>Configure Confluence Toolkit Settings:</strong> Carefully fill in the following configuration fields within the "New Confluence tool" section:</p>
 <ul>
-<li><strong>Name:</strong>  Enter a descriptive <strong>Name</strong> for this specific Confluence toolkit instance. Choose a name that is easily recognizable and helps you identify its purpose within your Agent's instructions (e.g., "ProjectConfluence", "KnowledgeBaseAccess", "ConfluenceIntegration").</li>
-<li><strong>Description:</strong> Provide a concise <strong>Description</strong> for the toolkit. This description should clarify the toolkit's purpose or the specific Confluence space it is intended to access (e.g., "Toolkit for accessing and managing project documentation in Confluence", "Integration for Confluence Space 'Project Documentation'").</li>
 <li><strong>URL:</strong> Enter the base URL of your Confluence instance. <strong>Ensure you use the correct format</strong>, including <code>https://</code> or <code>http://</code> and the full workspace URL (e.g., <code>https://your-workspace.atlassian.net/wiki</code>).</li>
 <li><strong>Username:</strong> Enter the <strong>Username</strong> associated with your Confluence account for which you generated the API token. This is typically your email address used for Confluence login.</li>
 <li><strong>Authentication Options - Basic:</strong> Select the <strong>"Basic"</strong> authentication option.<ul>
@@ -2740,7 +2738,8 @@
 <li><strong>Space:</strong> Enter the <strong>Space name</strong> in Confluence that you want to access with this toolkit. This is the Space Key, which is typically found in the URL of your Confluence space (e.g., for URL <code>https://your-workspace.atlassian.net/wiki/spaces/DOCS/overview</code>, the Space Key is <code>DOCS</code>).</li>
 <li><strong>Hosting Option:</strong> Select the appropriate <strong>"Hosting option"</strong> for your Confluence instance:<ul>
 <li><strong>Cloud:</strong> Select "Cloud" if you are using Confluence Cloud (e.g., accessed via <code>atlassian.net</code>).</li>
-<li><strong>Server:</strong> Select "Server" if you are using a self-hosted Confluence Server or Data Center instance. <strong>Note:</strong> When connecting to an Epam Confluence instance, ensure you select "Server" as the Hosting option.</li>
+<li><strong>Server:</strong> Select "Server" if you are using a self-hosted Confluence Server or Data Center instance(e.g., https://kb.epam.com/ ). 
+<strong>Note:</strong> When connecting to an Epam Confluence instance, ensure you select "Server" as the Hosting option.</li>
 </ul>
 </li>
 <li><strong>Advanced Settings:</strong> Configure additional settings to control data fetching and presentation:<ul>
@@ -2752,7 +2751,8 @@
 </ul>
 </li>
 </ul>
-<p><img alt="Confluence-Toolkit_Configuration" src="../../../img/how-tos/confluence/Confluence-Toolkit_Configuration.png" /></p>
+<p><img alt="Confluence-Toolkit_Configuration" src="../../../img/how-tos/confluence/Confluence-Toolkit_Configuration1.png" />
+<img alt="Confluence-Toolkit_Configuration" src="../../../img/how-tos/confluence/Confluence-Toolkit_Configuration2.png" /></p>
 </li>
 <li>
 <p><strong>Enable Desired Tools:</strong> In the "Tools" section within the Confluence toolkit configuration panel, <strong>select the checkboxes next to the specific Confluence tools</strong> that you want to enable for your Agent. <strong>It is crucial to enable only the tools that your Agent will actually need to use</strong> to adhere to the principle of least privilege and minimize potential security risks. Available tools include:</p>
@@ -2772,6 +2772,7 @@
 <li><strong>Search by title</strong> - Searches for pages based on their title.</li>
 <li><strong>Read page by id</strong> - Retrieves the content of a page using its unique ID.</li>
 <li><strong>Generic request</strong> - Allows to send custom HTTP requests to Confluence API.</li>
+<li><strong>Loader</strong> - Allows to load content from Confluence based on specified parameters.</li>
 </ul>
 </li>
 <li>
@@ -2880,9 +2881,18 @@
 <li><strong>Purpose:</strong> Enables Agents to access and utilize content from specific Confluence pages, allowing retrieval of documentation, meeting notes, project information, or any page content to provide context, data, or instructions within ELITEA workflows and conversations, facilitating dynamic and context-aware automation.</li>
 </ul>
 </li>
-<li><strong>Generic request</strong>: <strong>Tool Name:</strong> <code>generic_request</code><ul>
-<li><strong>Functionality:</strong> Allows to send custom HTTP requests to Confluence API.</li>
-<li><strong>Purpose:</strong> Enables advanced users to interact with Confluence API directly and perform actions that are not covered by other tools.</li>
+<li>
+<p><strong>Generic Request:</strong>  <strong>Tool Name:</strong> <code>generic_confluence</code></p>
+<ul>
+<li><strong>Functionality:</strong> A generic tool to interact with the official Atlassian Confluence REST API. Allows for executing various operations like searching, creating, updating, or deleting pages by specifying the HTTP method, relative URL, and parameters.</li>
+<li><strong>Purpose:</strong> Provides flexibility to perform any Confluence API operation, enabling advanced and custom use cases beyond predefined tools.</li>
+</ul>
+</li>
+<li>
+<p><strong>Loader Tool:</strong>  <strong>Tool Name:</strong> <code>loader</code></p>
+<ul>
+<li><strong>Functionality:</strong> Loads content from Confluence based on specified parameters such as content format, page IDs, labels, CQL queries, and more. It can also include restricted content, archived content, attachments, comments, and labels.</li>
+<li><strong>Purpose:</strong> Enables efficient retrieval of content from Confluence with advanced filtering options, making it ideal for bulk data extraction or targeted content loading.</li>
 </ul>
 </li>
 </ul>

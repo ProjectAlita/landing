@@ -2757,8 +2757,6 @@
 <li>
 <p><strong>Configure GitHub Toolkit Settings:</strong> Fill in the following configuration fields in the "New GitHub tool" section:</p>
 <ul>
-<li><strong>Name:</strong>  Enter a descriptive <strong>Name</strong> for your GitHub toolkit instance. This name will be used to reference the toolkit within your Agent's instructions (e.g., "MyGitHubRepo", "CodeRepoAccess"). Choose a name that clearly indicates its purpose.</li>
-<li><strong>Description:</strong> Provide a concise <strong>Description</strong> of the toolkit's purpose or the specific GitHub repository it will access (e.g., "Access to the main development code repository").</li>
 <li><strong>URL:</strong>  This field is pre-filled with the standard GitHub API URL: <code>https://api.github.com</code>. <strong>In the vast majority of cases, you should not modify this URL.</strong> Only change it if you are connecting to a self-hosted <strong>GitHub Enterprise Server</strong> instance, in which case you should enter the specific API URL for your Enterprise Server.</li>
 <li><strong>Repository:</strong> Enter the <strong>Repository name</strong> that you want to access with this toolkit. Use the format: <code>repository_owner/repository_name</code> (e.g., <code>MyOrganization/my-project-repo</code>). Ensure you use the correct owner/organization and repository name. You don't need to add ".git" at the end of the repo.</li>
 <li><strong>Main branch:</strong> Specify the <strong>Main branch</strong> of your repository. This is typically <code>main</code> or <code>master</code>.</li>
@@ -2768,8 +2766,7 @@
 </ul>
 </li>
 </ul>
-<p><img alt="GitHub-Toolkit_Configuration.png" src="../../../img/how-tos/github/GitHub-Toolkit_Configuration.png" /></p>
-<p><img alt="GitHub-Toolkit_Configuration.png" src="..//..//img/how-tos/github/GitHub-setup.png" /></p>
+<p><img alt="GitHub-Toolkit_Configuration.png" src="../../../img/how-tos/github/GitHub-setup.png" /></p>
 </li>
 <li>
 <p><strong>Enable Desired Tools:</strong> In the <strong>"Tools"</strong> section within the GitHub toolkit configuration, <strong>carefully select the checkboxes next to only the specific GitHub tools</strong> that your Agent will actually need to use. <strong>Enable only the tools that are absolutely necessary</strong> to adhere to the principle of least privilege and minimize potential security risks. Available tools include:</p>
@@ -2793,6 +2790,9 @@
 <li><strong>Set active branch</strong> - Sets the active branch.</li>
 <li><strong>Create branch</strong> - Creates a new branch.</li>
 <li><strong>Get files from directory</strong> - Retrieves files from a directory.</li>
+<li><strong>Create Issue on Project</strong> - Creates a new issue for given project.</li>
+<li><strong>Update Issue on Project</strong> - Update issue for given project.</li>
+<li><strong>Loader</strong> - Load repository to get general information..</li>
 </ul>
 </li>
 <li>
@@ -2825,16 +2825,16 @@
 </ul>
 </li>
 <li>
-<p><strong>Create Issue:</strong> <strong>Tool Name:</strong> <code>create_issue</code></p>
+<p><strong>Create Issue:</strong> <strong>Tool Name:</strong> <code>create_issue</code> and <strong>Create Issue on project:</strong> <strong>Tool Name:</strong> <code>update_issue_on_project</code></p>
 <ul>
 <li><strong>Functionality:</strong> Creates a new issue in the specified GitHub repository. Requires parameters such as issue title and body, and optionally supports setting assignees, labels, and milestones during issue creation.</li>
 <li><strong>Purpose:</strong> Automates the process of issue creation directly from ELITEA workflows. Allows Agents to automatically log bugs, feature requests, or tasks based on user input, workflow triggers, or analysis results, streamlining issue reporting and task management.</li>
 </ul>
 </li>
 <li>
-<p><strong>Update Issue:</strong> <strong>Tool Name:</strong> <code>update_issue</code></p>
+<p><strong>Update Issue:</strong> <strong>Tool Name:</strong> <code>update_issue</code> and <strong>Update Issue on project:</strong> <strong>Tool Name:</strong> <code>update_issue_on_project</code></p>
 <ul>
-<li><strong>Functionality:</strong> Updates an existing issue in the specified GitHub repository. Allows modification of issue attributes such as title, body, status (open/closed), assignees, and labels. Requires the issue number to identify the issue to be updated.</li>
+<li><strong>Functionality:</strong> Updates an existing issue in the specified GitHub repository and project. Allows modification of issue attributes such as title, body, status (open/closed), assignees, and labels. Requires the issue number to identify the issue to be updated.</li>
 <li><strong>Purpose:</strong> Enables Agents to automate issue status updates, assignment changes, priority adjustments, or content modifications based on workflow progress, user actions, or external events. Facilitates dynamic issue management and keeps issue tracking information current and accurate.</li>
 </ul>
 </li>
@@ -2934,6 +2934,13 @@
 <ul>
 <li><strong>Functionality:</strong> Retrieves a list of files located within a specific directory in a GitHub repository. Allows retrieval of files from a specified subdirectory path within a branch.</li>
 <li><strong>Purpose:</strong> Enables Agents to retrieve file listings from specific directories, facilitating focused navigation within complex repositories, targeting relevant files within a directory structure for processing, or automating directory-specific file management tasks within ELITEA workflows, improving efficiency when working with organized file sets.</li>
+</ul>
+</li>
+<li>
+<p><strong>Loader:</strong> <strong>Tool Name:</strong> <code>Loader</code></p>
+<ul>
+<li><strong>Functionality:</strong> A generator that yields content from files matching the whitelist but not the blacklist.</li>
+<li><strong>Purpose:</strong> The Loader Tool generates file content from a specific branch in the repository, while respecting whitelist and blacklist patterns. It is useful for processing or analyzing specific files in a repository by filtering the files based on the specified criteria.Paramets : branch, whitelist, blacklist.</li>
 </ul>
 </li>
 </ul>

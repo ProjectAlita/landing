@@ -2874,8 +2874,6 @@
 <li>
 <p><strong>Configure Azure DevOps Toolkit Settings:</strong>  Fill in the configuration fields for the selected Azure DevOps toolkit. The configuration steps are similar for all ADO toolkits:</p>
 <ul>
-<li><strong>Name:</strong>  Enter a descriptive <strong>Name</strong> for your Azure DevOps toolkit instance. This name will be used to reference the toolkit within your Agent's instructions (e.g., "MyAzureWiki", "ProjectBoardAccess", "TestPlanManager").</li>
-<li><strong>Description:</strong> Provide a brief <strong>Description</strong> of the toolkit's purpose or the specific Azure DevOps service it will access (e.g., "Access to Project Alpha Wiki", "Work item management for Project Beta").</li>
 <li><strong>ADO Organization URL:</strong> Enter your Azure DevOps organization URL. <strong>Ensure you use the correct format</strong>, including your organization name: <code>https://dev.azure.com/{YourOrganizationName}</code> (Replace <code>{YourOrganizationName}</code> with your actual Azure DevOps organization name).</li>
 <li><strong>Project Name:</strong> Enter the <strong>Project Name</strong> within your Azure DevOps organization that contains the Wiki, Boards, or Test Plans you want to access (e.g., <code>MyProject</code>).</li>
 <li><strong>Personal Access Token:</strong> Paste the <strong>Personal Access Token</strong> you generated in Azure DevOps (during the "Software-Specific Setup" section of this guide) into the <strong>"Personal Access Token"</strong> field.  <strong>Important Security Note:</strong> For enhanced security, consider using the <strong>"Secret"</strong> option instead and storing your Personal Access Token securely as a Secret within <a href="../../../platform-documentation/menus/settings/#secrets">Secrets</a> feature.</li>
@@ -2925,6 +2923,11 @@
 <li><strong>Purpose:</strong> Automate wiki updates, allowing Agents to dynamically update documentation, add meeting notes, or modify wiki content based on workflow events or user interactions.</li>
 </ul>
 </li>
+<li><strong>Rename Wiki Page:</strong>  <strong>Tool Name:</strong> <code>Rename_Wiki_Page</code><ul>
+<li><strong>Functionality:</strong> Allows renaming of the wiki pages.</li>
+<li><strong>Purpose:</strong> Automate wiki updates, allowing Agents to dynamically update documentation, or modify wiki content based on workflow events or user interactions.</li>
+</ul>
+</li>
 </ul>
 <h4 id="ado-board-tools">ADO Board Tools:</h4>
 <ul>
@@ -2956,6 +2959,11 @@
 <li><strong>Get Relation Types:</strong> <strong>Tool Name:</strong> <code>get_relation_types</code><ul>
 <li><strong>Functionality:</strong> Retrieves a list of available relation types for work items in Azure DevOps Boards.</li>
 <li><strong>Purpose:</strong> Allows Agents to dynamically retrieve valid relation types for work items, enabling dynamic link creation and providing users with valid linking options within ELITEA workflows.</li>
+</ul>
+</li>
+<li><strong>Get Comments:</strong> <strong>Tool Name:</strong> <code>get_comments</code><ul>
+<li><strong>Functionality:</strong> Retrieves comments from Azure DevOps Boards.</li>
+<li><strong>Purpose:</strong> Allow Agents to fetch work item information to provide context, summarize task status, or incorporate work item details into ELITEA conversations or reports.</li>
 </ul>
 </li>
 </ul>

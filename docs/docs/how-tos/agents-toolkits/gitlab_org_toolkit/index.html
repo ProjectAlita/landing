@@ -2684,8 +2684,6 @@
 <li>
 <p><strong>Configure GitLab Org Toolkit Settings:</strong> Carefully fill in the following configuration fields within the "New GitLab Org tool" section:</p>
 <ul>
-<li><strong>Name:</strong>  Enter a descriptive <strong>Name</strong> for this specific GitLab Org toolkit instance. Choose a name that is easily recognizable and helps you identify its purpose within your Agent's instructions. For example, you might use names like "OrgCodeAccess", "GitLabOrgIntegration", or "EnterpriseGitLab".</li>
-<li><strong>Description:</strong> Provide a concise <strong>Description</strong> for the toolkit. This description should clarify the toolkit's purpose or the GitLab Organization it is intended to access. For example, you could describe it as "Toolkit for accessing and managing repositories across the GitLab Organization" or "Integration for the entire GitLab Enterprise Organization".</li>
 <li><strong>GitLab URL:</strong> Enter the base URL of your GitLab instance.<ul>
 <li>For <strong>GitLab.com (Cloud)</strong>: Use the standard GitLab.com URL: <code>https://gitlab.com</code>.</li>
 <li>For <strong>Self-Hosted GitLab Instances</strong>: If your organization uses a self-hosted GitLab instance (GitLab Enterprise Edition), enter the specific URL of your GitLab server. For example, <code>https://gitlab.yourcompany.com</code>. <strong>Ensure you include <code>https://</code> or <code>http://</code> at the beginning of the URL.</strong></li>
@@ -2718,6 +2716,10 @@
 <li><strong>Set active branch</strong> - Enables the Agent to set a specific branch as the active branch for subsequent operations.</li>
 <li><strong>Update file</strong> - Allows the Agent to update the content of existing files within the repository.</li>
 <li><strong>Append file</strong> - Allows the Agent to append content to existing files within the repository.</li>
+<li><strong>Get Issue</strong> - Allows the Agent to fetch details of a specific issue and its initial comments.</li>
+<li><strong>Get Issues</strong> - Allows the Agent to retrieve a list of all open issues in the repository.</li>
+<li><strong>Comment on Issue</strong> - Allows the Agent to add comments to existing issues in the repository.</li>
+<li><strong>List Folders</strong> - Allows the Agent to list folders within a specified path in the repository.</li>
 </ul>
 </li>
 <li>
@@ -2810,6 +2812,34 @@
 <ul>
 <li><strong>Functionality:</strong> Appends content to the end of an existing file within the GitLab repository. Requires the file path, branch name, and content to append as parameters.</li>
 <li><strong>Purpose:</strong> Enables automated appending of data to log files, documentation files, or other files where incremental content addition is needed. Useful for adding timestamps, generating audit trails, or accumulating data within repository files through automated workflows.</li>
+</ul>
+</li>
+<li>
+<p><strong>Get Issue:</strong> <strong>Tool Name:</strong> <code>get_issue</code></p>
+<ul>
+<li><strong>Functionality:</strong> Fetches a specific issue and its first 10 comments from the GitLab repository. Requires the issue number and repository name as parameters.</li>
+<li><strong>Purpose:</strong> Allows retrieval of detailed information about a specific issue, including its description and initial comments. Useful for tracking issue progress, understanding the context of the issue, and facilitating communication among team members.</li>
+</ul>
+</li>
+<li>
+<p><strong>Get Issues:</strong> <strong>Tool Name:</strong> <code>get_issues</code></p>
+<ul>
+<li><strong>Functionality:</strong> Fetches all open issues from the GitLab repository. Requires the repository name as a parameter.</li>
+<li><strong>Purpose:</strong> Provides a comprehensive list of all open issues within the repository. Useful for project management, tracking outstanding tasks, and prioritizing work based on issue status.</li>
+</ul>
+</li>
+<li>
+<p><strong>Comment on Issue:</strong> <strong>Tool Name:</strong> <code>comment_on_issue</code></p>
+<ul>
+<li><strong>Functionality:</strong> Adds a comment to a GitLab issue. Requires the issue number, comment text, and repository name as parameters.</li>
+<li><strong>Purpose:</strong> Facilitates communication and collaboration by allowing team members to add comments to issues. Useful for providing updates, asking questions, and sharing information related to the issue.</li>
+</ul>
+</li>
+<li>
+<p><strong>List Folders:</strong> <strong>Tool Name:</strong> <code>list_folders</code></p>
+<ul>
+<li><strong>Functionality:</strong> Lists folders within a specified path in the GitLab repository. Requires the repository path, branch name, and an optional recursive flag as parameters.</li>
+<li><strong>Purpose:</strong> Enables navigation and exploration of the repository's folder structure. Useful for understanding the organization of files and directories, locating specific folders, and managing repository contents.</li>
 </ul>
 </li>
 </ul>
