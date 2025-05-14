@@ -355,7 +355,7 @@
   
   
   <span class="md-ellipsis">
-    RN 1.5.1
+    RN 1.5.2
     
   </span>
   
@@ -403,6 +403,29 @@
             Archive
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release-notes/archived/rn8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RN 1.5.1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -2972,10 +2995,8 @@
 <h3 id="option-1-workspace-settings">Option 1: Workspace Settings</h3>
 <p>If you choose <strong>Workspace Settings</strong>, VS Code will create a <code>.vscode/mcp.json</code> file in your project.</p>
 <ol>
-<li>
-<p><strong>Open <code>.vscode/mcp.json</code></strong><br />
-   Navigate to the file in your workspace and open it.  </p>
-</li>
+<li><strong>Open <code>.vscode/mcp.json</code></strong><br />
+   Navigate to the file in your workspace and open it.  </li>
 <li>
 <p><strong>Add Your Token</strong><br />
    After the <code>"url"</code> entry for your server, add the <code>"headers"</code> section exactly as shown below. Make sure to keep the word <code>Bearer</code> (with a space after it) and replace <code>[Your Token]</code> with your actual authentication token. Do not remove <code>Bearer</code>—it is required for authorization to work correctly.
@@ -2989,6 +3010,15 @@
        "Authorization": "Bearer abc123"
    }</code>
    <img alt="Add Token to mcp.json" src="../../img/how-tos/mcp_server/add-token-mcp-json.png" /></p>
+<blockquote>
+<p><strong>Important:</strong> If you are using VS Code version 1.100.1 or higher, you'll also need to manually add <code>"type": "sse"</code> to your configuration  file, as shown below:
+<code>json
+"type": "sse",
+"url": "https://nexus.elitea.ai/mcp_sse/1/sse",
+"headers": {
+    "Authorization": "Bearer abc123"
+}</code></p>
+</blockquote>
 </li>
 <li>
 <p><strong>Save and Start</strong><br />
@@ -3021,11 +3051,20 @@
    }</code>
    <img alt="Add Token to settings.json" src="../../img/how-tos/mcp_server/add-token-settings-json.png" /></p>
 </li>
-<li>
-<p><strong>Save and Start</strong><br />
+</ol>
+<blockquote>
+<p><strong>Important:</strong> If you are using VS Code version 1.100.1 or higher, you'll also need to manually add <code>"type": "sse"</code> to your configuration file, as shown below:
+<code>json
+"type": "sse",
+"url": "https://nexus.elitea.ai/mcp_sse/1/sse",
+"headers": {
+    "Authorization": "Bearer abc123"
+}</code></p>
+</blockquote>
+<ol>
+<li><strong>Save and Start</strong><br />
    Save the file, then click the <strong>Start</strong> button in the Copilot Chat interface to activate the server.
-   <img alt="Start Server settings.json" src="../../img/how-tos/mcp_server/start-server-settings-json.png" /></p>
-</li>
+   <img alt="Start Server settings.json" src="../../img/how-tos/mcp_server/start-server-settings-json.png" /></li>
 </ol>
 <blockquote>
 <p><strong>Note:</strong> This MCP server will be available globally for all your projects and workspaces in VS Code.</p>
