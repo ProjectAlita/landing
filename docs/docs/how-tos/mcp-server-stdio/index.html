@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://elitea.ai/docs/how-tos/mcp-server/">
+        <link rel="canonical" href="https://elitea.ai/docs/how-tos/mcp-server-stdio/">
       
       
-        <link rel="prev" href="../../feature-guides/advanced-features/roles/">
+        <link rel="prev" href="../mcp-server/">
       
       
-        <link rel="next" href="../mcp-server-stdio/">
+        <link rel="next" href="../agents-toolkits/pipeline-agent-framework/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Elitea MCP Server Integration via SSE Transport - ELITEA Documentation</title>
+        <title>Elitea MCP Server Integration via STDIO - ELITEA Documentation</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#elitea-mcp-server-integration-via-sse-transport" class="md-skip">
+        <a href="#elitea-mcp-server-integration-via-stdio" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Elitea MCP Server Integration via SSE Transport
+              Elitea MCP Server Integration via STDIO
             
           </span>
         </div>
@@ -1352,6 +1352,29 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../mcp-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Elitea MCP Server Integration via SSE Transport
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1369,7 +1392,7 @@
   
   
   <span class="md-ellipsis">
-    Elitea MCP Server Integration via SSE Transport
+    Elitea MCP Server Integration via STDIO
     
   </span>
   
@@ -1382,7 +1405,7 @@
   
   
   <span class="md-ellipsis">
-    Elitea MCP Server Integration via SSE Transport
+    Elitea MCP Server Integration via STDIO
     
   </span>
   
@@ -1423,6 +1446,48 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#difference-between-sse-transport-and-stdio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Difference between SSE Transport and STDIO
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Difference between SSE Transport and STDIO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sse-transport" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSE Transport
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdio-transport" class="md-nav__link">
+    <span class="md-ellipsis">
+      STDIO Transport
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#communication-channels-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Communication Channels Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       Prerequisites
@@ -1448,6 +1513,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Step-by-Step Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      For macOS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Windows
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-in-vs-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting Up in VS Code
+    </span>
+  </a>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1465,6 +1563,48 @@
       Option 2: User Settings
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-server-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Server Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example Server Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1-access-all-agents-in-a-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option 1: Access All Agents in a Project
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2-access-a-specific-application-within-a-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option 2: Access a Specific Application within a Project
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-line-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command-Line Reference
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1604,9 +1744,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-token-issues" class="md-nav__link">
+  <a href="#2-command-not-found" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Token Issues
+      2. Command Not Found
     </span>
   </a>
   
@@ -1622,18 +1762,27 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-general-troubleshooting-tips" class="md-nav__link">
+  <a href="#4-project-id-issues" class="md-nav__link">
     <span class="md-ellipsis">
-      4. General Troubleshooting Tips
+      4. Project ID Issues
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-still-having-issues" class="md-nav__link">
+  <a href="#5-general-troubleshooting-tips" class="md-nav__link">
     <span class="md-ellipsis">
-      5. Still Having Issues?
+      5. General Troubleshooting Tips
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-still-having-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Still Having Issues?
     </span>
   </a>
   
@@ -1657,29 +1806,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../mcp-server-stdio/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Elitea MCP Server Integration via STDIO
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -2641,6 +2767,48 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#difference-between-sse-transport-and-stdio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Difference between SSE Transport and STDIO
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Difference between SSE Transport and STDIO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sse-transport" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSE Transport
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdio-transport" class="md-nav__link">
+    <span class="md-ellipsis">
+      STDIO Transport
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#communication-channels-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Communication Channels Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       Prerequisites
@@ -2666,6 +2834,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Step-by-Step Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      For macOS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Windows
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-in-vs-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting Up in VS Code
+    </span>
+  </a>
+  
 </li>
         
           <li class="md-nav__item">
@@ -2683,6 +2884,48 @@
       Option 2: User Settings
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-server-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Server Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example Server Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1-access-all-agents-in-a-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option 1: Access All Agents in a Project
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2-access-a-specific-application-within-a-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option 2: Access a Specific Application within a Project
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-line-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command-Line Reference
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2822,9 +3065,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-token-issues" class="md-nav__link">
+  <a href="#2-command-not-found" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Token Issues
+      2. Command Not Found
     </span>
   </a>
   
@@ -2840,18 +3083,27 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-general-troubleshooting-tips" class="md-nav__link">
+  <a href="#4-project-id-issues" class="md-nav__link">
     <span class="md-ellipsis">
-      4. General Troubleshooting Tips
+      4. Project ID Issues
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-still-having-issues" class="md-nav__link">
+  <a href="#5-general-troubleshooting-tips" class="md-nav__link">
     <span class="md-ellipsis">
-      5. Still Having Issues?
+      5. General Troubleshooting Tips
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-still-having-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Still Having Issues?
     </span>
   </a>
   
@@ -2887,32 +3139,80 @@
 
 
 
-<h1 id="elitea-mcp-server-integration-via-sse-transport">Elitea MCP Server Integration via SSE Transport</h1>
+<h1 id="elitea-mcp-server-integration-via-stdio">Elitea MCP Server Integration via STDIO</h1>
 <h2 id="overview">Overview</h2>
-<p>The Elitea platform now supports integration with MCP clients through its dedicated MCP Server, using Server-Sent Events (SSE) for real-time communication. This integration makes it easy to connect your favorite MCP-compatible tools to Elitea, enabling seamless, live interactions powered by the open Model Context Protocol (MCP).</p>
-<p>With SSE transport, you receive updates and responses from Elitea agents as they happen, making your workflows more interactive and efficient. Whether you’re using Visual Studio Code or another MCP client, this guide will walk you through connecting and making the most of Elitea’s MCP Server capabilities.</p>
+<p>The Elitea platform supports integration with MCP clients through its dedicated MCP Server using Standard Input/Output (STDIO) for communication. This integration allows you to connect your favorite MCP-compatible tools to Elitea, enabling seamless interactions powered by the open Model Context Protocol (MCP).</p>
+<p>With STDIO transport, you can interact with Elitea agents directly through a command-line interface, making it ideal for script-based workflows, automation, and environments where HTTP connections may not be practical. Whether you're using Visual Studio Code or another MCP client, this guide will walk you through connecting and leveraging Elitea's MCP Server capabilities via STDIO.</p>
 <h2 id="what-is-the-mcp-protocol">What is the MCP Protocol?</h2>
 <p>The Model Context Protocol (MCP) is an open standard designed to enable seamless communication between AI-powered tools, agents, and client applications. By following the MCP protocol, different systems can exchange context, tasks, and results in a consistent and interoperable way.</p>
 <p>MCP is widely adopted in the AI ecosystem, making it easier to integrate various tools and platforms—like Elitea—with your favorite development environments and assistants.</p>
 <p>To learn more about the technical details and capabilities of MCP, visit the official documentation: <a href="https://modelcontextprotocol.io/">MCP Protocol</a>.</p>
+<h2 id="difference-between-sse-transport-and-stdio">Difference between SSE Transport and STDIO</h2>
+<p>Elitea MCP Server offers two transport options: Server-Sent Events (SSE) and Standard Input/Output (STDIO). These options differ not only in their implementation but also in their communication direction and use cases.</p>
+<h3 id="sse-transport">SSE Transport</h3>
+<ul>
+<li><strong>Direction</strong>: One-way communication (Elitea → Your Product)</li>
+<li><strong>Purpose</strong>: Elitea uses SSE to push workflow updates, notifications, and real-time events to your product</li>
+<li><strong>Uses HTTP</strong> with Server-Sent Events for communication</li>
+<li><strong>Web-based</strong> and operates over network connections</li>
+<li><strong>Requires authentication</strong> via HTTP headers</li>
+<li><strong>Ideal for</strong>: Web applications, remote connections, and scenarios where you need to receive continuous updates without polling</li>
+<li>See the <a href="../mcp-server/">SSE Transport guide</a> for details</li>
+</ul>
+<h3 id="stdio-transport">STDIO Transport</h3>
+<ul>
+<li><strong>Direction</strong>: Two-way communication (Elitea ↔ Your Product)</li>
+<li><strong>Purpose</strong>: Your product uses MCP STDIO client (such as alita-mcp) to exchange data, send commands, or receive responses with Elitea</li>
+<li><strong>Uses local process input/output streams</strong> for communication</li>
+<li><strong>Operates entirely</strong> within your local environment</li>
+<li><strong>Authentication handled</strong> through command-line parameters</li>
+<li><strong>Ideal for</strong>: Local development, CLI-based workflows, and scenarios where you need bidirectional communication</li>
+<li><strong>Perfect for</strong> environments where HTTP connections are limited or not preferred</li>
+<li><strong>No need for token management</strong> as authentication is handled through the command line</li>
+</ul>
+<h3 id="communication-channels-summary">Communication Channels Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Channel</th>
+<th>Direction</th>
+<th>Purpose</th>
+<th>Example Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SSE</td>
+<td>Elitea → Your Product</td>
+<td>Real-time workflow updates, notifications</td>
+<td>Receiving workflow status updates from Elitea</td>
+</tr>
+<tr>
+<td>STDIO (MCP)</td>
+<td>Elitea ↔ Your Product</td>
+<td>Data exchange, commands, responses</td>
+<td>Sending data/results back to Elitea and responding to requests</td>
+</tr>
+</tbody>
+</table>
 <h2 id="prerequisites">Prerequisites</h2>
-<p>Before you begin integrating with the Elitea MCP Server via SSE, ensure you have the following:</p>
+<p>Before you begin integrating with the Elitea MCP Server via STDIO, ensure you have the following:</p>
 <ul>
 <li>
-<p><strong>MCP Server Endpoint</strong><br />
-  You’ll need the full URL for your project’s MCP Server. The format is:
-  <code>[ELITEA_SERVER_URL]/mcp_sse/[PROJECT_ID]/sse</code>
-  For example:
-  <code>https://nexus.elitea.ai/mcp_sse/1/sse</code>
-  You can find your Server Endpoint and Project ID in the <a href="../../platform-documentation/menus/settings/#configuration">Settings Configuration section</a> of the Elitea web interface.</p>
+<p><strong>Alita MCP Client</strong><br />
+  The <code>alita-mcp</code> client is required to connect to the Elitea MCP Server. Installation instructions are provided in this guide.</p>
+</li>
+<li>
+<p><strong>Project ID</strong><br />
+  You'll need your Elitea Project ID to connect to the MCP Server. You can find your Project ID in the <a href="../../platform-documentation/menus/settings/#configuration">Settings Configuration section</a> of the Elitea web interface.</p>
 </li>
 <li>
 <p><strong>Authentication Token</strong><br />
   An authentication token is required to securely connect your MCP client to Elitea. Tokens act as secure keys that authorize your applications or scripts to perform operations on behalf of your account and project. You can generate and manage tokens in the Elitea web interface under the <a href="../../platform-documentation/menus/settings/#configuration">Settings &amp; Configuration – Personal Tokens</a> section. For each project, you can create a token and set its expiration. Be sure to copy and store your token securely, as it will not be shown again after creation.</p>
 </li>
 <li>
-<p><strong>Compatible MCP Clients</strong><br />
-  Currently, VSCode is the primary supported client for integration. You can also use Postman or any HTTP client that supports Server-Sent Events (SSE) for testing and development purposes. <strong>Note:</strong> Only MCP clients that support <strong>custom HTTP headers</strong> or implicitly add the HTTP header <strong>Authorization: Bearer [TOKEN]</strong> can be integrated with the Elitea SSE MCP Server. More clients will be added in the future.</p>
+<p><strong>Compatible Environment</strong><br />
+  Your operating system must support Python packages (Windows or macOS).</p>
 </li>
 <li>
 <p><strong>Enable MCP Support in VS Code</strong><br />
@@ -2924,8 +3224,85 @@
 </li>
 </ul>
 <h2 id="how-to-connect-to-elitea-mcp-server">How to Connect to ELITEA MCP Server</h2>
-<p>You can add and configure an Elitea MCP Server in VS Code using either <strong>Workspace</strong> or <strong>User</strong> settings. This flexibility allows you to share configurations with your team or keep them global for all your projects.</p>
+<p>You can add and configure an Elitea MCP Server in VS Code using either <strong>Workspace</strong> or <strong>User</strong> settings. The STDIO transport requires installing the Alita MCP client on your system first.</p>
 <h3 id="step-by-step-setup">Step-by-Step Setup</h3>
+<h4 id="for-macos">For macOS</h4>
+<p><strong>Step 1: Install the Alita MCP Client</strong><br />
+Open Terminal and run the following commands:</p>
+<pre><code class="language-bash"># Install pipx if not already installed
+brew install pipx
+pipx ensurepath
+
+# Install alita-mcp
+pipx install alita-mcp
+</code></pre>
+<p><strong>Step 2: Set Up Environment Variables</strong><br />
+Add the following to your shell configuration file:</p>
+<p>For zsh (default shell in newer macOS versions):</p>
+<pre><code class="language-bash"># Add these lines to ~/.zprofile
+export PATH=&quot;$PATH:$HOME/.local/bin&quot;
+export PYTHONPATH=&quot;$PYTHONPATH:$HOME/.local/pipx/venvs/alita-mcp/lib/python3.x/site-packages&quot;
+</code></pre>
+<p>For bash:</p>
+<pre><code class="language-bash"># Add these lines to ~/.bash_profile
+export PATH=&quot;$PATH:$HOME/.local/bin&quot;
+export PYTHONPATH=&quot;$PYTHONPATH:$HOME/.local/pipx/venvs/alita-mcp/lib/python3.x/site-packages&quot;
+</code></pre>
+<p><strong>Step 3: Reload Your Shell Configuration</strong><br />
+Apply the changes by running:</p>
+<pre><code class="language-bash"># For zsh (default in newer macOS)
+source ~/.zprofile
+
+# For bash
+# source ~/.bash_profile
+</code></pre>
+<p><strong>Step 4: Configure the Client</strong><br />
+Bootstrap the client with your deployment information:</p>
+<pre><code class="language-bash"># Set up your deployment URL and authentication token
+alita-mcp bootstrap
+</code></pre>
+<p>This will start an interactive configuration process where you'll need to provide the following information:</p>
+<pre><code>Deployment URL: [Enter your Elitea deployment URL]
+Authentication token: [Enter your authentication token]
+Host (default: 0.0.0.0): [Press Enter to accept default or specify a host]
+Port (default: 8000): [Press Enter to accept default or specify a port]
+</code></pre>
+<p><strong>Example Configuration:</strong></p>
+<pre><code>Deployment URL: https://nexus.elitea.ai
+Authentication token: abcD123
+Host (default: 0.0.0.0): [Press Enter]
+Port (default: 8000): [Press Enter]
+</code></pre>
+<p>The bootstrap process will create a configuration file with these settings that the <code>alita-mcp</code> client will use for all future connections to the Elitea MCP Server.</p>
+<h4 id="for-windows">For Windows</h4>
+<p><strong>Step 1: Install the Alita MCP Client</strong><br />
+Open Command Prompt or PowerShell and run the following commands:</p>
+<pre><code class="language-powershell"># Install pipx if not already installed
+python -m pip install --user pipx
+python -m pipx ensurepath
+
+# Install alita-mcp
+pipx install alita-mcp
+</code></pre>
+<p><strong>Step 2: Configure the Client</strong><br />
+Bootstrap the client with your deployment information:</p>
+<pre><code class="language-powershell"># Set up your deployment URL and authentication token
+alita-mcp bootstrap
+</code></pre>
+<p>This will start an interactive configuration process where you'll need to provide the following information:</p>
+<pre><code>Deployment URL: [Enter your Elitea deployment URL]
+Authentication token: [Enter your authentication token]
+Host (default: 0.0.0.0): [Press Enter to accept default or specify a host]
+Port (default: 8000): [Press Enter to accept default or specify a port]
+</code></pre>
+<p><strong>Example Configuration:</strong></p>
+<pre><code>Deployment URL: https://nexus.elitea.ai
+Authentication token: abcD123
+Host (default: 0.0.0.0): [Press Enter]
+Port (default: 8000): [Press Enter]
+</code></pre>
+<p>The bootstrap process will create a configuration file with these settings that the <code>alita-mcp</code> client will use for all future connections to the Elitea MCP Server.</p>
+<h3 id="setting-up-in-vs-code">Setting Up in VS Code</h3>
 <ol>
 <li>
 <p><strong>Open Your Project</strong><br />
@@ -2933,29 +3310,31 @@
 </li>
 <li>
 <p><strong>Open GitHub Copilot Chat</strong><br />
-   Access the Copilot Chat panel in VS Code.<br />
-<img alt="Open Copilot Chat" src="../../img/how-tos/mcp_server/open-copilot-chat.png" /></p>
+   Access the Copilot Chat panel in VS Code.</p>
 </li>
+</ol>
+<p><img alt="Open Copilot Chat" src="../../img/how-tos/mcp_server/open-copilot-chat.png" /></p>
+<ol>
 <li>
 <p><strong>Switch to Agent Mode</strong><br />
-   In Copilot Chat, select <strong>Agent mode</strong>.  </p>
+   In Copilot Chat, select <strong>Agent mode</strong>.</p>
 </li>
 <li>
 <p><strong>Select Tools</strong><br />
-   Click the <strong>Select Tools</strong> icon.  </p>
+   Click the <strong>Select Tools</strong> icon.</p>
 </li>
 <li>
-<p><strong>Add MCP Server</strong>  </p>
+<p><strong>Add MCP Server</strong></p>
 <ul>
 <li>Click <strong>Add More Tools</strong>.</li>
 <li>Choose <strong>+ Add MCP Server</strong>.
-  <img alt="Add MCP Server" src="../../img/how-tos/mcp_server/add-mcp-server.png" /></li>
-<li>Select <strong>HTTP (Server Sent Events)</strong>.
-  <img alt="Select HTTP SSE" src="../../img/how-tos/mcp_server/select-http-sse.png" /></li>
-<li>Enter your Server URL (e.g., <code>https://nexus.elitea.ai/mcp_sse/1/sse</code>).
-  <img alt="Add ServerURL" src="../../img/how-tos/mcp_server/add-server-url.png" /></li>
+    <img alt="Add MCP Server" src="../../img/how-tos/mcp_server/add-mcp-server.png" /></li>
+<li>Select <strong>Command stdio</strong>.
+    <img alt="Select Command stdio" src="../../img/how-tos/mcp_server/select-command-stdio.png" /></li>
+<li>For Command, enter <code>alita-mcp</code>.
+    <img alt="Enter Command" src="../../img/how-tos/mcp_server/enter-command.png" /></li>
 <li>Enter a Server ID (use the default generated one or provide a descriptive name).
-  <img alt="Add Server ID" src="../../img/how-tos/mcp_server/add-server-id.png" /></li>
+    <img alt="Add Server ID" src="../../img/how-tos/mcp_server/add-server-id-stdio.png" /></li>
 </ul>
 </li>
 <li>
@@ -2963,74 +3342,85 @@
    You can save your MCP server configuration in either:</p>
 <ul>
 <li><strong>Workspace Settings</strong> (shared with your team, local to the project)</li>
-<li><strong>User Settings</strong> (applies globally to all VS Code workspaces)
-<img alt="Select Configuration Scope" src="../../img/how-tos/mcp_server/select-configuration-scope.png" /></li>
+<li><strong>User Settings</strong> (applies globally to all VS Code workspaces)</li>
 </ul>
+<p><img alt="Select Configuration Scope" src="../../img/how-tos/mcp_server/select-configuration-scope.png" /></p>
 </li>
 </ol>
 <hr />
 <h3 id="option-1-workspace-settings">Option 1: Workspace Settings</h3>
 <p>If you choose <strong>Workspace Settings</strong>, VS Code will create a <code>.vscode/mcp.json</code> file in your project.</p>
+<p>Follow these steps:</p>
 <ol>
 <li>
 <p><strong>Open <code>.vscode/mcp.json</code></strong><br />
-   Navigate to the file in your workspace and open it.  </p>
+   Navigate to the file in your workspace and open it.</p>
 </li>
 <li>
-<p><strong>Add Your Token</strong><br />
-   After the <code>"url"</code> entry for your server, add the <code>"headers"</code> section exactly as shown below. Make sure to keep the word <code>Bearer</code> (with a space after it) and replace <code>[Your Token]</code> with your actual authentication token. Do not remove <code>Bearer</code>—it is required for authorization to work correctly.
+<p><strong>Add Project Info</strong><br />
+   Add the following for args, replacing <code>project_id_number</code> with your actual project ID:
    <code>json
-   "headers": {
-       "Authorization": "Bearer YOUR_TOKEN_HERE"
-   }</code>
-   For example, if your token is <code>abc123</code>, it should look like:
-   <code>json
-   "headers": {
-       "Authorization": "Bearer abc123"
-   }</code>
-   <img alt="Add Token to mcp.json" src="../../img/how-tos/mcp_server/add-token-mcp-json.png" /></p>
+   "args": ["run", "--project_id", "project_id_number"]</code></p>
 </li>
-<li>
-<p><strong>Save and Start</strong><br />
-   Save the file, then click the <strong>Start</strong> button in the Copilot Chat interface to activate the server.
-   <img alt="Start Server mcp.json" src="../../img/how-tos/mcp_server/start-server-mcp-json.png" /></p>
-</li>
+<li><strong>Save and Start</strong><br />
+   Save the file, then click the <strong>Start</strong> button in the Copilot Chat interface to activate the server.</li>
 </ol>
+<p><img alt="Start Server mcp.json" src="../../img/how-tos/mcp_server/stdio-start-server-mcp-json.png" /></p>
 <blockquote>
 <p><strong>Note:</strong> This MCP server will only be available within this workspace.</p>
 </blockquote>
 <hr />
 <h3 id="option-2-user-settings">Option 2: User Settings</h3>
 <p>If you choose <strong>User Settings</strong>, your MCP server configuration will be added to your global <code>settings.json</code> file.</p>
+<p>Follow these steps:</p>
 <ol>
 <li>
 <p><strong>Open <code>settings.json</code></strong><br />
-   Open your user settings file in VS Code.  </p>
+   Open your user settings file in VS Code.</p>
 </li>
 <li>
-<p><strong>Add Your Token</strong><br />
-   After the <code>"url"</code> entry for your server, add the <code>"headers"</code> section exactly as shown below. Make sure to keep the word <code>Bearer</code> (with a space after it) and replace <code>[Your Token]</code> with your actual authentication token. Do not remove <code>Bearer</code> — it is required for authorization to work correctly.
+<p><strong>Add Project Info</strong><br />
+   Add the following for args, replacing <code>project_id_number</code> with your actual project ID:
    <code>json
-   "headers": {
-       "Authorization": "Bearer YOUR_TOKEN_HERE"
-   }</code>
-   For example, if your token is <code>abc123</code>, it should look like:
-   <code>json
-   "headers": {
-       "Authorization": "Bearer abc123"
-   }</code>
-   <img alt="Add Token to settings.json" src="../../img/how-tos/mcp_server/add-token-settings-json.png" /></p>
+   "args": ["run", "--project_id", "project_id_number"]</code></p>
 </li>
-<li>
-<p><strong>Save and Start</strong><br />
-   Save the file, then click the <strong>Start</strong> button in the Copilot Chat interface to activate the server.
-   <img alt="Start Server settings.json" src="../../img/how-tos/mcp_server/start-server-settings-json.png" /></p>
-</li>
+<li><strong>Save and Start</strong><br />
+   Save the file, then click the <strong>Start</strong> button in the Copilot Chat interface to activate the server.</li>
 </ol>
+<p><img alt="Start Server settings.json" src="../../img/how-tos/mcp_server/stdio-start-server-settings-json.png" /></p>
 <blockquote>
 <p><strong>Note:</strong> This MCP server will be available globally for all your projects and workspaces in VS Code.</p>
 </blockquote>
 <hr />
+<h3 id="example-server-configuration">Example Server Configuration</h3>
+<p>When setting up your STDIO MCP server configuration, you have several options for the <code>args</code> parameter depending on your needs:</p>
+<h4 id="option-1-access-all-agents-in-a-project">Option 1: Access All Agents in a Project</h4>
+<p>To access all available agents and pipelines in a specific project:</p>
+<pre><code class="language-json">&quot;elitea&quot;:  {
+    &quot;type&quot;: &quot;stdio&quot;,
+    &quot;command&quot;: &quot;alita-mcp&quot;,
+    &quot;args&quot;: [&quot;run&quot;, &quot;--project_id&quot;, &quot;25&quot;]
+}
+</code></pre>
+<h4 id="option-2-access-a-specific-application-within-a-project">Option 2: Access a Specific Application within a Project</h4>
+<p>For more granular control, you can specify a particular agent or pipeline and a version:</p>
+<pre><code class="language-json">&quot;elitea&quot;:  {
+    &quot;type&quot;: &quot;stdio&quot;,
+    &quot;command&quot;: &quot;alita-mcp&quot;,
+    &quot;args&quot;: [&quot;run&quot;, &quot;--project_id&quot;, &quot;25&quot;, &quot;--app_id&quot;, &quot;12&quot;, &quot;--version_id&quot;, &quot;3&quot;]
+}
+</code></pre>
+<blockquote>
+<p><strong>Note:</strong> The <code>app_id</code> and <code>version_id</code> parameters are optional and can be used when you want to limit access to a specific application or version within your project.</p>
+</blockquote>
+<h4 id="command-line-reference">Command-Line Reference</h4>
+<p>For reference, here are the corresponding command-line options:</p>
+<pre><code class="language-bash"># Using a specific application within a project (application_id and version_id are optional)
+alita-mcp run --project_id YOUR_PROJECT_ID [--app_id YOUR_APP_ID] [--version_id YOUR_VERSION_ID]
+
+# Using all available agents in a project
+alita-mcp run --project_id YOUR_PROJECT_ID
+</code></pre>
 <h3 id="multiple-mcp-servers">Multiple MCP Servers</h3>
 <p>You can add as many MCP servers as you need. For example, if you have several Elitea projects and want to use different agents from each, simply repeat the above steps for each server—regardless of whether you use workspace or user settings.</p>
 <hr />
@@ -3042,7 +3432,7 @@
 <h3 id="tagging-agents-and-pipelines">Tagging Agents and Pipelines</h3>
 <ol>
 <li>In the Elitea web interface, tag your agents or pipelines with <code>mcp</code>.
-   <img alt="Tag agent as mcp" src="../../img/how-tos/mcp_server/tag-agent-mcp.png" /></li>
+      <img alt="Tag agent as mcp" src="../../img/how-tos/mcp_server/tag-agent-mcp.png" /></li>
 <li>Only tagged agents and pipelines will be synced and available as tools in VS Code.</li>
 </ol>
 <blockquote>
@@ -3053,49 +3443,37 @@
 <h3 id="using-mcp-tools-in-agent-mode">Using MCP Tools in Agent Mode</h3>
 <p>Once your MCP server is connected and your agents/pipelines are tagged:</p>
 <ol>
-<li><strong>Open GitHub Copilot Chat</strong>  </li>
-<li><strong>Select Agent Mode</strong>  </li>
-<li><strong>Click the Tools Icon</strong>  </li>
-<li>
-<p><strong>Select Synced Agents and Pipelines</strong>  </p>
-<ul>
+<li><strong>Open GitHub Copilot Chat</strong></li>
+<li><strong>Select Agent Mode</strong></li>
+<li><strong>Click the Tools Icon</strong></li>
+<li><strong>Select Synced Agents and Pipelines</strong><ul>
 <li>All synced tools (tagged with <code>mcp</code>) will appear in the list.</li>
 <li>By default, all are selected. You can search, select, or deselect tools as needed.
-<img alt="MCP tools list" src="../../img/how-tos/mcp_server/mcp-tools-list.png" /></li>
+   <img alt="MCP tools list" src="../../img/how-tos/mcp_server/mcp-tools-list.png" /></li>
 </ul>
 </li>
-<li>
-<p><strong>Use Tools in Chat</strong>  </p>
-<ul>
-<li>In the chat input, write your instructions. You can reference a tool directly by typing <code>#</code> followed by the tool name (e.g.,   <code>#my_agent</code>).</li>
+<li><strong>Use Tools in Chat</strong><ul>
+<li>In the chat input, write your instructions. You can reference a tool directly by typing <code>#</code> followed by the tool name (e.g., <code>#my_agent</code>).</li>
 <li>Copilot will automatically suggest and invoke tools as needed.
-<img alt="MCP tool call" src="../../img/how-tos/mcp_server/mcp-tool-call.png" /></li>
+   <img alt="MCP tool call" src="../../img/how-tos/mcp_server/mcp-tool-call.png" /></li>
 </ul>
 </li>
-<li>
-<p><strong>Run the Tool</strong>  </p>
-<ul>
+<li><strong>Run the Tool</strong><ul>
 <li>When a tool is selected, click <strong>Run [tool name]</strong> to execute it.
-<img alt="Run tool" src="../../img/how-tos/mcp_server/run-tool.png" /></li>
+   <img alt="Run tool" src="../../img/how-tos/mcp_server/run-tool.png" /></li>
 </ul>
 </li>
-<li>
-<p><strong>Confirm Tool Execution</strong>  </p>
-<ul>
-<li>By default, you’ll be asked to confirm before a tool runs, for safety.</li>
+<li><strong>Confirm Tool Execution</strong><ul>
+<li>By default, you'll be asked to confirm before a tool runs, for safety.</li>
 <li>Use the <strong>Continue</strong> button dropdown to auto-confirm for the session, workspace, or all future runs.</li>
 </ul>
 </li>
-<li>
-<p><strong>Edit Tool Input Parameters (Optional)</strong>  </p>
-<ul>
+<li><strong>Edit Tool Input Parameters (Optional)</strong><ul>
 <li>Click the chevron next to the tool name to view and edit input parameters before running.
-<img alt="Edit tool parameters" src="../../img/how-tos/mcp_server/edit-tool-params.png" /></li>
+   <img alt="Edit tool parameters" src="../../img/how-tos/mcp_server/edit-tool-params.png" /></li>
 </ul>
 </li>
-<li>
-<p><strong>Review Output and Next Steps</strong>  </p>
-<ul>
+<li><strong>Review Output and Next Steps</strong><ul>
 <li>Follow the output and use the results as needed in your workflow.</li>
 </ul>
 </li>
@@ -3104,27 +3482,27 @@
 <p><strong>Tip:</strong><br />
 You can reference any available tool in your prompt by typing <code>#</code> and the tool name. This works in all chat modes (ask, edit, and agent mode).</p>
 <h2 id="use-case-enhancing-jira-user-stories-with-the-ba-assistant-agent">Use Case: Enhancing Jira User Stories with the BA Assistant Agent</h2>
-<p>Let’s walk through a real-world example to see how you can use an Elitea agent as an MCP tool in your workflow. In this scenario, we’ll use the <strong>BA Assistant</strong> agent, which helps you analyze instructions, retrieve data, and perform actions in Confluence and Jira.</p>
+<p>Let's walk through a real-world example to see how you can use an Elitea agent as an MCP tool in your workflow. In this scenario, we'll use the <strong>BA Assistant</strong> agent, which helps you analyze instructions, retrieve data, and perform actions in Confluence and Jira.</p>
 <h3 id="scenario">Scenario</h3>
 <p>You want to improve the acceptance criteria (ACs) of a Jira User Story. The BA Assistant agent, tagged with <code>mcp</code>, will help you read the ticket, enhance the ACs, and save the improved User Story as a local file—all from within GitHub Copilot Chat in VS Code.</p>
 <hr />
 <h3 id="step-1-ensure-the-agent-is-tagged">Step 1: Ensure the Agent is Tagged</h3>
-<p>In Elitea, make sure your <strong>BA Assistant</strong> agent is tagged with <code>mcp</code> so it’s available as a tool in VS Code.</p>
+<p>In Elitea, make sure your <strong>BA Assistant</strong> agent is tagged with <code>mcp</code> so it's available as a tool in VS Code.</p>
 <pre><code class="language-text">Agent: BA Assistant
 Tags: mcp
 </code></pre>
 <p><img alt="Tag agent as mcp" src="../../img/how-tos/mcp_server/tag-agent-mcp.png" /></p>
 <hr />
 <h3 id="step-2-connect-to-elitea-mcp-server">Step 2: Connect to Elitea MCP Server</h3>
-<p>Follow the earlier steps in this guide to connect your workspace to the Elitea MCP Server and sync available agents.</p>
+<p>Follow the earlier steps in this guide to connect your workspace to the Elitea MCP Server via STDIO and sync available agents.</p>
 <hr />
 <h3 id="step-3-open-copilot-chat-and-select-the-agent">Step 3: Open Copilot Chat and Select the Agent</h3>
 <ol>
 <li>Open GitHub Copilot Chat in VS Code.</li>
 <li>Switch to <strong>Agent mode</strong>.</li>
-<li>Click the <strong>Tools</strong> icon and ensure <strong>BA Assistant</strong> is selected as a tool.
-   <img alt="Select BA Assistant tool" src="../../img/how-tos/mcp_server/mcp-tools-list.png" /></li>
+<li>Click the <strong>Tools</strong> icon and ensure <strong>BA Assistant</strong> is selected as a tool.</li>
 </ol>
+<p><img alt="Select BA Assistant tool" src="../../img/how-tos/mcp_server/mcp-tools-list.png" /></p>
 <hr />
 <h3 id="step-4-call-the-agent-with-your-instruction">Step 4: Call the Agent with Your Instruction</h3>
 <p>In the chat input, provide a clear instruction referencing the BA Assistant tool. For example:</p>
@@ -3139,14 +3517,14 @@ Show me the scope of PLAN-3012 user story. Enhance ACs.
 <li>The BA Assistant agent will retrieve the Jira ticket, enhance the ACs, and present the improved User Story.</li>
 <li>The Github Copilot will save enhanced US as a new file named <code>PLAN-3012_enhanced.md</code> in my workspace.</li>
 <li>Confirm the action if prompted.</li>
-<li>The enhanced User Story will be saved as a new file in your workspace.
-  <img alt="Enhanced User Story saved" src="../../img/how-tos/mcp_server/enhanced-user-story-saved.png" /></li>
+<li>The enhanced User Story will be saved as a new file in your workspace.</li>
 </ul>
+<p><img alt="Enhanced User Story saved" src="../../img/how-tos/mcp_server/enhanced-user-story-saved.png" /></p>
 <hr />
-<p><strong>That’s it!</strong><br />
-With just a few steps, you’ve used the BA Assistant agent as an MCP tool to automate and streamline your Jira workflow—directly from VS Code.</p>
+<p><strong>That's it!</strong><br />
+With just a few steps, you've used the BA Assistant agent as an MCP tool to automate and streamline your Jira workflow—directly from VS Code.</p>
 <h2 id="troubleshooting-tips">Troubleshooting &amp; Tips</h2>
-<p>If you encounter issues while integrating or using the Elitea MCP Server, use the following tips and solutions to resolve common problems:</p>
+<p>If you encounter issues while integrating or using the Elitea MCP Server via STDIO, use the following tips and solutions to resolve common problems:</p>
 <hr />
 <h3 id="1-no-agents-or-pipelines-are-shown">1. No Agents or Pipelines Are Shown</h3>
 <ul>
@@ -3155,32 +3533,42 @@ With just a few steps, you’ve used the BA Assistant agent as an MCP tool to au
 <li><strong>Scope of MCP Server:</strong> Verify whether your MCP server is configured for the correct scope (User or Workspace). Sometimes, agents may not appear if the configuration is not in the expected location.</li>
 </ul>
 <hr />
-<h3 id="2-token-issues">2. Token Issues</h3>
+<h3 id="2-command-not-found">2. Command Not Found</h3>
 <ul>
-<li><strong>Correct Token:</strong> Double-check that you have copied and pasted the correct authentication token into your configuration.</li>
-<li><strong>Token Expiry:</strong> Ensure your token has not expired. If it has, generate a new one in the Elitea Settings and update your configuration.</li>
-<li><strong>Token Placement:</strong> Make sure the token is added under the <code>"headers"</code> section in your MCP server configuration.</li>
+<li><strong>Path Issues:</strong> Make sure that the <code>alita-mcp</code> command is properly installed and in your system's PATH.</li>
+<li><strong>Verify Installation:</strong> Run <code>which alita-mcp</code> on macOS/Linux or <code>where alita-mcp</code> on Windows to confirm the command is available.</li>
+<li><strong>Reinstall Client:</strong> If needed, reinstall the client following the installation steps in this guide.</li>
 </ul>
 <hr />
 <h3 id="3-vs-code-mcp-server-errors">3. VS Code MCP Server Errors</h3>
 <ul>
-<li><strong>Error Indicator:</strong> If VS Code encounters an issue with an MCP server, an error indicator will appear in the Chat view.
-  <img alt="MCP Server Error" src="../../img/how-tos/mcp_server/mcp-server-error.png" /></li>
-<li><strong>View Server Logs:</strong> Select the error notification in the Chat view, then choose <strong>Show Output</strong> to view detailed server logs.
-  <img alt="MCP Server Error Output" src="../../img/how-tos/mcp_server/mcp-server-error-output.png" /></li>
+<li><strong>Error Indicator:</strong> If VS Code encounters an issue with an MCP server, an error indicator will appear in the Chat view.</li>
+</ul>
+<p><img alt="MCP Server Error" src="../../img/how-tos/mcp_server/mcp-server-error.png" /></p>
+<ul>
+<li><strong>View Server Logs:</strong> Select the error notification in the Chat view, then choose <strong>Show Output</strong> to view detailed server logs.</li>
+</ul>
+<p><img alt="MCP Server Error Output" src="../../img/how-tos/mcp_server/mcp-server-error-output.png" /></p>
+<ul>
 <li><strong>Command Palette:</strong> Alternatively, run <code>MCP: List Servers</code> from the Command Palette, select your server, and choose <strong>Show Output</strong> for troubleshooting details.</li>
 </ul>
 <hr />
-<h3 id="4-general-troubleshooting-tips">4. General Troubleshooting Tips</h3>
+<h3 id="4-project-id-issues">4. Project ID Issues</h3>
 <ul>
-<li><strong>Check Network Connection:</strong> Ensure your internet connection is stable and that your firewall or proxy settings are not blocking the MCP server URL.</li>
+<li><strong>Verify Project ID:</strong> Double-check that you've entered the correct Project ID in your configuration.</li>
+<li><strong>Command Arguments:</strong> Ensure the args array in your configuration is properly formatted as shown in the examples.</li>
+</ul>
+<hr />
+<h3 id="5-general-troubleshooting-tips">5. General Troubleshooting Tips</h3>
+<ul>
+<li><strong>Check Python Installation:</strong> Make sure Python is correctly installed on your system.</li>
 <li><strong>VS Code Version:</strong> Make sure you are using VS Code version 1.99 or later, as MCP support is only available from this version onward.</li>
 <li><strong>Configuration File Location:</strong> Confirm that your <code>mcp.json</code> (for workspace) or <code>settings.json</code> (for user) is correctly formatted and saved.</li>
 <li><strong>Multiple Servers:</strong> If you have multiple MCP servers configured, ensure you are interacting with the correct one in the Copilot Chat interface.</li>
 <li><strong>Agent Mode:</strong> Always use Agent mode in Copilot Chat to access and use MCP tools.</li>
 </ul>
 <hr />
-<h3 id="5-still-having-issues">5. Still Having Issues?</h3>
+<h3 id="6-still-having-issues">6. Still Having Issues?</h3>
 <ul>
 <li><strong>Re-sync Tools:</strong> Try deselecting and reselecting tools in the Tools menu to force a refresh.</li>
 <li><strong>Restart VS Code:</strong> Sometimes, simply restarting VS Code can resolve temporary glitches.</li>
@@ -3197,7 +3585,8 @@ The primary way to reach our support team is via email:</p>
 <li><a href="https://modelcontextprotocol.io/">MCP Protocol – Official Documentation</a></li>
 <li><a href="https://code.visualstudio.com/docs/copilot/chat/mcp-servers">VS Code MCP Server Documentation</a></li>
 <li><a href="../../home/introduction/">ELITEA Documentation Home</a></li>
-<li><a href="../../platform-documentation/menus/settings/#configuration">ELITEA Settings &amp; Token Management</a></li>
+<li><a href="../../platform-documentation/menus/settings/#configuration">ELITEA Settings &amp; Configuration</a></li>
+<li><a href="../mcp-server/">ELITEA SSE Transport Integration</a></li>
 <li><a href="../../support-resources/contact-support/">ELITEA Support Resources</a></li>
 </ul>
 <p>Stay up to date with the latest features and best practices by visiting these links regularly.</p>
