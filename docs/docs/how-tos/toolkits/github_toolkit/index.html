@@ -1879,6 +1879,39 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#authentication-using-a-github-app-private-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication Using a GitHub App (Private Key)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication Using a GitHub App (Private Key)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-create-and-configure-a-github-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Create and Configure a GitHub App
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-generate-private-key-and-install-the-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Generate Private Key and Install the App
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1909,6 +1942,21 @@
       Toolkit Configuration
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Toolkit Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage-of-app-private-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage of App Private Key
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2288,6 +2336,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../servicenow_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ServiceNow Integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../sharepoint_toolkit/" class="md-nav__link">
         
   
@@ -2649,6 +2720,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../webhook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to Use Webhook Functionality
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2865,6 +2959,39 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#authentication-using-a-github-app-private-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication Using a GitHub App (Private Key)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication Using a GitHub App (Private Key)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-create-and-configure-a-github-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Create and Configure a GitHub App
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-generate-private-key-and-install-the-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Generate Private Key and Install the App
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2895,6 +3022,21 @@
       Toolkit Configuration
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Toolkit Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage-of-app-private-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage of App Private Key
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -3105,6 +3247,50 @@
 <img alt="GitHub-Generate_Token2" src="../../../img/how-tos/toolkits/github/GitHub-Generate_Token2.png" />
 <img alt="GitHub-Generate_Token3" src="../../../img/how-tos/toolkits/github/GitHub-Generate_Token3.png" />
 <img alt="GitHub-Generate_Token4" src="../../../img/how-tos/toolkits/github/GitHub-Generate_Token4.png" /></p>
+<h3 id="authentication-using-a-github-app-private-key">Authentication Using a GitHub App (Private Key)</h3>
+<p>For more granular control and enhanced security, especially in organizational or automated contexts, using a GitHub App for authentication is the recommended approach. This method authenticates as the app itself, not as a user, and its permissions are precisely defined within the app's settings.</p>
+<h4 id="step-1-create-and-configure-a-github-app">Step 1: Create and Configure a GitHub App</h4>
+<ol>
+<li><strong>Navigate to Developer Settings:</strong> Log in to your GitHub account, click your profile photo in the top-right corner, and go to <strong>Settings</strong> &gt; <strong>Developer settings</strong>.</li>
+<li><strong>Register a New App:</strong> Select <strong>GitHub Apps</strong> from the left-hand menu and click <strong>New GitHub App</strong>.</li>
+<li><strong>Fill in App Details:</strong><ul>
+<li><strong>App Name:</strong> Enter a unique name for your application (e.g., "ELITEA Integration App").</li>
+<li><strong>Homepage URL:</strong> Provide a valid URL. A placeholder like <code>https://www.example.com</code> is sufficient if you don't have a dedicated homepage.</li>
+</ul>
+</li>
+<li><strong>Configure Permissions:</strong> This is the most critical step. Scroll down to the <strong>"Permissions"</strong> section. For the toolkit to function correctly, you must grant the following permissions. Under <strong>Repository permissions</strong>, set the following:<ul>
+<li><strong>Actions:</strong> Read &amp; Write</li>
+<li><strong>Contents:</strong> Read &amp; Write</li>
+<li><strong>Issues:</strong> Read &amp; Write</li>
+<li><strong>Metadata:</strong> Read-only (This is a minimum requirement)</li>
+<li><strong>Pull requests:</strong> Read &amp; Write</li>
+<li><strong>Projects:</strong> Read &amp; Write</li>
+</ul>
+</li>
+<li><strong>Set Installation Options:</strong> Under <strong>"Where can this GitHub App be installed?"</strong>, choose <strong>"Only on this account"</strong> for private use.</li>
+<li><strong>Create the App:</strong> Click <strong>Create GitHub App</strong> at the bottom of the page.</li>
+</ol>
+<h4 id="step-2-generate-private-key-and-install-the-app">Step 2: Generate Private Key and Install the App</h4>
+<p>After creating the app, you will be redirected to its settings page.</p>
+<ol>
+<li>
+<p><strong>Generate a Private Key:</strong></p>
+<ul>
+<li>Scroll down to the <strong>"Private keys"</strong> section.</li>
+<li>Click <strong>Generate a private key</strong>.</li>
+<li>A <code>.pem</code> file will be immediately downloaded to your computer. <strong>This is your private key. Treat it like a password and store it securely.</strong> You will only be able to download it once.</li>
+</ul>
+</li>
+<li>
+<p><strong>Install the App:</strong></p>
+<ul>
+<li>In your GitHub App's settings, click the <strong>Install App</strong> tab in the left sidebar.</li>
+<li>Click <strong>Install</strong> next to your organization or personal account.</li>
+<li>On the next screen, you can choose to install the app on <strong>All repositories</strong> or <strong>Only select repositories</strong>.</li>
+<li>Click <strong>Install</strong> to complete the process. The app can now interact with the selected repositories.</li>
+</ul>
+</li>
+</ol>
 <h2 id="github-integration-with-elitea">GitHub Integration with ELITEA</h2>
 <h3 id="agent-creationconfiguration">Agent Creation/Configuration</h3>
 <p>To integrate GitHub, you'll need to configure it within an ELITEA Agent. You can integrate GitHub with a new Agent or modify an existing one.</p>
@@ -3128,13 +3314,40 @@
 <li><strong>URL:</strong>  This field is pre-filled with the standard GitHub API URL: <code>https://api.github.com</code>. <strong>In the vast majority of cases, you should not modify this URL.</strong> Only change it if you are connecting to a self-hosted <strong>GitHub Enterprise Server</strong> instance, in which case you should enter the specific API URL for your Enterprise Server( e.g. https://github.tools.test/api/v3/ ).</li>
 <li><strong>Repository:</strong> Enter the <strong>Repository name</strong> that you want to access with this toolkit. Use the format: <code>repository_owner/repository_name</code> (e.g., <code>MyOrganization/my-project-repo</code>). Ensure you use the correct owner/organization and repository name. You don't need to add ".git" at the end of the repo.</li>
 <li><strong>Main branch:</strong> Specify the <strong>Main branch</strong> of your repository. This is typically <code>main</code> or <code>master</code>.</li>
-<li><strong>Authentication Options - Token:</strong> Select the <strong>"Token"</strong> authentication option.<ul>
-<li><strong>Password/Secret:</strong> Choose <strong>"Password"</strong> and then paste the <strong>Personal Access Token (Classic)</strong> you generated in GitHub (during the "Software-Specific Setup" section of this guide) into the <strong>"Password"</strong> field.</li>
+<li>
+<p><strong>Authentication Options:</strong></p>
+<ul>
+<li><strong>Token:</strong> Select this option to authenticate using a GitHub Personal Access Token (recommended for most use cases).</li>
+<li><strong>Anonymous:</strong> Use this option if you only need to access public repositories and do not require authentication.</li>
+<li><strong>Password:</strong> Choose this option if you need to authenticate with your GitHub password (not recommended; use tokens for better security).</li>
+<li>
+<p><strong>App Private Key:</strong> Select this if you have a GitHub App installed on the repository and want to authenticate using the app's private key.</p>
+</li>
+<li>
+<p><strong>Password/Secret:</strong> Choose <strong>"Password"</strong> and then paste the <strong>Personal Access Token (Classic)</strong> you generated in GitHub (during the "Software-Specific Setup" section of this guide) into the <strong>"Password"</strong> field.</p>
+</li>
 <li><strong>Enhanced Security with Secrets (Recommended):</strong> For significantly enhanced security, it is strongly recommended to use the <strong>"Secret"</strong> option. Select <strong>"Secret"</strong> and then choose a pre-configured secret from the dropdown list. You must first securely store your Personal Access Token as a Secret within ELITEA's <a href="../../../platform-documentation/menus/settings/#secrets">Secrets Management</a> feature. Using Secrets is a critical security best practice that prevents hardcoding sensitive credentials directly in the toolkit configuration, reducing the risk of exposure.</li>
 </ul>
 </li>
 </ul>
 <p><img alt="GitHub-Toolkit_Configuration.png" src="../../../img/how-tos/toolkits/github/GitHub-setup.png" /></p>
+</li>
+</ol>
+<h4 id="usage-of-app-private-key">Usage of App Private Key</h4>
+<ol>
+<li>Return to your GitHub App's main settings page (<strong>General</strong> tab). You will find the <strong>App ID</strong> at the top of the page. Copy this value.</li>
+<li>In the ELITEA GitHub toolkit configuration, select <strong>"App private key"</strong> as the authentication option.</li>
+<li>
+<p>Fill in the required fields:</p>
+<ul>
+<li><strong>App ID:</strong> Paste the App ID you copied from your GitHub App's settings page.</li>
+<li><strong>Private Key / Secret:</strong><ul>
+<li>Open the <code>.pem</code> file you downloaded in a plain text editor. Copy the <strong>entire content</strong>, excluding the <code>-----BEGIN RSA PRIVATE KEY-----</code> and <code>-----END RSA PRIVATE KEY-----</code> lines, and paste it into the <strong>"Password"</strong> field.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="GitHub-private_key" src="../../../img/how-tos/toolkits/github/private_key.png" />
+  <img alt="GitHub-private_key1" src="../../../img/how-tos/toolkits/github/private_key1.png" /></p>
 </li>
 <li>
 <p><strong>Enable Desired Tools:</strong> In the <strong>"Tools"</strong> section within the GitHub toolkit configuration, <strong>carefully select the checkboxes next to only the specific GitHub tools</strong> that your Agent will actually need to use. <strong>Enable only the tools that are absolutely necessary</strong> to adhere to the principle of least privilege and minimize potential security risks. Available tools include:</p>
@@ -3614,6 +3827,27 @@
 </ol>
 </li>
 </ul>
+</li>
+<li>
+<p><strong>Error Updating Multiple Files (LLM Context Loss):</strong></p>
+<ul>
+<li><strong>Problem:</strong> This issue occurs because the LLM (Agent) loses context between file operations. It can be fixed by instructing the LLM to process files one by one, completing all steps for a single file before moving to the next.</li>
+</ul>
+<p><strong>Example Agent Instructions:</strong></p>
+<pre><code>  You will be given a list of files, but you need to process them one by one, completing operations with a single file before moving to the next.
+
+ Update file guidelines:
+- Read the file's initial content.
+- Review what must be updated.
+- Use the update_file tool to apply the changes to that single file.
+- ONLY after you have processed a file can you move to the next.
+
+ Constraints:
+- IMPORTANT: Start processing the next file ONLY after you have updated the previous one.
+- Process file by file and per flow: read - decide - update.
+</code></pre>
+<p>This approach ensures the Agent maintains the necessary context for each file operation, preventing update failures due to missing or outdated file content.</p>
+<p><img alt="GitHub-Toolkit_issue.png" src="../../../img/how-tos/toolkits/github/context_issue.png" /></p>
 </li>
 </ul>
 <h3 id="faq">FAQ</h3>

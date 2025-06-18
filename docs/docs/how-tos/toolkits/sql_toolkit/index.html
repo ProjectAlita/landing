@@ -2045,6 +2045,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../servicenow_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ServiceNow Integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../sharepoint_toolkit/" class="md-nav__link">
         
   
@@ -2648,6 +2671,29 @@
   
   <span class="md-ellipsis">
     Collections and Organizing Entities in ELITEA
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../webhook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to Use Webhook Functionality
     
   </span>
   
@@ -3315,7 +3361,7 @@ With this integration, users can pull real-time structured data from SQL databas
 <li><strong>Verify Connection Details:</strong> Double-check the Host, Port, Database name, Username, and Password in the toolkit configuration. Ensure they are accurate and match your database credentials.</li>
 <li><strong>Database Server Status:</strong> Confirm that your SQL server is running and accessible. Try connecting to the database using a database client (like MySQL Workbench, pgAdmin, DBeaver) from the same network where ELITEA is running to isolate network issues.</li>
 <li><strong>Network Connectivity:</strong> Verify network connectivity between ELITEA and your SQL server. Check firewall rules, network configurations, and ensure that the SQL server port is open for incoming connections from ELITEA's IP address (if applicable).</li>
-<li><strong>Database Dialect:</strong> Ensure you have selected the correct SQL Dialect ("MySQL" or "PostgreSQL") in the toolkit configuration that matches your database type.</li>
+<li><strong>Database Dialect:</strong> Ensure that the correct SQL Dialect ("MySQL" or "PostgreSQL") is selected in the toolkit configuration to match your database type.</li>
 </ol>
 </li>
 </ul>
@@ -3338,12 +3384,20 @@ With this integration, users can pull real-time structured data from SQL databas
 <li><strong>A:</strong> Currently, the ELITEA SQL toolkit officially supports <strong>MySQL</strong> and <strong>PostgreSQL</strong> dialects. Support for other SQL databases might be added in future updates. If you require integration with a different SQL database, please contact ELITEA support to discuss your needs.</li>
 </ul>
 </li>
-<li><strong>Q: Why can't Elitea connect to my SQL server?</strong><ul>
+<li>
+<p><strong>Q: Why can't Elitea connect to my SQL server?</strong></p>
+<ul>
 <li><strong>A:</strong> Elitea requires direct access to your SQL server. If you're experiencing connectivity issues, check the following:<ol>
 <li><strong>Public IP:</strong> Ensure that your local-hosted SQL server has a Public IP address if it needs to be accessed from outside your local network. Without this, ELITEA cannot initiate a connection to your database.</li>
 <li><strong>Network Environment:</strong> If your SQL server operates within a closed network or a VPN-restricted environment, deploy ELITEA within the same network. This ensures that ELITEA can reach the SQL server without external network barriers.</li>
 </ol>
 </li>
+</ul>
+</li>
+<li>
+<p><strong>Q: Can I use my locally deployed SQL server to connect ELITEA to it?</strong>  </p>
+<ul>
+<li><strong>A:</strong> No, your SQL server must be accessible from the web. This means the server should be hosted in a way that allows ELITEA to connect to it over the internet. If your SQL server is only available on your local network, ELITEA will not be able to access it unless you configure public accessibility or set up a secure connection such as a VPN.</li>
 </ul>
 </li>
 </ol>
