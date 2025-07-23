@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
     
     
       
@@ -1930,6 +1930,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../postman_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Postman Integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../powerpoint_toolkit/" class="md-nav__link">
         
   
@@ -2074,6 +2097,29 @@
   
   <span class="md-ellipsis">
     SharePoint Integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slack_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Slack Integration
     
   </span>
   
@@ -3288,14 +3334,56 @@
 <p>This section provides detailed instructions on how to configure the Xray Cloud toolkit within your ELITEA Agent.</p>
 <ol>
 <li><strong>Add Toolkit:</strong> In the "Tools" section of the Agent configuration, click on the <strong>"+" icon</strong>. This action will display a dropdown list of available toolkits that can be integrated with your Agent.</li>
-<li><strong>Select Xray Cloud Toolkit:</strong> From the dropdown list of available toolkits, choose <strong>"Xray Cloud"</strong>. Selecting "Xray Cloud" will open the "New Xray cloud tool" configuration panel, where you will specify the settings for your Xray Cloud integration.</li>
+<li>
+<p><strong>Select Xray Cloud Toolkit:</strong> From the dropdown list of available toolkits, choose <strong>"Xray Cloud"</strong>. Selecting "Xray Cloud" will open the "New Xray cloud tool" configuration panel, where you will specify the settings for your Xray Cloud integration.</p>
+</li>
 <li>
 <p><strong>Configure Xray Cloud Toolkit Settings:</strong> Carefully fill in the following configuration fields within the "New Xray cloud tool" section:</p>
 <ul>
-<li><strong>Name:</strong>  Enter a descriptive <strong>Name</strong> for your Xray Cloud toolkit instance. Choose a name that is easily recognizable and helps you identify its purpose within your Agent's instructions (e.g., "ProjectXrayCloud", "TestManagementAccess", "XrayCloudIntegration").</li>
-<li><strong>Description:</strong> Provide a concise <strong>Description</strong> for the toolkit. This description should clarify the toolkit's purpose or the specific Jira project with Xray Cloud it is intended to access (e.g., "Toolkit for accessing and managing test cases in Xray Cloud", "Integration for Xray Cloud in Jira Project 'Project Alpha'").</li>
-<li><strong>Base URL:</strong> Enter the base URL of your Jira Cloud instance where Xray Cloud is installed. <strong>Ensure you use the correct format</strong>, including <code>https://</code> or <code>http://</code> and the full workspace URL (e.g., <code>https://your-workspace.atlassian.net</code>). For Epam Jira, use <code>https://jira.epam.com</code>. <strong>Important Note:</strong> Use the base URL of your Jira Cloud instance, not the Xray Cloud-specific API endpoint. The toolkit automatically constructs the API endpoint URL.</li>
-<li><strong>Client ID:</strong> Paste the <strong>Client ID</strong> of your registered Xray Cloud API Keys that you noted down into the <strong>"Client ID"</strong> field.</li>
+<li>
+<p><strong>Base URL:</strong></p>
+<ul>
+<li>Enter the <strong>Xray Cloud API base URL</strong> for your region. The correct endpoint depends on where your Xray Cloud instance is hosted. Use the table below to select the appropriate base URL:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Location</th>
+<th>Region Description</th>
+<th>Endpoint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Global</td>
+<td>All Xray Cloud across regions</td>
+<td>https://xray.cloud.getxray.app/</td>
+</tr>
+<tr>
+<td>USA</td>
+<td>USA region</td>
+<td>https://us.xray.cloud.getxray.app/</td>
+</tr>
+<tr>
+<td>EU</td>
+<td>Europe (Frankfurt) region</td>
+<td>https://eu.xray.cloud.getxray.app/</td>
+</tr>
+<tr>
+<td>Australia</td>
+<td>Australia (Sydney) region</td>
+<td>https://au.xray.cloud.getxray.app/</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Important:</strong> Use the correct base URL for your Xray Cloud region. If unsure, check your Xray Cloud account or contact your administrator.</li>
+<li>Do <strong>not</strong> use your Jira Cloud workspace URL as the base URL for Xray Cloud toolkit configuration. The toolkit requires the Xray Cloud API endpoint as shown above.</li>
+</ul>
+</li>
+<li>
+<p><strong>Client ID:</strong> Paste the <strong>Client ID</strong> of your registered Xray Cloud API Keys that you noted down into the <strong>"Client ID"</strong> field.</p>
+</li>
 <li><strong>Client Secret:</strong> Paste the <strong>Client Secret</strong> of your registered Xray Cloud API Keys that you generated in previous section into the <strong>"Client Secret"</strong> field.  <strong>Important Security Note:</strong> For enhanced security, it is strongly recommended to use ELITEA's <strong>Secrets Management</strong> feature to store your Xray Cloud Client ID and Client Secret securely. Instead of directly pasting them into the corresponding fields, select the <strong>"Secret"</strong> option and choose the pre-configured secrets containing your Xray Cloud credentials from the dropdown list. This prevents hardcoding sensitive credentials in your toolkit configuration.</li>
 </ul>
 <p><img alt="XrayCloud-Toolkit_Configuration" src="../../../img/how-tos/toolkits/xraycloud/XrayCloud-Toolkit_Configuration.png" /></p>
@@ -3586,7 +3674,7 @@ Provide the following parameters:
       <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
   </body>
