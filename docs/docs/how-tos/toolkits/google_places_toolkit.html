@@ -8,22 +8,28 @@
       
       
       
+        <link rel="canonical" href="https://elitea.ai/docs/how-tos/toolkits/google_places_toolkit.html">
       
       
+        <link rel="prev" href="gitlab_org_toolkit.html">
       
-      <link rel="icon" href="/docs/assets/images/favicon.png">
+      
+        <link rel="next" href="jira_toolkit.html">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
     
     
       
-        <title>ELITEA Documentation</title>
+        <title>Google Places Integration - ELITEA Documentation</title>
       
     
     
-      <link rel="stylesheet" href="/docs/assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
       
         
-        <link rel="stylesheet" href="/docs/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -42,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="/docs/extra_css/material.css">
+      <link rel="stylesheet" href="../../extra_css/material.css">
     
-    <script>__md_scope=new URL("/docs/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -69,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#elitea-toolkit-guide-google-places-integration" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -81,7 +92,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/docs/." title="ELITEA Documentation" class="md-header__button md-logo" aria-label="ELITEA Documentation" data-md-component="logo">
+    <a href="../.." title="ELITEA Documentation" class="md-header__button md-logo" aria-label="ELITEA Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -101,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Google Places Integration
             
           </span>
         </div>
@@ -215,7 +226,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/docs/." title="ELITEA Documentation" class="md-nav__button md-logo" aria-label="ELITEA Documentation" data-md-component="logo">
+    <a href="../.." title="ELITEA Documentation" class="md-nav__button md-logo" aria-label="ELITEA Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -271,7 +282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/home/introduction.html" class="md-nav__link">
+      <a href="../../home/introduction.html" class="md-nav__link">
         
   
   
@@ -339,7 +350,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/release-notes/rn_current.html" class="md-nav__link">
+      <a href="../../release-notes/rn_current.html" class="md-nav__link">
         
   
   
@@ -400,7 +411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/release-notes/archived/rn9.html" class="md-nav__link">
+      <a href="../../release-notes/archived/rn9.html" class="md-nav__link">
         
   
   
@@ -423,7 +434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/release-notes/archived/rn8.html" class="md-nav__link">
+      <a href="../../release-notes/archived/rn8.html" class="md-nav__link">
         
   
   
@@ -446,7 +457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/release-notes/archived/rn7.html" class="md-nav__link">
+      <a href="../../release-notes/archived/rn7.html" class="md-nav__link">
         
   
   
@@ -469,7 +480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/release-notes/archived/rn6.html" class="md-nav__link">
+      <a href="../../release-notes/archived/rn6.html" class="md-nav__link">
         
   
   
@@ -492,7 +503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/release-notes/archived/rn5.html" class="md-nav__link">
+      <a href="../../release-notes/archived/rn5.html" class="md-nav__link">
         
   
   
@@ -515,7 +526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/release-notes/archived/rn4.html" class="md-nav__link">
+      <a href="../../release-notes/archived/rn4.html" class="md-nav__link">
         
   
   
@@ -538,7 +549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/release-notes/archived/rn3.html" class="md-nav__link">
+      <a href="../../release-notes/archived/rn3.html" class="md-nav__link">
         
   
   
@@ -561,7 +572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/release-notes/archived/rn2.html" class="md-nav__link">
+      <a href="../../release-notes/archived/rn2.html" class="md-nav__link">
         
   
   
@@ -584,7 +595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/release-notes/archived/rn1.html" class="md-nav__link">
+      <a href="../../release-notes/archived/rn1.html" class="md-nav__link">
         
   
   
@@ -698,7 +709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/platform-documentation/menus/overview.html" class="md-nav__link">
+      <a href="../../platform-documentation/menus/overview.html" class="md-nav__link">
         
   
   
@@ -721,7 +732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/platform-documentation/menus/settings.html" class="md-nav__link">
+      <a href="../../platform-documentation/menus/settings.html" class="md-nav__link">
         
   
   
@@ -744,7 +755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/platform-documentation/menus/chat.html" class="md-nav__link">
+      <a href="../../platform-documentation/menus/chat.html" class="md-nav__link">
         
   
   
@@ -767,7 +778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/platform-documentation/menus/prompts.html" class="md-nav__link">
+      <a href="../../platform-documentation/menus/prompts.html" class="md-nav__link">
         
   
   
@@ -790,7 +801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/platform-documentation/menus/datasources.html" class="md-nav__link">
+      <a href="../../platform-documentation/menus/datasources.html" class="md-nav__link">
         
   
   
@@ -813,7 +824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/platform-documentation/menus/collections.html" class="md-nav__link">
+      <a href="../../platform-documentation/menus/collections.html" class="md-nav__link">
         
   
   
@@ -836,7 +847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/platform-documentation/menus/artifacts.html" class="md-nav__link">
+      <a href="../../platform-documentation/menus/artifacts.html" class="md-nav__link">
         
   
   
@@ -859,7 +870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/platform-documentation/menus/agents.html" class="md-nav__link">
+      <a href="../../platform-documentation/menus/agents.html" class="md-nav__link">
         
   
   
@@ -882,7 +893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/platform-documentation/menus/pipelines.html" class="md-nav__link">
+      <a href="../../platform-documentation/menus/pipelines.html" class="md-nav__link">
         
   
   
@@ -951,7 +962,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/platform-documentation/extensions/elitea-code.html" class="md-nav__link">
+      <a href="../../platform-documentation/extensions/elitea-code.html" class="md-nav__link">
         
   
   
@@ -974,7 +985,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/platform-documentation/extensions/elitea-code-chat.html" class="md-nav__link">
+      <a href="../../platform-documentation/extensions/elitea-code-chat.html" class="md-nav__link">
         
   
   
@@ -1088,7 +1099,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/feature-guides/core-features/export-import.html" class="md-nav__link">
+      <a href="../../feature-guides/core-features/export-import.html" class="md-nav__link">
         
   
   
@@ -1111,7 +1122,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/feature-guides/core-features/forking.html" class="md-nav__link">
+      <a href="../../feature-guides/core-features/forking.html" class="md-nav__link">
         
   
   
@@ -1134,7 +1145,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/feature-guides/core-features/integrations.html" class="md-nav__link">
+      <a href="../../feature-guides/core-features/integrations.html" class="md-nav__link">
         
   
   
@@ -1157,7 +1168,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/feature-guides/core-features/prompt-magic-assistant.html" class="md-nav__link">
+      <a href="../../feature-guides/core-features/prompt-magic-assistant.html" class="md-nav__link">
         
   
   
@@ -1180,7 +1191,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/feature-guides/core-features/public-project.html" class="md-nav__link">
+      <a href="../../feature-guides/core-features/public-project.html" class="md-nav__link">
         
   
   
@@ -1203,7 +1214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/feature-guides/core-features/monitoring.html" class="md-nav__link">
+      <a href="../../feature-guides/core-features/monitoring.html" class="md-nav__link">
         
   
   
@@ -1272,7 +1283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/feature-guides/advanced-features/roles.html" class="md-nav__link">
+      <a href="../../feature-guides/advanced-features/roles.html" class="md-nav__link">
         
   
   
@@ -1307,18 +1318,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -1334,7 +1347,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             How TOs
@@ -1386,7 +1399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/mcp/mcp-server-stdio.html" class="md-nav__link">
+      <a href="../mcp/mcp-server-stdio.html" class="md-nav__link">
         
   
   
@@ -1409,7 +1422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/mcp/mcp-server-sse.html" class="md-nav__link">
+      <a href="../mcp/mcp-server-sse.html" class="md-nav__link">
         
   
   
@@ -1432,7 +1445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/mcp/mcp-client.html" class="md-nav__link">
+      <a href="../mcp/mcp-client.html" class="md-nav__link">
         
   
   
@@ -1501,7 +1514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/pipelines/pipeline-agent-framework.html" class="md-nav__link">
+      <a href="../pipelines/pipeline-agent-framework.html" class="md-nav__link">
         
   
   
@@ -1529,18 +1542,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" checked>
         
           
           <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
@@ -1556,7 +1571,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_3">
             <span class="md-nav__icon md-icon"></span>
             Toolkits
@@ -1570,7 +1585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/ado_repos_toolkit.html" class="md-nav__link">
+      <a href="ado_repos_toolkit.html" class="md-nav__link">
         
   
   
@@ -1593,7 +1608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/ado_wiki_plan_board_toolkit.html" class="md-nav__link">
+      <a href="ado_wiki_plan_board_toolkit.html" class="md-nav__link">
         
   
   
@@ -1616,7 +1631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/artifact_toolkit.html" class="md-nav__link">
+      <a href="artifact_toolkit.html" class="md-nav__link">
         
   
   
@@ -1639,7 +1654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/bitbucket_toolkit.html" class="md-nav__link">
+      <a href="bitbucket_toolkit.html" class="md-nav__link">
         
   
   
@@ -1662,7 +1677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/browser_toolkit.html" class="md-nav__link">
+      <a href="browser_toolkit.html" class="md-nav__link">
         
   
   
@@ -1685,7 +1700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/confluence_toolkit.html" class="md-nav__link">
+      <a href="confluence_toolkit.html" class="md-nav__link">
         
   
   
@@ -1708,7 +1723,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/custom_toolkit.html" class="md-nav__link">
+      <a href="custom_toolkit.html" class="md-nav__link">
         
   
   
@@ -1731,7 +1746,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/figma_toolkit.html" class="md-nav__link">
+      <a href="figma_toolkit.html" class="md-nav__link">
         
   
   
@@ -1754,7 +1769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/github_toolkit.html" class="md-nav__link">
+      <a href="github_toolkit.html" class="md-nav__link">
         
   
   
@@ -1777,7 +1792,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/gitlab_toolkit.html" class="md-nav__link">
+      <a href="gitlab_toolkit.html" class="md-nav__link">
         
   
   
@@ -1800,7 +1815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/gitlab_org_toolkit.html" class="md-nav__link">
+      <a href="gitlab_org_toolkit.html" class="md-nav__link">
         
   
   
@@ -1820,10 +1835,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/google_places_toolkit.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Google Places Integration
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="google_places_toolkit.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1834,6 +1871,209 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose-of-this-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose of this Guide
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brief-overview-of-google-places" class="md-nav__link">
+    <span class="md-ellipsis">
+      Brief Overview of Google Places
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#google-places-api-setup-and-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google Places API Setup and Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Google Places API Setup and Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#account-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Account Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-key-generation-creating-an-api-key-in-google-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Key Generation: Creating an API Key in Google Cloud
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#google-places-integration-with-elitea" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google Places Integration with ELITEA
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Google Places Integration with ELITEA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agent-creationconfiguration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agent Creation/Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toolkit-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Toolkit Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tool-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tool Overview
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instructions-and-prompts-for-using-the-toolkit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instructions and Prompts for Using the Toolkit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instructions and Prompts for Using the Toolkit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instruction-creation-for-openai-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instruction Creation for OpenAI Agents
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversation-starters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conversation Starters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Cases
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-and-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting and Support
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting and Support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#support-contact" class="md-nav__link">
+    <span class="md-ellipsis">
+      Support Contact
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1846,7 +2086,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/jira_toolkit.html" class="md-nav__link">
+      <a href="jira_toolkit.html" class="md-nav__link">
         
   
   
@@ -1869,7 +2109,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/openapi_toolkit.html" class="md-nav__link">
+      <a href="openapi_toolkit.html" class="md-nav__link">
         
   
   
@@ -1892,7 +2132,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/pandas_toolkit.html" class="md-nav__link">
+      <a href="pandas_toolkit.html" class="md-nav__link">
         
   
   
@@ -1915,7 +2155,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/postman_toolkit.html" class="md-nav__link">
+      <a href="postman_toolkit.html" class="md-nav__link">
         
   
   
@@ -1938,7 +2178,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/powerpoint_toolkit.html" class="md-nav__link">
+      <a href="powerpoint_toolkit.html" class="md-nav__link">
         
   
   
@@ -1961,7 +2201,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/qtest_toolkit.html" class="md-nav__link">
+      <a href="qtest_toolkit.html" class="md-nav__link">
         
   
   
@@ -1984,7 +2224,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/rally_toolkit.html" class="md-nav__link">
+      <a href="rally_toolkit.html" class="md-nav__link">
         
   
   
@@ -2007,7 +2247,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/reportportal_toolkit.html" class="md-nav__link">
+      <a href="reportportal_toolkit.html" class="md-nav__link">
         
   
   
@@ -2030,7 +2270,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/salesfores_toolkit.html" class="md-nav__link">
+      <a href="salesfores_toolkit.html" class="md-nav__link">
         
   
   
@@ -2053,7 +2293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/servicenow_toolkit.html" class="md-nav__link">
+      <a href="servicenow_toolkit.html" class="md-nav__link">
         
   
   
@@ -2076,7 +2316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/sharepoint_toolkit.html" class="md-nav__link">
+      <a href="sharepoint_toolkit.html" class="md-nav__link">
         
   
   
@@ -2099,7 +2339,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/slack_toolkit.html" class="md-nav__link">
+      <a href="slack_toolkit.html" class="md-nav__link">
         
   
   
@@ -2122,7 +2362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/sonar_toolkit.html" class="md-nav__link">
+      <a href="sonar_toolkit.html" class="md-nav__link">
         
   
   
@@ -2145,7 +2385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/sql_toolkit.html" class="md-nav__link">
+      <a href="sql_toolkit.html" class="md-nav__link">
         
   
   
@@ -2168,7 +2408,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/testIO_toolkit.html" class="md-nav__link">
+      <a href="testIO_toolkit.html" class="md-nav__link">
         
   
   
@@ -2191,7 +2431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/testrail_toolkit.html" class="md-nav__link">
+      <a href="testrail_toolkit.html" class="md-nav__link">
         
   
   
@@ -2214,7 +2454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/xray_toolkit.html" class="md-nav__link">
+      <a href="xray_toolkit.html" class="md-nav__link">
         
   
   
@@ -2237,7 +2477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/zephyr_scale_toolkit.html" class="md-nav__link">
+      <a href="zephyr_scale_toolkit.html" class="md-nav__link">
         
   
   
@@ -2260,7 +2500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/zephyr_enterprise_toolkit.html" class="md-nav__link">
+      <a href="zephyr_enterprise_toolkit.html" class="md-nav__link">
         
   
   
@@ -2329,7 +2569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/how-to-use-chat-functionality.html" class="md-nav__link">
+      <a href="../how-to-use-chat-functionality.html" class="md-nav__link">
         
   
   
@@ -2352,7 +2592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/how-to-canvas.html" class="md-nav__link">
+      <a href="../how-to-canvas.html" class="md-nav__link">
         
   
   
@@ -2375,7 +2615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/how-to-search.html" class="md-nav__link">
+      <a href="../how-to-search.html" class="md-nav__link">
         
   
   
@@ -2398,7 +2638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/jira-automation-with-elitea.html" class="md-nav__link">
+      <a href="../jira-automation-with-elitea.html" class="md-nav__link">
         
   
   
@@ -2421,7 +2661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/creating-prompts.html" class="md-nav__link">
+      <a href="../creating-prompts.html" class="md-nav__link">
         
   
   
@@ -2444,7 +2684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/collections-and-organizing-entities.html" class="md-nav__link">
+      <a href="../collections-and-organizing-entities.html" class="md-nav__link">
         
   
   
@@ -2467,7 +2707,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/webhook.html" class="md-nav__link">
+      <a href="../webhook.html" class="md-nav__link">
         
   
   
@@ -2498,7 +2738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/faqs.html" class="md-nav__link">
+      <a href="../faqs.html" class="md-nav__link">
         
   
   
@@ -2566,7 +2806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/support-resources/contact-support.html" class="md-nav__link">
+      <a href="../../support-resources/contact-support.html" class="md-nav__link">
         
   
   
@@ -2589,7 +2829,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/support-resources/additional-resources.html" class="md-nav__link">
+      <a href="../../support-resources/additional-resources.html" class="md-nav__link">
         
   
   
@@ -2629,6 +2869,199 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose-of-this-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose of this Guide
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brief-overview-of-google-places" class="md-nav__link">
+    <span class="md-ellipsis">
+      Brief Overview of Google Places
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#google-places-api-setup-and-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google Places API Setup and Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Google Places API Setup and Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#account-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Account Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-key-generation-creating-an-api-key-in-google-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Key Generation: Creating an API Key in Google Cloud
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#google-places-integration-with-elitea" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google Places Integration with ELITEA
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Google Places Integration with ELITEA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agent-creationconfiguration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agent Creation/Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toolkit-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Toolkit Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tool-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tool Overview
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instructions-and-prompts-for-using-the-toolkit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instructions and Prompts for Using the Toolkit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instructions and Prompts for Using the Toolkit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instruction-creation-for-openai-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instruction Creation for OpenAI Agents
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversation-starters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conversation Starters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Cases
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-and-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting and Support
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting and Support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#support-contact" class="md-nav__link">
+    <span class="md-ellipsis">
+      Support Contact
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2640,8 +3073,274 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+<h1 id="elitea-toolkit-guide-google-places-integration">ELITEA Toolkit Guide: Google Places Integration</h1>
+<h2 id="introduction">Introduction</h2>
+<h3 id="purpose-of-this-guide">Purpose of this Guide</h3>
+<p>This guide is your definitive resource for integrating and utilizing the <strong>Google Places toolkit</strong> within ELITEA. It provides a step-by-step walkthrough, from setting up your Google API key to configuring the toolkit in ELITEA and effectively using it within your Agents. By following this guide, you will unlock the power of automated location-based information, streamlined workflows, and enhanced user experiences, all directly within the ELITEA platform. This integration empowers you to leverage AI-driven automation to optimize your location-aware applications using the combined strengths of ELITEA and Google Places.</p>
+<h3 id="brief-overview-of-google-places">Brief Overview of Google Places</h3>
+<p>Google Places is a powerful location-based service provided by Google that allows applications to access and display information about businesses, landmarks, and points of interest. It offers comprehensive details, including business names, addresses, contact information, user reviews, ratings, and real-time data such as open hours and busy periods. It's designed for applications that need location-based services, and offers features for:</p>
+<ul>
+<li><strong>Finding Places:</strong> Search for businesses, points of interest, and other locations based on name, keywords, or geographical coordinates.</li>
+<li><strong>Detailed Place Information:</strong> Retrieve rich information about places, including address, phone number, website, opening hours, user reviews, and photos.</li>
+<li><strong>Nearby Searches:</strong> Find places that are located within a specified radius of a given location.</li>
+<li><strong>Autocomplete Suggestions:</strong> Provide users with intelligent location suggestions as they type.</li>
+</ul>
+<p>Integrating Google Places with ELITEA brings these robust location-based capabilities directly into your AI-powered workflows. Your ELITEA Agents can then interact with the Google Places API to automate location-related tasks, enhance application functionalities, and improve user experiences through intelligent automation.</p>
+<h2 id="google-places-api-setup-and-configuration">Google Places API Setup and Configuration</h2>
+<h3 id="account-setup">Account Setup</h3>
+<p>If you don't have a Google Cloud account with the Places API enabled yet, here’s how to get started:</p>
+<ol>
+<li><strong>Go to Google Cloud Console:</strong> Open your web browser and navigate to <a href="https://console.cloud.google.com">console.cloud.google.com</a>.</li>
+<li><strong>Sign In or Create an Account:</strong> Sign in with your existing Google account, or create a new one if needed.</li>
+<li><strong>Create a Project (if needed):</strong> If you don't have an existing project, create a new one. Click on the project dropdown at the top, and select "New Project". Give your project a name and click "Create".</li>
+</ol>
+<p><img alt="create project" src="../../img/how-tos/toolkits/google_places/create_project_new.png" />
+<img alt="new project" src="../../img/how-tos/toolkits/google_places/new_project.png" />
+<img alt="save project" src="../../img/how-tos/toolkits/google_places/save_project.png" /></p>
+<ol>
+<li><strong>Enable the Places API:</strong> Once your project is created/selected, navigate to the "APIs &amp; Services" dashboard. </li>
+</ol>
+<p><img alt="APIs &amp; Services" src="../../img/how-tos/toolkits/google_places/APIs_Services.png" /></p>
+<p>Click on "+ ENABLE APIS AND SERVICES" and search for "Places API". Select the "Places API" and click "Enable".
+<img alt="enable API" src="../../img/how-tos/toolkits/google_places/enable_API.png" />
+<img alt="places API" src="../../img/how-tos/toolkits/google_places/places_API.png" />
+<img alt="enable" src="../../img/how-tos/toolkits/google_places/enable.png" /></p>
+<h3 id="api-key-generation-creating-an-api-key-in-google-cloud">API Key Generation: Creating an API Key in Google Cloud</h3>
+<p>For secure integration with ELITEA, you need a Google Places API key. This key authorizes ELITEA to access the Google Places API on your behalf.</p>
+<p><strong>Follow these steps to create an API key:</strong></p>
+<ol>
+<li><strong>Go to API Credentials:</strong> In the Google Cloud Console, go to "APIs &amp; Services" and then "Credentials".
+<img alt="credentals" src="../../img/how-tos/toolkits/google_places/credentials.png" /></li>
+<li><strong>Create Credentials:</strong> Click on "+ CREATE CREDENTIALS" and select "API key".
+<img alt="create credentals" src="../../img/how-tos/toolkits/google_places/create_credentials.png" /></li>
+<li><strong>Restrict the API key (Important):</strong> After the API key is generated, <strong>immediately restrict it</strong> to improve security. Click on "Restrict key".</li>
+<li><strong>Restrict Key Usage:</strong> Under "API restrictions", select "Restrict key" and choose the "Places API". This ensures the key can only be used for the Places API.</li>
+<li><strong>Save Changes:</strong> Click "Save" to apply the restrictions.</li>
+<li><strong>Securely Store Your API Key:</strong> <strong>Immediately copy the generated API Key.</strong> Store it securely using a password manager or ELITEA's built-in Secrets feature (recommended for enhanced security within ELITEA). You will need this API key to configure the Google Places toolkit in ELITEA.</li>
+</ol>
+<p><img alt="copy_key" src="../../img/how-tos/toolkits/google_places/copy_key.png" /></p>
+<h2 id="google-places-integration-with-elitea">Google Places Integration with ELITEA</h2>
+<h3 id="agent-creationconfiguration">Agent Creation/Configuration</h3>
+<p>To integrate Google Places, you'll need to configure it within an ELITEA Agent. You can either create a new Agent or modify an existing one.</p>
+<ol>
+<li><strong>Navigate to Agents:</strong> In ELITEA, go to the <strong>Agents</strong> menu.</li>
+<li><strong>Create or Edit Agent:</strong><ul>
+<li><strong>New Agent:</strong> Click <strong>"+ Agent"</strong> to create a new Agent. Follow the steps to define Agent details like name, description, type, and instructions.</li>
+<li><strong>Existing Agent:</strong> Select the Agent you want to integrate with Google Places and click on its name to edit.</li>
+</ul>
+</li>
+<li><strong>Access Tools Section:</strong> In the Agent configuration, scroll down to the <strong>"Tools"</strong> section.</li>
+</ol>
+<h3 id="toolkit-configuration">Toolkit Configuration</h3>
+<p>This section details how to configure the Google Places toolkit within your ELITEA Agent.</p>
+<ol>
+<li><strong>Add Toolkit:</strong> In the "Tools" section, click the <strong>"+" icon</strong>.</li>
+<li><strong>Select Google Places:</strong> Choose <strong>"Google Places"</strong> from the dropdown list of available toolkits. This opens the "New Google Places tool" configuration panel.</li>
+<li>
+<p><strong>Configure Toolkit Details:</strong> Fill in the following fields:</p>
+<ul>
+<li><strong>Name:</strong> Enter a <strong>Name</strong> for this Google Places toolkit instance. Choose a descriptive name that helps you identify its purpose within your Agent's instructions (e.g., "LocationFinder", "PlacesAPI").</li>
+<li><strong>Description:</strong> Provide a <strong>Description</strong> for the toolkit, clarifying its purpose or the specific type of location information it will access (e.g., "Toolkit to find nearby restaurants").</li>
+<li><strong>Results number (to show):</strong> Specify the <strong>number of results</strong> to return from the Google Places API.</li>
+<li><strong>Api Key:</strong><ul>
+<li>Paste the <strong>API Key</strong> you generated in Google Cloud into the "Api Key" field.</li>
+<li><strong>Enhanced Security with Secrets:</strong> For improved security, it's highly recommended to use <strong>"Secret"</strong>. Select <strong>"Secret"</strong> and choose a pre-configured secret from the dropdown. You must first create and securely store your <strong>API Key</strong> as a Secret in ELITEA's <a href="../../atform-documentation/menus/settings.md#secrets">Secrets</a> feature. Using Secrets prevents hardcoding sensitive credentials directly in the toolkit configuration.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p><img alt="toolkit_config" src="../../img/how-tos/toolkits/google_places/toolkit_config.png" /></p>
+<ol>
+<li>
+<p><strong>Enable Tools:</strong> In the "Tools" section of the Google Places toolkit configuration, <strong>select the checkboxes next to the Google Places tools</strong> you want to enable for your Agent. <strong>Enable only the tools your Agent will actually use</strong> to adhere to the principle of least privilege and enhance security. Available tools are:</p>
+<ul>
+<li><strong>Find places:</strong> <code>find_places</code> - Allows the Agent to find places based on a search query.</li>
+<li><strong>Find near:</strong> <code>find_near</code> - Enables the Agent to find places near a specified location.</li>
+</ul>
+</li>
+<li>
+<p><strong>Complete Configuration:</strong> Click the <strong>arrow icon</strong> (at the top right of the toolkit configuration) to save the Google Places toolkit setup and return to the main Agent configuration.</p>
+</li>
+<li>Click <strong>Save</strong> to apply configuration and changes.</li>
+</ol>
+<h3 id="tool-overview">Tool Overview</h3>
+<p>The Google Places toolkit provides the following tools for your ELITEA Agents:</p>
+<ul>
+<li><strong>Find places:</strong> <code>find_places</code> - Finds places based on a search query.</li>
+<li><strong>Find near:</strong> <code>find_near</code> - Finds places near a specified location.</li>
+</ul>
+<h2 id="instructions-and-prompts-for-using-the-toolkit">Instructions and Prompts for Using the Toolkit</h2>
+<p>To instruct your ELITEA Agent to use the Google Places toolkit, you need to provide clear instructions within the Agent's "Instructions" field. These instructions guide the Agent on <em>when</em> and <em>how</em> to use the available tools.</p>
+<h3 id="instruction-creation-for-openai-agents">Instruction Creation for OpenAI Agents</h3>
+<p>When creating instructions for the Google Places toolkit for OpenAI-based Agents, focus on clear, action-oriented language. Break down tasks into simple steps and explicitly state the parameters required for each tool. OpenAI Agents respond best to instructions that are:</p>
+<ul>
+<li><strong>Direct and Imperative:</strong> Use action verbs and clear commands (e.g., "Use the 'find_places' tool...", "Find places near...").</li>
+<li><strong>Parameter-Focused:</strong> Clearly list each parameter and how the Agent should determine its value.</li>
+<li><strong>Context-Aware:</strong> Provide enough context so the Agent understands the overall goal and when to use specific tools within a workflow.</li>
+</ul>
+<p>When instructing your Agent to use a Google Places toolkit, use this pattern:</p>
+<pre><code>1. Identify the goal: [State the objective, e.g., &quot;To find nearby restaurants&quot;].
+2. Tool Selection: Use the &quot;[tool_name]&quot; tool.
+3. Parameter Specification: Provide the following parameters:
+    - Parameter Name 1: &lt;value or description of value&gt;
+    - Parameter Name 2: &lt;value or description of value&gt;
+    - ...
+4. Expected Outcome: [Optionally, describe what should happen after the tool is used].
+</code></pre>
+<p><strong>Example Agent Instructions for Google Places Toolkit Tools:</strong></p>
+<ul>
+<li>
+<p><strong>Agent Instructions for Finding Places:</strong></p>
+<p><code>1. Goal: To find Italian restaurants in New York City.
+2. Tool: Use the "find_places" tool.
+3. Parameters:
+    - Query: "Italian restaurants"
+    - Location: "New York City"
+4. Outcome: The Agent will provide a list of Italian restaurants in New York City.</code></p>
+</li>
+<li>
+<p><strong>Agent Instructions for Finding Places Near a Location:</strong></p>
+<p><code>1. Goal: To find coffee shops near Times Square in New York City.
+2. Tool: Use the "find_near" tool.
+3. Parameters:
+    - Location: "Times Square, New York City"
+    - Query: "coffee shops"
+4. Outcome: The Agent will provide a list of coffee shops near Times Square in New York City.</code></p>
+</li>
+</ul>
+<h3 id="conversation-starters">Conversation Starters</h3>
+<p>Use these conversation starters to interact with your Google Places-integrated Agent.</p>
+<p><strong>1. For Testing and Troubleshooting Connection:</strong></p>
+<p>These starters are designed to verify if the Google Places toolkit is correctly configured and connected to the Google Places API.</p>
+<ul>
+<li>"Find Italian restaurants in Rome." - <em>This tests basic connectivity and ability to find places.</em></li>
+<li>"Find coffee shops near the Eiffel Tower in Paris." - <em>This further tests the 'find near' functionality and location-based searching.</em></li>
+</ul>
+<p><strong>2. For General Agent Usage Scenarios:</strong></p>
+<p>These starters demonstrate how to initiate agent execution for common Google Places-related tasks.</p>
+<ul>
+<li>"I'm looking for a good pizza place near me. Can you find some options?" - <em>This triggers a <code>find_near</code> search based on the user's implied location (which the Agent would need to determine or ask for).</em></li>
+<li>"Find the opening hours for the Louvre Museum in Paris." - <em>This would require a combination of <code>find_places</code> to locate the Louvre and then potentially another call to retrieve details (if the toolkit was expanded to support that).</em></li>
+<li>"What are some popular tourist attractions in Tokyo?" - <em>This could use the <code>find_places</code> tool with a general query.</em></li>
+</ul>
+<p>These conversation starters provide a starting point for interacting with your Google Places-integrated ELITEA Agent and can be customized further based on your specific use cases and workflows.</p>
+<h2 id="use-cases">Use Cases</h2>
+<p>The Google Places toolkit unlocks numerous automation possibilities for location-aware applications and workflows within ELITEA. Here are some key use cases, demonstrating how each tool can be applied:</p>
+<ul>
+<li>
+<p><strong>Automated Restaurant Recommendation:</strong></p>
+<ul>
+<li><strong>Scenario:</strong> A user asks for a restaurant recommendation near their current location.</li>
+<li><strong>Tools Used:</strong> <code>find_near</code></li>
+<li><strong>Example Instruction:</strong> "If the user asks for a restaurant recommendation near their location, use the 'find_near' tool with their location and the query 'restaurants'."</li>
+<li><strong>Benefit:</strong> Provides personalized recommendations based on proximity.</li>
+</ul>
+</li>
+<li>
+<p><strong>Travel Planning Assistance:</strong></p>
+<ul>
+<li><strong>Scenario:</strong> An Agent assists a user in planning a trip by finding points of interest in a specific city.</li>
+<li><strong>Tools Used:</strong> <code>find_places</code></li>
+<li><strong>Example Instruction:</strong> "If the user is planning a trip to Rome, use the 'find_places' tool with the location 'Rome' and the query 'tourist attractions'."</li>
+<li><strong>Benefit:</strong> Streamlines travel planning with automated location discovery.</li>
+</ul>
+</li>
+<li>
+<p><strong>Real-time Location-Based Alerts:</strong></p>
+<ul>
+<li><strong>Scenario:</strong> The Agent can send alerts when a user is near a specific type of place.</li>
+<li><strong>Tools Used:</strong> <code>find_near</code></li>
+<li><strong>Example Instruction:</strong> "Use the 'find_near' tool to check if the user is near a Starbucks. If a Starbucks is found within 500 meters, send an alert."</li>
+<li><strong>Benefit:</strong> Enables timely and relevant notifications based on location.</li>
+</ul>
+</li>
+<li>
+<p><strong>Enhanced Customer Support:</strong></p>
+<ul>
+<li><strong>Scenario:</strong> The Agent can help customers find the nearest branch of a store or service provider.</li>
+<li><strong>Tools Used:</strong> <code>find_near</code>, <code>find_places</code></li>
+<li><strong>Example Instruction:</strong> "If a customer asks for the nearest branch of 'XYZ Bank', use the 'find_near' tool with the customer's location and the query 'XYZ Bank'."</li>
+<li><strong>Benefit:</strong> Improves customer service with quick and accurate location information.</li>
+</ul>
+</li>
+</ul>
+<h2 id="troubleshooting-and-support">Troubleshooting and Support</h2>
+<h3 id="troubleshooting">Troubleshooting</h3>
+<ul>
+<li>
+<p><strong>Connection Issues:</strong></p>
+<ul>
+<li><strong>Problem:</strong> Agent fails to connect to Google Places API, resulting in errors during toolkit execution.</li>
+<li><strong>Troubleshooting Steps:</strong><ol>
+<li><strong>Verify API Key:</strong> Ensure the API Key is correctly entered.</li>
+<li><strong>API Restrictions:</strong> Review the API Key restrictions in Google Cloud Console. Ensure the "Places API" is selected under API restrictions.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Authorization Errors (Permission Denied):</strong></p>
+<ul>
+<li><strong>Problem:</strong> Agent receives "Permission Denied" or "Unauthorized" errors when accessing the Google Places API.</li>
+<li><strong>Troubleshooting Steps:</strong><ol>
+<li><strong>API Key Restrictions:</strong> Re-verify the API Key restrictions. Ensure the "Places API" is selected. Check for any IP address restrictions that might be blocking ELITEA.</li>
+<li><strong>API Enabled:</strong> Double-check that the Places API is enabled in your Google Cloud project.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>No Results Found:</strong></p>
+<ul>
+<li><strong>Problem:</strong> Agent returns no results for a search query.</li>
+<li><strong>Troubleshooting Steps:</strong><ol>
+<li><strong>Query Accuracy:</strong> Check the accuracy of the search query. Ensure it is specific enough to find the desired places.</li>
+<li><strong>API Usage Limits:</strong> Check your Google Cloud Console for any API usage limits that may have been reached.</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="support-contact">Support Contact</h3>
+<p>For any issues, questions, or further assistance with the Google Places integration or ELITEA Agents, please reach out to our dedicated ELITEA Support Team. We are committed to providing prompt and effective support to ensure your success with ELITEA.</p>
+<p><strong>Contact ELITEA Support:</strong></p>
+<ul>
+<li><strong>Email:</strong> <strong><a href="mailto:SupportAlita@epam.com">SupportAlita@epam.com</a></strong></li>
+</ul>
+<p><strong>Best Practices for Effective Support Requests:</strong></p>
+<p>To help us understand and resolve your issue as quickly as possible, please ensure you provide the following information in your support email:</p>
+<ul>
+<li><strong>ELITEA Environment:</strong> Clearly specify the ELITEA environment you are using (e.g., "Nexus," "Alita Lab," "EYE").</li>
+<li><strong>Project Details:</strong> Indicate the <strong>Project Name</strong> and whether you are working in your <strong>Private</strong> workspace or a <strong>Team</strong> project.</li>
+<li><strong>Detailed Issue Description:</strong> Provide a clear, concise, and detailed description of the problem you are encountering. Explain what you were trying to do, what you expected to happen, and what actually occurred.</li>
+<li><strong>Relevant Configuration Information:</strong> To help us diagnose the issue, please include relevant configuration details, such as:<ul>
+<li><strong>Agent Instructions (Screenshot or Text):</strong> If the issue is with an Agent, provide a screenshot or copy the text of your Agent's "Instructions" field.</li>
+<li><strong>Toolkit Configurations (Screenshots):</strong> If the issue involves the Google Places toolkit or other toolkits, include screenshots of the toolkit configuration settings within your Agent.</li>
+</ul>
+</li>
+<li><strong>Error Messages (Full Error Text):</strong> If you are encountering an error message, please provide the <strong>complete error text</strong>. In the Chat window, expand the error details and copy the full error message. This detailed error information is crucial for diagnosis.</li>
+<li><strong>Your Query/Prompt (Exact Text):</strong> If the issue is related to Agent execution, provide the exact query or prompt you used to trigger the issue.</li>
+</ul>
+<p><strong>Before Contacting Support:</strong></p>
+<p>We encourage you to first explore the resources available within this guide and the broader ELITEA documentation. You may find answers to common questions or solutions to known issues in the documentation.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -2677,10 +3376,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "/docs/", "features": [], "search": "/docs/assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/docs/assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
       
     
   </body>

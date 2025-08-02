@@ -8,22 +8,28 @@
       
       
       
+        <link rel="canonical" href="https://elitea.ai/docs/how-tos/jira-automation-with-elitea.html">
       
       
+        <link rel="prev" href="how-to-search.html">
       
-      <link rel="icon" href="/docs/assets/images/favicon.png">
+      
+        <link rel="next" href="creating-prompts.html">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
     
     
       
-        <title>ELITEA Documentation</title>
+        <title>How to Automate JIRA Issue Review with Elitea - ELITEA Documentation</title>
       
     
     
-      <link rel="stylesheet" href="/docs/assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
       
         
-        <link rel="stylesheet" href="/docs/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -42,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="/docs/extra_css/material.css">
+      <link rel="stylesheet" href="../extra_css/material.css">
     
-    <script>__md_scope=new URL("/docs/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -69,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#guide-automated-jira-issue-review-with-elitea-ai-agents" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -81,7 +92,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/docs/." title="ELITEA Documentation" class="md-header__button md-logo" aria-label="ELITEA Documentation" data-md-component="logo">
+    <a href=".." title="ELITEA Documentation" class="md-header__button md-logo" aria-label="ELITEA Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -101,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              How to Automate JIRA Issue Review with Elitea
             
           </span>
         </div>
@@ -215,7 +226,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/docs/." title="ELITEA Documentation" class="md-nav__button md-logo" aria-label="ELITEA Documentation" data-md-component="logo">
+    <a href=".." title="ELITEA Documentation" class="md-nav__button md-logo" aria-label="ELITEA Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -271,7 +282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/home/introduction.html" class="md-nav__link">
+      <a href="../home/introduction.html" class="md-nav__link">
         
   
   
@@ -339,7 +350,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/release-notes/rn_current.html" class="md-nav__link">
+      <a href="../release-notes/rn_current.html" class="md-nav__link">
         
   
   
@@ -400,7 +411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/release-notes/archived/rn9.html" class="md-nav__link">
+      <a href="../release-notes/archived/rn9.html" class="md-nav__link">
         
   
   
@@ -423,7 +434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/release-notes/archived/rn8.html" class="md-nav__link">
+      <a href="../release-notes/archived/rn8.html" class="md-nav__link">
         
   
   
@@ -446,7 +457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/release-notes/archived/rn7.html" class="md-nav__link">
+      <a href="../release-notes/archived/rn7.html" class="md-nav__link">
         
   
   
@@ -469,7 +480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/release-notes/archived/rn6.html" class="md-nav__link">
+      <a href="../release-notes/archived/rn6.html" class="md-nav__link">
         
   
   
@@ -492,7 +503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/release-notes/archived/rn5.html" class="md-nav__link">
+      <a href="../release-notes/archived/rn5.html" class="md-nav__link">
         
   
   
@@ -515,7 +526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/release-notes/archived/rn4.html" class="md-nav__link">
+      <a href="../release-notes/archived/rn4.html" class="md-nav__link">
         
   
   
@@ -538,7 +549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/release-notes/archived/rn3.html" class="md-nav__link">
+      <a href="../release-notes/archived/rn3.html" class="md-nav__link">
         
   
   
@@ -561,7 +572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/release-notes/archived/rn2.html" class="md-nav__link">
+      <a href="../release-notes/archived/rn2.html" class="md-nav__link">
         
   
   
@@ -584,7 +595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/release-notes/archived/rn1.html" class="md-nav__link">
+      <a href="../release-notes/archived/rn1.html" class="md-nav__link">
         
   
   
@@ -698,7 +709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/platform-documentation/menus/overview.html" class="md-nav__link">
+      <a href="../platform-documentation/menus/overview.html" class="md-nav__link">
         
   
   
@@ -721,7 +732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/platform-documentation/menus/settings.html" class="md-nav__link">
+      <a href="../platform-documentation/menus/settings.html" class="md-nav__link">
         
   
   
@@ -744,7 +755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/platform-documentation/menus/chat.html" class="md-nav__link">
+      <a href="../platform-documentation/menus/chat.html" class="md-nav__link">
         
   
   
@@ -767,7 +778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/platform-documentation/menus/prompts.html" class="md-nav__link">
+      <a href="../platform-documentation/menus/prompts.html" class="md-nav__link">
         
   
   
@@ -790,7 +801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/platform-documentation/menus/datasources.html" class="md-nav__link">
+      <a href="../platform-documentation/menus/datasources.html" class="md-nav__link">
         
   
   
@@ -813,7 +824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/platform-documentation/menus/collections.html" class="md-nav__link">
+      <a href="../platform-documentation/menus/collections.html" class="md-nav__link">
         
   
   
@@ -836,7 +847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/platform-documentation/menus/artifacts.html" class="md-nav__link">
+      <a href="../platform-documentation/menus/artifacts.html" class="md-nav__link">
         
   
   
@@ -859,7 +870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/platform-documentation/menus/agents.html" class="md-nav__link">
+      <a href="../platform-documentation/menus/agents.html" class="md-nav__link">
         
   
   
@@ -882,7 +893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/platform-documentation/menus/pipelines.html" class="md-nav__link">
+      <a href="../platform-documentation/menus/pipelines.html" class="md-nav__link">
         
   
   
@@ -951,7 +962,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/platform-documentation/extensions/elitea-code.html" class="md-nav__link">
+      <a href="../platform-documentation/extensions/elitea-code.html" class="md-nav__link">
         
   
   
@@ -974,7 +985,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/platform-documentation/extensions/elitea-code-chat.html" class="md-nav__link">
+      <a href="../platform-documentation/extensions/elitea-code-chat.html" class="md-nav__link">
         
   
   
@@ -1088,7 +1099,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/feature-guides/core-features/export-import.html" class="md-nav__link">
+      <a href="../feature-guides/core-features/export-import.html" class="md-nav__link">
         
   
   
@@ -1111,7 +1122,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/feature-guides/core-features/forking.html" class="md-nav__link">
+      <a href="../feature-guides/core-features/forking.html" class="md-nav__link">
         
   
   
@@ -1134,7 +1145,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/feature-guides/core-features/integrations.html" class="md-nav__link">
+      <a href="../feature-guides/core-features/integrations.html" class="md-nav__link">
         
   
   
@@ -1157,7 +1168,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/feature-guides/core-features/prompt-magic-assistant.html" class="md-nav__link">
+      <a href="../feature-guides/core-features/prompt-magic-assistant.html" class="md-nav__link">
         
   
   
@@ -1180,7 +1191,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/feature-guides/core-features/public-project.html" class="md-nav__link">
+      <a href="../feature-guides/core-features/public-project.html" class="md-nav__link">
         
   
   
@@ -1203,7 +1214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/feature-guides/core-features/monitoring.html" class="md-nav__link">
+      <a href="../feature-guides/core-features/monitoring.html" class="md-nav__link">
         
   
   
@@ -1272,7 +1283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/feature-guides/advanced-features/roles.html" class="md-nav__link">
+      <a href="../feature-guides/advanced-features/roles.html" class="md-nav__link">
         
   
   
@@ -1307,18 +1318,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -1334,7 +1347,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             How TOs
@@ -1386,7 +1399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/mcp/mcp-server-stdio.html" class="md-nav__link">
+      <a href="mcp/mcp-server-stdio.html" class="md-nav__link">
         
   
   
@@ -1409,7 +1422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/mcp/mcp-server-sse.html" class="md-nav__link">
+      <a href="mcp/mcp-server-sse.html" class="md-nav__link">
         
   
   
@@ -1432,7 +1445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/mcp/mcp-client.html" class="md-nav__link">
+      <a href="mcp/mcp-client.html" class="md-nav__link">
         
   
   
@@ -1501,7 +1514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/pipelines/pipeline-agent-framework.html" class="md-nav__link">
+      <a href="pipelines/pipeline-agent-framework.html" class="md-nav__link">
         
   
   
@@ -1570,7 +1583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/ado_repos_toolkit.html" class="md-nav__link">
+      <a href="toolkits/ado_repos_toolkit.html" class="md-nav__link">
         
   
   
@@ -1593,7 +1606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/ado_wiki_plan_board_toolkit.html" class="md-nav__link">
+      <a href="toolkits/ado_wiki_plan_board_toolkit.html" class="md-nav__link">
         
   
   
@@ -1616,7 +1629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/artifact_toolkit.html" class="md-nav__link">
+      <a href="toolkits/artifact_toolkit.html" class="md-nav__link">
         
   
   
@@ -1639,7 +1652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/bitbucket_toolkit.html" class="md-nav__link">
+      <a href="toolkits/bitbucket_toolkit.html" class="md-nav__link">
         
   
   
@@ -1662,7 +1675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/browser_toolkit.html" class="md-nav__link">
+      <a href="toolkits/browser_toolkit.html" class="md-nav__link">
         
   
   
@@ -1685,7 +1698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/confluence_toolkit.html" class="md-nav__link">
+      <a href="toolkits/confluence_toolkit.html" class="md-nav__link">
         
   
   
@@ -1708,7 +1721,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/custom_toolkit.html" class="md-nav__link">
+      <a href="toolkits/custom_toolkit.html" class="md-nav__link">
         
   
   
@@ -1731,7 +1744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/figma_toolkit.html" class="md-nav__link">
+      <a href="toolkits/figma_toolkit.html" class="md-nav__link">
         
   
   
@@ -1754,7 +1767,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/github_toolkit.html" class="md-nav__link">
+      <a href="toolkits/github_toolkit.html" class="md-nav__link">
         
   
   
@@ -1777,7 +1790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/gitlab_toolkit.html" class="md-nav__link">
+      <a href="toolkits/gitlab_toolkit.html" class="md-nav__link">
         
   
   
@@ -1800,7 +1813,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/gitlab_org_toolkit.html" class="md-nav__link">
+      <a href="toolkits/gitlab_org_toolkit.html" class="md-nav__link">
         
   
   
@@ -1823,7 +1836,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/google_places_toolkit.html" class="md-nav__link">
+      <a href="toolkits/google_places_toolkit.html" class="md-nav__link">
         
   
   
@@ -1846,7 +1859,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/jira_toolkit.html" class="md-nav__link">
+      <a href="toolkits/jira_toolkit.html" class="md-nav__link">
         
   
   
@@ -1869,7 +1882,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/openapi_toolkit.html" class="md-nav__link">
+      <a href="toolkits/openapi_toolkit.html" class="md-nav__link">
         
   
   
@@ -1892,7 +1905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/pandas_toolkit.html" class="md-nav__link">
+      <a href="toolkits/pandas_toolkit.html" class="md-nav__link">
         
   
   
@@ -1915,7 +1928,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/postman_toolkit.html" class="md-nav__link">
+      <a href="toolkits/postman_toolkit.html" class="md-nav__link">
         
   
   
@@ -1938,7 +1951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/powerpoint_toolkit.html" class="md-nav__link">
+      <a href="toolkits/powerpoint_toolkit.html" class="md-nav__link">
         
   
   
@@ -1961,7 +1974,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/qtest_toolkit.html" class="md-nav__link">
+      <a href="toolkits/qtest_toolkit.html" class="md-nav__link">
         
   
   
@@ -1984,7 +1997,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/rally_toolkit.html" class="md-nav__link">
+      <a href="toolkits/rally_toolkit.html" class="md-nav__link">
         
   
   
@@ -2007,7 +2020,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/reportportal_toolkit.html" class="md-nav__link">
+      <a href="toolkits/reportportal_toolkit.html" class="md-nav__link">
         
   
   
@@ -2030,7 +2043,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/salesfores_toolkit.html" class="md-nav__link">
+      <a href="toolkits/salesfores_toolkit.html" class="md-nav__link">
         
   
   
@@ -2053,7 +2066,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/servicenow_toolkit.html" class="md-nav__link">
+      <a href="toolkits/servicenow_toolkit.html" class="md-nav__link">
         
   
   
@@ -2076,7 +2089,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/sharepoint_toolkit.html" class="md-nav__link">
+      <a href="toolkits/sharepoint_toolkit.html" class="md-nav__link">
         
   
   
@@ -2099,7 +2112,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/slack_toolkit.html" class="md-nav__link">
+      <a href="toolkits/slack_toolkit.html" class="md-nav__link">
         
   
   
@@ -2122,7 +2135,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/sonar_toolkit.html" class="md-nav__link">
+      <a href="toolkits/sonar_toolkit.html" class="md-nav__link">
         
   
   
@@ -2145,7 +2158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/sql_toolkit.html" class="md-nav__link">
+      <a href="toolkits/sql_toolkit.html" class="md-nav__link">
         
   
   
@@ -2168,7 +2181,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/testIO_toolkit.html" class="md-nav__link">
+      <a href="toolkits/testIO_toolkit.html" class="md-nav__link">
         
   
   
@@ -2191,7 +2204,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/testrail_toolkit.html" class="md-nav__link">
+      <a href="toolkits/testrail_toolkit.html" class="md-nav__link">
         
   
   
@@ -2214,7 +2227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/xray_toolkit.html" class="md-nav__link">
+      <a href="toolkits/xray_toolkit.html" class="md-nav__link">
         
   
   
@@ -2237,7 +2250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/zephyr_scale_toolkit.html" class="md-nav__link">
+      <a href="toolkits/zephyr_scale_toolkit.html" class="md-nav__link">
         
   
   
@@ -2260,7 +2273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/toolkits/zephyr_enterprise_toolkit.html" class="md-nav__link">
+      <a href="toolkits/zephyr_enterprise_toolkit.html" class="md-nav__link">
         
   
   
@@ -2288,18 +2301,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" checked>
         
           
           <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
@@ -2315,7 +2330,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_4">
             <span class="md-nav__icon md-icon"></span>
             General How-Tos
@@ -2329,7 +2344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/how-to-use-chat-functionality.html" class="md-nav__link">
+      <a href="how-to-use-chat-functionality.html" class="md-nav__link">
         
   
   
@@ -2352,7 +2367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/how-to-canvas.html" class="md-nav__link">
+      <a href="how-to-canvas.html" class="md-nav__link">
         
   
   
@@ -2375,7 +2390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/how-to-search.html" class="md-nav__link">
+      <a href="how-to-search.html" class="md-nav__link">
         
   
   
@@ -2395,10 +2410,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/docs/how-tos/jira-automation-with-elitea.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    How to Automate JIRA Issue Review with Elitea
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="jira-automation-with-elitea.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2409,6 +2446,197 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose-and-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose and Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brief-overview-of-the-automated-jira-review-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Brief Overview of the Automated JIRA Review Process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Terms
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-and-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup and Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup and Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-create-and-configure-the-elitea-review-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Create and Configure the Elitea Review Agent
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-understanding-the-elitea-api-trigger" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Understanding the Elitea API Trigger
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-set-up-jira-automation-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Set Up JIRA Automation Rule
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-automated-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the Automated Review
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the Automated Review">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#triggering-the-review-from-a-jira-issue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Triggering the Review from a JIRA Issue
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reviewing-the-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reviewing the Results
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases-and-customization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Cases and Customization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faqs" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAQs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support-and-contact-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Support and Contact Information
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-materials-and-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      Useful Materials and References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2421,7 +2649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/creating-prompts.html" class="md-nav__link">
+      <a href="creating-prompts.html" class="md-nav__link">
         
   
   
@@ -2444,7 +2672,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/collections-and-organizing-entities.html" class="md-nav__link">
+      <a href="collections-and-organizing-entities.html" class="md-nav__link">
         
   
   
@@ -2467,7 +2695,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/webhook.html" class="md-nav__link">
+      <a href="webhook.html" class="md-nav__link">
         
   
   
@@ -2498,7 +2726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/how-tos/faqs.html" class="md-nav__link">
+      <a href="faqs.html" class="md-nav__link">
         
   
   
@@ -2566,7 +2794,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/support-resources/contact-support.html" class="md-nav__link">
+      <a href="../support-resources/contact-support.html" class="md-nav__link">
         
   
   
@@ -2589,7 +2817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/support-resources/additional-resources.html" class="md-nav__link">
+      <a href="../support-resources/additional-resources.html" class="md-nav__link">
         
   
   
@@ -2629,6 +2857,187 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose-and-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose and Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brief-overview-of-the-automated-jira-review-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Brief Overview of the Automated JIRA Review Process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Terms
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-and-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup and Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup and Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-create-and-configure-the-elitea-review-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Create and Configure the Elitea Review Agent
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-understanding-the-elitea-api-trigger" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Understanding the Elitea API Trigger
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-set-up-jira-automation-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Set Up JIRA Automation Rule
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-automated-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the Automated Review
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the Automated Review">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#triggering-the-review-from-a-jira-issue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Triggering the Review from a JIRA Issue
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reviewing-the-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reviewing the Results
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases-and-customization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Cases and Customization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faqs" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAQs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support-and-contact-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Support and Contact Information
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-materials-and-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      Useful Materials and References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2640,8 +3049,316 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+<h1 id="guide-automated-jira-issue-review-with-elitea-ai-agents">Guide: Automated JIRA Issue Review with Elitea AI Agents</h1>
+<h2 id="introduction">Introduction</h2>
+<h3 id="purpose-and-overview">Purpose and Overview</h3>
+<p>This guide provides comprehensive instructions on setting up an automated JIRA issue review process using Elitea AI agents and JIRA Automation. By following these steps, you can configure a system where an AI agent automatically reviews JIRA issues (such as User Stories ор tasks) and posts its findings directly as comments on the respective JIRA tickets. This enhances efficiency, consistency, and quality in your project management workflows.</p>
+<p>This document covers understanding the API trigger mechanism, setting up the JIRA Automation rule, and troubleshooting common issues.</p>
+<p>Note. Example provided in this guide can be used to create other workflows too. </p>
+<h3 id="brief-overview-of-the-automated-jira-review-process">Brief Overview of the Automated JIRA Review Process</h3>
+<p>The automated JIRA review process leverages the power of Elitea AI agents to analyze issue content based on predefined instructions. When triggered from JIRA (e.g., by clicking a button on an issue), a JIRA Automation rule sends the issue details (like the issue key) to a specific Elitea agent via an API call. The Elitea agent processes this information—which might involve using its JIRA toolkit to fetch more details about the issue—and then performs the review. The results of this review are then typically posted back to the originating JIRA issue as a comment.</p>
+<p>This allows for:</p>
+<ul>
+<li><strong>Consistent Reviews:</strong> Standardized checks against every issue.</li>
+<li><strong>Time Savings:</strong> Automating a typically manual review process.</li>
+<li><strong>Improved Quality:</strong> Identifying potential gaps, ambiguities, or areas for improvement in JIRA issues early.</li>
+<li><strong>Versatility:</strong> Applicable not just to user stories, but also to other issue types for various analytical tasks.</li>
+</ul>
+<h3 id="key-terms">Key Terms</h3>
+<ul>
+<li><strong>Elitea Agent:</strong> An AI-powered assistant configured within the Elitea platform to perform specific tasks, such as reviewing text, interacting with external systems (like JIRA), and generating responses.</li>
+<li><strong>JIRA Automation:</strong> A feature within JIRA (Cloud and Data Center/Server) that allows you to automate actions based on triggers and conditions.</li>
+<li><strong>Webhook:</strong> An automated message sent from one application (JIRA) to another (Elitea) when something happens. It contains a message—or payload—which is sent to a unique URL.</li>
+<li><strong>API Trigger:</strong> A mechanism to invoke an Elitea agent's functionality via an Application Programming Interface (API) call.</li>
+<li><strong><code>{{issue.key}}</code> (JIRA Smart Value):</strong> A placeholder used in JIRA Automation that JIRA replaces with the actual key of the issue being processed (e.g., "PROJECT-123").</li>
+<li><strong><code>ProjectID</code> (Elitea):</strong> A unique identifier for your project within the Elitea platform.</li>
+<li><strong><code>ApplicationVersionID</code> (Elitea):</strong> A unique identifier for a specific version of your configured Elitea agent.</li>
+<li><strong>JIRA Toolkit (Elitea):</strong> A set of tools within an Elitea agent that allows it to interact with JIRA (More about  <strong><a href="../toolkits/jira_toolkit.md">Jira toolkit</a></strong> here)</li>
+</ul>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Before you begin, ensure you have the following:</p>
+<ul>
+<li>An Elitea agent designed for JIRA issue review, preferably equipped with the JIRA toolkit. (Details on creation below).</li>
+<li>Access to your JIRA instance (Cloud or Data Center/Server) with project administrator privileges to create Automation rules.</li>
+<li>An Elitea API token for authentication.</li>
+<li>The <code>ProjectID</code> and <code>ApplicationVersionID</code> for your Elitea agent.</li>
+</ul>
+<h2 id="setup-and-configuration">Setup and Configuration</h2>
+<p>Follow these steps to set up the automated JIRA review:</p>
+<h3 id="step-1-create-and-configure-the-elitea-review-agent">Step 1: Create and Configure the Elitea Review Agent</h3>
+<ol>
+<li><strong>Navigate to Elitea Agents:</strong> Access the Agent configuration section within your Elitea instance.</li>
+<li>
+<p><strong>Create or Configure Agent:</strong></p>
+<ul>
+<li>Create a new agent or modify an existing one.</li>
+<li>Define an <strong>Agent Name</strong> (e.g., "JIRA Story Reviewer"), <strong>Description</strong>, and crucial <strong>Instructions</strong>.<ul>
+<li><strong>Agent Instructions:</strong> The instructions must guide the agent on how to process the input (which will be the <code>issue key</code>) and what to do. For example: "You will receive a JIRA issue key as user input. Use the JIRA toolkit to fetch the details of this issue. Review the user story based on INVEST principles. Then, immediately post a comment on the same JIRA issue with your review, including a summary, context, identified gaps, and clarifying questions."</li>
+</ul>
+</li>
+<li><strong>Add JIRA Toolkit:</strong> If not already present, add the "JIRA" toolkit to your agent and configure it with your JIRA instance ( More about  <strong><a href="../toolkits/jira_toolkit.md">Jira toolkit</a></strong> here).</li>
+</ul>
+</li>
+<li>
+<p><strong>Note <code>ProjectID</code> and <code>ApplicationVersionID</code>:</strong></p>
+<ul>
+<li><strong>ProjectID:</strong> Find this in your Elitea "Settings" -&gt; "Configuration" page.</li>
+<li><strong>ApplicationVersionID:</strong> After configuring and saving your agent, locate its <code>ApplicationVersionID</code>. This ID is specific to this version of the agent configuration.</li>
+</ul>
+<p><img alt="ApplicationVersionID" src="../img/how-tos/jira_automation/ApplicationVersionID.png" />
+<img alt="ProjectID" src="../img/how-tos/jira_automation/ProjectID.png" /></p>
+</li>
+</ol>
+<h3 id="step-2-understanding-the-elitea-api-trigger">Step 2: Understanding the Elitea API Trigger</h3>
+<p>The Elitea agent will be triggered via its public API.
+*   <strong>API Endpoint:</strong>
+    <code>POST https://nexus.elitea.ai/api/v1/applications/predict/prompt_lib/{ProjectID}/{ApplicationVersionID}</code>
+    Replace <code>{ProjectID}</code> with your Elitea Project ID and <code>{ApplicationVersionID}</code> with your agent's specific Application Version ID.</p>
+<ul>
+<li><strong>Request Body:</strong>
+    The JIRA Automation rule will send data to this endpoint. The <code>user_input</code> field will contain the JIRA issue key, which your agent is instructed to process.
+    <code>json
+    {
+      "user_input": "{{issue.key}}"
+    }</code>
+    JIRA will dynamically replace <code>{{issue.key}}</code> with the actual issue key (e.g., "PROJ-123") when the automation rule runs. Your Elitea agent instructions should be designed to expect this issue key as the primary input.</li>
+</ul>
+<h3 id="step-3-set-up-jira-automation-rule">Step 3: Set Up JIRA Automation Rule</h3>
+<ol>
+<li>
+<p><strong>Navigate to JIRA Automation:</strong></p>
+<ul>
+<li>In your JIRA project, go to <strong>Project settings</strong> &gt; <strong>Automation</strong>.</li>
+</ul>
+<p><strong>Cloud</strong></p>
+<p><img alt="Project_settings" src="../img/how-tos/jira_automation/Project_settings.png" /></p>
+<p><img alt="Automation" src="../img/how-tos/jira_automation/Automation_c.png" /></p>
+<p><strong>Server</strong></p>
+<p><img alt="Project_settings_s" src="../img/how-tos/jira_automation/Project_settings_s.png" /></p>
+<p><img alt="Select_project" src="../img/how-tos/jira_automation/Select_project.png" /></p>
+<p><img alt="Automation_s" src="../img/how-tos/jira_automation/Automation_s.png" /></p>
+</li>
+<li>
+<p><strong>Create a New Rule:</strong></p>
+<ul>
+<li>Click on <strong>Create rule</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Select a Trigger:</strong></p>
+<ul>
+<li>For a button-initiated review, choose the <strong>Manual trigger</strong>. You can customize the name of the button (e.g., "Eliea Review Story").</li>
+</ul>
+<p><img alt="manual-trigger" src="../img/how-tos/jira_automation/manual-trigger.png" /></p>
+</li>
+<li>
+<p><strong>Add "Send web request" Action:</strong></p>
+<ul>
+<li>Click on <strong>New action</strong> and select <strong>Send web request</strong>.</li>
+</ul>
+<p><img alt="web_request" src="../img/how-tos/jira_automation/web_request.png" /></p>
+</li>
+<li>
+<p><strong>Configure the Web Request:</strong></p>
+<ul>
+<li><strong>Webhook URL:</strong> Enter the Elitea API endpoint from Step 2, with your actual <code>ProjectID</code> and <code>ApplicationVersionID</code>.
+    Example: <code>https://nexus.elitea.ai/api/v1/applications/predict/prompt_lib/your_project_id_here/your_app_version_id_here</code></li>
+<li>
+<p><strong>Headers:</strong></p>
+<ul>
+<li><code>Content-Type</code>: <code>application/json</code></li>
+<li><code>Authorization</code>: <code>Bearer [Your_Eliea_API_Token]</code></li>
+</ul>
+<p><img alt="ELITEA_API_TOKEN" src="../img/how-tos/jira_automation/ELITEA_API_TOKEN.png" /></p>
+<ul>
+<li><strong>Important:</strong> Instead of pasting your token directly, use JIRA's secret management if available. Create a secret (e.g., <code>ELITEA_API_TOKEN</code>) in JIRA's automation settings and reference it here like <code>Bearer {{secrets.ELITEA_API_TOKEN}}</code>. This keeps your token secure.</li>
+</ul>
+<p><img alt="jira-automation-secrets" src="../img/how-tos/jira_automation/jira-automation-secrets.png" /></p>
+</li>
+<li>
+<p><strong>HTTP method:</strong> <code>POST</code></p>
+</li>
+<li><strong>Webhook body:</strong> Select <code>Custom data</code>.
+    <code>json
+    {
+      "user_input": "{{issue.key}}"
+    }</code></li>
+<li><strong>Validate your web request configuration:</strong> Use this JIRA feature to test the connection to the Elitea API with a sample issue key before saving the rule.</li>
+</ul>
+<p>Cloud</p>
+<p><img alt="webhook-setup-cloud" src="../img/how-tos/jira_automation/webhook-setup-cloud.png" /></p>
+<p>Server</p>
+<p><img alt="webhook-setup-server" src="../img/how-tos/jira_automation/webhook-setup-server.png" /></p>
+</li>
+<li>
+<p><strong>Save and Name the Rule:</strong></p>
+<ul>
+<li>Give your rule a descriptive name (e.g., "Trigger Elitea Story Review").</li>
+<li>Turn on the rule.</li>
+<li><strong>Rule Permissions/Scope:</strong> Ensure the rule is configured to be visible/usable by the intended project members or roles if it's a manual trigger.</li>
+</ul>
+</li>
+</ol>
+<h2 id="using-the-automated-review">Using the Automated Review</h2>
+<h3 id="triggering-the-review-from-a-jira-issue">Triggering the Review from a JIRA Issue</h3>
+<ol>
+<li>Open any JIRA issue in the project where you configured the automation.</li>
+<li>If you used a Manual trigger:<ul>
+<li>Look for the button you named (e.g., "Eliea Review Story"). It might be under the "Actions" menu (...) or directly visible on the issue view, depending on your JIRA version and configuration.</li>
+</ul>
+</li>
+<li>
+<p>Click the button. This will trigger the JIRA Automation rule, which in turn calls the Elitea agent.</p>
+<p>Cloud 
+ <img alt="Button_c" src="../img/how-tos/jira_automation/Button_c.png" /></p>
+<p>Server 
+ <img alt="Button_s" src="../img/how-tos/jira_automation/Button_s.png" /></p>
+</li>
+</ol>
+<h3 id="reviewing-the-results">Reviewing the Results</h3>
+<ul>
+<li>After a short processing time, the Elitea agent (if configured to do so with its JIRA toolkit) will post its review as a comment on the JIRA issue.</li>
+<li>The comment will contain the structured feedback as defined in your agent's instructions (e.g., Requirements Summary, Context, Gaps Identified, Clarifying Questions).</li>
+</ul>
+<h2 id="use-cases-and-customization">Use Cases and Customization</h2>
+<p>This setup is highly versatile. Beyond the primary example of user story review, consider these possibilities:</p>
+<ul>
+<li><strong>Reviewing Different Issue Types:</strong> Configure the agent and automation for bugs, tasks, epics, or any custom JIRA issue type. The agent's instructions would need to be tailored to the specific information available and the desired review criteria for that issue type.</li>
+<li><strong>Generating Checklists:</strong> The Elitea agent can be instructed to generate a task checklist based on the issue description or type and add it as a comment or update a specific field.</li>
+<li><strong>Converting Formats:</strong> Instruct the agent to convert a user story into Gherkin syntax for BDD scenarios, or extract key information to populate a test case template.</li>
+<li><strong>Summarizing Issues:</strong> For lengthy issues with many comments, the agent could provide a summary.</li>
+<li><strong>Data Validation/Enrichment:</strong> The agent could check for missing information in required fields or suggest labels based on the content.</li>
+</ul>
+<p><strong>Customizing Triggers and Actions:</strong>
+*   <strong>Triggers:</strong> Instead of a manual button, JIRA Automation supports various triggers:
+    *   <strong>Issue Created:</strong> Automatically review new issues.
+    *   <strong>Issue Transitioned:</strong> Review an issue when it moves to a specific status (e.g., "Ready for Review").
+    *   <strong>Scheduled:</strong> Run reviews on a batch of issues at set times.
+*   <strong>Agent Actions:</strong> The Elitea agent can perform more than just commenting:
+    *   Update JIRA issue fields.
+    *   Transition issues to different statuses.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>If you encounter issues, here are common areas to check:</p>
+<ol>
+<li>
+<p><strong>Comment Not Created After Clicking the Rule/Button:</strong></p>
+<ul>
+<li><strong>A. Verify Elitea Agent Directly:</strong><ul>
+<li>Go to your Elitea instance.</li>
+<li>Manually run or test the agent by providing a JIRA issue key (e.g., "PROJECT-123") as the <code>user_input</code>.</li>
+<li>Check if the agent executes successfully and performs the intended action (e.g., tries to create a comment).</li>
+</ul>
+</li>
+<li><strong>B. Test API Request:</strong><ul>
+<li>Use a tool like Postman or <code>curl</code> to send a direct HTTP POST request to your Elitea agent's API endpoint (<code>https://nexus.elitea.ai/api/v1/applications/predict/prompt_lib/{ProjectID}/{ApplicationVersionID}</code>).</li>
+<li>Use the same headers (Authorization with Bearer token, Content-Type) and body (<code>{ "user_input": "YOUR-ISSUE-KEY" }</code>) as configured in JIRA Automation.</li>
+<li>This helps isolate whether the issue is with JIRA Automation or the Elitea agent/API itself.</li>
+</ul>
+</li>
+<li><strong>C. Check JIRA Automation Audit Log:</strong><ul>
+<li>In JIRA Automation settings, find your rule and view its "Audit log."</li>
+<li>Look for successful executions or error messages. Errors here might point to problems with the webhook URL, authentication, request body format, or network connectivity from JIRA to Elitea.</li>
+<li>JIRA often provides details on why a web request failed.</li>
+</ul>
+</li>
+<li><strong>D. Use "Validate your web request configuration":</strong><ul>
+<li>In the JIRA "Send web request" action configuration, there's often a button to validate the setup. Use this with a real issue key and review the request details.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="validate-web-request" src="../img/how-tos/jira_automation/validate-web-request.png" /></p>
+</li>
+<li>
+<p><strong>Your Teammates Can't See the Rule/Button (for Manual Triggers):</strong></p>
+<ul>
+<li><strong>Check Rule Scope/Permissions:</strong> In the JIRA Automation rule settings, ensure the rule is enabled and that its scope or permissions allow other project members to see and execute manual triggers. Some JIRA versions have specific settings for manual trigger visibility.</li>
+</ul>
+<p><img alt="permissions" src="../img/how-tos/jira_automation/permissions.png" /></p>
+</li>
+<li>
+<p><strong>Elitea Agent Errors:</strong></p>
+<ul>
+<li>Ensure the agent's JIRA toolkit is correctly configured and can connect to your JIRA instance.</li>
+<li>Verify the agent's instructions are clear and correctly interpret the <code>user_input</code> (issue key).</li>
+</ul>
+</li>
+<li>
+<p><strong>Authentication Issues (401 Unauthorized or 403 Forbidden):</strong></p>
+<ul>
+<li>Double-check the Elitea API token used in the <code>Authorization</code> header.</li>
+<li>Ensure the <code>Bearer</code> prefix is present before the token.</li>
+<li>Verify the token is valid and has not expired.</li>
+<li>If using JIRA secrets, ensure the secret is correctly defined and accessible.</li>
+</ul>
+</li>
+<li>
+<p><strong>Incorrect <code>ProjectID</code> or <code>ApplicationVersionID</code>:</strong></p>
+<ul>
+<li>A common issue is using <code>ApplicationID</code> instead of <code>ApplicationVersionID</code> after updating the agent.</li>
+<li>Verify the <code>ProjectID</code> is correct.</li>
+</ul>
+</li>
+</ol>
+<h2 id="faqs">FAQs</h2>
+<p><strong>Q: Can I use this automation for issues other than User Stories?</strong>
+<strong>A:</strong> Yes. You can adapt the Elitea agent's instructions and the JIRA Automation rule (e.g., trigger conditions, issue scope) to review any JIRA issue type like bugs, tasks, epics, etc. The key is to tailor the agent's logic to what needs to be reviewed for that specific issue type.</p>
+<p><strong>Q: What if the Elitea agent's <code>ApplicationVersionID</code> changes?</strong>
+<strong>A:</strong> You will need to update the Webhook URL in your JIRA Automation rule with the new <code>ApplicationVersionID</code> for the automation to continue triggering the correct agent version.</p>
+<p><strong>Q: Can I trigger the review based on a status change instead of a manual button?</strong>
+<strong>A:</strong> Absolutely. JIRA Automation allows various triggers. You can configure the rule to run when an issue is transitioned to a specific status (e.g., "In Review"), when an issue is created, or on a scheduled basis.</p>
+<p><strong>Q: How do I ensure the Elitea agent has the necessary permissions in JIRA?</strong>
+<strong>A:</strong> The Elitea agent, through its JIRA Toolkit, will interact with JIRA using credentials (often an API token of a JIRA user). Ensure this JIRA user account has the necessary permissions in the target JIRA project to:
+    *   Read issue details.
+    *   Add comments to issues.
+Ensure that the corresponding tools are selected for Jira toolkit in Elitea</p>
+<h2 id="support-and-contact-information">Support and Contact Information</h2>
+<p>If you encounter persistent issues not covered in this guide, or require further assistance with Elitea Agents or this JIRA integration, please contact the Elitea Support Team:</p>
+<ul>
+<li><strong>Email:</strong> SupportAlita@epam.com</li>
+</ul>
+<p>Please provide the following details in your support request to help us assist you efficiently:</p>
+<ul>
+<li><strong>Elitea Environment:</strong> (e.g., "Nexus," "Alita Lab," "EYE")</li>
+<li><strong>JIRA Version:</strong> (e.g., JIRA Cloud, JIRA Server 8.x)</li>
+<li><strong>Project Details:</strong> Project Name in Elitea and JIRA.</li>
+<li><strong>Detailed Issue Description:</strong> Clear explanation of the problem, steps to reproduce, expected vs. actual behavior.</li>
+<li><strong>Relevant Configuration Information:</strong><ul>
+<li>Elitea Agent Instructions (screenshot or text)</li>
+<li>Elitea Agent <code>ProjectID</code> and <code>ApplicationVersionID</code> used.</li>
+<li>JIRA Automation Rule configuration (screenshots).</li>
+<li>Error Messages (full error text from JIRA Audit Log or Elitea agent logs).</li>
+</ul>
+</li>
+<li><strong>Your Query/Prompt (if testing manually):</strong> Exact input used.</li>
+</ul>
+<p><strong>Before Contacting Support:</strong>
+Please ensure you have reviewed the troubleshooting steps in this guide and consulted the JIRA Automation audit logs.</p>
+<h2 id="useful-materials-and-references">Useful Materials and References</h2>
+<ul>
+<li><strong>Elitea API Public Collection (Postman):</strong> <a href="https://www.postman.com/projectalita/elitea-api-public">https://www.postman.com/projectalita/elitea-api-public</a><ul>
+<li>The specific request for prediction: <a href="https://www.postman.com/projectalita/elitea-api-public/request/ac6fj06/predict">Elitea API predict endpoint</a></li>
+</ul>
+</li>
+<li><strong>JIRA Automation Documentation (Cloud):</strong> <a href="https://support.atlassian.com/cloud-automation/docs/jira-cloud-automation/">https://support.atlassian.com/cloud-automation/docs/jira-cloud-automation/</a></li>
+<li><strong>Example Elitea Agent Instructions for JIRA Story Review:</strong> <a href="../../img/how-tos/jira_automation/instructions.txt">Agent Instructions</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -2677,10 +3394,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "/docs/", "features": [], "search": "/docs/assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/docs/assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../assets/javascripts/bundle.50899def.min.js"></script>
       
     
   </body>
