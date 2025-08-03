@@ -6,6 +6,196 @@ info:
   version: 1.0.0
 basePath: /api/v1
 paths:
+  /artifacts/artifacts/default/{project_id}/{bucket_name}:
+    parameters:
+      - in: path
+        name: project_id
+        required: true
+        type: string
+      - in: path
+        name: bucket_name
+        required: true
+        type: string
+      - in: query
+        name: configuration_title
+        required: false
+        type: string
+    get:
+      responses:
+        '200':
+          description: List artifacts in a bucket
+      tags:
+        - artifacts
+      description: List artifacts in a bucket
+      operationId: listArtifacts
+      summary: List artifacts
+
+  /artifacts/artifact/default/{project_id}/{bucket_name}/{file_name}:
+    parameters:
+      - in: path
+        name: project_id
+        required: true
+        type: string
+      - in: path
+        name: bucket_name
+        required: true
+        type: string
+      - in: path
+        name: file_name
+        required: true
+        type: string
+      - in: query
+        name: configuration_title
+        required: false
+        type: string
+    get:
+      responses:
+        '200':
+          description: Get artifact details
+      tags:
+        - artifacts
+      description: Get artifact details
+      operationId: getArtifact
+      summary: Get artifact
+
+  /artifacts/artifacts/default/{project_id}/{bucket_name}:
+    parameters:
+      - in: path
+        name: project_id
+        required: true
+        type: string
+      - in: path
+        name: bucket_name
+        required: true
+        type: string
+    post:
+      consumes:
+        - multipart/form-data
+      parameters:
+        - in: formData
+          name: file
+          required: true
+          type: file
+      responses:
+        '201':
+          description: Create an artifact
+      tags:
+        - artifacts
+      description: Create an artifact
+      operationId: createArtifact
+      summary: Create artifact
+
+  /artifacts/buckets/default/{project_id}:
+    parameters:
+      - in: path
+        name: project_id
+        required: true
+        type: string
+    post:
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          schema:
+            properties:
+              name:
+                type: string
+                example: TestBucket
+              expiration_measure:
+                type: string
+                example: days
+              expiration_value:
+                type: integer
+                example: 7
+            required:
+              - name
+      responses:
+        '201':
+          description: Create a bucket
+      tags:
+        - artifacts
+      description: Create a bucket
+      operationId: createBucket
+      summary: Create bucket
+
+  /artifacts/buckets/default/{project_id}:
+    parameters:
+      - in: path
+        name: project_id
+        required: true
+        type: string
+      - in: query
+        name: configuration_title
+        required: false
+        type: string
+    get:
+      responses:
+        '200':
+          description: List buckets
+      tags:
+        - artifacts
+      description: List buckets
+      operationId: listBuckets
+      summary: List buckets
+
+  /artifacts/artifacts/default/{project_id}/{bucket_name}:
+    parameters:
+      - in: path
+        name: project_id
+        required: true
+        type: string
+      - in: path
+        name: bucket_name
+        required: true
+        type: string
+      - in: query
+        name: configuration_title
+        required: false
+        type: string
+      - in: query
+        name: fname[]
+        required: false
+        type: array
+        items:
+          type: string
+    delete:
+      responses:
+        '204':
+          description: Delete artifacts
+      tags:
+        - artifacts
+      description: Delete artifacts
+      operationId: deleteArtifacts
+      summary: Delete artifacts
+
+  /artifacts/artifact/default/{project_id}/{bucket_name}:
+    parameters:
+      - in: path
+        name: project_id
+        required: true
+        type: string
+      - in: path
+        name: bucket_name
+        required: true
+        type: string
+      - in: query
+        name: configuration_title
+        required: false
+        type: string
+      - in: query
+        name: filename
+        required: true
+        type: string
+    delete:
+      responses:
+        '204':
+          description: Delete an artifact
+      tags:
+        - artifacts
+      description: Delete an artifact
+      operationId: deleteArtifact
+      summary: Delete artifact
   /ai_dial/models/default/{project_id}:
     parameters:
       - in: path
