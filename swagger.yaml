@@ -1,0 +1,164 @@
+openapi: 3.0.0
+info:
+  title: Artifacts API
+  description: API documentation for managing artifacts and buckets.
+  version: 1.0.0
+paths:
+  /artifacts/artifacts/default/{project_id}/{bucket_name}:
+    get:
+      summary: List Artifacts
+      parameters:
+        - name: project_id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: bucket_name
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: configuration_title
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+    post:
+      summary: Create Artifact
+      parameters:
+        - name: project_id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: bucket_name
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        '201':
+          description: Artifact created successfully
+  /artifacts/artifact/default/{project_id}/{bucket_name}/{file_name}:
+    get:
+      summary: Get Artifact
+      parameters:
+        - name: project_id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: bucket_name
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: file_name
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+  /artifacts/buckets/default/{project_id}:
+    get:
+      summary: List Buckets
+      parameters:
+        - name: project_id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: configuration_title
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+    post:
+      summary: Create Bucket
+      parameters:
+        - name: project_id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                expiration_measure:
+                  type: string
+                expiration_value:
+                  type: integer
+      responses:
+        '201':
+          description: Bucket created successfully
+  /artifacts/artifacts/default/{project_id}/{bucket_name}:
+    delete:
+      summary: Delete Artifacts
+      parameters:
+        - name: project_id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: bucket_name
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: configuration_title
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Artifacts deleted successfully
+  /artifacts/artifact/default/{project_id}/{bucket_name}:
+    delete:
+      summary: Delete Artifact
+      parameters:
+        - name: project_id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: bucket_name
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: configuration_title
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: filename
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Artifact deleted successfully
