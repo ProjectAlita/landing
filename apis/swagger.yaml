@@ -6,6 +6,12 @@ info:
   version: 1.0.0
 basePath: /api/v1
 paths:
+  /api/v1/storage.py:
+    description: Deprecated endpoint
+    summary: Deprecated endpoint
+    responses:
+      '410':
+        description: Gone
   /ai_dial/models/default/{project_id}:
     parameters:
       - in: path
