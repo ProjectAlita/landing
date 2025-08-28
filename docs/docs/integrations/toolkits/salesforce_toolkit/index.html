@@ -1,0 +1,4976 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://elitea.ai/docs/integrations/toolkits/salesforce_toolkit/">
+      
+      
+        <link rel="prev" href="../reportportal_toolkit/">
+      
+      
+        <link rel="next" href="../servicenow_toolkit/">
+      
+      
+      <link rel="icon" href="../../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>SalesForce - ELITEA Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../extra_css/material.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#elitea-toolkit-guide-salesforce-integration" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="ELITEA Documentation" class="md-header__button md-logo" aria-label="ELITEA Documentation" data-md-component="logo">
+      
+  <img src="../../../img/favicon.ico" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ELITEA Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              SalesForce
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../.." class="md-tabs__link">
+          
+  
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../getting-started/next-quick-start/" class="md-tabs__link">
+          
+  
+  
+  Getting Started
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../menus/overview/" class="md-tabs__link">
+          
+  
+  
+  Menus
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../features/export-import/" class="md-tabs__link">
+          
+  
+  
+  Features
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../how-tos/how-to-use-credentials/" class="md-tabs__link">
+          
+  
+  
+  How-To Guides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../extensions/elitea-code/" class="md-tabs__link">
+          
+  
+  
+  Integrations
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../release-notes/rn_current/" class="md-tabs__link">
+          
+  
+  
+  Release Notes
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../support/faqs/" class="md-tabs__link">
+          
+  
+  
+  Support
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../archive/prompt-magic-assistant/" class="md-tabs__link">
+          
+  
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="ELITEA Documentation" class="md-nav__button md-logo" aria-label="ELITEA Documentation" data-md-component="logo">
+      
+  <img src="../../../img/favicon.ico" alt="logo">
+
+    </a>
+    ELITEA Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Elitea Values
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../home/introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../home/glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Glossary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Key Concepts
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Key Concepts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../home/key-concepts/what-is-an-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is an agent?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../home/key-concepts/what-is-a-pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is a pipeline?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../home/key-concepts/what-is-a-credential/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is a credential?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../home/key-concepts/what-is-a-toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is a toolkit?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../home/key-concepts/what-is-a-conversation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is a conversation?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../home/key-concepts/what-is-an-artifact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is an artifact?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../home/key-concepts/what-is-a-collection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is a collection?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Quick Starts
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Quick Starts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/next-quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Next Env - Quick Start
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/very-quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Very Quick Start
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quick Start
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Initial Setup
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Initial Setup
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/create-personal-access-token/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create a Personal Access Token
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/create-secret/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create a Secret
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/create-credential/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create a Credential
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/create-toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create a Toolkit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Create Your First Entities
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Create Your First Entities
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/create-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create first Agent
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/create-artifact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create first Artifact
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/create-pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create first Pipeline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/create-conversation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create first Conversation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Enhanced Usage
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Enhanced Usage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/canvas-in-conversation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Canvas in Conversation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/add-teammates-to-conversation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Add Teammates to Conversation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Menus
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Menus
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../menus/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../menus/chat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chat
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../menus/agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Agents
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../menus/pipelines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pipelines
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../menus/credentials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Credentials
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../menus/toolkits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Toolkits
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../menus/collections/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Collections
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../menus/artifacts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Artifacts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Settings
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_9">
+            <span class="md-nav__icon md-icon"></span>
+            Settings
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../menus/settings/settings-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Settings Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../menus/settings/ai-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AI Configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../menus/settings/personal-tokens/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Personal Tokens
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../menus/settings/secrets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Secrets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../menus/settings/projects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Projects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../menus/settings/monitoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Monitoring
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Features
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Features
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/export-import/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Export & Import Entities
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/forking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fork Entities
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/entity-versioning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Entity Versioning
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/search-entities/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Search Entities
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/organizing-entities/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Organizing Entities
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/public-project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Public Project
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/monitoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Monitoring
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/roles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Manage Users & Roles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_9" id="__nav_4_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Pipelines
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_9">
+            <span class="md-nav__icon md-icon"></span>
+            Pipelines
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/pipelines/pipeline-agent-framework/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pipelines Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    How-To Guides
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            How-To Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../how-tos/how-to-use-credentials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Use Credentials
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../how-tos/jira-automation-with-elitea/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Automate JIRA Issue Review
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../how-tos/how-to-use-webhooks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Use Webhooks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Indexing
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Indexing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../how-tos/indexing/index-github-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Github Indexing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../how-tos/indexing/index-confluence-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Confluence Indexing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../how-tos/indexing/index-jira-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Jira Indexing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../how-tos/indexing/index-sharepoint-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SharePoint Indexing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Chat & Conversations
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            Chat & Conversations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../how-tos/how-to-use-chat-functionality/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chat - Advanced Usage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../how-tos/how-to-canvas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Canvas - Advanced Usage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../how-tos/how-to-canvas-agent-pipeline-editing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Canvas Agent & Pipeline Editing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Integrations
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Integrations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Extensions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            Extensions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extensions/elitea-code/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Elitea Code
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extensions/elitea-code-chat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Elitea Code Chat
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    MCP
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            MCP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mcp/mcp-server-stdio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Server (STDIO)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mcp/mcp-server-sse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Server (SSE)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mcp/mcp-client/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Client (STDIO)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Toolkits
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            Toolkits
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ado_repos_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ADO Repos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ado_wiki_plan_board_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ADO Wiki / Boards / Test Plans
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../artifact_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Artifact
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bitbucket_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    BitBucket
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../browser_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Browser
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../confluence_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Confluence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../custom_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Custom
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../figma_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Figma
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../github_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GitHub
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gitlab_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GitLab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gitlab_org_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GitLab Org
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google_places_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Google Places
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jira_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Jira
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../openapi_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OpenAPI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pandas_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pandas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../postman_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Postman
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../powerpoint_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PowerPoint
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qtest_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    qTest
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rally_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rally
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reportportal_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ReportPortal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    SalesForce
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    SalesForce
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose-of-this-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose of this Guide
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brief-overview-of-salesforce-and-its-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Brief Overview of Salesforce and its API
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#salesforce-api-access-and-configuration-setting-up-a-connected-app-alternative-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Salesforce API Access and Configuration: Setting up a Connected App (Alternative Method)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps-to-configure-connected-app-for-client-credentials-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steps to Configure Connected App for Client Credentials Flow
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../servicenow_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ServiceNow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sharepoint_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SharePoint
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slack_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Slack
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sonar_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sonar
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sql_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SQL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testIO_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TestIO
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testrail_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TestRail
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xray_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Xray Cloud
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zephyr_scale_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zephyr Scale
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zephyr_enterprise_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zephyr Enterprise
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Release Notes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Release Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Current version
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            Current version
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../release-notes/rn_current/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RN 1.7.0
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Previous versions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            Previous versions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../release-notes/archived/rn10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RN 1.6.0
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../release-notes/archived/rn9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RN 1.5.2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../release-notes/archived/rn8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RN 1.5.1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../release-notes/archived/rn7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RN 1.5.0
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../release-notes/archived/rn6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RN 1.4.0
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../release-notes/archived/rn5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RN 1.3.0
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../release-notes/archived/rn4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RN 1.2.0
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../release-notes/archived/rn3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RN 1.1.0
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../release-notes/archived/rn2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RN 1.0.1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../release-notes/archived/rn1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RN 1.0.0
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Support
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Support
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../support/faqs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../support/contact-support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contact Support
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../support/additional-resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Additional Resources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Archive
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Archive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../archive/prompt-magic-assistant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Prompt Magic Assistant
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../archive/alita-dial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Alita Dial
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../archive/creating-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Creating Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../archive/prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../archive/datasources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Datasources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../archive/agents-examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Agents Examples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../archive/prompts-examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Prompts Examples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose-of-this-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose of this Guide
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brief-overview-of-salesforce-and-its-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Brief Overview of Salesforce and its API
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#salesforce-api-access-and-configuration-setting-up-a-connected-app-alternative-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Salesforce API Access and Configuration: Setting up a Connected App (Alternative Method)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps-to-configure-connected-app-for-client-credentials-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steps to Configure Connected App for Client Credentials Flow
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="elitea-toolkit-guide-salesforce-integration">ELITEA Toolkit Guide: Salesforce Integration<a class="headerlink" href="#elitea-toolkit-guide-salesforce-integration" title="Permanent link">&para;</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<h3 id="purpose-of-this-guide">Purpose of this Guide<a class="headerlink" href="#purpose-of-this-guide" title="Permanent link">&para;</a></h3>
+<p>This guide is your definitive resource for integrating and utilizing the <strong>Salesforce toolkit</strong> within ELITEA. It provides a step-by-step walkthrough, from understanding necessary Salesforce prerequisites to configuring the toolkit in ELITEA and effectively using it within your Agents. By following this guide, you will unlock the power of automated CRM data management, record creation, updates, searches, and streamlined workflows focused on Leads, Cases, and general Salesforce interactions, all directly within the ELITEA platform. This integration empowers you to leverage AI-driven automation to optimize your Salesforce-related tasks using the combined strengths of ELITEA and Salesforce APIs.</p>
+<h3 id="brief-overview-of-salesforce-and-its-api">Brief Overview of Salesforce and its API<a class="headerlink" href="#brief-overview-of-salesforce-and-its-api" title="Permanent link">&para;</a></h3>
+<p>Salesforce is a leading cloud-based Customer Relationship Management (CRM) platform that helps companies manage customer interactions, streamline sales processes, track leads and opportunities, provide customer service, and much more. It centralizes customer data and business operations.</p>
+<p>The Salesforce API provides programmatic access to your Salesforce data and functionality. It allows external applications like ELITEA to interact with your Salesforce organization to perform specific actions on records such as Leads and Cases, as well as conduct searches and generic updates. Key capabilities relevant to this toolkit include:</p>
+<ul>
+<li><strong>Creating Records:</strong> Programmatically create new Lead or Case records in Salesforce.</li>
+<li><strong>Updating Records:</strong> Modify existing Lead or Case records, or perform generic updates on other record types based on ID.</li>
+<li><strong>Searching/Querying:</strong> Find records across various Salesforce objects using search queries.</li>
+</ul>
+<p>Integrating Salesforce with ELITEA brings these robust CRM capabilities directly into your AI-powered workflows. Your ELITEA Agents can then interact with the Salesforce API to automate tasks such as creating new leads from inquiries, logging customer support cases, updating record statuses, and retrieving specific Salesforce data based on user requests or automated triggers, enhancing application functionalities, and improving business processes through intelligent automation.
+Before you can integrate Salesforce with ELITEA, you need:</p>
+<ol>
+<li><strong>A Salesforce Account:</strong> Access to a Salesforce organization (Developer Edition, Enterprise Edition, Unlimited Edition, etc.) that supports API access.</li>
+</ol>
+<h2 id="salesforce-api-access-and-configuration-setting-up-a-connected-app-alternative-method">Salesforce API Access and Configuration: Setting up a Connected App (Alternative Method)<a class="headerlink" href="#salesforce-api-access-and-configuration-setting-up-a-connected-app-alternative-method" title="Permanent link">&para;</a></h2>
+<p>For secure integration with ELITEA using OAuth, it is highly recommended to use a Salesforce Connected App. This method provides a Client ID (Consumer Key) and Client Secret (Consumer Secret) that ELITEA can use to authenticate and gain API access without storing user credentials directly.</p>
+<p>Here’s a step-by-step guide based on the provided screenshots to create a Connected App:</p>
+<p><strong>Prerequisites:</strong> You must have "Modify All Data" or "Customize Application" permissions in Salesforce to create Connected Apps.</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>
+<p><strong>Access Salesforce Setup:</strong></p>
+<ul>
+<li>Click the <strong>Gear icon</strong> (Setup menu) in the top right corner of your Salesforce org. </li>
+<li>
+<p>From the dropdown menu, click <strong>"Setup"</strong>. </p>
+<p><img alt="SalesForce_setup" src="../../../img/integrations/toolkits/salesforces/SalesForce_Setup.png" /></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Navigate to App Manager:</strong></p>
+<ul>
+<li>Once in Setup Home, use the <strong>"Quick Find"</strong> search bar on the left sidebar.</li>
+<li>
+<p>Type "App Manager" in the search bar.</p>
+<p><img alt="SalesForce_AppManager" src="../../../img/integrations/toolkits/salesforces/SalesForce_App_Manager.png" /></p>
+</li>
+<li>
+<p>Under "Apps" (or potentially "External Client Apps"), click the <strong>"App Manager"</strong> link.</p>
+</li>
+<li>
+<p>You will see a list of existing apps. </p>
+<p><img alt="SalesForce_ApplicationsList" src="../../../img/integrations/toolkits/salesforces/SlesForce_ApplicationsList.png" /></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Initiate New Connected App Creation:</strong></p>
+<ul>
+<li>In the top right corner of the Lightning Experience App Manager page, click the <strong>"New Connected App"</strong> button. </li>
+<li>A modal might appear asking to choose between "Create a Connected App" and "Create an External Client App". Select <strong>"Create a Connected App"</strong> </li>
+<li>
+<p>Click <strong>"Continue"</strong> (labeled '3').</p>
+<p><img alt="SalesForce_Create_a_New_Connected_App" src="../../../img/integrations/toolkits/salesforces/SalesForce_Create_a_connected_App.png" /></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Enter Basic Information:</strong></p>
+<ul>
+<li>
+<p>Fill in the required "Basic Information" fields for your new Connected App:</p>
+<ul>
+<li><strong>Connected App Name:</strong> Enter a descriptive name (e.g., "ELITEA Integration App").</li>
+<li><strong>API Name:</strong> This will auto-populate based on the Connected App Name but can be modified.</li>
+<li><strong>Contact Email:</strong> Enter your email address or a relevant contact email.
+    Fill in any other optional fields as needed (e.g., Description). </li>
+</ul>
+<p><img alt="SalesForce_AppData" src="../../../img/integrations/toolkits/salesforces/SalesForce_AppData.png" /></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Enable OAuth Settings:</strong></p>
+<ul>
+<li>Scroll down to the "API (Enable OAuth Settings)" section.</li>
+<li>Check the <strong>"Enable OAuth Settings"</strong> checkbox. (Refer to Screenshots 6 and 7)</li>
+<li>
+<p>Checking this box will reveal more fields, including "Callback URL" and "Available OAuth Scopes".</p>
+<p><img alt="SalesForce_EnableOAuthSettings" src="../../../img/integrations/toolkits/salesforces/SalesForce_EnableOAuthSettings.png" /></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Configure Callback URL:</strong></p>
+<ul>
+<li>The <strong>"Callback URL"</strong> field is required when enabling OAuth, even if you primarily use a flow like Client Credentials that doesn't use a callback. Enter a placeholder URL or, if your ELITEA instance provides a specific callback URL for OAuth flows, use that. A common placeholder might be <code>https://login.salesforce.com/services/oauth2/success</code> or a generic secure URL related to your application. </li>
+</ul>
+</li>
+<li>
+<p><strong>Select OAuth Scopes:</strong></p>
+<ul>
+<li>In the "Available OAuth Scopes" list, select the necessary permissions for ELITEA to interact with Salesforce. You will likely need at least:<ul>
+<li><strong>"Access and manage your data (api)"</strong>: This is fundamental for the toolkit's read/write operations (<code>create_case</code>, <code>update_lead</code>, <code>search_salesforce</code>, etc.).</li>
+<li><strong>"Access the identity URL service (id, profile, email, address, phone)"</strong>: Often useful for identifying the connecting user.</li>
+</ul>
+</li>
+<li>
+<p>Select the desired scopes from the "Available OAuth Scopes" list and click the <strong>right arrow</strong> button to move them to the "Selected OAuth Scopes" list. </p>
+<p><img alt="SalesForce_EnableOAuth_Scope" src="../../../img/integrations/toolkits/salesforces/SalesForce_OAuthScope.png" /></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Enable Client Credentials Flow (Recommended for Server-to-Server):</strong></p>
+<ul>
+<li>Scroll down further in the "API (Enable OAuth Settings)" section.</li>
+<li>
+<p>Check the <strong>"Enable Client Credentials Flow"</strong> checkbox. </p>
+<p><img alt="SalesForce_Enable_ClientCredentials" src="../../../img/integrations/toolkits/salesforces/SalesForce_Enable_Client_Credentials.png" /></p>
+</li>
+<li>
+<p>This flow allows server-to-server authentication using only the Consumer Key and Consumer Secret.</p>
+</li>
+<li>Get Client ID and Secret
+After saving connected app and waiting a few minutes:</li>
+</ul>
+</li>
+</ol>
+<h2 id="steps-to-configure-connected-app-for-client-credentials-flow">Steps to Configure Connected App for Client Credentials Flow<a class="headerlink" href="#steps-to-configure-connected-app-for-client-credentials-flow" title="Permanent link">&para;</a></h2>
+<p>Follow these steps after saving your Connected App and waiting a few minutes:</p>
+<ul>
+<li>Go back to <strong>App Manager</strong>.</li>
+<li>
+<p>Find your app in the list ➝ click the <strong>▼ arrow</strong> on the right ➝ choose <strong>View</strong>.</p>
+<p><img alt="SalesForce_ViewApp" src="../../../img/integrations/toolkits/salesforces/SalesForce_ViewApp.png" /></p>
+</li>
+<li>
+<p>From the connected app detail page, click "Manage".</p>
+<p><img alt="SalesForce_ManageApp" src="../../../img/integrations/toolkits/salesforces/SalesForce_manageApp.png" /></p>
+</li>
+<li>
+<p>Click Edit Policies.</p>
+<p><img alt="SalesForce_EditPolicies" src="../../../img/integrations/toolkits/salesforces/SalesForce_EditPolicy.png" /></p>
+</li>
+<li>
+<p>Under <strong>Client Credentials Flow</strong>, for <strong>Run As</strong>, select the user that you want to assign to the client credentials flow.</p>
+<p><img alt="SalesForce_ClientCrendentialAssignement" src="../../../img/integrations/toolkits/salesforces/SalesForce_ClientCredentialAssingnement.png" /></p>
+</li>
+<li>
+<p>Click <strong>Save</strong>.</p>
+</li>
+<li>Go back to <strong>App Manager</strong>.</li>
+<li>
+<p><strong>Retrieve Consumer Key and Secret:</strong></p>
+<ul>
+<li>
+<p>Once saved, you will be taken to the Connected App Detail page.</p>
+<p><img alt="SalesForce_AppListView" src="../../../img/integrations/toolkits/salesforces/SalesForce_AppListView.png" /></p>
+</li>
+<li>
+<p>To get the credentials, look for the "API (Enable OAuth Settings)" section again.</p>
+</li>
+<li>
+<p>Click the <strong>"Manage Consumer Details"</strong> button. </p>
+<p><img alt="SalesForce_ManageCustomerDetails" src="../../../img/integrations/toolkits/salesforces/SalesForce_manageCustomerDetails.png" /></p>
+</li>
+<li>
+<p>After verification your Consumer Details will be displayed</p>
+</li>
+<li>
+<p>A new page or modal will display your <strong>"Consumer Key"</strong> (Client ID) and <strong>"Consumer Secret"</strong>      (Client Secret). </p>
+<p><img alt="SalesForce_CustomerSecretAndKey" src="../../../img/integrations/toolkits/salesforces/SalesForce_CustomerSecretAndKey.png" /></p>
+</li>
+<li>
+<p><strong>Securely Copy and Store these credentials.</strong> You will need the Consumer Key and Consumer Secret to configure the Salesforce toolkit in ELITEA, preferably using ELITEA's Secrets feature.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>This Connected App is now configured for API access, including potentially using the more secure Client Credentials Flow. You would then configure your ELITEA Salesforce toolkit using the Salesforce Domain/Instance URL, the Consumer Key, and the Consumer Secret, likely stored as Secrets. The Salesforce toolkit in ELAITEA would need to support OAuth Client Credentials flow for this method to work.</p>
+<h1 id="salesforce-integration-with-elitea">Salesforce Integration with ELITEA<a class="headerlink" href="#salesforce-integration-with-elitea" title="Permanent link">&para;</a></h1>
+<p>Integrating Salesforce with ELITEA allows your Agents to interact with your Salesforce data, automating tasks like retrieving records, creating leads, updating opportunities, and more. This document guides you through the process.</p>
+<h2 id="agent-creationconfiguration">Agent Creation/Configuration<a class="headerlink" href="#agent-creationconfiguration" title="Permanent link">&para;</a></h2>
+<p>To integrate Salesforce, you'll need to configure it within an ELITEA Agent. You can either create a new Agent or modify an existing one.</p>
+<ol>
+<li><strong>Navigate to Agents:</strong> In ELITEA, go to the <strong>Agents</strong> menu.</li>
+<li><strong>Create or Edit Agent:</strong><ul>
+<li><strong>New Agent:</strong> Click <strong>"+ Agent"</strong> to create a new Agent. Follow the steps to define Agent details like name, description, type, and instructions.</li>
+<li><strong>Existing Agent:</strong> Select the Agent you want to integrate with Salesforce and click on its name to edit.</li>
+</ul>
+</li>
+<li><strong>Access Toolkits Section:</strong> In the Agent configuration, scroll down to the <strong>"Toolkits"</strong> section.</li>
+</ol>
+<h2 id="toolkit-configuration">Toolkit Configuration<a class="headerlink" href="#toolkit-configuration" title="Permanent link">&para;</a></h2>
+<p>This section details how to configure the Salesforce toolkit within your ELITEA Agent.</p>
+<ol>
+<li><strong>Add Toolkit:</strong> In the "Tools" section, click the <strong>"+" icon</strong>.</li>
+<li><strong>Select Salesforce:</strong> Choose <strong>"Salesforce"</strong> from the dropdown list of available toolkits. This opens the "New Salesforce tool" configuration panel.</li>
+<li>
+<p><strong>Configure Toolkit Details:</strong> Fill in the following fields using the information from your Salesforce Connected App and instance:</p>
+<ul>
+<li><strong>Name:</strong> Enter a <strong>Name</strong> for this Salesforce toolkit instance. Choose a descriptive name (e.g., "SalesforceCRM", "AccountManager"). This name might be referenced in your Agent's instructions.</li>
+<li><strong>Description:</strong> Provide a <strong>Description</strong> for the toolkit, clarifying its purpose (e.g., "Toolkit to interact with Salesforce data").</li>
+<li><strong>Base Url:</strong> Enter the <strong>Base URL</strong> of your Salesforce instance. This is typically in the format <code>https://[YourInstance].my.salesforce.com</code> or <code>https://[YourInstance].salesforce.com</code>. Ensure it points to your specific Salesforce environment.</li>
+<li>For example:</li>
+</ul>
+</li>
+<li>
+<p>If your Salesforce URL is <code>https://orgfarm-17b45be5f2-dev-ed.develop.my.salesforce.com</code>, use <code>https://orgfarm-17b45be5f2-dev-ed.develop.my.salesforce.com</code> as the Base Url.</p>
+<p>Avoid using <code>lightning.force.com</code> URLs that you might see when logged into the Lightning Experience interface.</p>
+<p>The Salesforce toolkit internally handles the specific API endpoints (like the token endpoint) based on the Base Url you provide and your Salesforce instance type (Production, Sandbox, My Domain). You do not need to configure these specific endpoint URLs such as:</p>
+<p><code>https://test.salesforce.com/services/oauth2/token</code> (for Sandboxes)
+ <code>https://login.salesforce.com/services/oauth2/token</code> (for Developer Edition or Production)
+ <code>https://your-custom-domain.my.salesforce.com/services/oauth2/token</code> (for My Domain).The toolkit constructs these endpoints automatically.</p>
+<ul>
+<li><strong>Client Id:</strong><ul>
+<li>Paste the <strong>Consumer Key</strong> you copied from your Salesforce Connected App's "Manage Consumer Details" (Step 11 in the Prerequisites) into the "Client Id" field.</li>
+<li><strong>Enhanced Security with Secrets:</strong> For improved security, it's highly recommended to use <strong>"Secret"</strong>. Select <strong>"Secret"</strong> and choose a pre-configured secret from the dropdown. You must first create and securely store your <strong>Consumer Key</strong> as a Secret in ELITEA's <a href="../../../menus/settings/secrets/">Secrets</a> feature. Using Secrets prevents hardcoding sensitive credentials directly in the toolkit configuration.</li>
+</ul>
+</li>
+<li><strong>Client Secret:</strong><ul>
+<li>Paste the <strong>Consumer Secret</strong> you copied from your Salesforce Connected App's "Manage Consumer Details" (Step 12 in the Prerequisites) into the "Client Secret" field.</li>
+<li><strong>Enhanced Security with Secrets:</strong> Similar to the Client ID, it's highly recommended to store your <strong>Consumer Secret</strong> as a Secret in ELITEA's feature and use it.</li>
+</ul>
+</li>
+<li><strong>Api Version:</strong> Enter the desired Salesforce <strong>API Version</strong> (e.g., <code>v59.0</code>). You can find the current API versions in Salesforce Developer documentation. Use a version supported by your Salesforce instance.</li>
+</ul>
+</li>
+</ol>
+<p><img alt="SalesForce_EliteaConfiguration" src="../../../img/integrations/toolkits/salesforces/SalesForce_EliteaConfiguration.png" /></p>
+<ol>
+<li><strong>Enable Tools:</strong> In the "Tools" section of the Salesforce toolkit configuration, <strong>select the checkboxes next to the Salesforce tools</strong> you want to enable for your Agent. <strong>Enable only the tools your Agent will actually use</strong> to adhere to the principle of least privilege and enhance security. The specific tools available depend on the ELITEA Salesforce toolkit implementation, but commonly include actions like:</li>
+<li><strong>Complete Configuration:</strong> Click the <strong>arrow icon</strong> (at the top right of the toolkit configuration) to save the Salesforce toolkit setup and return to the main Agent configuration.</li>
+<li>Click <strong>Save</strong> to apply configuration and changes.</li>
+</ol>
+<h2 id="tool-overview">Tool Overview<a class="headerlink" href="#tool-overview" title="Permanent link">&para;</a></h2>
+<p>The Salesforce toolkit provides various tools for your ELITEA Agents to interact with your Salesforce data. Based on the tools you have enabled, the toolkit offers the following functionalities:</p>
+<ul>
+<li><strong>Create case:</strong> Creates a new Case record in Salesforce.</li>
+<li><strong>create lead:</strong> Creates a new Lead record in Salesforce.</li>
+<li><strong>search salesforce:</strong> A general tool to search or query records across Salesforce, potentially using SOSL or SOQL depending on the specific implementation.</li>
+<li><strong>update case:</strong> Updates an existing Case record in Salesforce.</li>
+<li><strong>update lead:</strong> Updates an existing Lead record in Salesforce.</li>
+<li><strong>execute generic rq:</strong> A powerful tool likely designed to execute arbitrary Salesforce API requests or queries (like complex SOQL/SOSL queries or DML operations) not covered by the specific <code>create</code>/<code>update</code> tools.</li>
+</ul>
+<h2 id="instructions-and-prompts-for-using-the-toolkit">Instructions and Prompts for Using the Toolkit<a class="headerlink" href="#instructions-and-prompts-for-using-the-toolkit" title="Permanent link">&para;</a></h2>
+<p>To instruct your ELITEA Agent to use the Salesforce toolkit, you need to provide clear instructions within the Agent's "Instructions" field. These instructions guide the Agent on <em>when</em> and <em>how</em> to use the available tools.</p>
+<h3 id="instruction-creation-for-openai-agents">Instruction Creation for OpenAI Agents<a class="headerlink" href="#instruction-creation-for-openai-agents" title="Permanent link">&para;</a></h3>
+<p>When creating instructions for the Salesforce toolkit for OpenAI-based Agents, focus on clear, action-oriented language. Break down tasks into simple steps and explicitly state the parameters required for each tool. OpenAI Agents respond best to instructions that are:</p>
+<ul>
+<li><strong>Direct and Imperative:</strong> Use action verbs and clear commands (e.g., "Use the 'search salesforce' tool...", "Create a new Lead for...").</li>
+<li><strong>Parameter-Focused:</strong> Clearly list each parameter required by the tool (e.g., Case details, Lead details, Search Query, Record ID, Fields to Update, API Request details). Explain how the Agent should determine the value for each parameter from the user's input or context.</li>
+<li><strong>Context-Aware:</strong> Provide enough context so the Agent understands the overall goal and when to use specific tools within a workflow (e.g., "If the user reports an issue, use the 'Create case' tool.").</li>
+</ul>
+<p><strong>Example Agent Instructions for Salesforce Toolkit Tools (using the exact tool names you provided):</strong></p>
+<ul>
+<li>
+<p><strong>Agent Instructions for Creating a Lead:</strong></p>
+<div class="highlight"><pre><span></span><code>1. Goal: To create a new Lead in Salesforce from user-provided information.
+2. Tool: Use the &quot;create lead&quot; tool.
+3. Parameters:
+    - FirstName: &lt;Extract first name from user input&gt;
+    - LastName: &lt;Extract last name from user input&gt;
+    - Company: &lt;Extract company from user input&gt;
+    - Email: &lt;Extract email from user input&gt;
+    - Status: &quot;Open - Not Contacted&quot;
+    - (Include any other required fields for Leads as parameters)
+4. Outcome: The Agent will confirm the Lead was created and provide the new Lead ID.
+</code></pre></div>
+</li>
+<li>
+<p><strong>Agent Instructions for Creating a Case:</strong></p>
+<div class="highlight"><pre><span></span><code>1. Goal: To create a new Support Case in Salesforce based on a user&#39;s issue description.
+2. Tool: Use the &quot;Create case&quot; tool.
+3. Parameters:
+    - Subject: &lt;Summarize the user&#39;s issue, e.g., &quot;Customer reported X problem&quot;&gt;
+    - Description: &lt;Provide the full details of the user&#39;s issue&gt;
+    - Origin: &quot;Chat&quot; or &quot;Email&quot; (depending on interaction type, or extract if provided)
+    - (Optionally include ContactId or AccountId if identifiable from user input or context)
+4. Outcome: The Agent will confirm the Case was created and provide the Case Number.
+</code></pre></div>
+</li>
+<li>
+<p><strong>Agent Instructions for Searching Salesforce:</strong></p>
+<div class="highlight"><pre><span></span><code>1. Goal: To find information about a customer, record, or general data based on a user&#39;s query.
+2. Tool: Use the &quot;search salesforce&quot; tool.
+3. Parameters:
+    - Query: &lt;The search term or phrase provided by the user, e.g., &quot;Acme Corporation account&quot; or &quot;open cases for John Smith&quot;&gt;
+4. Outcome: The Agent will provide the results found in Salesforce that match the query.
+</code></pre></div>
+</li>
+<li>
+<p><strong>Agent Instructions for Updating a Lead:</strong></p>
+<div class="highlight"><pre><span></span><code>1. Goal: To update specific fields on an existing Lead record.
+2. Tool: Use the &quot;update lead&quot; tool.
+3. Parameters:
+    - LeadId: &lt;Extract the Lead ID from user input or previous tool call&gt;
+    - FieldsToUpdate: &lt;A structure containing the fields and their new values, e.g., { &quot;Status&quot;: &quot;Contacted&quot;, &quot;Phone&quot;: &quot;555-1212&quot; } &gt;
+4. Outcome: The Agent will confirm the Lead was updated.
+</code></pre></div>
+</li>
+<li>
+<p><strong>Agent Instructions for Updating a Case:</strong></p>
+<div class="highlight"><pre><span></span><code>1. Goal: To update specific fields on an existing Case record.
+2. Tool: Use the &quot;update case&quot; tool.
+3. Parameters:
+    - CaseId: &lt;Extract the Case ID from user input or previous tool call&gt;
+    - FieldsToUpdate: &lt;A structure containing the fields and their new values, e.g., { &quot;Status&quot;: &quot;Closed&quot;, &quot;Reason&quot;: &quot;Solved&quot; } &gt;
+4. Outcome: The Agent will confirm the Case was updated.
+</code></pre></div>
+</li>
+<li>
+<p><strong>Agent Instructions for Executing Generic Request:</strong>
+    <em>(Note: The parameters for this tool are highly dependent on its specific implementation. This example assumes it takes a method and a path/body.)</em></p>
+<div class="highlight"><pre><span></span><code>1. Goal: To execute a specific, potentially complex Salesforce API request, like running a SOQL query not covered by &#39;search salesforce&#39;.
+2. Tool: Use the &quot;execute generic rq&quot; tool.
+3. Parameters:
+    - Method: &quot;GET&quot; or &quot;POST&quot; (or other HTTP methods)
+    - Path: &lt;The Salesforce API endpoint path, e.g., &quot;/services/data/vXX.X/query?q=SELECT+Name+FROM+Account+LIMIT+10&quot;&gt;
+    - Body: &lt;Optional request body, e.g., for a POST request like creating a record&gt;
+4. Outcome: The Agent will provide the response from the Salesforce API.
+</code></pre></div>
+</li>
+</ul>
+<h3 id="conversation-starters">Conversation Starters<a class="headerlink" href="#conversation-starters" title="Permanent link">&para;</a></h3>
+<p>Use these conversation starters to interact with your Salesforce-integrated Agent.</p>
+<p><strong>1. For Testing and Troubleshooting Connection/Basic Functionality:</strong></p>
+<p>These starters are designed to verify if the Salesforce toolkit is correctly configured and connected to your Salesforce instance, and if basic operations work.</p>
+<ul>
+<li>"Create a test lead for Jane Doe at Testing Co." - <em>Tests the <code>create lead</code> tool.</em></li>
+<li>"Create a test case about login issue for user abc@example.com." - <em>Tests the <code>Create case</code> tool.</em></li>
+<li>"Search Salesforce for 'Acme Corporation'." - <em>Tests the <code>search salesforce</code> tool.</em></li>
+<li>"Update case number [Provide a valid Case ID] with status 'Closed'." - <em>Tests the <code>update case</code> tool (requires a valid case number).</em></li>
+<li>"Update lead ID [Provide a valid Lead ID] with email test@example.com." - <em>Tests the <code>update lead</code> tool (requires a valid lead ID).</em></li>
+<li>"Execute a generic request to get the first 5 Accounts." - <em>Tests the <code>execute generic rq</code> tool (requires Agent instructions to map this request to the tool parameters).</em></li>
+</ul>
+<p><strong>2. For General Agent Usage Scenarios:</strong></p>
+<p>These starters demonstrate how to initiate agent execution for common Salesforce tasks.</p>
+<ul>
+<li>"A customer is reporting an error when saving a record. Please create a support case detailing the issue." - <em>This triggers a <code>Create case</code> call.</em></li>
+<li>"We just met a potential client, John Doe from Example Corp. Can you create a lead for him? His email is john.doe@examplecorp.com." - <em>This triggers a <code>create lead</code> call.</em></li>
+<li>"Can you find me information about the 'Global Solutions' account?" - <em>This would likely use the <code>search salesforce</code> tool.</em></li>
+<li>"Update case 5678 to 'In Progress' and add a note that I am working on it." - <em>This triggers an <code>update case</code> call.</em></li>
+<li>"Mark Lead ID 00Q... as 'Qualified'." - <em>This triggers an <code>update lead</code> call.</em></li>
+<li>"Show me a list of all open opportunities for 'Acme Corporation'." - <em>This could use the <code>search salesforce</code> tool or potentially <code>execute generic rq</code> for a more precise SOQL query.</em></li>
+</ul>
+<p>These conversation starters provide a starting point for interacting with your Salesforce-integrated ELITEA Agent and can be customized further based on your specific use cases and workflows, and the parameters required by each tool.</p>
+<h2 id="use-cases">Use Cases<a class="headerlink" href="#use-cases" title="Permanent link">&para;</a></h2>
+<p>The Salesforce toolkit unlocks numerous automation possibilities for CRM-related workflows within ELITEA. Here are some key use cases, demonstrating how your available tools can be applied:</p>
+<ul>
+<li>
+<p><strong>Automated Lead Qualification and Creation:</strong></p>
+<ul>
+<li><strong>Scenario:</strong> Automatically create and potentially update Leads based on interactions in other channels (e.g., chat, email).</li>
+<li><strong>Tools Used:</strong> <code>create lead</code>, <code>update lead</code></li>
+<li><strong>Example Instruction (Creation):</strong> "When a user provides contact details for a potential lead (Name, Company, Email), use the 'create lead' tool to create a new Lead record..."</li>
+<li><strong>Example Instruction (Update):</strong> "If the user confirms they are interested, use the 'update lead' tool with the Lead ID to update the Status to 'Qualified'."</li>
+<li><strong>Benefit:</strong> Streamlines lead capture, qualification, and ensures data is immediately available and up-to-date in the CRM.</li>
+</ul>
+</li>
+<li>
+<p><strong>Automated Case Management:</strong></p>
+<ul>
+<li><strong>Scenario:</strong> Automatically create support cases from incoming requests and update them as the support process progresses.</li>
+<li><strong>Tools Used:</strong> <code>Create case</code>, <code>update case</code></li>
+<li><strong>Example Instruction (Creation):</strong> "If a user reports a problem or asks for support, use the 'Create case' tool to create a new Case record, populating details from their request."</li>
+<li><strong>Example Instruction (Update):</strong> "If a support agent or system indicates a case is resolved, use the 'update case' tool with the Case ID to set the Status to 'Closed'."</li>
+<li><strong>Benefit:</strong> Ensures all support issues are logged and their status is accurately tracked in Salesforce.</li>
+</ul>
+</li>
+<li>
+<p><strong>Customer Data Retrieval for Service/Sales:</strong></p>
+<ul>
+<li><strong>Scenario:</strong> Quickly find and present relevant customer information (Account, Contact, Cases, Opportunities) to an Agent or user interacting with the system.</li>
+<li><strong>Tools Used:</strong> <code>search salesforce</code>, <code>execute generic rq</code></li>
+<li><strong>Example Instruction (Search):</strong> "If a user provides a company name, use the 'search salesforce' tool with the company name to find matching Account and Contact records."</li>
+<li><strong>Example Instruction (Generic Query):</strong> "If a user asks for a list of their open opportunities, use the 'execute generic rq' tool with a SOQL query to retrieve open opportunities linked to the identified Account/Contact."</li>
+<li><strong>Benefit:</strong> Provides context-aware CRM data, enabling more efficient and personalized customer interactions.</li>
+</ul>
+</li>
+<li>
+<p><strong>Streamlined Data Maintenance:</strong></p>
+<ul>
+<li><strong>Scenario:</strong> Allow users or automated workflows to correct or update specific fields on Lead or Case records.</li>
+<li><strong>Tools Used:</strong> <code>update lead</code>, <code>update case</code></li>
+<li><strong>Example Instruction (Update Lead):</strong> "If a user corrects the phone number for a Lead and provides the Lead ID, use the 'update lead' tool to update the Phone field."</li>
+<li><strong>Example Instruction (Update Case):</strong> "If a user provides a more detailed description for an existing case and provides the Case ID, use the 'update case' tool to append the new information to the Description field."</li>
+<li><strong>Benefit:</strong> Ensures data accuracy and allows for quick corrections directly within ELITEA workflows.</li>
+</ul>
+</li>
+<li>
+<p><strong>Execution of Custom/Advanced Operations:</strong></p>
+<ul>
+<li><strong>Scenario:</strong> Handle Salesforce interactions that fall outside the specific <code>create</code>/<code>update</code> tools, such as complex queries, potentially interacting with custom objects, or triggering specific Apex methods if the tool supports it.</li>
+<li><strong>Tools Used:</strong> <code>execute generic rq</code></li>
+<li><strong>Example Instruction:</strong> (Highly dependent on tool capabilities and Salesforce setup) "If the user asks to run the 'Generate Quarterly Report' process for Account ID [AccountID], use the 'execute generic rq' tool to call the appropriate Salesforce API endpoint for that custom process, passing the Account ID as a parameter."</li>
+<li><strong>Benefit:</strong> Provides flexibility to integrate ELITEA with more complex or custom Salesforce functionalities.</li>
+</ul>
+</li>
+</ul>
+<h2 id="troubleshooting-and-support">Troubleshooting and Support<a class="headerlink" href="#troubleshooting-and-support" title="Permanent link">&para;</a></h2>
+<h3 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Connection Issues:</strong></p>
+<ul>
+<li><strong>Problem:</strong> Agent fails to connect to Salesforce API, resulting in errors during toolkit execution.</li>
+<li><strong>Troubleshooting Steps:</strong><ol>
+<li><strong>Verify Base URL:</strong> Ensure the Salesforce <strong>Base Url</strong> in the toolkit configuration is correct and accessible. It should match your Salesforce instance URL exactly.</li>
+<li><strong>Check Connected App:</strong> Verify the Connected App exists and is correctly configured for the Client Credentials Flow in Salesforce Setup.</li>
+<li><strong>Network Access:</strong> Ensure there are no network firewalls or proxy settings preventing ELITEA from reaching your Salesforce instance URL.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Authorization Errors (Permission Denied):</strong></p>
+<ul>
+<li><strong>Problem:</strong> Agent receives "Permission Denied" or "Unauthorized" errors when interacting with Salesforce data.</li>
+<li><strong>Troubleshooting Steps:</strong><ol>
+<li><strong>Verify Client ID/Secret:</strong> Double-check the <strong>Client Id</strong> (Consumer Key) and <strong>Client Secret</strong> (Consumer Secret) in the ELITEA toolkit configuration against the Salesforce Connected App details. Ensure you are using Secrets correctly if configured that way.</li>
+<li><strong>Check Run As User Permissions:</strong> Crucially, verify the permissions and profile of the <strong>Run As</strong> user assigned to the Client Credentials Flow in the Salesforce Connected App policies. This user must have the necessary object and field permissions (for Case, Lead, and potentially others for <code>search salesforce</code> and <code>execute generic rq</code>), as well as access to the required API enabled profile/permission set, to perform the actions requested by the Agent (e.g., create Cases, update Leads, read data via search/query).</li>
+<li><strong>API Enabled:</strong> Ensure the profile or permission set assigned to the Run As user has the "API Enabled" permission.</li>
+<li><strong>Token Introspection:</strong> In the Salesforce Connected App policies, ensure the "Enable Token Introspection" setting is checked.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>No Results Found / Data Issues / Operation Failures:</strong></p>
+<ul>
+<li><strong>Problem:</strong> Agent returns no results for a search or query, data is incorrect, or <code>create</code>/<code>update</code> operations fail.</li>
+<li><strong>Troubleshooting Steps:</strong><ol>
+<li><strong>Check Parameters:</strong> If using <code>create lead</code>, <code>Create case</code>, <code>update lead</code>, or <code>update case</code>, verify the parameters provided in the Agent's instructions are correct and include all <em>required</em> fields for creating/updating those objects in your Salesforce instance. Check spelling of field names.</li>
+<li><strong>Check Query/Parameters for Search/Generic Tool:</strong> If using <code>search salesforce</code> or <code>execute generic rq</code>, verify the query syntax or parameters provided. Test the equivalent search/query directly in Salesforce Developer Console if possible using the Run As user's context if you can replicate it.</li>
+<li><strong>Run As User Data Access:</strong> The <strong>Run As</strong> user's sharing settings, profile permissions, and field-level security in Salesforce determine what data they can see and what operations they can perform. Ensure the user has access to create/update Cases/Leads and see/execute data via <code>search salesforce</code> and <code>execute generic rq</code>.</li>
+<li><strong>Validation Rules/Flows:</strong> Salesforce validation rules, triggers, or flows on the Case or Lead objects might be preventing creation or updates via the API. Check the Salesforce debug logs for the Run As user if you can replicate the issue to see if any automation is causing the failure.</li>
+<li><strong>Object/Field Existence:</strong> Ensure the Object Types (Case, Lead, etc.) and Field Names used actually exist and are spelled correctly in your Salesforce instance.</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="support-contact">Support Contact<a class="headerlink" href="#support-contact" title="Permanent link">&para;</a></h3>
+<p>For any issues, questions, or further assistance with the Salesforce integration or ELITEA Agents, please reach out to our dedicated ELITEA Support Team. We are committed to providing prompt and effective support to ensure your success with ELITEA.</p>
+<p><strong>Contact ELITEA Support:</strong></p>
+<ul>
+<li><strong>Email:</strong> <strong><a href="mailto:SupportAlita@epam.com">SupportAlita@epam.com</a></strong></li>
+</ul>
+<p><strong>Best Practices for Effective Support Requests:</strong></p>
+<p>To help us understand and resolve your issue as quickly as possible, please ensure you provide the following information in your support email:</p>
+<ul>
+<li><strong>ELITEA Environment:</strong> Clearly specify the ELITEA environment you are using (e.g., "Nexus," "Alita Lab," "EYE").</li>
+<li><strong>Project Details:</strong> Indicate the <strong>Project Name</strong> and whether you are working in your <strong>Private</strong> workspace or a <strong>Team</strong> project.</li>
+<li><strong>Detailed Issue Description:</strong> Provide a clear, concise, and detailed description of the problem you are encountering. Explain what you were trying to do, what you expected to happen, and what actually occurred.</li>
+<li><strong>Relevant Configuration Information:</strong> To help us diagnose the issue, please include relevant configuration details, such as:<ul>
+<li><strong>Agent Instructions (Screenshot or Text):</strong> If the issue is with an Agent, provide a screenshot or copy the text of your Agent's "Instructions" field.</li>
+<li><strong>Toolkit Configurations (Screenshots):</strong> Include screenshots of the Salesforce toolkit configuration settings within your Agent, showing <strong>Base Url</strong>, <strong>Api Version</strong>, and enabled <strong>Tools</strong>. (Sensitive credentials like Client ID/Secret do <em>not</em> need to be included in the screenshot if using Secrets).</li>
+<li><strong>Salesforce Connected App Details:</strong> Mention the Salesforce instance type (e.g., Production, Sandbox) and confirm the Run As user's profile/permissions are configured, specifically mentioning permissions for Case and Lead objects and API access.</li>
+</ul>
+</li>
+<li><strong>Error Messages (Full Error Text):</strong> If you are encountering an error message, please provide the <strong>complete error text</strong>. In the Chat window or Agent logs, expand the error details and copy the full error message. This detailed error information is crucial for diagnosis.</li>
+<li><strong>Your Query/Prompt (Exact Text):</strong> If the issue is related to Agent execution, provide the exact query or prompt you used to trigger the issue, as well as any parameters the Agent attempted to use for the Salesforce tool call.</li>
+</ul>
+<p><strong>Before Contacting Support:</strong></p>
+<p>We encourage you to first explore the resources available within this guide and the broader ELITEA documentation. You may find answers to common questions or solutions to known issues in the documentation.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../reportportal_toolkit/" class="md-footer__link md-footer__link--prev" aria-label="Previous: ReportPortal">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                ReportPortal
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../servicenow_toolkit/" class="md-footer__link md-footer__link--next" aria-label="Next: ServiceNow">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                ServiceNow
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.path", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../../extra_js/fullscreen.js"></script>
+      
+    
+  </body>
+</html>
