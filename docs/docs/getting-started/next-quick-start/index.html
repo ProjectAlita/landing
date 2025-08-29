@@ -14,7 +14,7 @@
         <link rel="prev" href="../../home/key-concepts/what-is-a-collection/">
       
       
-        <link rel="next" href="../very-quick-start/">
+        <link rel="next" href="../configure-epam-ai-dial-key/">
       
       
       <link rel="icon" href="../../img/favicon.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Next Env - Quick Start - ELITEA Documentation</title>
+        <title>Quick Start (Next env) - ELITEA Documentation</title>
       
     
     
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Next Env - Quick Start
+              Quick Start (Next env)
             
           </span>
         </div>
@@ -898,7 +898,7 @@
   
   
   <span class="md-ellipsis">
-    Next Env - Quick Start
+    Quick Start (Next env)
     
   </span>
   
@@ -911,7 +911,7 @@
   
   
   <span class="md-ellipsis">
-    Next Env - Quick Start
+    Quick Start (Next env)
     
   </span>
   
@@ -1024,6 +1024,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#configure-epam-ai-dial-keys-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure EPAM AI DIAL keys (recommended)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#questions-or-issues-contact-support" class="md-nav__link">
     <span class="md-ellipsis">
       Questions or issues? Contact Support
@@ -1036,6 +1045,29 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configure-epam-ai-dial-key/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure Epam AI Dial key (Next env)
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -4490,6 +4522,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#configure-epam-ai-dial-keys-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure EPAM AI DIAL keys (recommended)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#questions-or-issues-contact-support" class="md-nav__link">
     <span class="md-ellipsis">
       Questions or issues? Contact Support
@@ -4575,9 +4616,18 @@
 <li>See: <a href="#check-your-conversations">Check your conversations</a> · <a href="../create-conversation/">Create a conversation</a></li>
 </ul>
 </li>
-<li>Index data for a toolkit<ul>
+<li>
+<p>Index data for a toolkit</p>
+<ul>
 <li>Use Tool Testing → Index Data to recreate datasets; parameters vary by toolkit.</li>
 <li>See: <a href="#index-data-for-a-toolkit">Index data for a toolkit</a> · Example: <a href="../../how-tos/indexing/index-github-data/">Index GitHub data</a></li>
+</ul>
+</li>
+<li>
+<p>Configure EPAM AI DIAL keys (strongly recommended)</p>
+<ul>
+<li>Shared LLM models in Next are evaluation-only with daily limits. For sustained or production use, configure your own DIAL keys.</li>
+<li>See: <a href="../configure-epam-ai-dial-key/">Configure EPAM AI DIAL Keys</a> · Settings → <a href="../../menus/settings/ai-configuration/">AI Configuration</a></li>
 </ul>
 </li>
 </ol>
@@ -4629,6 +4679,18 @@
 <li>Example guide: <a href="../../how-tos/indexing/index-github-data/">Index GitHub data</a>. Additional indexing guides will be added for other toolkits.</li>
 </ul>
 </div>
+<h2 id="configure-epam-ai-dial-keys-recommended">Configure EPAM AI DIAL keys (recommended)<a class="headerlink" href="#configure-epam-ai-dial-keys-recommended" title="Permanent link">&para;</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Why this matters</p>
+<p>The LLM models available in the Next environment are shared and have daily limits. To avoid being throttled, configure your own EPAM AI DIAL keys.</p>
+</div>
+<p>Quick steps:</p>
+<ul>
+<li>Request a key from EPAM AI DIAL (see the guide below).</li>
+<li>In Next env: Settings → AI Configuration → + Create → choose “AI DIAL” → enter API Base, Key, Version → Save.</li>
+<li>Create LLM models: + Create → LLM Model → set exact model name from EPAM catalog, context window, max output tokens → select your DIAL credential → Save.</li>
+</ul>
+<p>Full how-to: <a href="../configure-epam-ai-dial-key/">Configure EPAM AI DIAL Keys</a></p>
 <h2 id="questions-or-issues-contact-support">Questions or issues? Contact Support<a class="headerlink" href="#questions-or-issues-contact-support" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Need help fast?</p>
@@ -4688,13 +4750,13 @@
         
         
           
-          <a href="../very-quick-start/" class="md-footer__link md-footer__link--next" aria-label="Next: Very Quick Start">
+          <a href="../configure-epam-ai-dial-key/" class="md-footer__link md-footer__link--next" aria-label="Next: Configure Epam AI Dial key (Next env)">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Very Quick Start
+                Configure Epam AI Dial key (Next env)
               </div>
             </div>
             <div class="md-footer__button md-icon">
