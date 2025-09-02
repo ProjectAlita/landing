@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://elitea.ai/docs/how-tos/indexing/index-github-data/">
       
       
-        <link rel="prev" href="../../how-to-use-webhooks/">
+        <link rel="prev" href="../indexing-tools/">
       
       
         <link rel="next" href="../index-confluence-data/">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Github Indexing - ELITEA Documentation</title>
+        <title>Repository Indexing - ELITEA Documentation</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#index-github-data" class="md-skip">
+        <a href="#index-repository-data" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Github Indexing
+              Repository Indexing
             
           </span>
         </div>
@@ -2255,6 +2255,52 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../indexing-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Indexing Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../indexing-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Indexing Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -2267,17 +2313,265 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Repository Indexing
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    Github Indexing
+    Repository Indexing
     
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-example-walkthrough" class="md-nav__link">
+    <span class="md-ellipsis">
+      GitHub Example Walkthrough
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Permissions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-by-step-creating-a-github-credential" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step-by-Step: Creating a GitHub Credential
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-by-step-configure-github-toolkit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step-by-Step: Configure GitHub Toolkit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step-by-Step: Configure GitHub Toolkit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tool-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tool Overview:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-by-step-index-github-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step-by-Step: Index GitHub Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step-by-Step: Index GitHub Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#repository-content-indexingfrom-toolkit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repository Content Indexing(from Toolkit)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification-confirm-index-success" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verification: Confirm Index Success
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Verification: Confirm Index Success">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-1-using-test-settings-technical-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 1: Using Test Settings (Technical Verification)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search-and-chat-with-indexed-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search and Chat with Indexed Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Search and Chat with Indexed Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-toolkit-in-conversations-and-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Toolkit in Conversations and Agents
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-life-example-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real-Life Example Workflow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting &amp; Tips
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting &amp; Tips">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-errors-and-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Errors and Solutions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-and-scope-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance and Scope Considerations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-result-quality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search Result Quality
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#content-specific-indexing-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Content-Specific Indexing Tips
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4277,6 +4571,230 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-example-walkthrough" class="md-nav__link">
+    <span class="md-ellipsis">
+      GitHub Example Walkthrough
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Permissions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-by-step-creating-a-github-credential" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step-by-Step: Creating a GitHub Credential
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-by-step-configure-github-toolkit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step-by-Step: Configure GitHub Toolkit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step-by-Step: Configure GitHub Toolkit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tool-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tool Overview:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-by-step-index-github-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step-by-Step: Index GitHub Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step-by-Step: Index GitHub Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#repository-content-indexingfrom-toolkit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repository Content Indexing(from Toolkit)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification-confirm-index-success" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verification: Confirm Index Success
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Verification: Confirm Index Success">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-1-using-test-settings-technical-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 1: Using Test Settings (Technical Verification)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search-and-chat-with-indexed-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search and Chat with Indexed Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Search and Chat with Indexed Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-toolkit-in-conversations-and-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Toolkit in Conversations and Agents
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-life-example-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real-Life Example Workflow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting &amp; Tips
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting &amp; Tips">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-errors-and-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Errors and Solutions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-and-scope-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance and Scope Considerations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-result-quality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search Result Quality
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#content-specific-indexing-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Content-Specific Indexing Tips
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4291,23 +4809,367 @@
 
 
 
-<h1 id="index-github-data">Index GitHub Data<a class="headerlink" href="#index-github-data" title="Permanent link">&para;</a></h1>
-<div class="admonition info">
-<p class="admonition-title">Guide in progress</p>
-<p>This guide is being finalized for the Next environment. A complete step-by-step with field names and screenshots is coming soon.</p>
+<h1 id="index-repository-data">Index Repository Data<a class="headerlink" href="#index-repository-data" title="Permanent link">&para;</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Availability</p>
+<p>Indexing tools are available in the <a href="https://next.elitea.ai">Next environment</a> (Release 1.7.0) and replace legacy Datasources/Datasets. For context, see <a href="../../../release-notes/rn_current/#indexing-tools-replacement-for-datasets">Release Notes 1.7.0</a> and the <a href="../indexing-overview/">Indexing Overview</a>.</p>
 </div>
-<p>Until then, you can:</p>
+<p>This guide provides a complete step-by-step walkthrough for indexing repository data and then searching or chatting with the indexed content using ELITEA's AI-powered tools.</p>
+<p><strong>Repository Support:</strong></p>
+<p>This guide is applicable to all supported repository platforms:</p>
 <ul>
-<li>Configure the GitHub Toolkit and assign a valid credential: see the <a href="../../../integrations/toolkits/github_toolkit/">GitHub Toolkit</a> and <a href="../../../getting-started/create-credential/">Create a Credential</a>.</li>
-<li>Use the toolkit’s Test section to run the "Index Data" tool and create an index.</li>
-<li>Review the general flow in the <a href="../../../getting-started/next-quick-start/#index-data-for-a-toolkit">Next Environment Quick Start</a>.</li>
+<li><strong>GitHub</strong> - Git repository hosting and DevOps platform</li>
+<li><strong>Azure DevOps Repos</strong> - Microsoft's Git repository hosting</li>
+<li><strong>Bitbucket</strong> - Atlassian's Git and Mercurial repository management</li>
+<li><strong>GitLab</strong> - DevOps platform with integrated Git repository management</li>
+<li><strong>Other Git-based platforms</strong> - Any Git repository accessible via standard protocols</li>
+</ul>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>Repository indexing allows you to create searchable indexes from various repository resources:</p>
+<ul>
+<li><strong>Repository Content</strong>: Code files, documentation, configuration files, and project assets</li>
+<li><strong>Issues &amp; Discussions</strong>: Bug reports, feature requests, support tickets, and community discussions  </li>
+<li><strong>Pull Requests</strong>: Code reviews, change proposals, and development conversations</li>
+<li><strong>Project Workflows</strong>: GitHub Actions logs, workflow configurations, and CI/CD data</li>
+<li><strong>Organization Data</strong>: Team repositories, project structures, and collaborative content</li>
+</ul>
+<p><strong>What you can do with indexed repository data:</strong></p>
+<ul>
+<li><strong>Semantic Search</strong>: Find code patterns, documentation, or discussions using natural language queries</li>
+<li><strong>Context-Aware Chat</strong>: Get AI-generated answers from your repository content with citations</li>
+<li><strong>Cross-Repository Discovery</strong>: Search across multiple repositories and project resources</li>
+<li><strong>Development Insights</strong>: Analyze issues, PRs, and workflows for project intelligence</li>
+<li><strong>Knowledge Extraction</strong>: Transform repository content into searchable organizational knowledge</li>
+</ul>
+<p><strong>Common use cases:</strong></p>
+<ul>
+<li>Onboarding new team members by allowing them to ask questions about the codebase and processes</li>
+<li>Finding specific implementations, bug fixes, or feature discussions across repositories</li>
+<li>Generating documentation or explanations from existing code and project discussions</li>
+<li>Code review assistance and impact analysis using historical PR data</li>
+<li>Support ticket resolution using indexed issue discussions and solutions</li>
+</ul>
+<hr />
+<h2 id="github-example-walkthrough">GitHub Example Walkthrough<a class="headerlink" href="#github-example-walkthrough" title="Permanent link">&para;</a></h2>
+<div class="admonition example">
+<p class="admonition-title">GitHub as Primary Example</p>
+<p>The following sections demonstrate the complete indexing workflow using <strong>GitHub</strong> as the example repository platform. This includes:</p>
+<ul>
+<li>Creating GitHub credentials</li>
+<li>Configuring GitHub toolkit</li>
+<li>Indexing GitHub repository data</li>
+<li>Searching and using the indexed content</li>
+</ul>
+<p><strong>For other repository platforms</strong> (Azure DevOps, Bitbucket, GitLab), the process is identical - simply replace "GitHub" with your platform name and use the appropriate credential type and toolkit.</p>
+</div>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p>Before indexing GitHub data, ensure you have:</p>
+<ol>
+<li><strong>GitHub Credential</strong>: A Personal Access Token or <a href="../../how-to-use-credentials/#github-credential-setup">GitHub App credentials</a> configured in ELITEA</li>
+<li><strong>Vector Storage</strong>: PgVector selected in Settings → <a href="../../../menus/settings/ai-configuration/">AI Configuration</a></li>
+<li><strong>Embedding Model</strong>: Selected in AI Configuration (defaults available) → <a href="../../../menus/settings/ai-configuration/">AI Configuration</a></li>
+<li><strong>GitHub Toolkit</strong>: Configured with your repository details and credentials</li>
+</ol>
+<h3 id="required-permissions">Required Permissions<a class="headerlink" href="#required-permissions" title="Permanent link">&para;</a></h3>
+<p>Your GitHub credential needs these minimum scopes based on what you want to index:</p>
+<p><strong>For Repository Content:</strong>
+- <code>repo</code> or <code>public_repo</code> (for public repositories)
+- <code>repo:status</code> (for commit status access)</p>
+<p><strong>For Issues &amp; Pull Requests:</strong>
+- <code>repo</code> (includes issue access)
+- <code>read:org</code> (for organization-level content)</p>
+<p><strong>For GitHub Actions &amp; Workflows:</strong>
+- <code>actions:read</code> (for workflow data)
+- <code>repo</code> (for repository-level workflows)</p>
+<hr />
+<h2 id="step-by-step-creating-a-github-credential">Step-by-Step: Creating a GitHub Credential<a class="headerlink" href="#step-by-step-creating-a-github-credential" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Generate GitHub Personal Access Token</strong> in GitHub with required scopes (<code>repo</code>, <code>public_repo</code>, <code>repo:status</code>, etc.)</li>
+<li><strong>Create Credential in ELITEA</strong>: Navigate to <strong>Credentials</strong> → <strong>+ Create</strong> → <strong>GitHub</strong> → enter token and save</li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">Detailed Instructions</p>
+<p>For complete credential setup steps including token generation and security best practices, see:</p>
+<ul>
+<li><a href="../../../getting-started/create-credential/">Create a Credential</a></li>
+<li><a href="../../how-to-use-credentials/#github-credential-setup">GitHub Credential Setup</a></li>
+<li><a href="../../../integrations/toolkits/github_toolkit/">GitHub Toolkit Guide</a> (Token generation section)</li>
+</ul>
+</div>
+<hr />
+<h2 id="step-by-step-configure-github-toolkit">Step-by-Step: Configure GitHub Toolkit<a class="headerlink" href="#step-by-step-configure-github-toolkit" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Create Toolkit</strong>: Navigate to <strong>Toolkits</strong> → <strong>+ Create</strong> → <strong>GitHub</strong></li>
+<li><strong>Configure Settings</strong>: Set repository (<code>owner/repo-name</code>), branches, and assign your GitHub credential</li>
+<li><strong>Enable Tools</strong>: Select <code>index_data</code>, <code>List collections</code>, <code>search_index</code>, <code>stepback_search_index</code>, <code>Stepback summary index</code>, and <code>"Remove index</code> tools</li>
+<li><strong>Save Configuration</strong></li>
+</ol>
+<h3 id="tool-overview">Tool Overview:<a class="headerlink" href="#tool-overview" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Index_data</strong>: Creates searchable indexes from GitHub repository content (files, documentation, code)</li>
+<li><strong>List collection</strong>: Lists all available collections/indexes to verify what's been indexed</li>
+<li><strong>Search_index</strong>: Performs semantic search across indexed content using natural language queries</li>
+<li><strong>Stepback_search_index</strong>: Advanced search that breaks down complex questions into simpler parts for better results</li>
+<li><strong>Stepback summary index</strong>: Generates summaries and insights from search results across indexed content</li>
+<li><strong>Remove index</strong>: Deletes existing collections/indexes when you need to clean up or start fresh</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Detailed Instructions</p>
+<p>For complete toolkit configuration including PgVector setup and embedding models, see:</p>
+<ul>
+<li><a href="../../../menus/toolkits/">Toolkits Menu</a></li>
+<li><a href="../../../integrations/toolkits/github_toolkit/">GitHub Toolkit Integration Guide</a></li>
+</ul>
+</div>
+<hr />
+<h2 id="step-by-step-index-github-data">Step-by-Step: Index GitHub Data<a class="headerlink" href="#step-by-step-index-github-data" title="Permanent link">&para;</a></h2>
+<h3 id="repository-content-indexingfrom-toolkit">Repository Content Indexing(from Toolkit)<a class="headerlink" href="#repository-content-indexingfrom-toolkit" title="Permanent link">&para;</a></h3>
+<ol>
 <li>
-<p>Need help? See <a href="../../../support/contact-support/">How to Contact ELITEA Support</a>.</p>
+<p><strong>Open Toolkit Test Settings:</strong></p>
+<ul>
+<li>Navigate to your GitHub toolkit's detail page</li>
+<li>In the <strong>Test Settings</strong> panel (right side), select a model (e.g., <code>gpt-4o</code>)</li>
+</ul>
 </li>
 <li>
-<p>Rate limits: large repos may hit GitHub API limits; wait and retry or narrow scope.</p>
+<p><strong>Configure Index Data Tool:</strong></p>
+<ul>
+<li>From the tool dropdown, select <strong>"Index Data"</strong></li>
+<li>Configure the following parameters:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Example Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Collection Suffix</strong></td>
+<td>Suffix for collection name (max 7 chars)</td>
+<td><code>docs</code> or <code>code</code></td>
+</tr>
+<tr>
+<td><strong>Branch</strong></td>
+<td>Git branch to index (leave empty for default branch)</td>
+<td><code>main</code>, <code>develop</code>, or empty</td>
+</tr>
+<tr>
+<td><strong>Whitelist</strong></td>
+<td>File extensions/paths to include</td>
+<td><code>["*.md", "*.py", "*.js", "*.yml"]</code></td>
+</tr>
+<tr>
+<td><strong>Blacklist</strong></td>
+<td>File extensions/paths to exclude</td>
+<td><code>["*.png", "*.jpg", "node_modules/*", ".git/*"]</code></td>
+</tr>
+<tr>
+<td><strong>Clean Index</strong></td>
+<td>Remove existing index data before re-indexing</td>
+<td>✓ (checked) or ✗ (unchecked)</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>Run Repository Indexing:</strong></p>
+<ul>
+<li>Click <strong>"Run Tool"</strong> </li>
+<li>Wait for completion (may take several minutes for large repositories)</li>
+<li>Check the output for success confirmation or error messages</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="verification-confirm-index-success">Verification: Confirm Index Success<a class="headerlink" href="#verification-confirm-index-success" title="Permanent link">&para;</a></h2>
+<p>After indexing completes, verify the index was created successfully:</p>
+<h3 id="method-1-using-test-settings-technical-verification">Method 1: Using Test Settings (Technical Verification)<a class="headerlink" href="#method-1-using-test-settings-technical-verification" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Use List Collections Tool:</strong></p>
+<ul>
+<li>In Test Settings, select <strong>"List Collections"</strong> tool</li>
+<li>Run tool to see all available collections</li>
+<li>Look for your collection with the specified suffix</li>
+</ul>
+</li>
+<li>
+<p><strong>Test Basic Search:</strong></p>
+<ul>
+<li>Select <strong>"Search Index"</strong> tool</li>
+<li><strong>Query</strong>: e.g., <code>README documentation setup</code></li>
+<li><strong>Collection Suffix</strong>: Your specified suffix</li>
+<li>Run tool and verify relevant results are returned</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="search-and-chat-with-indexed-data">Search and Chat with Indexed Data<a class="headerlink" href="#search-and-chat-with-indexed-data" title="Permanent link">&para;</a></h2>
+<p>Once your GitHub data is indexed, you can use the toolkit to search and interact with your content in multiple ways:</p>
+<h3 id="using-toolkit-in-conversations-and-agents">Using Toolkit in Conversations and Agents<a class="headerlink" href="#using-toolkit-in-conversations-and-agents" title="Permanent link">&para;</a></h3>
+<p>Your GitHub toolkit can be used in two main contexts:</p>
+<ol>
+<li><strong>In Conversations</strong>: Add the toolkit as a participant to ask questions and search your indexed GitHub data</li>
+<li><strong>In Agents</strong>: Include the toolkit when creating AI agents to give them access to your GitHub knowledge base</li>
+</ol>
+<p><strong>How to use:</strong></p>
+<ul>
+<li><strong>Start a New Conversation or Create an Agent</strong></li>
+<li><strong>Add Toolkit as Participant</strong>: Select your GitHub toolkit from the available toolkits</li>
+<li><strong>Ask Natural Language Questions</strong>: The toolkit will automatically search your indexed data and provide relevant answers with citations</li>
+</ul>
+<h3 id="real-life-example-workflow">Real-Life Example Workflow<a class="headerlink" href="#real-life-example-workflow" title="Permanent link">&para;</a></h3>
+<p>Let's walk through a complete example of indexing and using the ELITEA documentation repository:</p>
+<p><strong>Step 1: Setup GitHub Toolkit for projectalita.github.io</strong></p>
+<p><strong>Configure GitHub Toolkit:</strong></p>
+<ul>
+<li>Repository: <code>projectalita/projectalita.github.io</code></li>
+<li>Branch: <code>main</code> (leave empty for default)</li>
+<li>Credential: Your GitHub Personal Access Token</li>
+<li>Tools enabled: <code>Index_data</code>, <code>List collection</code>, <code>Search_index</code>, <code>Stepback_search_index</code>, <code>Stepback summary index</code>, <code>Remove index</code></li>
+</ul>
+<p><strong>Step 2: Index the Repository</strong></p>
+<p><strong>Run Indexing with these parameters:</strong></p>
+<ul>
+<li>Collection Suffix: <code>docs</code></li>
+<li>Branch: (empty - uses main branch)</li>
+<li>Whitelist: <code>["*.md"]</code></li>
+<li>Blacklist: <code>["*.png"]</code></li>
+<li>
+<p>Clean Index: <code>✓ (checked)</code></p>
+<p><img alt="GitHub Index Data Configuration Example" src="../../../img/how-tos/indexing/index-data-github.png" /></p>
 </li>
 </ul>
+<p><strong>Step 3: Verify Index Creation</strong></p>
+<p><strong>Check that your collection was created successfully:</strong></p>
+<ul>
+<li>In Test Settings, select <strong>"List Collections"</strong> tool from the dropdown</li>
+<li>Click <strong>"Run Tool"</strong> </li>
+<li>Look for your collection in the output: <code>projectalita_projectalita_github_io_docs</code></li>
+<li>
+<p>This confirms the indexing completed successfully</p>
+<p><img alt="List Collections Tool Output" src="../../../img/how-tos/indexing/list-collection-github.png" /></p>
+</li>
+</ul>
+<p><strong>Step 4: Use in Conversations</strong></p>
+<p><strong>Add toolkit to a conversation and start asking questions:</strong></p>
+<ul>
+<li>Navigate to <strong>Conversations</strong> → <strong>+ New Conversation</strong></li>
+<li>In the participants section click + to add Toolkit</li>
+<li>Select your GitHub toolkit from the available toolkits list</li>
+<li>Start the conversation and begin asking questions about your indexed content</li>
+</ul>
+<p><strong>User:</strong> "How do I create credentials in ELITEA?"</p>
+<p><strong>GitHub Toolkit:</strong> "Based on your indexed documentation, here are the steps to create credentials:</p>
+<ol>
+<li>Navigate to <strong>Credentials</strong> → <strong>+ Create</strong></li>
+<li>Select the credential type (GitHub, Jira, etc.)</li>
+<li>
+<p>Enter the required authentication details...</p>
+<p><img alt="Search index" src="../../../img/how-tos/indexing/search-index-github.com.png" /></p>
+</li>
+</ol>
+<p><strong>User:</strong> "Show me how to configure Secrets in Elitea"</p>
+<p><strong>GitHub Toolkit:</strong> "Here's how to configure Secrets in ELITEA:</p>
+<ol>
+<li>Go to <strong>Settings</strong> → <strong>+ Secrets</strong></li>
+<li>Click <strong>+ Create</strong> button to initiate the creation of a new secret</li>
+<li>Enter the name and value...</li>
+</ol>
+<p><img alt="Search index" src="../../../img/how-tos/indexing/search-index-github-v2.png" /></p>
+<h2 id="troubleshooting-tips">Troubleshooting &amp; Tips<a class="headerlink" href="#troubleshooting-tips" title="Permanent link">&para;</a></h2>
+<h3 id="common-errors-and-solutions">Common Errors and Solutions<a class="headerlink" href="#common-errors-and-solutions" title="Permanent link">&para;</a></h3>
+<p><strong>"Repository not found" or "Authentication failed":</strong></p>
+<ul>
+<li>Verify your GitHub credential has the correct token</li>
+<li>Ensure the repository name format is <code>owner/repository</code></li>
+<li>Check that your token has appropriate permissions for the repository</li>
+</ul>
+<p><strong>"Rate limit exceeded":</strong></p>
+<ul>
+<li>Large repositories may hit GitHub API limits</li>
+<li>Wait 1 hour and retry, or use more specific whitelist patterns</li>
+<li>Consider indexing smaller subsets of files</li>
+</ul>
+<p><strong>"No documents indexed":</strong></p>
+<ul>
+<li>Check your whitelist/blacklist patterns aren't too restrictive</li>
+<li>Verify the repository has files matching your whitelist</li>
+<li>Try indexing without filters first, then add restrictions</li>
+</ul>
+<p><strong>"Vector database connection failed" or "PgVector errors":</strong></p>
+<ul>
+<li>Ensure PgVector is properly configured in Settings → AI Configuration</li>
+<li>Verify the vector database is running and accessible</li>
+<li>Check connection credentials and database permissions</li>
+<li>Restart the vector database service if connection issues persist</li>
+</ul>
+<p><strong>"Embedding model not found" or "Embedding errors":</strong></p>
+<ul>
+<li>Verify an embedding model is selected in AI Configuration</li>
+<li>Check if the embedding model is properly downloaded/initialized</li>
+<li>Try switching to a different embedding model (e.g., sentence-transformers/all-MiniLM-L6-v2)</li>
+<li>Ensure sufficient system resources for the embedding model to load</li>
+</ul>
+<h3 id="performance-and-scope-considerations">Performance and Scope Considerations<a class="headerlink" href="#performance-and-scope-considerations" title="Permanent link">&para;</a></h3>
+<p><strong>For Large Repositories:</strong></p>
+<ul>
+<li>Use specific whitelist patterns: <code>["docs/*.md", "src/*.py"]</code></li>
+<li>Exclude binary files: <code>["*.png", "*.jpg", "*.zip", "*.exe"]</code></li>
+<li>Consider indexing specific directories: <code>["docs/*", "README.md"]</code></li>
+</ul>
+<h3 id="search-result-quality">Search Result Quality<a class="headerlink" href="#search-result-quality" title="Permanent link">&para;</a></h3>
+<p><strong>If search returns few/no results:</strong></p>
+<ul>
+<li>Lower the cut-off score from 0.5 to 0.35 or 0.3</li>
+<li>Increase search_top from 10 to 20 or 30</li>
+<li>Try rephrasing your query with different keywords</li>
+<li>Verify the indexed content contains relevant information</li>
+</ul>
+<p><strong>For better search quality:</strong></p>
+<ul>
+<li>Include both documentation and code files in your whitelist for comprehensive coverage</li>
+<li>Use natural language queries rather than exact keyword matches</li>
+<li>Leverage stepback search for complex questions that require reasoning</li>
+<li>Create separate indexes for different content types (docs vs code vs configs)</li>
+</ul>
+<h3 id="content-specific-indexing-tips">Content-Specific Indexing Tips<a class="headerlink" href="#content-specific-indexing-tips" title="Permanent link">&para;</a></h3>
+<p><strong>For Issue &amp; PR Data (Future Enhancement):</strong></p>
+<ul>
+<li>Focus on repositories with active issue discussions</li>
+<li>Consider date ranges for large, long-running projects</li>
+<li>Include both open and closed issues for comprehensive coverage</li>
+</ul>
+<p><strong>For Documentation:</strong></p>
+<ul>
+<li>Index README files, wiki content, and inline code documentation</li>
+<li>Include changelog and release notes for version-specific information</li>
+</ul>
+<p><strong>For Configuration Management:</strong></p>
+<ul>
+<li>Index deployment configs, CI/CD pipelines, and environment settings</li>
+<li>Be careful to exclude sensitive data (secrets, keys, credentials)</li>
+</ul>
+<hr />
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Related Documentation</p>
+<p>For additional information and detailed setup instructions, see:</p>
+<ul>
+<li><a href="../indexing-overview/">Indexing Overview</a> - General indexing concepts and features</li>
+<li><a href="../../../getting-started/create-credential/">Create a Credential</a> - Step-by-step credential creation guide</li>
+<li><a href="../../how-to-use-credentials/">How to Use Credentials</a> - Credential management and GitHub setup</li>
+<li><a href="../../../menus/toolkits/">Toolkits Menu</a> - Toolkit configuration and management</li>
+<li><a href="../../../integrations/toolkits/github_toolkit/">GitHub Toolkit Integration Guide</a> - Complete GitHub toolkit reference</li>
+<li><a href="../../../menus/settings/ai-configuration/">AI Configuration</a> - Vector storage and embedding model setup</li>
+<li><a href="../../../menus/chat/">Chat Menu</a> - Creating conversations and adding toolkit participants</li>
+</ul>
+</div>
+<hr />
 
 
 
@@ -4337,7 +5199,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../how-to-use-webhooks/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Use Webhooks">
+          <a href="../indexing-tools/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Indexing Tools">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -4347,7 +5209,7 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Use Webhooks
+                Indexing Tools
               </div>
             </div>
           </a>
