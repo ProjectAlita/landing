@@ -2304,6 +2304,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../index-artifacts-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Artifacts Indexing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../index-github-data/" class="md-nav__link">
         
   
@@ -4819,6 +4842,19 @@
 <p class="admonition-title">Availability</p>
 <p>Indexing tools are available in the <a href="https://next.elitea.ai">Next environment</a> (Release 1.7.0) and replace legacy Datasources/Datasets. For context, see <a href="../../../release-notes/rn_current/#indexing-tools-replacement-for-datasets">Release Notes 1.7.0</a> and the <a href="../indexing-overview/">Indexing Overview</a>.</p>
 </div>
+<div class="admonition info">
+<p class="admonition-title">Migration from Datasources</p>
+<p>In previous releases, there was a <strong>Source type: File</strong> option in Datasources. Now, Datasources have been removed from ELITEA, and users can perform the same action through SharePoint Toolkit indexing.</p>
+<p><strong>How to migrate from Datasources to SharePoint Toolkit:</strong></p>
+<ol>
+<li><strong>Add files to SharePoint</strong>: Upload your documents to SharePoint document libraries or sites (if not already there)</li>
+<li><strong>Set up credentials</strong>: Configure your SharePoint credentials in <strong>Settings</strong> → <strong>Credentials</strong> </li>
+<li><strong>Create SharePoint Toolkit</strong>: Go to <strong>Toolkits</strong> → <strong>+ Create</strong> → <strong>SharePoint</strong> and configure with your site details</li>
+<li><strong>Index your data</strong>: Use the "Index Data" tool from the SharePoint Toolkit to create searchable indexes</li>
+<li><strong>Search and chat</strong>: Use the toolkit in conversations or agents to query your indexed SharePoint content</li>
+</ol>
+<p>This provides the same SharePoint indexing capabilities as the previous Datasources system with improved performance and integration.</p>
+</div>
 <p>This guide provides a complete step-by-step walkthrough for indexing SharePoint data and then searching or chatting with the indexed content using ELITEA's AI-powered tools.</p>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p>SharePoint indexing allows you to create searchable indexes from your SharePoint document management and collaboration content:</p>
@@ -5102,7 +5138,6 @@
 </li>
 </ul>
 <p><em>Sources: Project_Charter_Template_v3.2.docx, Sprint_Planning_Template.xlsx, Risk_Management_Matrix.xlsx</em>"</p>
-<p><img alt="SharePoint Search" src="../../img/how-tos/indexing/sharepoint-index-search1.png" /></p>
 <h2 id="troubleshooting-tips">Troubleshooting &amp; Tips<a class="headerlink" href="#troubleshooting-tips" title="Permanent link">&para;</a></h2>
 <h3 id="common-errors-and-solutions">Common Errors and Solutions<a class="headerlink" href="#common-errors-and-solutions" title="Permanent link">&para;</a></h3>
 <p><strong>"Authentication failed" or "Unauthorized access":</strong></p>
