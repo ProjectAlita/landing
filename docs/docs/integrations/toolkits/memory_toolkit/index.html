@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://elitea.ai/docs/integrations/toolkits/postman_toolkit/">
+        <link rel="canonical" href="https://elitea.ai/docs/integrations/toolkits/memory_toolkit/">
       
       
-        <link rel="prev" href="../pandas_toolkit/">
+        <link rel="prev" href="../jira_toolkit/">
       
       
-        <link rel="next" href="../powerpoint_toolkit/">
+        <link rel="next" href="../openapi_toolkit/">
       
       
       <link rel="icon" href="../../../img/favicon.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Postman - ELITEA Documentation</title>
+        <title>Memory - ELITEA Documentation</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#elitea-toolkit-guide-postman-integration" class="md-skip">
+        <a href="#elitea-toolkit-guide-memory-integration" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Postman
+              Memory
             
           </span>
         </div>
@@ -3350,10 +3350,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../memory_toolkit/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Memory
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -3364,6 +3386,425 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose-of-this-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose of this Guide
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brief-overview-of-memory-toolkit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Brief Overview of Memory Toolkit
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites-and-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites and Dependencies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites and Dependencies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Dependencies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-setup-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Setup Requirements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-integration-with-elitea" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Integration with ELITEA
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="System Integration with ELITEA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-configure-pgvector-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Configure PgVector Storage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 1: Configure PgVector Storage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-default-shared-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Default Shared Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-custom-pgvector-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Custom PgVector Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-create-memory-toolkit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Create Memory Toolkit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Create Memory Toolkit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#available-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Available Tools:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-use-toolkit-in-agents-pipelines-or-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Use Toolkit in Agents, Pipelines, or Chat
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-namespaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Namespaces
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding Namespaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-namespace" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a Namespace?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-namespace-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Namespace Concepts:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#namespace-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespace Best Practices:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-namespace-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Namespace Strategies:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-memory-tools-and-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working with Memory: Tools and Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Working with Memory: Tools and Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-qa-agent-user-story-to-test-case-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: QA Agent - User Story to Test Case Workflow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memory-management-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Memory Management Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Memory Management Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#effective-memory-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Effective Memory Storage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#effective-memory-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Effective Memory Search
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-issues-and-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Issues and Solutions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Issues and Solutions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#memory-toolkit-not-available-in-dropdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      Memory Toolkit Not Available in Dropdown
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pgvector-configuration-connection-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      PgVector Configuration Connection Errors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memory-tools-not-working" class="md-nav__link">
+    <span class="md-ellipsis">
+      Memory Tools Not Working
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#namespace-isolation-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespace Isolation Issues
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Issues
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Messages
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Error Messages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#langmem-is-required-for-memorytoolkit" class="md-nav__link">
+    <span class="md-ellipsis">
+      "langmem is required for MemoryToolkit"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#postgresql-dependencies-psycopg-are-required" class="md-nav__link">
+    <span class="md-ellipsis">
+      "PostgreSQL dependencies (psycopg) are required"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expected-postgresstore-got-other-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Expected PostgresStore, got [other type]"
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAQ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#support-and-contact-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Support and Contact Information
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -3419,32 +3860,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Postman
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../postman_toolkit/" class="md-nav__link">
         
   
   
@@ -3455,260 +3874,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introduction
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Introduction">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#purpose-of-this-guide" class="md-nav__link">
-    <span class="md-ellipsis">
-      Purpose of this Guide
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#brief-overview-of-postman" class="md-nav__link">
-    <span class="md-ellipsis">
-      Brief Overview of Postman
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#postman-account-setup-and-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Postman Account Setup and Configuration
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Postman Account Setup and Configuration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#account-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      Account Setup
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#api-key-generation-in-postman" class="md-nav__link">
-    <span class="md-ellipsis">
-      API Key Generation in Postman
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get-collection-id-and-workspace-id-in-postman" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Collection Id and Workspace Id in Postman
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Get Collection Id and Workspace Id in Postman">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#how-to-find-the-collection-id" class="md-nav__link">
-    <span class="md-ellipsis">
-      How to Find the Collection Id
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#how-to-find-the-workspace-id" class="md-nav__link">
-    <span class="md-ellipsis">
-      How to Find the Workspace Id
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#postman-integration-with-elitea" class="md-nav__link">
-    <span class="md-ellipsis">
-      Postman Integration with ELITEA
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Postman Integration with ELITEA">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#agent-creationconfiguration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Agent Creation/Configuration
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#toolkit-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Toolkit Configuration
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tool-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tool Overview
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#instructions-and-prompts-for-using-the-toolkit" class="md-nav__link">
-    <span class="md-ellipsis">
-      Instructions and Prompts for Using the Toolkit
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Instructions and Prompts for Using the Toolkit">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#instruction-creation-for-openai-agents" class="md-nav__link">
-    <span class="md-ellipsis">
-      Instruction Creation for OpenAI Agents
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#conversation-starters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conversation Starters
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#use-cases" class="md-nav__link">
-    <span class="md-ellipsis">
-      Use Cases
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#troubleshooting-and-support" class="md-nav__link">
-    <span class="md-ellipsis">
-      Troubleshooting and Support
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Troubleshooting and Support">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
-    <span class="md-ellipsis">
-      Troubleshooting
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#faq" class="md-nav__link">
-    <span class="md-ellipsis">
-      FAQ
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#support-contact" class="md-nav__link">
-    <span class="md-ellipsis">
-      Support Contact
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#useful-links" class="md-nav__link">
-    <span class="md-ellipsis">
-      Useful Links
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -4855,9 +5020,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#brief-overview-of-postman" class="md-nav__link">
+  <a href="#brief-overview-of-memory-toolkit" class="md-nav__link">
     <span class="md-ellipsis">
-      Brief Overview of Postman
+      Brief Overview of Memory Toolkit
     </span>
   </a>
   
@@ -4869,103 +5034,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#postman-account-setup-and-configuration" class="md-nav__link">
+  <a href="#prerequisites-and-dependencies" class="md-nav__link">
     <span class="md-ellipsis">
-      Postman Account Setup and Configuration
+      Prerequisites and Dependencies
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Postman Account Setup and Configuration">
+    <nav class="md-nav" aria-label="Prerequisites and Dependencies">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#account-setup" class="md-nav__link">
+  <a href="#required-dependencies" class="md-nav__link">
     <span class="md-ellipsis">
-      Account Setup
+      Required Dependencies
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#api-key-generation-in-postman" class="md-nav__link">
+  <a href="#database-setup-requirements" class="md-nav__link">
     <span class="md-ellipsis">
-      API Key Generation in Postman
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get-collection-id-and-workspace-id-in-postman" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Collection Id and Workspace Id in Postman
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Get Collection Id and Workspace Id in Postman">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#how-to-find-the-collection-id" class="md-nav__link">
-    <span class="md-ellipsis">
-      How to Find the Collection Id
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#how-to-find-the-workspace-id" class="md-nav__link">
-    <span class="md-ellipsis">
-      How to Find the Workspace Id
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#postman-integration-with-elitea" class="md-nav__link">
-    <span class="md-ellipsis">
-      Postman Integration with ELITEA
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Postman Integration with ELITEA">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#agent-creationconfiguration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Agent Creation/Configuration
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#toolkit-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Toolkit Configuration
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tool-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tool Overview
+      Database Setup Requirements
     </span>
   </a>
   
@@ -4977,28 +5067,76 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#instructions-and-prompts-for-using-the-toolkit" class="md-nav__link">
+  <a href="#system-integration-with-elitea" class="md-nav__link">
     <span class="md-ellipsis">
-      Instructions and Prompts for Using the Toolkit
+      System Integration with ELITEA
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Instructions and Prompts for Using the Toolkit">
+    <nav class="md-nav" aria-label="System Integration with ELITEA">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#instruction-creation-for-openai-agents" class="md-nav__link">
+  <a href="#step-1-configure-pgvector-storage" class="md-nav__link">
     <span class="md-ellipsis">
-      Instruction Creation for OpenAI Agents
+      Step 1: Configure PgVector Storage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 1: Configure PgVector Storage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-default-shared-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Default Shared Configuration
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#conversation-starters" class="md-nav__link">
+  <a href="#creating-custom-pgvector-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Conversation Starters
+      Creating Custom PgVector Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-create-memory-toolkit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Create Memory Toolkit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Create Memory Toolkit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#available-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Available Tools:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-use-toolkit-in-agents-pipelines-or-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Use Toolkit in Agents, Pipelines, or Chat
     </span>
   </a>
   
@@ -5010,30 +5148,222 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#use-cases" class="md-nav__link">
+  <a href="#understanding-namespaces" class="md-nav__link">
     <span class="md-ellipsis">
-      Use Cases
+      Understanding Namespaces
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding Namespaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-namespace" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a Namespace?
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#troubleshooting-and-support" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#key-namespace-concepts" class="md-nav__link">
     <span class="md-ellipsis">
-      Troubleshooting and Support
+      Key Namespace Concepts:
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Troubleshooting and Support">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#namespace-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespace Best Practices:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-namespace-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Namespace Strategies:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-memory-tools-and-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working with Memory: Tools and Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Working with Memory: Tools and Examples">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#example-qa-agent-user-story-to-test-case-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: QA Agent - User Story to Test Case Workflow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memory-management-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Memory Management Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Memory Management Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#effective-memory-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Effective Memory Storage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#effective-memory-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Effective Memory Search
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#troubleshooting" class="md-nav__link">
     <span class="md-ellipsis">
       Troubleshooting
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-issues-and-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Issues and Solutions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Issues and Solutions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#memory-toolkit-not-available-in-dropdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      Memory Toolkit Not Available in Dropdown
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pgvector-configuration-connection-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      PgVector Configuration Connection Errors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memory-tools-not-working" class="md-nav__link">
+    <span class="md-ellipsis">
+      Memory Tools Not Working
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#namespace-isolation-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Namespace Isolation Issues
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Issues
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Messages
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Error Messages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#langmem-is-required-for-memorytoolkit" class="md-nav__link">
+    <span class="md-ellipsis">
+      "langmem is required for MemoryToolkit"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#postgresql-dependencies-psycopg-are-required" class="md-nav__link">
+    <span class="md-ellipsis">
+      "PostgreSQL dependencies (psycopg) are required"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expected-postgresstore-got-other-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Expected PostgresStore, got [other type]"
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -5047,9 +5377,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#support-contact" class="md-nav__link">
+  <a href="#support-and-contact-information" class="md-nav__link">
     <span class="md-ellipsis">
-      Support Contact
+      Support and Contact Information
     </span>
   </a>
   
@@ -5061,9 +5391,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#useful-links" class="md-nav__link">
+  <a href="#summary" class="md-nav__link">
     <span class="md-ellipsis">
-      Useful Links
+      Summary
     </span>
   </a>
   
@@ -5085,364 +5415,455 @@
 
 
 
-<h1 id="elitea-toolkit-guide-postman-integration">ELITEA Toolkit Guide: Postman Integration<a class="headerlink" href="#elitea-toolkit-guide-postman-integration" title="Permanent link">&para;</a></h1>
+<h1 id="elitea-toolkit-guide-memory-integration">ELITEA Toolkit Guide: Memory Integration<a class="headerlink" href="#elitea-toolkit-guide-memory-integration" title="Permanent link">&para;</a></h1>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <h3 id="purpose-of-this-guide">Purpose of this Guide<a class="headerlink" href="#purpose-of-this-guide" title="Permanent link">&para;</a></h3>
-<p>This guide is your definitive resource for integrating and utilizing the <strong>Postman toolkit</strong> within ELITEA. It provides a step-by-step walkthrough, from setting up your Postman API Key to configuring the toolkit in ELITEA and effectively using it within your Agents. By following this guide, you will unlock the power of automated API testing, streamlined workflows, and enhanced team collaboration, all directly within the ELITEA platform. This integration empowers you to leverage AI-driven automation to optimize your API testing lifecycle using the combined strengths of ELITEA and Postman.</p>
-<h3 id="brief-overview-of-postman">Brief Overview of Postman<a class="headerlink" href="#brief-overview-of-postman" title="Permanent link">&para;</a></h3>
-<p>Postman is a popular, web-based API platform that helps teams of all sizes efficiently design, test, and manage APIs. It provides a centralized platform to streamline your API development and testing process, offering features for:</p>
+<p>This guide is your definitive resource for integrating and utilizing the <strong>Memory toolkit</strong> within ELITEA. It provides a comprehensive, step-by-step walkthrough, from setting up PostgreSQL storage to configuring the toolkit in ELITEA and effectively using it within your Agents. By following this guide, you will unlock the power of persistent, long-term memory capabilities that enable your AI agents to remember information across conversations, learn from interactions, and provide more contextual and personalized responses. This integration empowers you to leverage AI-driven memory management to create truly intelligent, context-aware agents using the combined strengths of ELITEA and the langmem memory management library.</p>
+<h3 id="brief-overview-of-memory-toolkit">Brief Overview of Memory Toolkit<a class="headerlink" href="#brief-overview-of-memory-toolkit" title="Permanent link">&para;</a></h3>
+<p>The Memory toolkit is a sophisticated long-term memory solution for AI agents built on the <strong>langmem</strong> library. It provides intelligent memory management capabilities that enable your ELITEA agents to:</p>
 <ul>
-<li><strong>API Request Management:</strong> Create, organize, and manage API requests and collections with rich documentation and environment variables.</li>
-<li><strong>Automated Testing:</strong> Plan and execute automated API tests, track results in real-time, and integrate with CI/CD pipelines.</li>
-<li><strong>Reporting &amp; Metrics:</strong> Generate insightful reports and metrics on API test coverage, results, and performance.</li>
-<li><strong>Integration with Development Tools:</strong> Seamlessly integrates with version control, CI/CD, and other tools, making it a central hub for your API ecosystem.</li>
-<li><strong>Collaboration &amp; Sharing:</strong> Share collections, environments, and test results with your team for better collaboration.</li>
+<li><strong>Persistent Context Retention:</strong> Store and retrieve information across multiple conversations and sessions, maintaining continuity and context over time.</li>
+<li><strong>Intelligent Memory Management:</strong> Automatically organize and categorize memories using namespace-based storage for easy retrieval and organization.</li>
+<li><strong>PostgreSQL-Powered Storage:</strong> Leverage robust PostgreSQL database storage with PgVector integration for reliable, scalable memory persistence.</li>
+<li><strong>Semantic Memory Search:</strong> Perform intelligent searches across stored memories to find relevant information based on context and meaning.</li>
+<li><strong>Namespace Organization:</strong> Organize memories by namespace to create isolated memory spaces for different agents, projects, or use cases.</li>
 </ul>
-<p>Integrating Postman with ELITEA brings these robust API management capabilities directly into your AI-powered workflows. Your ELITEA Agents can then interact with your Postman workspace to automate API-related tasks, enhance testing processes, and improve team collaboration through intelligent automation.</p>
-<h2 id="postman-account-setup-and-configuration">Postman Account Setup and Configuration<a class="headerlink" href="#postman-account-setup-and-configuration" title="Permanent link">&para;</a></h2>
-<h3 id="account-setup">Account Setup<a class="headerlink" href="#account-setup" title="Permanent link">&para;</a></h3>
-<p>If you don't have a Postman account yet, here’s how to get started:</p>
+<p>Integrating the Memory toolkit with ELITEA brings advanced memory capabilities directly into your AI-driven workflows. Your ELITEA Agents can store important information, learn from past interactions, and provide more intelligent, context-aware responses by accessing their accumulated knowledge and experience.</p>
+<h2 id="prerequisites-and-dependencies">Prerequisites and Dependencies<a class="headerlink" href="#prerequisites-and-dependencies" title="Permanent link">&para;</a></h2>
+<h3 id="required-dependencies">Required Dependencies<a class="headerlink" href="#required-dependencies" title="Permanent link">&para;</a></h3>
+<p>The Memory toolkit requires several key dependencies to function properly:</p>
+<p><strong>Essential Requirements:</strong></p>
 <ol>
-<li><strong>Go to Postman Website:</strong> Open your web browser and navigate to <a href="https://www.postman.com/">Postman's official website</a>.</li>
-<li><strong>Sign Up:</strong> Click the <strong>"Sign Up"</strong> button and provide your details. You can sign up with an email address or use a Google account.</li>
-<li><strong>Verify Your Email:</strong> Open the confirmation email from Postman and click on the verification link provided within the email.</li>
-<li><strong>Access Your Account:</strong> After email verification, you will be redirected to your new Postman workspace. Follow any on-screen instructions to complete the setup.</li>
+<li><strong>PostgreSQL Database:</strong> A PostgreSQL database instance for memory storage</li>
+<li><strong>PgVector Extension:</strong> PostgreSQL extension for vector operations and storage</li>
+<li><strong>langmem Library:</strong> The core memory management library (automatically included in ELITEA)</li>
+<li><strong>psycopg[binary]:</strong> PostgreSQL adapter for Python (included in ELITEA runtime)</li>
 </ol>
-<h3 id="api-key-generation-in-postman">API Key Generation in Postman<a class="headerlink" href="#api-key-generation-in-postman" title="Permanent link">&para;</a></h3>
-<p>To securely integrate Postman with ELITEA, you need to generate an API key within Postman. This API key will be used by ELITEA to authenticate and access your Postman workspace.</p>
-<p><strong>Follow these steps to create an API Key:</strong></p>
+<h3 id="database-setup-requirements">Database Setup Requirements<a class="headerlink" href="#database-setup-requirements" title="Permanent link">&para;</a></h3>
+<p>Before creating your Memory toolkit, ensure you have:</p>
 <ol>
-<li><strong>Log in to Postman:</strong> Access your Postman account using your credentials.</li>
-<li><strong>Access API Keys:</strong> Click on your profile icon in the top right corner, then select <strong>"Settings"</strong>. Navigate to the <strong>"API Keys"</strong> tab.</li>
-<li><strong>Create API Key:</strong> Click the <strong>"Create API Key"</strong> button, provide a name for the key (e.g., "ELITEA Integration Key"), and set the desired scopes/permissions.</li>
-<li>
-<p><strong>Copy and Store the API Key:</strong> <strong>Immediately copy the generated API key.</strong> This is the only time it will be displayed in full. Store it securely using a password manager or ELITEA's built-in Secrets feature (recommended for enhanced security within ELITEA). You will need this API Key to configure the Postman toolkit in ELITEA.</p>
-<p><img alt="Postman-Access_API_Keys" src="../../../img/integrations/toolkits/postman/Postman-Access_API_Keys.png" />
- <img alt="Postman-Generate_API_Key" src="../../../img/integrations/toolkits/postman/Postman-Generate_API_Key.png" /></p>
-</li>
+<li><strong>PostgreSQL Database Access:</strong> A running PostgreSQL instance with appropriate permissions</li>
+<li><strong>PgVector Extension Installed:</strong> The database must have the PgVector extension enabled</li>
+<li><strong>Connection String:</strong> A valid PostgreSQL connection string in the format:
+   <div class="highlight"><pre><span></span><code>postgresql://username:password@host:port/database_name
+</code></pre></div></li>
 </ol>
-<h3 id="get-collection-id-and-workspace-id-in-postman">Get Collection Id and Workspace Id in Postman<a class="headerlink" href="#get-collection-id-and-workspace-id-in-postman" title="Permanent link">&para;</a></h3>
-<p>To configure the Postman toolkit in ELITEA, you will need the Collection Id and Workspace Id. Here’s how to find them in the Postman web interface:</p>
-<h4 id="how-to-find-the-collection-id">How to Find the Collection Id<a class="headerlink" href="#how-to-find-the-collection-id" title="Permanent link">&para;</a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ELITEA provides default shared PgVector configurations for both Private and Team projects. You can use these shared configurations or create your own custom PgVector configuration.</p>
+</div>
+<h2 id="system-integration-with-elitea">System Integration with ELITEA<a class="headerlink" href="#system-integration-with-elitea" title="Permanent link">&para;</a></h2>
+<p>To integrate the Memory toolkit with ELITEA, you need to follow a three-step process: <strong>Configure PgVector → Create Memory Toolkit → Use in Agents</strong>. This workflow ensures proper database connectivity and memory management configuration.</p>
+<h3 id="step-1-configure-pgvector-storage">Step 1: Configure PgVector Storage<a class="headerlink" href="#step-1-configure-pgvector-storage" title="Permanent link">&para;</a></h3>
+<p>Before creating a Memory toolkit, you must first set up PgVector storage configuration:</p>
+<h4 id="using-default-shared-configuration">Using Default Shared Configuration<a class="headerlink" href="#using-default-shared-configuration" title="Permanent link">&para;</a></h4>
 <ol>
-<li><strong>Open Postman</strong> and navigate to the workspace containing your collection.</li>
-<li><strong>Select the Collection</strong> you want to use.</li>
-<li><strong>Locate the Collection Id:</strong><ul>
-<li>In the browser URL, you will see a path like <code>https://web.postman.co/workspace/&lt;workspace-name&gt;/collection/&lt;collection-id&gt;</code>.</li>
-<li>The value after <code>/collection/</code> is your Collection Id.</li>
-<li>Alternatively, you can use the Postman API to list collections and retrieve their IDs.</li>
-</ul>
-</li>
-<li><strong>Example:</strong><ul>
-<li>URL: <code>https://web.postman.co/workspace/MyWorkspace/collection/12345678-90ab-cdef-1234-567890abcdef</code></li>
-<li>Collection Id: <code>12345678-90ab-cdef-1234-567890abcdef</code>
-<img alt="Postman-Colection_Id " src="../../../img/integrations/toolkits/postman/Postman-Colection_Id.png" /></li>
+<li><strong>Navigate to AI Configuration:</strong> Open the sidebar and select <strong>Settings</strong> → <strong><a href="../../../menus/settings/ai-configuration/">AI Configuration</a></strong>.</li>
+<li><strong>Locate Vector Storage Section:</strong> Find the "Vector Storage (PgVector)" section.</li>
+<li><strong>Verify Default Configuration:</strong> Confirm that default shared PgVector configurations are available:<ul>
+<li><strong>Private Projects:</strong> Shared private PgVector configuration</li>
+<li><strong>Team Projects:</strong> Shared team PgVector configuration</li>
 </ul>
 </li>
 </ol>
-<h4 id="how-to-find-the-workspace-id">How to Find the Workspace Id<a class="headerlink" href="#how-to-find-the-workspace-id" title="Permanent link">&para;</a></h4>
+<h4 id="creating-custom-pgvector-configuration">Creating Custom PgVector Configuration<a class="headerlink" href="#creating-custom-pgvector-configuration" title="Permanent link">&para;</a></h4>
+<p>If you need a custom PgVector configuration:</p>
 <ol>
-<li><strong>Open Postman</strong> and go to the workspace you want to use.</li>
-<li><strong>Locate the Workspace Id:</strong><ul>
-<li>In the browser URL, you will see a path like <code>https://web.postman.co/workspace/&lt;workspace-id&gt;</code>.</li>
-<li>The value after <code>/workspace/</code> is your Workspace Id.</li>
-<li>Alternatively, you can use the Postman API to list workspaces and retrieve their IDs.</li>
+<li><strong>Navigate to AI Configuration:</strong> Open the sidebar and select <strong>Settings → AI Configuration</strong>.</li>
+<li><strong>Create New PgVector Configuration:</strong> <ul>
+<li>Click <strong>"New private pgvector credentials"</strong> or <strong>"New project pgvector credentials"</strong></li>
+<li><strong>Display Name:</strong> Enter a descriptive name (e.g., "Memory Storage - Production")</li>
+<li><strong>Connection String:</strong> Enter your PostgreSQL connection string:
+   <div class="highlight"><pre><span></span><code>postgresql://username:password@host:port/database_name
+</code></pre></div></li>
 </ul>
 </li>
-<li><strong>Example:</strong><ul>
-<li>URL: <code>https://web.postman.co/workspace/abcdef12-3456-7890-abcd-ef1234567890</code></li>
-<li>Workspace Id: <code>abcdef12-3456-7890-abcd-ef1234567890</code>
-<img alt="Postman-Workspace_Id" src="../../../img/integrations/toolkits/postman/Postman-Workspace_Id.png" /></li>
-</ul>
-</li>
+<li><strong>Save Configuration:</strong> Click <strong>Save</strong> to create the PgVector configuration.</li>
+<li><strong>Refresh:</strong> Click the <strong>Refresh</strong> icon to make the new configuration available in dropdown selections.</li>
 </ol>
-<blockquote>
-<p><strong>Tip:</strong> You can also use the <a href="https://docs.api.getpostman.com/">Postman API</a> to programmatically list collections and workspaces, which will include their IDs in the response.</p>
-</blockquote>
-<h2 id="postman-integration-with-elitea">Postman Integration with ELITEA<a class="headerlink" href="#postman-integration-with-elitea" title="Permanent link">&para;</a></h2>
-<h3 id="agent-creationconfiguration">Agent Creation/Configuration<a class="headerlink" href="#agent-creationconfiguration" title="Permanent link">&para;</a></h3>
-<p>To integrate Postman, you'll need to configure it within an ELITEA Agent. You can either create a new Agent or modify an existing one.</p>
+<h3 id="step-2-create-memory-toolkit">Step 2: Create Memory Toolkit<a class="headerlink" href="#step-2-create-memory-toolkit" title="Permanent link">&para;</a></h3>
+<p>Once your PgVector configuration is ready, create the Memory toolkit:</p>
 <ol>
-<li><strong>Navigate to Agents:</strong> In ELITEA, go to the <strong>Agents</strong> menu.</li>
-<li><strong>Create or Edit Agent:</strong><ul>
-<li><strong>New Agent:</strong> Click <strong>"+ Agent"</strong> to create a new Agent. Follow the steps to define Agent details like name, description, type, and instructions.</li>
-<li><strong>Existing Agent:</strong> Select the Agent you want to integrate with Postman and click on its name to edit.</li>
+<li><strong>Navigate to Toolkits Menu:</strong> Open the sidebar and select <strong><a href="../../../menus/toolkits/">Toolkits</a></strong>.</li>
+<li><strong>Create New Toolkit:</strong> Click the <strong><code>+ Create</code></strong> button.</li>
+<li><strong>Select Memory:</strong> Choose <strong>Memory</strong> from the list of available toolkit types.</li>
+<li><strong>Configure Memory Settings:</strong><ul>
+<li><strong>Namespace:</strong> Enter a unique namespace for this memory instance (e.g., "customer-support", "project-assistant", "research-agent")<ul>
+<li><strong>Important:</strong> The namespace acts as an isolated memory space - agents with the same namespace share memories, while different namespaces are completely separate</li>
 </ul>
 </li>
-<li><strong>Access Tools Section:</strong> In the Agent configuration, scroll down to the <strong>"Tools"</strong> section.</li>
+<li><strong>PgVector Configuration:</strong> Select your PgVector configuration from the dropdown (shared or custom)</li>
+</ul>
+</li>
+<li><strong>Enable Desired Tools:</strong> In the <strong>"Tools"</strong> section, select the checkboxes next to the specific memory tools you want to enable:</li>
+<li><strong>Save Toolkit:</strong> Click <strong>Save</strong> to create the toolkit.</li>
 </ol>
-<h3 id="toolkit-configuration">Toolkit Configuration<a class="headerlink" href="#toolkit-configuration" title="Permanent link">&para;</a></h3>
-<p>This section details how to configure the Postman toolkit within your ELITEA Agent.</p>
+<p><img alt="Memory Toolkit Configuration" src="../../../img/integrations/toolkits/memory/memory-toolkit-create.png" /></p>
+<h4 id="available-tools">Available Tools:<a class="headerlink" href="#available-tools" title="Permanent link">&para;</a></h4>
+<p>The Memory toolkit provides two essential tools for intelligent memory management:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>Tool Name</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Primary Use Case</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>Manage Memory</strong></td>
+<td>Store, update, and organize information in the agent's memory</td>
+<td>Save important facts, user preferences, conversation context, and key insights for future reference</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Search Memory</strong></td>
+<td>Search and retrieve information from stored memories using semantic search</td>
+<td>Find relevant past information, recall previous conversations, and access stored knowledge</td>
+</tr>
+</tbody>
+</table>
+<h3 id="step-3-use-toolkit-in-agents-pipelines-or-chat">Step 3: Use Toolkit in Agents, Pipelines, or Chat<a class="headerlink" href="#step-3-use-toolkit-in-agents-pipelines-or-chat" title="Permanent link">&para;</a></h3>
+<p>Now you can add the configured Memory toolkit to your agents, pipelines, or use it directly in chat:</p>
+<p><strong>For Agents:</strong></p>
 <ol>
-<li><strong>Add Toolkit:</strong> In the "Tools" section, click the <strong>"+" icon</strong>.</li>
-<li><strong>Select Postman:</strong> Choose <strong>"Postman"</strong> from the dropdown list of available toolkits. This opens the "New Postman tool" configuration panel.</li>
-<li>
-<p><strong>Configure Toolkit Details:</strong> Fill in the following fields:</p>
-<ul>
-<li><strong>API Key:</strong> Enter your Postman API Key. This is required for authenticating ELITEA with your Postman account. For best security, store your API Key as a Secret in ELITEA and select it from the dropdown. Alternatively, you can paste the API Key directly, but using Secrets is recommended.</li>
-<li><strong>Base Url:</strong> The base URL for the Postman API. Typically, this is <code>https://api.getpostman.com/</code>. Only change this if you are using a custom Postman API endpoint.</li>
-<li><strong>Collection Id:</strong> The unique identifier of the Postman collection you want the Agent to access or run. You can find the Collection ID in the Postman web interface (in the collection's URL or via the Postman API).</li>
-<li><strong>Workspace Id:</strong> The unique identifier of your Postman workspace. This is required if you want to scope actions (like listing or running collections) to a specific workspace. You can find the Workspace ID in the Postman web interface or via the Postman API.</li>
-<li><strong>Environment Config:</strong> (Optional) The ID or configuration for a Postman environment to use when running collections. This allows you to specify environment variables and settings for your API tests. You can find Environment IDs in the Postman web interface or via the API.</li>
-</ul>
-<p><img alt="Postman-Toolkit_configuration" src="../../../img/integrations/toolkits/postman/Postman-Toolkit_configuration.png" /></p>
-</li>
-<li>
-<p><strong>Enable Tools:</strong> In the "Tools" section of the Postman toolkit configuration, <strong>select the checkboxes next to the Postman tools</strong> you want to enable for your Agent. <strong>Enable only the tools your Agent will actually use</strong> to adhere to the principle of least privilege and enhance security. Available tools may include:</p>
-<ul>
-<li><strong>Get collections:</strong> Retrieve a list of all collections in your Postman workspace.</li>
-<li><strong>Get collection:</strong> Retrieves details of a specific collection.</li>
-<li><strong>Get folder:</strong> Retrieve details of a specific folder within a collection.</li>
+<li><strong>Navigate to Agents:</strong> Open the sidebar and select <strong><a href="../../../menus/agents/">Agents</a></strong>.</li>
+<li><strong>Create or Edit Agent:</strong> Either create a new agent or select an existing agent to edit.</li>
+<li><strong>Add Memory Toolkit:</strong> <ul>
+<li>In the <strong>"Tools"</strong> section of the agent configuration, click the <strong>"+Toolkit"</strong> icon</li>
+<li>Select your configured Memory toolkit from the dropdown list</li>
+<li>The toolkit will be added to your agent with the previously configured tools enabled</li>
 </ul>
 </li>
-<li>
-<p><strong>Complete Configuration:</strong> Click the <strong>arrow icon</strong> (at the top right of the toolkit configuration) to save the Postman toolkit setup and return to the main Agent configuration.</p>
-</li>
-<li>Click <strong>Save</strong> to apply configuration and changes to the Agent.</li>
 </ol>
-<h3 id="tool-overview">Tool Overview<a class="headerlink" href="#tool-overview" title="Permanent link">&para;</a></h3>
-<p>The Postman toolkit provides a wide range of tools for your ELITEA Agents. Below are the available tools and their purposes:</p>
-<ul>
-<li><strong>get_collections:</strong> Retrieve a list of all collections in your Postman workspace.</li>
-<li><strong>get_collection:</strong> Retrieve details of a specific collection by its ID.</li>
-<li><strong>get_folder:</strong> Retrieve details of a specific folder within a collection.</li>
-<li><strong>get_request_by_path:</strong> Retrieve a request by specifying its path within a collection/folder structure.</li>
-<li><strong>get_request_by_id:</strong> Retrieve a request by its unique ID.</li>
-<li><strong>get_request_script:</strong> Retrieve the pre-request or test script associated with a request.</li>
-<li><strong>search_requests:</strong> Search for requests within collections by name or other criteria.</li>
-<li><strong>analyze:</strong> Analyze a collection or request for best practices, issues, or structure.</li>
-<li><strong>execute_request:</strong> Execute a specific request and return the response.</li>
-<li><strong>update_collection_description:</strong> Update the description of a collection.</li>
-<li><strong>update_collection_variables:</strong> Update the variables defined at the collection level.</li>
-<li><strong>update_collection_auth:</strong> Update the authentication settings for a collection.</li>
-<li><strong>duplicate_collection:</strong> Create a duplicate of an existing collection.</li>
-<li><strong>create_folder:</strong> Create a new folder within a collection.</li>
-<li><strong>update_folder:</strong> Update the name or description of a folder.</li>
-<li><strong>move_folder:</strong> Move a folder to a different location within a collection.</li>
-<li><strong>create_request:</strong> Create a new request within a collection or folder.</li>
-<li><strong>update_request_name:</strong> Update the name of a request.</li>
-<li><strong>update_request_method:</strong> Update the HTTP method (GET, POST, etc.) of a request.</li>
-<li><strong>update_request_url:</strong> Update the URL of a request.</li>
-<li><strong>update_request_description:</strong> Update the description of a request.</li>
-<li><strong>update_request_headers:</strong> Update the headers for a request.</li>
-<li><strong>update_request_body:</strong> Update the body (payload) of a request.</li>
-<li><strong>update_request_auth:</strong> Update the authentication settings for a request.</li>
-<li><strong>update_request_tests:</strong> Update the test scripts for a request.</li>
-<li><strong>update_request_pre_script:</strong> Update the pre-request script for a request.</li>
-<li><strong>duplicate_request:</strong> Create a duplicate of an existing request.</li>
-<li><strong>move_request:</strong> Move a request to a different folder or collection.</li>
-</ul>
-<p>These tools enable comprehensive management, automation, and analysis of your Postman collections, folders, and requests directly from ELITEA Agents.</p>
-<h2 id="instructions-and-prompts-for-using-the-toolkit">Instructions and Prompts for Using the Toolkit<a class="headerlink" href="#instructions-and-prompts-for-using-the-toolkit" title="Permanent link">&para;</a></h2>
-<p>To instruct your ELITEA Agent to use the Postman toolkit, you need to provide clear instructions within the Agent's "Instructions" field. These instructions guide the Agent on <em>when</em> and <em>how</em> to use the available tools.</p>
-<h3 id="instruction-creation-for-openai-agents">Instruction Creation for OpenAI Agents<a class="headerlink" href="#instruction-creation-for-openai-agents" title="Permanent link">&para;</a></h3>
-<p>When creating instructions for the Postman toolkit for OpenAI-based Agents, focus on clear, action-oriented language. Break down tasks into simple steps and explicitly state the parameters required for each tool. OpenAI Agents respond best to instructions that are:</p>
-<ul>
-<li><strong>Direct and Imperative:</strong> Use action verbs and clear commands (e.g., "Use the 'get_collections' tool...", "Update the request body using 'update_request_body'...").</li>
-<li><strong>Parameter-Focused:</strong> Clearly list each parameter and how the Agent should determine its value.</li>
-<li><strong>Context-Aware:</strong> Provide enough context so the Agent understands the overall goal and when to use specific tools within a workflow.</li>
-</ul>
-<p>When instructing your Agent to use a Postman toolkit, use this pattern:</p>
-<div class="highlight"><pre><span></span><code><span class="k">1.</span> Identify the goal: [State the objective, e.g., &quot;To update the request headers for a specific API request&quot;].
-<span class="k">2.</span> Tool Selection: Use the &quot;[tool_name]&quot; tool.
-<span class="k">3.</span> Parameter Specification: Provide the following parameters:
-<span class="w">    </span><span class="k">-</span><span class="w"> </span>Parameter Name 1: &lt;value or description of value&gt;
-<span class="w">    </span><span class="k">-</span><span class="w"> </span>Parameter Name 2: &lt;value or description of value&gt;
-<span class="w">    </span><span class="k">-</span><span class="w"> </span>...
-<span class="k">4.</span> Expected Outcome: [Optionally, describe what should happen after the tool is used].
-</code></pre></div>
-<p><strong>Example Agent Instructions for Postman Toolkit Tools (OpenAI Agent Friendly):</strong></p>
-<ul>
-<li><strong>Get all collections:</strong></li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="k">1.</span> Goal: To retrieve a list of all Postman collections in the workspace.
-<span class="k">2.</span> Tool: Use the &quot;get_collections&quot; tool.
-<span class="k">3.</span> Parameters: None
-<span class="k">4.</span> Outcome: The Agent will display all available collections.
-</code></pre></div>
-<ul>
-<li><strong>Get a specific request by ID:</strong></li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="k">1.</span> Goal: To get details of the request with ID &quot;req123&quot;.
-<span class="k">2.</span> Tool: Use the &quot;get_request_by_id&quot; tool.
-<span class="k">3.</span> Parameters:
-<span class="w">    </span><span class="k">-</span><span class="w"> </span>Request ID: &quot;req123&quot;
-<span class="k">4.</span> Outcome: The Agent will retrieve and display the details of the specified request.
-</code></pre></div>
-<ul>
-<li><strong>Update request headers:</strong></li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="k">1.</span> Goal: To update the headers for request ID &quot;req123&quot; to include a new Authorization token.
-<span class="k">2.</span> Tool: Use the &quot;update_request_headers&quot; tool.
-<span class="k">3.</span> Parameters:
-<span class="w">    </span><span class="k">-</span><span class="w"> </span>Request ID: &quot;req123&quot;
-<span class="w">    </span><span class="k">-</span><span class="w"> </span>Headers: &#39;{&quot;Authorization&quot;: &quot;Bearer &lt;token&gt;&quot;}&#39;
-<span class="k">4.</span> Outcome: The Agent will update the request headers accordingly.
-</code></pre></div>
-<ul>
-<li><strong>Move a folder:</strong></li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="k">1.</span> Goal: To move folder ID &quot;folder789&quot; to a new parent folder in collection ID &quot;col456&quot;.
-<span class="k">2.</span> Tool: Use the &quot;move_folder&quot; tool.
-<span class="k">3.</span> Parameters:
-<span class="w">    </span><span class="k">-</span><span class="w"> </span>Folder ID: &quot;folder789&quot;
-<span class="w">    </span><span class="k">-</span><span class="w"> </span>Collection ID: &quot;col456&quot;
-<span class="w">    </span><span class="k">-</span><span class="w"> </span>New Parent Folder ID: &quot;parent123&quot;
-<span class="k">4.</span> Outcome: The folder will be moved to the new location.
-</code></pre></div>
-<ul>
-<li><strong>Execute a request:</strong></li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="k">1.</span> Goal: To execute the request with ID &quot;req123&quot; and view the response.
-<span class="k">2.</span> Tool: Use the &quot;execute_request&quot; tool.
-<span class="k">3.</span> Parameters:
-<span class="w">    </span><span class="k">-</span><span class="w"> </span>Request ID: &quot;req123&quot;
-<span class="k">4.</span> Outcome: The Agent will execute the request and display the response.
-</code></pre></div>
-<h3 id="conversation-starters">Conversation Starters<a class="headerlink" href="#conversation-starters" title="Permanent link">&para;</a></h3>
-<p>Use these conversation starters to interact with your Postman-integrated Agent and test the toolkit's capabilities:</p>
-<ul>
-<li>"List all Postman collections."</li>
-<li>"Get details for collection ID col456."</li>
-<li>"Find the request named 'Get User Info' in collection col456."</li>
-<li>"Update the request body for request ID req123 to use new JSON data."</li>
-<li>"Move folder ID folder789 to a different parent folder."</li>
-<li>"Duplicate the request with ID req123."</li>
-<li>"Analyze collection col456 for best practices."</li>
-<li>"Execute the request with ID req123 and show me the response."</li>
-<li>"Update the authentication settings for collection col456."</li>
-<li>"Create a new request in folder folder789."</li>
-</ul>
-<h2 id="use-cases">Use Cases<a class="headerlink" href="#use-cases" title="Permanent link">&para;</a></h2>
-<p>The Postman toolkit unlocks extensive automation and management possibilities for API workflows within ELITEA. Here are some key use cases, demonstrating how each tool can be applied:</p>
-<ul>
+<p>Your agent can now store and retrieve memories using the configured toolkit and namespace.</p>
+<p><img alt="Memory Agent Configuration" src="../../../img/integrations/toolkits/memory/memory-agent.png" /></p>
+<p><strong>For Pipelines:</strong></p>
+<ol>
+<li><strong>Navigate to Pipelines:</strong> Open the sidebar and select <strong><a href="../../../menus/pipelines/">Pipelines</a></strong>.</li>
+<li><strong>Create or Edit Pipeline:</strong> Either create a new pipeline or select an existing pipeline to edit.</li>
 <li>
-<p><strong>API Inventory and Discovery:</strong></p>
+<p><strong>Add Memory Toolkit:</strong> </p>
 <ul>
-<li><strong>Scenario:</strong> List all collections and requests to get an overview of available APIs.</li>
-<li><strong>Tools Used:</strong> <code>get_collections</code>, <code>get_collection</code>, <code>get_request_by_id</code>, <code>search_requests</code></li>
-<li><strong>Example Instruction:</strong> "Use the 'get_collections' tool to list all collections, then use 'get_collection' to view details of collection col456."</li>
+<li>In the <strong>"Tools"</strong> section of the pipeline configuration, click the <strong>"+Toolkit"</strong> icon</li>
+<li>Select your configured Memory toolkit from the dropdown list</li>
+<li>The toolkit will be added to your pipeline with the previously configured tools enabled</li>
 </ul>
+<p><img alt="Memory Pipeline Configuration" src="../../../img/integrations/toolkits/memory/memory-pipeline.png" /></p>
 </li>
+</ol>
+<p><strong>For Chat:</strong></p>
+<ol>
+<li><strong>Navigate to Chat:</strong> Open the sidebar and select <strong><a href="../../../menus/chat/">Chat</a></strong>.</li>
 <li>
-<p><strong>Automated Request Execution:</strong></p>
+<p><strong>Add Memory Toolkit:</strong> </p>
 <ul>
-<li><strong>Scenario:</strong> Execute specific API requests and validate responses as part of automated workflows.</li>
-<li><strong>Tools Used:</strong> <code>execute_request</code>, <code>get_request_by_id</code></li>
-<li><strong>Example Instruction:</strong> "Use the 'execute_request' tool to run request req123 and display the response."</li>
+<li>In the chat interface, click the <strong>toolkit icon</strong> to add toolkits</li>
+<li>Select your configured Memory toolkit from the available options</li>
+<li>Start using memory capabilities directly in your chat conversations</li>
 </ul>
+<p><img alt="Memory Chat Configuration" src="../../../img/integrations/toolkits/memory/memory-chat.png" /></p>
 </li>
-<li>
-<p><strong>API Structure Management:</strong></p>
+</ol>
+<h2 id="understanding-namespaces">Understanding Namespaces<a class="headerlink" href="#understanding-namespaces" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-a-namespace">What is a Namespace?<a class="headerlink" href="#what-is-a-namespace" title="Permanent link">&para;</a></h3>
+<p>A <strong>namespace</strong> is a unique identifier that creates an isolated memory space for your agents. Think of it as a dedicated "brain" or "knowledge repository" that can be shared among multiple agents or kept private to a single agent.</p>
+<h3 id="key-namespace-concepts">Key Namespace Concepts:<a class="headerlink" href="#key-namespace-concepts" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Scenario:</strong> Organize and update collections, folders, and requests for better maintainability.</li>
-<li><strong>Tools Used:</strong> <code>create_folder</code>, <code>move_folder</code>, <code>update_folder</code>, <code>duplicate_collection</code>, <code>move_request</code>, <code>duplicate_request</code></li>
-<li><strong>Example Instruction:</strong> "Move folder folder789 to a new parent, or duplicate collection col456 for testing."</li>
+<li><strong>Isolation:</strong> Different namespaces are completely separate - agents cannot access memories from other namespaces</li>
+<li><strong>Sharing:</strong> Multiple agents using the same namespace share the same memory space</li>
+<li><strong>Organization:</strong> Use namespaces to organize memories by project, department, use case, or agent type</li>
 </ul>
-</li>
-<li>
-<p><strong>Request and Collection Updates:</strong></p>
+<h3 id="namespace-best-practices">Namespace Best Practices:<a class="headerlink" href="#namespace-best-practices" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Descriptive Names:</strong> Use clear, descriptive namespace names (e.g., "hr-assistant", "customer-support-team", "research-project-alpha")</li>
+<li><strong>Consistent Conventions:</strong> Establish naming conventions for your organization (e.g., "department-role", "project-agent-type")</li>
+<li><strong>Security Considerations:</strong> Consider who should have access to shared memory spaces</li>
+<li><strong>Scope Definition:</strong> Match namespace scope to your intended memory sharing requirements</li>
+</ol>
+<h3 id="example-namespace-strategies">Example Namespace Strategies:<a class="headerlink" href="#example-namespace-strategies" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Scenario:</strong> Update request details, headers, authentication, or scripts to reflect new requirements.</li>
-<li><strong>Tools Used:</strong> <code>update_request_headers</code>, <code>update_request_body</code>, <code>update_request_auth</code>, <code>update_request_tests</code>, <code>update_request_pre_script</code>, <code>update_collection_auth</code>, <code>update_collection_variables</code>, <code>update_collection_description</code></li>
-<li><strong>Example Instruction:</strong> "Update the request body for req123 to use the latest payload."</li>
+<li><strong>Per-Project:</strong> <code>project-web-redesign</code>, <code>project-mobile-app</code></li>
+<li><strong>Per-Department:</strong> <code>hr-department</code>, <code>sales-team</code>, <code>engineering-team</code></li>
+<li><strong>Per-Use-Case:</strong> <code>customer-support</code>, <code>content-creation</code>, <code>data-analysis</code></li>
+<li><strong>Per-Agent:</strong> <code>agent-sarah-personal</code>, <code>agent-research-bot</code></li>
 </ul>
-</li>
-<li>
-<p><strong>Quality and Best Practice Analysis:</strong></p>
+<h2 id="working-with-memory-tools-and-examples">Working with Memory: Tools and Examples<a class="headerlink" href="#working-with-memory-tools-and-examples" title="Permanent link">&para;</a></h2>
+<p>The Memory toolkit provides two essential tools for managing agent memory: <strong>Manage Memory</strong> (for storing information) and <strong>Search Memory</strong> (for retrieving information). Here's how to use each tool with practical examples.</p>
+<div class="admonition info">
+<p class="admonition-title">Memory Storage Behavior</p>
+<p>The Memory toolkit is designed to preserve existing information by default. When storing new memories:</p>
 <ul>
-<li><strong>Scenario:</strong> Analyze collections or requests for best practices, missing documentation, or potential issues.</li>
-<li><strong>Tools Used:</strong> <code>analyze</code></li>
-<li><strong>Example Instruction:</strong> "Analyze collection col456 for best practices and report any issues."</li>
+<li><strong>New information is added</strong> without overwriting previously saved data</li>
+<li><strong>Each memory entry gets a unique identifier</strong> to prevent accidental data loss</li>
+<li><strong>Existing memories remain intact</strong> unless explicitly requested to be updated or replaced</li>
+<li><strong>To update existing information</strong>, users must specifically request to modify or replace existing memories</li>
 </ul>
-</li>
-</ul>
-<p>These use cases demonstrate how the Postman toolkit can streamline API management, automate testing, and improve the quality and organization of your API assets within ELITEA.</p>
-<h2 id="troubleshooting-and-support">Troubleshooting and Support<a class="headerlink" href="#troubleshooting-and-support" title="Permanent link">&para;</a></h2>
-<h3 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h3>
+</div>
+<h4 id="example-qa-agent-user-story-to-test-case-workflow">Example: QA Agent - User Story to Test Case Workflow<a class="headerlink" href="#example-qa-agent-user-story-to-test-case-workflow" title="Permanent link">&para;</a></h4>
+<p><strong>Step 1: Get User Story from Jira</strong></p>
+<p><strong>User request:</strong> "Get user story STORY-456 from Jira, analyze it"</p>
+<p><strong>Agent:</strong> Agent uses Jira toolkit - Get Issue tool</p>
+<p><strong>Jira Toolkit Response:</strong></p>
 <ul>
-<li>
-<p><strong>Connection Issues:</strong></p>
-<ul>
-<li><strong>Problem:</strong> Agent fails to connect to Postman, resulting in errors during toolkit execution.</li>
-<li><strong>Troubleshooting Steps:</strong><ol>
-<li><strong>Verify API Key:</strong> Ensure the API Key is correctly entered and has the necessary permissions.</li>
-<li><strong>Check Account Access:</strong> Double-check your Postman account and workspace access.</li>
-<li><strong>API Key Generation:</strong> Re-generate a new API key in Postman and try using that if you suspect the key might be invalid.</li>
-<li><strong>Network Connectivity:</strong> Verify that both ELITEA and Postman have internet access and no network issues are blocking the connection.</li>
+<li>Summary: "User can reset password using email verification"</li>
+<li>Story Points: 5</li>
+<li>Description: "As a user, I want to reset my password using email verification so that I can regain access to my account when I forget my password"</li>
+<li>Acceptance Criteria: <ol>
+<li>User clicks 'Forgot Password' link </li>
+<li>User enters email address </li>
+<li>System sends verification email </li>
+<li>User clicks email link </li>
+<li>User enters new password </li>
+<li>Password is successfully updated"</li>
 </ol>
 </li>
 </ul>
-</li>
-<li>
-<p><strong>Authorization Errors (Permission Denied):</strong></p>
+<p><strong>Step 2: Store Story in Memory</strong></p>
+<p><strong>User request:</strong> "Now store this story analysis in memory so the team can access it later."</p>
+<p><strong>Agent:</strong> Agent uses Manage Memory tool to store the information related to the STORY-456</p>
+<p><strong>Step 3: Retrieve Story from Memory</strong></p>
+<p>User goes to the Chat and adds the memory toolkit to the chat team conversation</p>
+<p><strong>User request:</strong> Retrieve the story related to resetting password</p>
+<p><strong>Agent:</strong> Agent uses Search Memory tool to Search Memory for stored story</p>
+<p><strong>Memory Search Results:</strong></p>
 <ul>
-<li><strong>Problem:</strong> Agent receives "Permission Denied" or "Unauthorized" errors when accessing Postman resources.</li>
-<li><strong>Troubleshooting Steps:</strong><ol>
-<li><strong>API Key Validity:</strong> Ensure the API key is valid and has not been revoked in Postman.</li>
-<li><strong>Account Permissions:</strong> Confirm that the Postman account associated with the API key has the necessary permissions to access the specified workspace and perform the requested actions.</li>
+<li>Summary: "User can reset password using email verification"</li>
+<li>Story Points: 5</li>
+<li>Description: "As a user, I want to reset my password using email verification so that I can regain access to my account when I forget my password"</li>
+<li>Acceptance Criteria: <ol>
+<li>User clicks 'Forgot Password' link </li>
+<li>User enters email address </li>
+<li>System sends verification email </li>
+<li>User clicks email link </li>
+<li>User enters new password </li>
+<li>Password is successfully updated"</li>
 </ol>
 </li>
 </ul>
+<p><strong>Step 4: Create Test Cases in TestRail</strong></p>
+<p><strong>User request:</strong> Create test cases in TestRail based on story</p>
+<p><strong>Agent:</strong> [Agent uses TestRail toolkit - Add Test Case tool]</p>
+<ul>
+<li><strong>Command Parameters:</strong> (using parameters retrieved from memory)</li>
+</ul>
+<p><strong>TestRail Response:</strong> The following test cases have been created:</p>
+<ul>
+<li>Case ID: "TC-PWD-001"</li>
+<li>Case ID: "TC-PWD-002"</li>
+<li>Case ID: "TC-PWD-003"</li>
+<li>Case ID: "TC-PWD-004"</li>
+</ul>
+<h2 id="memory-management-best-practices">Memory Management Best Practices<a class="headerlink" href="#memory-management-best-practices" title="Permanent link">&para;</a></h2>
+<h3 id="effective-memory-storage">Effective Memory Storage<a class="headerlink" href="#effective-memory-storage" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Be Specific and Detailed:</strong> Store specific, actionable information rather than vague summaries</p>
+<ul>
+<li><strong>Good:</strong> "Customer John prefers email communication, timezone EST, usually available 9-5pm, previous issue resolved with billing credit on 2024-01-15"</li>
+<li><strong>Poor:</strong> "Customer had an issue before"</li>
+</ul>
 </li>
 <li>
-<p><strong>Incorrect Collection or Environment IDs:</strong></p>
+<p><strong>Include Context and Metadata:</strong> Add relevant context that makes memories more searchable and useful</p>
 <ul>
-<li><strong>Problem:</strong> Agent fails to find collections or environments, especially when running or retrieving details.</li>
-<li><strong>Troubleshooting Steps:</strong><ol>
-<li><strong>Verify Collection ID:</strong> Double-check the Collection ID in your Postman workspace. You can usually find the Collection ID in the URL or via the Postman API.</li>
-<li><strong>Verify Environment ID:</strong> Similarly, verify the Environment ID. Ensure the Environment ID is valid within the specified workspace.</li>
+<li>Include dates, categories, importance levels</li>
+<li>Tag memories with relevant keywords</li>
+</ul>
+</li>
+<li>
+<p><strong>Update and Maintain:</strong> Regularly update memories when information changes</p>
+<ul>
+<li>Update customer preferences</li>
+<li>Mark old information as outdated</li>
+<li>Remove irrelevant or outdated memories</li>
+</ul>
+</li>
 </ol>
-</li>
+<h3 id="effective-memory-search">Effective Memory Search<a class="headerlink" href="#effective-memory-search" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Use Descriptive Search Queries:</strong> Search with specific, descriptive terms</p>
+<ul>
+<li><strong>Good:</strong> "customer billing issues credit adjustment"</li>
+<li><strong>Poor:</strong> "customer problem"</li>
 </ul>
 </li>
-</ul>
+<li>
+<p><strong>Search Before Storing:</strong> Always search existing memories before storing new information to avoid duplicates</p>
+</li>
+<li>
+<p><strong>Iterate Search Terms:</strong> If initial search doesn't find relevant information, try different keywords or phrases</p>
+</li>
+</ol>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<h3 id="common-issues-and-solutions">Common Issues and Solutions<a class="headerlink" href="#common-issues-and-solutions" title="Permanent link">&para;</a></h3>
+<h4 id="memory-toolkit-not-available-in-dropdown">Memory Toolkit Not Available in Dropdown<a class="headerlink" href="#memory-toolkit-not-available-in-dropdown" title="Permanent link">&para;</a></h4>
+<p><strong>Symptom:</strong> Memory toolkit doesn't appear when creating a new toolkit.</p>
+<p><strong>Solutions:</strong></p>
+<ol>
+<li><strong>Check Installation:</strong> Verify that ELITEA includes the langmem library</li>
+<li><strong>Verify Permissions:</strong> Ensure you have toolkit creation permissions</li>
+<li><strong>Contact Support:</strong> If the issue persists, contact ELITEA support</li>
+</ol>
+<h4 id="pgvector-configuration-connection-errors">PgVector Configuration Connection Errors<a class="headerlink" href="#pgvector-configuration-connection-errors" title="Permanent link">&para;</a></h4>
+<p><strong>Symptom:</strong> Cannot connect to PostgreSQL database or PgVector configuration fails.</p>
+<p><strong>Solutions:</strong></p>
+<ol>
+<li><strong>Verify Connection String:</strong> Double-check the PostgreSQL connection string format:
+   <div class="highlight"><pre><span></span><code>postgresql://username:password@host:port/database_name
+</code></pre></div></li>
+<li><strong>Test Database Access:</strong> Verify you can connect to the database outside of ELITEA</li>
+<li><strong>Check PgVector Extension:</strong> Ensure the PgVector extension is installed and enabled in your PostgreSQL database</li>
+<li><strong>Network Access:</strong> Verify network connectivity between ELITEA and your PostgreSQL instance</li>
+<li><strong>Credentials:</strong> Confirm database username/password are correct and have appropriate permissions</li>
+</ol>
+<h4 id="memory-tools-not-working">Memory Tools Not Working<a class="headerlink" href="#memory-tools-not-working" title="Permanent link">&para;</a></h4>
+<p><strong>Symptom:</strong> Memory tools appear to run but don't store or retrieve information.</p>
+<p><strong>Solutions:</strong></p>
+<ol>
+<li><strong>Check Tool Selection:</strong> Verify both "Manage Memory" and "Search Memory" tools are enabled in your toolkit</li>
+<li><strong>Verify Namespace:</strong> Ensure the namespace is correctly configured and consistent</li>
+<li><strong>Database Permissions:</strong> Check that the database user has CREATE, INSERT, SELECT, UPDATE permissions</li>
+<li><strong>Connection Status:</strong> Verify the PgVector configuration is working and connected</li>
+</ol>
+<h4 id="namespace-isolation-issues">Namespace Isolation Issues<a class="headerlink" href="#namespace-isolation-issues" title="Permanent link">&para;</a></h4>
+<p><strong>Symptom:</strong> Agents accessing memories from wrong namespace or cannot find expected memories.</p>
+<p><strong>Solutions:</strong></p>
+<ol>
+<li><strong>Verify Namespace Names:</strong> Check that all agents using the same memory space have identical namespace values</li>
+<li><strong>Case Sensitivity:</strong> Ensure namespace names match exactly (case-sensitive)</li>
+<li><strong>Special Characters:</strong> Avoid special characters in namespace names that might cause parsing issues</li>
+</ol>
+<h4 id="performance-issues">Performance Issues<a class="headerlink" href="#performance-issues" title="Permanent link">&para;</a></h4>
+<p><strong>Symptom:</strong> Memory operations are slow or timing out.</p>
+<p><strong>Solutions:</strong></p>
+<ol>
+<li><strong>Database Performance:</strong> Check PostgreSQL database performance and resources</li>
+<li><strong>Memory Volume:</strong> Large memory stores may require database optimization</li>
+<li><strong>Search Optimization:</strong> Use more specific search terms to improve query performance</li>
+<li><strong>Database Indexing:</strong> Consider adding database indexes for better search performance</li>
+</ol>
+<h3 id="error-messages">Error Messages<a class="headerlink" href="#error-messages" title="Permanent link">&para;</a></h3>
+<h4 id="langmem-is-required-for-memorytoolkit">"langmem is required for MemoryToolkit"<a class="headerlink" href="#langmem-is-required-for-memorytoolkit" title="Permanent link">&para;</a></h4>
+<p><strong>Cause:</strong> The langmem library is not available or not properly installed.</p>
+<p><strong>Solution:</strong> This error typically indicates a system-level issue. Contact ELITEA support as the langmem library should be included in the standard ELITEA installation.</p>
+<h4 id="postgresql-dependencies-psycopg-are-required">"PostgreSQL dependencies (psycopg) are required"<a class="headerlink" href="#postgresql-dependencies-psycopg-are-required" title="Permanent link">&para;</a></h4>
+<p><strong>Cause:</strong> PostgreSQL adapter is not available.</p>
+<p><strong>Solution:</strong> This is a system-level dependency issue. Contact ELITEA support as psycopg should be included in the ELITEA runtime.</p>
+<h4 id="expected-postgresstore-got-other-type">"Expected PostgresStore, got [other type]"<a class="headerlink" href="#expected-postgresstore-got-other-type" title="Permanent link">&para;</a></h4>
+<p><strong>Cause:</strong> Invalid store configuration or connection issue.</p>
+<p><strong>Solution:</strong> </p>
+<ol>
+<li>Verify your PgVector configuration is correct</li>
+<li>Test the database connection</li>
+<li>**Recreate the PgVector configuration if necessary</li>
+</ol>
 <h3 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h3>
 <ol>
-<li><strong>Q: Can I use my regular Postman password instead of an API Key?</strong><ul>
-<li><strong>A:</strong> No, for secure integration with ELITEA, you <strong>must use a Postman API Key</strong>. Using your regular password directly is not supported and is a security risk.</li>
+<li>
+<p><strong>Q: Can multiple agents share the same memory namespace?</strong></p>
+<ul>
+<li><strong>A:</strong> Yes! Multiple agents using the same namespace will share the same memory space. This is useful for creating teams of agents that need to share knowledge and context.</li>
 </ul>
 </li>
-<li><strong>Q: Where do I find Collection and Environment IDs in Postman?</strong><ul>
-<li><strong>A:</strong> Collection and Environment IDs are typically visible in the URL when you navigate to a specific collection or environment within Postman. You can also find these IDs through the Postman API or by exporting the collection/environment.</li>
+<li>
+<p><strong>Q: How do I separate memories between different projects or use cases?</strong></p>
+<ul>
+<li><strong>A:</strong> Use different namespaces for different projects or use cases. Each namespace creates a completely isolated memory space.</li>
 </ul>
 </li>
-<li><strong>Q: What if I don't know the exact permissions needed for the API Key?</strong><ul>
-<li><strong>A:</strong> Postman allows you to set scopes/permissions when creating an API key. For ELITEA integration, ensure the key has access to the collections and environments you want to manage. Contact your Postman administrator if you are unsure about these permissions.</li>
+<li>
+<p><strong>Q: Can I migrate memories from one namespace to another?</strong></p>
+<ul>
+<li><strong>A:</strong> Currently, there is no built-in migration tool. You would need to recreate memories in the new namespace. Plan your namespace strategy carefully from the beginning.</li>
+</ul>
+</li>
+<li>
+<p><strong>Q: How much data can I store in memory?</strong></p>
+<ul>
+<li><strong>A:</strong> The storage limit depends on your PostgreSQL database configuration and available storage. The Memory toolkit is designed to handle substantial amounts of data efficiently.</li>
+</ul>
+</li>
+<li>
+<p><strong>Q: Can I use the same PgVector configuration for multiple Memory toolkits?</strong></p>
+<ul>
+<li><strong>A:</strong> Yes! Multiple Memory toolkits can share the same PgVector configuration. They will be isolated by their respective namespaces.</li>
+</ul>
+</li>
+<li>
+<p><strong>Q: How do I back up my agent's memories?</strong></p>
+<ul>
+<li><strong>A:</strong> Since memories are stored in your PostgreSQL database, use standard PostgreSQL backup procedures to back up your memory data.</li>
+</ul>
+</li>
+<li>
+<p><strong>Q: Can I search across multiple namespaces simultaneously?</strong></p>
+<ul>
+<li><strong>A:</strong> No, memory searches are confined to a single namespace. If you need to search across multiple memory spaces, you'll need to configure separate search operations for each namespace.</li>
+</ul>
+</li>
+<li>
+<p><strong>Q: Is there a limit to how many memories I can store in a namespace?</strong></p>
+<ul>
+<li><strong>A:</strong> There is no hard limit imposed by the Memory toolkit. Practical limits depend on your PostgreSQL database configuration and available storage space.</li>
 </ul>
 </li>
 </ol>
-<h3 id="support-contact">Support Contact<a class="headerlink" href="#support-contact" title="Permanent link">&para;</a></h3>
-<p>For any issues, questions, or further assistance with the Postman integration or ELITEA Agents, please reach out to our dedicated ELITEA Support Team. We are committed to providing prompt and effective support to ensure your success with ELITEA.</p>
-<p><strong>Contact ELITEA Support:</strong></p>
+<h3 id="support-and-contact-information">Support and Contact Information<a class="headerlink" href="#support-and-contact-information" title="Permanent link">&para;</a></h3>
+<p>If you encounter any persistent issues, have further questions, or require additional assistance beyond the scope of this guide regarding the Memory toolkit integration or ELITEA Agents in general, please do not hesitate to contact our dedicated ELITEA Support Team.</p>
+<p><strong>How to Reach ELITEA Support:</strong></p>
 <ul>
 <li><strong>Email:</strong>  <strong><a href="mailto:SupportAlita@epam.com">SupportAlita@epam.com</a></strong></li>
 </ul>
-<p><strong>Best Practices for Effective Support Requests:</strong></p>
-<p>To help us understand and resolve your issue as quickly as possible, please ensure you provide the following information in your support email:</p>
+<p><strong>Best Practices for Submitting Effective Support Requests:</strong></p>
+<p>To enable our support team to understand and resolve your issue as efficiently as possible, please include the following critical information in your support email:</p>
 <ul>
-<li><strong>ELITEA Environment:</strong> Clearly specify the ELITEA environment you are using (e.g., "Nexus," "Alita Lab," "EYE").</li>
-<li><strong>Project Details:</strong>  Indicate the <strong>Project Name</strong> and whether you are working in your <strong>Private</strong> workspace or a <strong>Team</strong> project.</li>
-<li><strong>Detailed Issue Description:</strong> Provide a clear, concise, and detailed description of the problem you are encountering. Explain what you were trying to do, what you expected to happen, and what actually occurred.</li>
-<li><strong>Relevant Configuration Information:</strong>  To help us diagnose the issue, please include relevant configuration details, such as:<ul>
-<li><strong>Agent Instructions (Screenshot or Text):</strong> If the issue is with an Agent, provide a screenshot or copy the text of your Agent's "Instructions" field.</li>
-<li><strong>Toolkit Configurations (Screenshots):</strong> If the issue involves the Postman toolkit or other toolkits, include screenshots of the toolkit configuration settings within your Agent.</li>
+<li><strong>ELITEA Environment Details:</strong> Clearly specify the ELITEA environment you are currently using (e.g., "Nexus," "Alita Lab," "EYE," or the specific name of your ELITEA instance).</li>
+<li><strong>Project Context:</strong>  Indicate the <strong>Project Name</strong> within ELITEA where you are experiencing the issue and specify whether you are working in your <strong>Private</strong> workspace or a <strong>Team</strong> project.</li>
+<li><strong>Memory Toolkit Configuration Details:</strong><ul>
+<li><strong>Namespace:</strong> The exact namespace used in your Memory toolkit</li>
+<li><strong>PgVector Configuration:</strong> Details about your PgVector configuration (shared or custom)</li>
+<li><strong>Tools Enabled:</strong> Which memory tools are enabled in your toolkit</li>
 </ul>
 </li>
-<li><strong>Error Messages (Full Error Text):</strong> If you are encountering an error message, please provide the <strong>complete error text</strong>. In the Chat window, expand the error details and copy the full error message. This detailed error information is crucial for diagnosis.</li>
-<li><strong>Your Query/Prompt (Exact Text):</strong> If the issue is related to Agent execution, provide the exact query or prompt you used to trigger the issue.</li>
+<li><strong>Detailed Issue Description:</strong> Provide a clear, concise, and comprehensive description of the problem you are encountering. Articulate precisely what you were attempting to do, what behavior you expected to observe, and what actually occurred.</li>
+<li><strong>Database Information:</strong> If the issue is related to memory storage/retrieval:<ul>
+<li>PostgreSQL version and configuration details</li>
+<li>PgVector extension version</li>
+<li>Any database error messages</li>
 </ul>
-<p><strong>Before Contacting Support:</strong></p>
-<p>We encourage you to first explore the resources available within this guide and the broader ELITEA documentation. You may find answers to common questions or solutions to known issues in the documentation.</p>
-<h2 id="useful-links">Useful Links<a class="headerlink" href="#useful-links" title="Permanent link">&para;</a></h2>
-<p>To further enhance your understanding and skills in integrating Postman with ELITEA, here are some helpful resources:</p>
+</li>
+<li><strong>Complete Error Messages:</strong> If you are encountering any error messages, provide the <strong>complete and unabridged error text</strong>.</li>
+<li><strong>Agent/Memory Operations:</strong> If the issue relates to specific memory operations, provide details about:<ul>
+<li>What information you were trying to store or retrieve</li>
+<li>The exact search terms or queries used</li>
+<li>Expected vs. actual results</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>The Memory toolkit integration with ELITEA follows a streamlined workflow:</p>
+<ol>
+<li><strong>🗄️ Configure PgVector</strong> - Set up PostgreSQL database storage with PgVector extension for memory persistence</li>
+<li><strong>🧠 Create Memory Toolkit</strong> - Configure the Memory toolkit with namespace and PgVector connection  </li>
+<li><strong>🚀 Use in Modules</strong> - Add the toolkit to Agents, Pipelines, and use directly in Chat for intelligent memory management</li>
+</ol>
+<p><strong>Key Benefits:</strong>
+- <strong>Persistent Context:</strong> Information survives across sessions and conversations
+- <strong>Intelligent Organization:</strong> Namespace-based memory organization for isolation and sharing
+- <strong>Semantic Search:</strong> Find relevant memories using natural language queries
+- <strong>Scalable Storage:</strong> PostgreSQL-powered storage that grows with your needs
+- <strong>Team Collaboration:</strong> Shared memory spaces for agent teams and departments</p>
+<div class="admonition reference">
+<p class="admonition-title">External Resources</p>
 <ul>
-<li><strong><a href="https://www.postman.com/">Postman Website</a></strong>: Access the main Postman platform to create an account or log in and explore Postman features.</li>
-<li><strong><a href="https://docs.api.getpostman.com/">Postman API Documentation</a></strong>:  Refer to the official Postman API documentation for detailed information on API endpoints, data structures, and advanced usage.</li>
-<li><strong><a href="../../../menus/settings/secrets/">ELITEA Secrets</a></strong>: Learn how to securely store your Postman API Key using ELITEA's Secrets management feature for enhanced security.</li>
-<li><strong><a href="../../../menus/agents/">ELITEA Agents Configuration</a></strong>:  Find out more about creating and configuring Agents in ELITEA, where you integrate the Postman toolkit to automate your workflows.</li>
-<li><strong><a href="mailto:SupportAlita@epam.com">ELITEA Support Email</a></strong>: Contact the ELITEA support team for direct assistance with Postman integration or any other questions and issues you may encounter.</li>
+<li><strong>PostgreSQL Documentation:</strong> <a href="https://www.postgresql.org/docs/">https://www.postgresql.org/docs/</a> - <em>Official PostgreSQL documentation for database setup and configuration.</em></li>
+<li><strong>PgVector Extension:</strong> <a href="https://github.com/pgvector/pgvector">https://github.com/pgvector/pgvector</a> - <em>Official PgVector extension documentation and installation guide.</em></li>
+<li><strong>LangMem Library:</strong> <a href="https://langmem.dev">https://langmem.dev</a> - <em>Documentation for the langmem memory management library used by the Memory toolkit.</em></li>
+<li><strong>PostgreSQL Connection Strings:</strong> <a href="https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNSTRING">https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNSTRING</a> - <em>Official guide to PostgreSQL connection string formats.</em></li>
 </ul>
+</div>
 
 
 
@@ -5472,7 +5893,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../pandas_toolkit/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Pandas">
+          <a href="../jira_toolkit/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Jira">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -5482,20 +5903,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Pandas
+                Jira
               </div>
             </div>
           </a>
         
         
           
-          <a href="../powerpoint_toolkit/" class="md-footer__link md-footer__link--next" aria-label="Next: PowerPoint">
+          <a href="../openapi_toolkit/" class="md-footer__link md-footer__link--next" aria-label="Next: OpenAPI">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                PowerPoint
+                OpenAPI
               </div>
             </div>
             <div class="md-footer__button md-icon">
