@@ -1,0 +1,7066 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://elitea.ai/docs/how-tos/credentials-toolkits/how-to-test-toolkit-tools/">
+      
+      
+        <link rel="prev" href="../creating-toolkits-with-user-specific-credentials/">
+      
+      
+        <link rel="next" href="../jira-automation-with-elitea/">
+      
+      
+      <link rel="icon" href="../../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+    
+    
+      
+        <title>Test Toolkits Tools - ELITEA Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../extra_css/material.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#how-to-test-toolkit-tools" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="ELITEA Documentation" class="md-header__button md-logo" aria-label="ELITEA Documentation" data-md-component="logo">
+      
+  <img src="../../../img/favicon.ico" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ELITEA Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Test Toolkits Tools
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../.." class="md-tabs__link">
+          
+  
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../getting-started/very-quick-start/" class="md-tabs__link">
+          
+  
+  
+  Getting Started
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../menus/overview/" class="md-tabs__link">
+          
+  
+  
+  Menus
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../chat-conversations/how-to-use-chat-functionality/" class="md-tabs__link">
+          
+  
+  
+  How-To Guides
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../integrations/mcp/mcp-server-stdio/" class="md-tabs__link">
+          
+  
+  
+  Integrations
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../release-notes/rn_current/" class="md-tabs__link">
+          
+  
+  
+  Release Notes
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../migration/v2.0.0/migration-overview/" class="md-tabs__link">
+          
+  
+  
+  Migration & Upgrade
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../support/faqs/" class="md-tabs__link">
+          
+  
+  
+  Support
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../archive/prompt-magic-assistant/" class="md-tabs__link">
+          
+  
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="ELITEA Documentation" class="md-nav__button md-logo" aria-label="ELITEA Documentation" data-md-component="logo">
+      
+  <img src="../../../img/favicon.ico" alt="logo">
+
+    </a>
+    ELITEA Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Welcome to Elitea
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Welcome to Elitea
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Elitea Values
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../home/introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quick Start
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../home/glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Glossary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../home/onboarding-tips/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Onboarding Tips
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Key Concepts
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Key Concepts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../home/key-concepts/what-is-an-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is an agent?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../home/key-concepts/what-is-a-pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is a pipeline?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../home/key-concepts/what-is-a-credential/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is a credential?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../home/key-concepts/what-is-a-toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is a toolkit?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../home/key-concepts/what-is-a-conversation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is a conversation?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../home/key-concepts/what-is-an-artifact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is an artifact?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../home/key-concepts/what-is-a-collection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is a collection?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Quick Starts
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Quick Starts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/very-quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Very Quick Start
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quick Start
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Initial Setup
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Initial Setup
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/create-personal-access-token/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create a Personal Access Token
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/create-secret/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create a Secret
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/create-credential/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create a Credential
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/create-toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create a Toolkit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/configure-epam-ai-dial-key/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure EPAM AI DIAL Keys
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Create Entities
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Create Entities
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/create-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create an Agent
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/create-artifact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create an Artifact
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/create-pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create a Pipeline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/create-conversation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create a Conversation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/indexing-quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create an Index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/configure-and-use-mcp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure and Use MCP Servers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Menus
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Menus
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Main Menus
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Main Menus
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../menus/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../menus/chat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chat
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../menus/agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Agents
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../menus/pipelines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pipelines
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../menus/credentials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Credentials
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../menus/toolkits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Toolkits
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../menus/mcps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MCPs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../menus/collections/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Collections
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../menus/artifacts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Artifacts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_10" id="__nav_3_1_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Settings
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_10">
+            <span class="md-nav__icon md-icon"></span>
+            Settings
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../menus/settings/settings-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Settings Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../menus/settings/ai-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AI Configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../menus/settings/personal-tokens/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Personal Tokens
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../menus/settings/secrets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Secrets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../menus/settings/projects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Projects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../menus/settings/monitoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Monitoring
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    How-To Guides
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            How-To Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Chat & Conversations
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Chat & Conversations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat-conversations/how-to-use-chat-functionality/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chat Usage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat-conversations/how-to-canvas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Canvas in Conversation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat-conversations/add-teammates-to-conversation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Add Teammates to Conversation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat-conversations/attach-images-and-files-in-chat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Attachments in Conversation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat-conversations/enable-internal-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Internal Tools in Conversation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat-conversations/how-to-create-and-edit-agents-from-canvas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Canvas - Create and Edit Agents
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat-conversations/how-to-create-and-edit-pipelines-from-canvas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Canvas - Create and Edit Pipelines
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat-conversations/how-to-create-and-edit-toolkits-from-canvas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Canvas - Create and Edit Toolkits
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat-conversations/how-to-create-and-edit-mcps-from-canvas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Canvas - Create and Edit MCPs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Indexing
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Indexing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../indexing/indexing-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Indexing Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../indexing/indexing-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Indexing Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../indexing/using-indexes-tab-interface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to create and use indexes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../indexing/index-github-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Repository Indexing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../indexing/index-confluence-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Confluence Indexing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../indexing/index-jira-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Jira Indexing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../indexing/index-sharepoint-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SharePoint Indexing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../indexing/index-artifacts-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Artifacts Indexing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../indexing/index-figma-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Figma Indexing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../indexing/index-testrail-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TestRail Indexing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../indexing/index-xray-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Xray Indexing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../indexing/index-zephyr-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zephyr Indexing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../indexing/index-ado-wiki-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ADO Wiki Indexing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Agents & Pipelines
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Agents & Pipelines
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agents-pipelines/agents-pipelines-history/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    View Agents and Pipelines History
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agents-pipelines/entity-versioning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Entity Versioning
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3_3" id="__nav_4_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Pipeline Building Blocks
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Pipeline Building Blocks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pipelines/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pipelines Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pipelines/states/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    States
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3_3_3" id="__nav_4_3_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Nodes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_3_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Nodes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pipelines/nodes/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Nodes Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pipelines/nodes/interaction-nodes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Interaction Nodes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pipelines/nodes/execution-nodes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Execution Nodes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pipelines/nodes/control-flow-nodes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Control Flow Nodes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pipelines/nodes/iteration-nodes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Iteration Nodes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pipelines/nodes/utility-nodes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Utility Nodes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pipelines/nodes-connectors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Nodes Connectors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pipelines/entry-point/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Entry Point
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pipelines/flow-editor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Flow Editor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pipelines/yaml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    YAML Configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pipelines/appendix-comparison-tables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Appendix - Comparison Tables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Credentials & Toolkits
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Credentials & Toolkits
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-use-credentials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Use Credentials
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../creating-toolkits-with-user-specific-credentials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Individual User Credentials for Shared Toolkits
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Test Toolkits Tools
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Test Toolkits Tools
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-the-test-settings-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessing the Test Settings Panel
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Accessing the Test Settings Panel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Access:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-settings-interface-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Settings Interface Components
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Test Settings Interface Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-model-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Model Selection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-model-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Model Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-tool-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Tool Selection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-tool-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Tool Parameters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-test-a-toolkit-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Test a Toolkit Tool
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to Test a Toolkit Tool">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-select-your-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Select Your Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-choose-a-tool-to-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Choose a Tool to Test
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-configure-tool-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Configure Tool Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-execute-the-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Execute the Test
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-test-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Test Results
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding Test Results">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#result-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Result Components
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#success-response-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Success Response Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-response-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Response Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-testing-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Testing Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Testing Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chat-history-and-multiple-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chat History and Multiple Tests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fullscreen-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fullscreen Mode
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-testing-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Testing Scenarios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Testing Scenarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-1-testing-github-create-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 1: Testing GitHub Create Branch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-2-testing-jira-issue-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 2: Testing Jira Issue Creation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-3-testing-index-data-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 3: Testing Index Data Tool
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-4-testing-search-index-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 4: Testing Search Index Tool
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-test-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting Test Failures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting Test Failures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-issues-and-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Issues and Solutions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Issues and Solutions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-authentication-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Authentication Errors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-parameter-validation-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Parameter Validation Errors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-connection-timeouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Connection Timeouts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-tool-not-found-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Tool Not Found Errors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-model-configuration-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Model Configuration Issues
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices-for-toolkit-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices for Toolkit Testing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices for Toolkit Testing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#before-production-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      Before Production Use
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameter-testing-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameter Testing Strategy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Testing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Testing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-tools-vs-using-in-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing Tools vs. Using in Agents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Resources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jira-automation-with-elitea/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Automate JIRA Issue Review
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-use-webhooks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Use Webhooks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Entity Management
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Entity Management
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entity-management/search-entities/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Search Entities
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entity-management/organizing-entities/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Organizing Entities
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entity-management/manage-users-and-roles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Manage Roles & Permissions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Integrations
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Integrations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    MCP
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            MCP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/mcp/mcp-server-stdio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Server (STDIO)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/mcp/mcp-server-sse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Server (SSE)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/mcp/mcp-client/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Client (STDIO)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/mcp/make-tools-available-by-mcp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Make Tools Available by MCP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Toolkits
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Toolkits
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/toolkits/ado_repos_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ADO Repos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/toolkits/ado_wiki_plan_board_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ADO Wiki / Boards / Test Plans
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/toolkits/artifact_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Artifact
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/toolkits/bitbucket_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    BitBucket
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/toolkits/browser_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Browser
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/toolkits/confluence_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Confluence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/toolkits/custom_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Custom
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/toolkits/figma_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Figma
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/toolkits/github_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GitHub
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/toolkits/gitlab_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GitLab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/toolkits/gitlab_org_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GitLab Org
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/toolkits/google_places_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Google Places
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/toolkits/jira_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Jira
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/toolkits/memory_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Memory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/toolkits/openapi_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OpenAPI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/toolkits/pandas_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pandas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/toolkits/postman_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Postman
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/toolkits/powerpoint_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PowerPoint
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/toolkits/qtest_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    qTest
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/toolkits/rally_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rally
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/toolkits/reportportal_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ReportPortal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/toolkits/salesforce_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SalesForce
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/toolkits/servicenow_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ServiceNow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/toolkits/sharepoint_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SharePoint
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/toolkits/slack_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Slack
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/toolkits/sonar_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sonar
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/toolkits/sql_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SQL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/toolkits/testIO_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TestIO
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/toolkits/testrail_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TestRail
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/toolkits/xray_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Xray Cloud
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/toolkits/zephyr_scale_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zephyr Scale
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/toolkits/zephyr_enterprise_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zephyr Enterprise
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Extensions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Extensions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/extensions/elitea-code/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Elitea Code
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/extensions/elitea-code-chat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Elitea Code Chat
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Release Notes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Release Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Current Version
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            Current Version
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../release-notes/rn_current/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RN 2.0.0 Beta
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Previous versions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Previous versions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../release-notes/archived/rn12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RN 1.7.1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../release-notes/archived/rn11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RN 1.7.0
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../release-notes/archived/rn10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RN 1.6.0
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../release-notes/archived/rn9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RN 1.5.2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../release-notes/archived/rn8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RN 1.5.1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../release-notes/archived/rn7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RN 1.5.0
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../release-notes/archived/rn6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RN 1.4.0
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../release-notes/archived/rn5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RN 1.3.0
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../release-notes/archived/rn4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RN 1.2.0
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../release-notes/archived/rn3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RN 1.1.0
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../release-notes/archived/rn2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RN 1.0.1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../release-notes/archived/rn1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RN 1.0.0
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Migration & Upgrade
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Migration & Upgrade
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Upgrading to v2.0.0
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            Upgrading to v2.0.0
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../migration/v2.0.0/migration-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Migration Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../migration/v2.0.0/update-llm-nodes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Update LLM Nodes in Pipelines
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../migration/v2.0.0/update-pipelines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Update Pipelines from Previous Versions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Upgrading to v1.7.0
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            Upgrading to v1.7.0
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../migration/v1.7.0/migration-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Migration Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../migration/v1.7.0/next-quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quick Start (Next env)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../migration/v1.7.0/migrate-datasources-to-indexing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Migrate Datasources to Indexing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Support
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Support
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../support/faqs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../support/contact-support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contact Support
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../support/additional-resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Additional Resources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Archive
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Archive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../archive/prompt-magic-assistant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Prompt Magic Assistant
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../archive/alita-dial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Alita Dial
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../archive/creating-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Creating Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../archive/prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../archive/datasources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Datasources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../archive/agents-examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Agents Examples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../archive/prompts-examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Prompts Examples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/export-import/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Export & Import Entities
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/forking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fork Entities
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/public-project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Public Project
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/monitoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Monitoring
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_12" id="__nav_9_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Pipelines
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_12">
+            <span class="md-nav__icon md-icon"></span>
+            Pipelines
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../features/pipelines/pipeline-agent-framework/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pipelines Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-the-test-settings-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessing the Test Settings Panel
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Accessing the Test Settings Panel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Access:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-settings-interface-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Settings Interface Components
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Test Settings Interface Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-model-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Model Selection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-model-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Model Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-tool-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Tool Selection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-tool-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Tool Parameters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-test-a-toolkit-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Test a Toolkit Tool
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to Test a Toolkit Tool">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-select-your-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Select Your Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-choose-a-tool-to-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Choose a Tool to Test
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-configure-tool-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Configure Tool Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-execute-the-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Execute the Test
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-test-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Test Results
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding Test Results">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#result-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Result Components
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#success-response-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Success Response Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-response-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Response Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-testing-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Testing Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Testing Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chat-history-and-multiple-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chat History and Multiple Tests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fullscreen-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fullscreen Mode
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-testing-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Testing Scenarios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Testing Scenarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-1-testing-github-create-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 1: Testing GitHub Create Branch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-2-testing-jira-issue-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 2: Testing Jira Issue Creation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-3-testing-index-data-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 3: Testing Index Data Tool
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-4-testing-search-index-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 4: Testing Search Index Tool
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-test-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting Test Failures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting Test Failures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-issues-and-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Issues and Solutions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Issues and Solutions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-authentication-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Authentication Errors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-parameter-validation-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Parameter Validation Errors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-connection-timeouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Connection Timeouts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-tool-not-found-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Tool Not Found Errors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-model-configuration-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Model Configuration Issues
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices-for-toolkit-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices for Toolkit Testing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices for Toolkit Testing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#before-production-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      Before Production Use
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameter-testing-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameter Testing Strategy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Testing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Testing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-tools-vs-using-in-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing Tools vs. Using in Agents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Resources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="how-to-test-toolkit-tools">How to Test Toolkit Tools<a class="headerlink" href="#how-to-test-toolkit-tools" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>The <strong>Test Settings</strong> panel provides a powerful interface for testing toolkit tools directly from the Toolkit detailed page. This feature allows you to validate toolkit functionality, verify credentials, test tool parameters, and ensure proper integration before using toolkits in agents or conversations.</p>
+<p>Testing toolkit tools is an essential step in the toolkit configuration workflow, enabling you to:</p>
+<ul>
+<li><strong>Verify Credentials</strong>: Confirm that authentication credentials are correctly configured</li>
+<li><strong>Validate Tool Functionality</strong>: Test individual tools with real parameters</li>
+<li><strong>Debug Tool Behavior</strong>: Understand how tools respond to different inputs</li>
+<li><strong>Preview Tool Outputs</strong>: See actual responses before integrating with agents</li>
+<li><strong>Optimize Parameters</strong>: Fine-tune tool settings and parameters for your use case</li>
+</ul>
+<hr />
+<h2 id="accessing-the-test-settings-panel">Accessing the Test Settings Panel<a class="headerlink" href="#accessing-the-test-settings-panel" title="Permanent link">&para;</a></h2>
+<p>The Test Settings panel is located on the right side of the Toolkit detailed page and is available for all configured toolkits.</p>
+<h3 id="how-to-access">How to Access:<a class="headerlink" href="#how-to-access" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Navigate to Toolkits</strong>: Go to <strong>Toolkits</strong> from the main navigation</li>
+<li><strong>Select a Toolkit</strong>: Click on any configured toolkit from the list</li>
+<li><strong>View Test Settings</strong>: The Test Settings panel appears on the right side of the page</li>
+</ol>
+<p><img alt="Test Settings Panel" src="../../../img/how-tos/credentials-toolkits/test-toolkit-tools/test-settings-panel.png" /></p>
+<hr />
+<h2 id="test-settings-interface-components">Test Settings Interface Components<a class="headerlink" href="#test-settings-interface-components" title="Permanent link">&para;</a></h2>
+<p>The Test Settings panel consists of several key components that work together to enable comprehensive tool testing:</p>
+<h3 id="1-model-selection">1. Model Selection<a class="headerlink" href="#1-model-selection" title="Permanent link">&para;</a></h3>
+<p>Choose the Large Language Model (LLM) that will be used to execute the tool test.</p>
+<ul>
+<li><strong>Model Dropdown</strong>: Select from available LLM models configured in your project</li>
+<li><strong>Default Selection</strong>: The system selects your project's default model automatically</li>
+<li><strong>Model Options</strong>: Displays model names (e.g., <code>gpt-4o</code>, <code>gpt-4o-mini</code>, <code>claude-3-5-sonnet</code>)</li>
+</ul>
+<p><img alt="Model Selection" src="../../../img/menus/toolkits/LLM_model.png" /></p>
+<h3 id="2-model-settings">2. Model Settings<a class="headerlink" href="#2-model-settings" title="Permanent link">&para;</a></h3>
+<p>Fine-tune how the selected model generates responses using these controls:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Range</th>
+<th>Description</th>
+<th>Best Practices</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Temperature</strong></td>
+<td>0.1 - 1.0</td>
+<td>Controls randomness and creativity in responses</td>
+<td>Lower values (0.1-0.3) for predictable, focused results; Higher values (0.7-1.0) for creative outputs</td>
+</tr>
+<tr>
+<td><strong>Top P</strong></td>
+<td>0.1 - 1.0</td>
+<td>Nucleus sampling parameter that limits output to most probable words</td>
+<td>Higher values (0.9-1.0) allow more diversity; Lower values (0.1-0.5) for more focused outputs</td>
+</tr>
+<tr>
+<td><strong>Top K</strong></td>
+<td>1 - 100</td>
+<td>Restricts choices to the top K most likely next words</td>
+<td>Lower values (10-20) for more deterministic outputs; Higher values (50-100) for variety</td>
+</tr>
+<tr>
+<td><strong>Max Completion Tokens</strong></td>
+<td>1 - 4096+</td>
+<td>Sets the upper limit for the length of the model's output</td>
+<td>Use higher values (1024-4096) for detailed responses; Lower values (256-512) for concise outputs</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="alt text" src="../../../img/how-tos/credentials-toolkits/test-toolkit-tools/model-settings.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Recommended Settings for Testing</p>
+<p>For toolkit tool testing, we recommend:</p>
+<ul>
+<li><strong>Temperature</strong>: 0.1 (for consistent, predictable results)</li>
+<li><strong>Top P</strong>: 1.0 (standard setting)</li>
+<li><strong>Top K</strong>: 10 (focused output)</li>
+<li><strong>Max Completion Tokens</strong>: 1024 (sufficient for most tool responses)</li>
+</ul>
+</div>
+<h3 id="3-tool-selection">3. Tool Selection<a class="headerlink" href="#3-tool-selection" title="Permanent link">&para;</a></h3>
+<p>Choose which specific tool from your toolkit you want to test.</p>
+<ul>
+<li><strong>Tool Dropdown</strong>: Lists all tools available in the current toolkit</li>
+<li><strong>Search Functionality</strong>: Type to filter available tools by name</li>
+<li><strong>Tool Grouping</strong>: Tools are organized by their functionality type</li>
+<li><strong>Enabled Tools Only</strong>: Only shows tools that are enabled in the toolkit configuration</li>
+</ul>
+<p><img alt="Tool Selection" src="../../../img/menus/toolkits/select_tool.png" /></p>
+<h3 id="4-tool-parameters">4. Tool Parameters<a class="headerlink" href="#4-tool-parameters" title="Permanent link">&para;</a></h3>
+<p>After selecting a tool, the Test Settings panel dynamically displays the required and optional parameters for that specific tool.</p>
+<p><strong>Parameter Field Types:</strong></p>
+<ul>
+<li><strong>Text Fields</strong>: For string inputs (e.g., repository names, URLs)</li>
+<li><strong>Number Fields</strong>: For numeric inputs (e.g., limits, IDs)</li>
+<li><strong>Dropdown Selects</strong>: For predefined choices (e.g., status values)</li>
+<li><strong>Boolean Checkboxes</strong>: For true/false options (e.g., include archived)</li>
+<li><strong>Array Fields</strong>: For multiple values (e.g., list of labels, file extensions)</li>
+<li><strong>Object Fields</strong>: For complex structured data (e.g., JSON configurations)</li>
+</ul>
+<p><strong>Field Indicators:</strong></p>
+<ul>
+<li><strong>Required Fields</strong>: Marked with an asterisk (*) and must be filled before testing</li>
+<li><strong>Optional Fields</strong>: Can be left empty; the tool will use default values</li>
+<li><strong>Default Values</strong>: Pre-populated fields show the tool's default setting</li>
+<li><strong>Field Descriptions</strong>: Hover over field labels for detailed parameter information</li>
+</ul>
+<hr />
+<h2 id="how-to-test-a-toolkit-tool">How to Test a Toolkit Tool<a class="headerlink" href="#how-to-test-a-toolkit-tool" title="Permanent link">&para;</a></h2>
+<p>Follow these steps to test any tool from your configured toolkit:</p>
+<h3 id="step-1-select-your-model">Step 1: Select Your Model<a class="headerlink" href="#step-1-select-your-model" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Click the <strong>Model</strong> dropdown in the Test Settings panel</li>
+<li>Choose the LLM model you want to use for testing</li>
+<li>(Optional) Adjust model parameters using the advanced settings sliders</li>
+</ol>
+<h3 id="step-2-choose-a-tool-to-test">Step 2: Choose a Tool to Test<a class="headerlink" href="#step-2-choose-a-tool-to-test" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Click the <strong>Tool</strong> dropdown</li>
+<li>Use the search box to filter tools (optional)</li>
+<li>Select the tool you want to test from the list</li>
+</ol>
+<h3 id="step-3-configure-tool-parameters">Step 3: Configure Tool Parameters<a class="headerlink" href="#step-3-configure-tool-parameters" title="Permanent link">&para;</a></h3>
+<p>Once a tool is selected, the parameter input fields appear below:</p>
+<ol>
+<li><strong>Fill Required Parameters</strong>: Complete all fields marked with an asterisk (*)</li>
+<li><strong>Configure Optional Parameters</strong>: Provide values for optional fields as needed</li>
+<li><strong>Use Default Values</strong>: Leave optional fields empty to use tool defaults</li>
+<li><strong>Validate Inputs</strong>: Ensure all values match the expected format (e.g., valid JSON for object fields)</li>
+</ol>
+<h3 id="step-4-execute-the-test">Step 4: Execute the Test<a class="headerlink" href="#step-4-execute-the-test" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Review Configuration</strong>: Verify all parameters are correctly set</li>
+<li><strong>Click RUN TOOL</strong>: The button becomes active when all required fields are filled</li>
+<li><strong>Monitor Execution</strong>: Watch the chat interface for real-time tool execution updates</li>
+<li><strong>Review Results</strong>: Examine the tool output displayed in the chat area</li>
+</ol>
+<p><img alt="Run Tool" src="../../../img/menus/toolkits/run_tool.png" /></p>
+<hr />
+<h2 id="understanding-test-results">Understanding Test Results<a class="headerlink" href="#understanding-test-results" title="Permanent link">&para;</a></h2>
+<p>Test results are displayed in a chat-style interface on the right side of the toolkit page, providing detailed information about the tool execution.</p>
+<h3 id="result-components">Result Components<a class="headerlink" href="#result-components" title="Permanent link">&para;</a></h3>
+<p><strong>1. Tool Execution Summary</strong></p>
+<p>The first section shows a summary of the tool execution:</p>
+<ul>
+<li><strong>Status Indicator</strong>: ✅ for success, ❌ for errors</li>
+<li><strong>Tool Name</strong>: The name of the executed tool</li>
+<li><strong>Execution Time</strong>: Time taken to complete the tool execution (in seconds)</li>
+</ul>
+<p><strong>2. Tool Output</strong></p>
+<p>The main result is displayed in a formatted code block (typically JSON):</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Operation completed successfully&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>3. Execution Metadata</strong></p>
+<p>Additional information about the execution:</p>
+<ul>
+<li><strong>Timestamp</strong>: When the tool was executed</li>
+<li><strong>Model Used</strong>: The LLM model that processed the request</li>
+<li><strong>Parameters Sent</strong>: The actual parameters passed to the tool</li>
+</ul>
+<h3 id="success-response-example">Success Response Example<a class="headerlink" href="#success-response-example" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>✅ `jira___search_issues` (1.234s)
+
+{
+  &quot;success&quot;: true,
+  &quot;issues&quot;: [
+    {
+      &quot;key&quot;: &quot;PROJ-123&quot;,
+      &quot;summary&quot;: &quot;Implement user authentication&quot;,
+      &quot;status&quot;: &quot;In Progress&quot;,
+      &quot;assignee&quot;: &quot;john.doe&quot;,
+      &quot;priority&quot;: &quot;High&quot;
+    },
+    {
+      &quot;key&quot;: &quot;PROJ-124&quot;,
+      &quot;summary&quot;: &quot;Fix login page layout&quot;,
+      &quot;status&quot;: &quot;To Do&quot;,
+      &quot;assignee&quot;: &quot;jane.smith&quot;,
+      &quot;priority&quot;: &quot;Medium&quot;
+    }
+  ],
+  &quot;total&quot;: 2
+}
+</code></pre></div>
+<h3 id="error-response-example">Error Response Example<a class="headerlink" href="#error-response-example" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>❌ `confluence___get_page` (0.423s)
+
+{
+  &quot;success&quot;: false,
+  &quot;error&quot;: &quot;Page not found with ID: 98765432&quot;,
+  &quot;error_type&quot;: &quot;PageNotFoundError&quot;,
+  &quot;status_code&quot;: 404
+}
+</code></pre></div>
+<img alt="Test Results" src="../../../img/how-tos/credentials-toolkits/test-toolkit-tools/test_interface.png" /></p>
+<hr />
+<h2 id="advanced-testing-features">Advanced Testing Features<a class="headerlink" href="#advanced-testing-features" title="Permanent link">&para;</a></h2>
+<h3 id="chat-history-and-multiple-tests">Chat History and Multiple Tests<a class="headerlink" href="#chat-history-and-multiple-tests" title="Permanent link">&para;</a></h3>
+<p>The test interface maintains a conversation history, allowing you to:</p>
+<ul>
+<li><strong>Review Previous Tests</strong>: Scroll through past test executions</li>
+<li><strong>Compare Results</strong>: See how different parameters affect tool outputs</li>
+<li><strong>Track Changes</strong>: Monitor how tool behavior changes after configuration updates</li>
+</ul>
+<p><strong>Clear Chat History:</strong></p>
+<ul>
+<li>Click the <strong>Clear</strong> (trash) icon at the top of the chat interface</li>
+<li>This removes all previous test results and starts fresh</li>
+</ul>
+<h3 id="fullscreen-mode">Fullscreen Mode<a class="headerlink" href="#fullscreen-mode" title="Permanent link">&para;</a></h3>
+<p>For detailed result analysis:</p>
+<ol>
+<li>Click the <strong>Fullscreen</strong> icon at the top of the chat interface</li>
+<li>The test results expand to fill the entire screen</li>
+<li>Click the fullscreen icon again (or press ESC) to return to normal view</li>
+</ol>
+<p>This is particularly useful when:</p>
+<ul>
+<li>Examining large JSON responses</li>
+<li>Analyzing complex tool outputs</li>
+<li>Comparing multiple test results side-by-side</li>
+</ul>
+<hr />
+<h2 id="common-testing-scenarios">Common Testing Scenarios<a class="headerlink" href="#common-testing-scenarios" title="Permanent link">&para;</a></h2>
+<h3 id="scenario-1-testing-github-create-branch">Scenario 1: Testing GitHub Create Branch<a class="headerlink" href="#scenario-1-testing-github-create-branch" title="Permanent link">&para;</a></h3>
+<p><strong>Objective</strong>: Verify that your GitHub credential can create a new branch in a repository</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li><strong>Select Model</strong>: <code>gpt-4o-mini</code></li>
+<li><strong>Select Tool</strong>: <code>create_branch</code></li>
+<li><strong>Configure Parameters</strong>:<ul>
+<li><code>branch_name</code>: <code>feature/test-branch</code></li>
+</ul>
+</li>
+<li><strong>Run Tool</strong>: Click RUN TOOL</li>
+<li><strong>Verify Result</strong>: Confirm that the new branch was created successfully</li>
+</ol>
+<p><strong>Expected Result</strong>: JSON response confirming branch creation with branch name, commit SHA, and reference details.</p>
+<h3 id="scenario-2-testing-jira-issue-creation">Scenario 2: Testing Jira Issue Creation<a class="headerlink" href="#scenario-2-testing-jira-issue-creation" title="Permanent link">&para;</a></h3>
+<p><strong>Objective</strong>: Test creating a new Jira issue with your configured credentials</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li><strong>Select Model</strong>: <code>gpt-4o</code></li>
+<li><strong>Select Tool</strong>: <code>create_issue</code></li>
+<li><strong>Configure Parameters</strong>:
+     <code>Issue Json *</code>:<br />
+{
+  "fields": {
+    "project": {
+      "key": "EL"
+    },
+    "summary": "Test issue from ELITEA toolkit",
+    "issuetype": {
+      "name": "Task"
+    },
+    "description": {
+      "type": "doc",
+      "version": 1,
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "This is a test issue created via toolkit testing"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+     ```</li>
+<li><strong>Run Tool</strong>: Click RUN TOOL</li>
+<li><strong>Verify Result</strong>: Check that the issue was created and the response includes the issue key</li>
+</ol>
+<p><strong>Expected Result</strong>: Success response with the newly created issue key (e.g., <code>DEMO-123</code>).</p>
+<h3 id="scenario-3-testing-index-data-tool">Scenario 3: Testing Index Data Tool<a class="headerlink" href="#scenario-3-testing-index-data-tool" title="Permanent link">&para;</a></h3>
+<p><strong>Objective</strong>: Test indexing functionality with your configured PgVector and embedding model</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li><strong>Select Model</strong>: <code>gpt-4o</code></li>
+<li><strong>Select Tool</strong>: <code>index_data</code></li>
+<li><strong>Configure Parameters</strong>:<ul>
+<li><code>index_name</code>: <code>test</code> (7 characters max)</li>
+<li><code>clean_index</code>: <code>true</code> (checkbox checked)</li>
+<li><code>progress_step</code>: <code>10</code></li>
+<li>Additional toolkit-specific parameters (e.g., <code>repository</code>, <code>branch</code> for GitHub)</li>
+</ul>
+</li>
+<li><strong>Run Tool</strong>: Click RUN TOOL</li>
+<li><strong>Monitor Progress</strong>: Watch for progress updates during indexing</li>
+<li><strong>Verify Result</strong>: Confirm indexing completed successfully</li>
+</ol>
+<p><strong>Expected Result</strong>: Success message with indexing statistics (documents processed, chunks created, etc.).</p>
+<h3 id="scenario-4-testing-search-index-tool">Scenario 4: Testing Search Index Tool<a class="headerlink" href="#scenario-4-testing-search-index-tool" title="Permanent link">&para;</a></h3>
+<p><strong>Objective</strong>: Verify that indexed data can be searched with natural language queries</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li><strong>Select Model</strong>: <code>gpt-4o</code></li>
+<li><strong>Select Tool</strong>: <code>search_index</code></li>
+<li><strong>Configure Parameters</strong>:<ul>
+<li><code>collection_suffix</code>: <code>test</code> (must match an existing index)</li>
+<li><code>query</code>: <code>authentication implementation</code></li>
+<li><code>top_k</code>: <code>5</code></li>
+<li><code>cut_off</code>: <code>0.7</code></li>
+</ul>
+</li>
+<li><strong>Run Tool</strong>: Click RUN TOOL</li>
+<li><strong>Review Results</strong>: Examine the returned search results with relevance scores</li>
+</ol>
+<p><strong>Expected Result</strong>: List of relevant documents/chunks with similarity scores and metadata.</p>
+<hr />
+<h2 id="troubleshooting-test-failures">Troubleshooting Test Failures<a class="headerlink" href="#troubleshooting-test-failures" title="Permanent link">&para;</a></h2>
+<h3 id="common-issues-and-solutions">Common Issues and Solutions<a class="headerlink" href="#common-issues-and-solutions" title="Permanent link">&para;</a></h3>
+<h4 id="1-authentication-errors">1. Authentication Errors<a class="headerlink" href="#1-authentication-errors" title="Permanent link">&para;</a></h4>
+<p><strong>Problem</strong>: <code>401 Unauthorized</code> or <code>403 Forbidden</code> errors</p>
+<p><strong>Solutions:</strong></p>
+<ul>
+<li><strong>Verify Credentials</strong>: Check that credentials are correctly configured in Settings → Credentials</li>
+<li><strong>Check Permissions</strong>: Ensure the credential has necessary permissions for the tool</li>
+<li><strong>Refresh Tokens</strong>: Update expired tokens or API keys</li>
+<li><strong>Test Connectivity</strong>: Verify network access to the external service</li>
+</ul>
+<h4 id="2-parameter-validation-errors">2. Parameter Validation Errors<a class="headerlink" href="#2-parameter-validation-errors" title="Permanent link">&para;</a></h4>
+<p><strong>Problem</strong>: <code>Invalid parameter</code> or <code>Required field missing</code> errors</p>
+<p><strong>Solutions:</strong></p>
+<ul>
+<li><strong>Review Required Fields</strong>: Ensure all fields marked with (*) are filled</li>
+<li><strong>Check Data Types</strong>: Verify that values match expected types (string, number, array, etc.)</li>
+<li><strong>Validate Formats</strong>: Ensure data formats are correct (e.g., valid JSON for object fields)</li>
+<li><strong>Review Field Descriptions</strong>: Hover over field labels for parameter requirements</li>
+</ul>
+<h4 id="3-connection-timeouts">3. Connection Timeouts<a class="headerlink" href="#3-connection-timeouts" title="Permanent link">&para;</a></h4>
+<p><strong>Problem</strong>: Tool execution times out without response</p>
+<p><strong>Solutions:</strong></p>
+<ul>
+<li><strong>Check Service Status</strong>: Verify the external service is operational</li>
+<li><strong>Network Connectivity</strong>: Ensure network access to the service URL</li>
+<li><strong>Firewall Rules</strong>: Check if firewalls are blocking connections</li>
+<li><strong>Service URLs</strong>: Verify endpoint URLs are correct in toolkit configuration</li>
+</ul>
+<h4 id="4-tool-not-found-errors">4. Tool Not Found Errors<a class="headerlink" href="#4-tool-not-found-errors" title="Permanent link">&para;</a></h4>
+<p><strong>Problem</strong>: Selected tool doesn't execute or shows as unavailable</p>
+<p><strong>Solutions:</strong></p>
+<ul>
+<li><strong>Enable Tool</strong>: Ensure the tool is checked in toolkit configuration</li>
+<li><strong>Save Configuration</strong>: Save toolkit changes before testing</li>
+<li><strong>Refresh Page</strong>: Reload the toolkit page to update available tools</li>
+<li><strong>Check Tool Selection</strong>: Verify the tool is supported for the toolkit type</li>
+</ul>
+<h4 id="5-model-configuration-issues">5. Model Configuration Issues<a class="headerlink" href="#5-model-configuration-issues" title="Permanent link">&para;</a></h4>
+<p><strong>Problem</strong>: LLM model errors or unavailable models</p>
+<p><strong>Solutions:</strong></p>
+<ul>
+<li><strong>Select Valid Model</strong>: Choose a model configured in your project</li>
+<li><strong>Check Model Access</strong>: Verify you have access to the selected model</li>
+<li><strong>Review Model Settings</strong>: Ensure model parameters are within valid ranges</li>
+<li><strong>Use Default Model</strong>: Try testing with the project's default model first</li>
+</ul>
+<hr />
+<h2 id="best-practices-for-toolkit-testing">Best Practices for Toolkit Testing<a class="headerlink" href="#best-practices-for-toolkit-testing" title="Permanent link">&para;</a></h2>
+<h3 id="before-production-use">Before Production Use<a class="headerlink" href="#before-production-use" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Test All Critical Tools</strong>: Verify each tool you plan to use in agents or conversations</li>
+<li><strong>Validate with Real Data</strong>: Test with actual data you'll be working with</li>
+<li><strong>Check Error Handling</strong>: Test tools with invalid inputs to understand error responses</li>
+<li><strong>Document Results</strong>: Keep notes on successful parameter combinations</li>
+<li><strong>Test After Updates</strong>: Re-test tools after updating credentials or configuration</li>
+</ol>
+<h3 id="parameter-testing-strategy">Parameter Testing Strategy<a class="headerlink" href="#parameter-testing-strategy" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Start with Defaults</strong>: Begin testing with default parameter values</li>
+<li><strong>Test Required Fields Only</strong>: First test with just required parameters</li>
+<li><strong>Add Optional Parameters</strong>: Gradually add optional parameters to understand their impact</li>
+<li><strong>Test Edge Cases</strong>: Try boundary values (empty strings, maximum limits, etc.)</li>
+<li><strong>Validate Complex Inputs</strong>: Carefully test tools requiring JSON or complex objects</li>
+</ol>
+<h3 id="performance-testing">Performance Testing<a class="headerlink" href="#performance-testing" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Monitor Execution Times</strong>: Note how long different tools take to execute</li>
+<li><strong>Test with Different Models</strong>: Compare performance across different LLM models</li>
+<li><strong>Adjust Timeouts</strong>: Configure appropriate timeout values based on tool performance</li>
+<li><strong>Test Under Load</strong>: Consider how tools perform with larger datasets or parameters</li>
+</ol>
+<h3 id="security-testing">Security Testing<a class="headerlink" href="#security-testing" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Test Permission Boundaries</strong>: Verify tools respect credential permissions</li>
+<li><strong>Validate Data Access</strong>: Ensure tools only access authorized data</li>
+<li><strong>Check Sensitive Data</strong>: Confirm sensitive information is properly handled</li>
+<li><strong>Test Error Messages</strong>: Verify error messages don't expose sensitive information</li>
+</ol>
+<hr />
+<h2 id="testing-tools-vs-using-in-agents">Testing Tools vs. Using in Agents<a class="headerlink" href="#testing-tools-vs-using-in-agents" title="Permanent link">&para;</a></h2>
+<p>Understanding the differences between testing tools and using them in agents helps set appropriate expectations:</p>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Tool Testing</th>
+<th>Agent Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Execution Context</strong></td>
+<td>Direct tool call with explicit parameters</td>
+<td>Agent decides when and how to call tools based on conversation</td>
+</tr>
+<tr>
+<td><strong>Parameter Source</strong></td>
+<td>Manually provided by you</td>
+<td>Extracted from conversation by the LLM</td>
+</tr>
+<tr>
+<td><strong>Error Handling</strong></td>
+<td>Immediate error feedback</td>
+<td>Agent may retry or request clarification</td>
+</tr>
+<tr>
+<td><strong>Output Format</strong></td>
+<td>Raw tool output (usually JSON)</td>
+<td>Natural language interpretation by agent</td>
+</tr>
+<tr>
+<td><strong>Execution Flow</strong></td>
+<td>Single tool execution</td>
+<td>May involve multiple tool calls in sequence</td>
+</tr>
+<tr>
+<td><strong>User Interaction</strong></td>
+<td>One-time test</td>
+<td>Ongoing conversation with context</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key Takeaway</strong>: Successful tool testing validates that the tool works correctly with proper parameters. In agent usage, the LLM determines when to call tools and how to extract parameters from natural language conversations.</p>
+<hr />
+<h2 id="related-resources">Related Resources<a class="headerlink" href="#related-resources" title="Permanent link">&para;</a></h2>
+<p>For more information on toolkit configuration and usage:</p>
+<ul>
+<li><strong><a href="../../../menus/toolkits/">Toolkits Menu</a></strong> — Complete guide to toolkit management and configuration</li>
+<li><strong><a href="../../../getting-started/create-credential/">Create a Credential</a></strong> — How to configure authentication credentials</li>
+<li><strong><a href="../../../menus/settings/ai-configuration/">AI Configuration</a></strong> — Set up LLM models and embedding configurations</li>
+<li><strong><a href="../../../menus/agents/">Agents Menu</a></strong> — Create agents that use your tested toolkits</li>
+<li><strong><a href="../../../menus/chat/">Chat Menu</a></strong> — Use toolkits in conversations</li>
+<li><strong><a href="../../indexing/indexing-overview/">Indexing Overview</a></strong> — Learn about indexing tools and data processing</li>
+</ul>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../creating-toolkits-with-user-specific-credentials/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Individual User Credentials for Shared Toolkits">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Individual User Credentials for Shared Toolkits
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../jira-automation-with-elitea/" class="md-footer__link md-footer__link--next" aria-label="Next: Automate JIRA Issue Review">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Automate JIRA Issue Review
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.path", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../../../extra_js/fullscreen.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,6728 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://elitea.ai/docs/how-tos/pipelines/nodes/iteration-nodes/">
+      
+      
+        <link rel="prev" href="../control-flow-nodes/">
+      
+      
+        <link rel="next" href="../utility-nodes/">
+      
+      
+      <link rel="icon" href="../../../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+    
+    
+      
+        <title>Iteration Nodes - ELITEA Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../extra_css/material.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#iteration-nodes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="ELITEA Documentation" class="md-header__button md-logo" aria-label="ELITEA Documentation" data-md-component="logo">
+      
+  <img src="../../../../img/favicon.ico" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ELITEA Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Iteration Nodes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../.." class="md-tabs__link">
+          
+  
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../getting-started/very-quick-start/" class="md-tabs__link">
+          
+  
+  
+  Getting Started
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../menus/overview/" class="md-tabs__link">
+          
+  
+  
+  Menus
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../chat-conversations/how-to-use-chat-functionality/" class="md-tabs__link">
+          
+  
+  
+  How-To Guides
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../integrations/mcp/mcp-server-stdio/" class="md-tabs__link">
+          
+  
+  
+  Integrations
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../release-notes/rn_current/" class="md-tabs__link">
+          
+  
+  
+  Release Notes
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../migration/v2.0.0/migration-overview/" class="md-tabs__link">
+          
+  
+  
+  Migration & Upgrade
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../support/faqs/" class="md-tabs__link">
+          
+  
+  
+  Support
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../archive/prompt-magic-assistant/" class="md-tabs__link">
+          
+  
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="ELITEA Documentation" class="md-nav__button md-logo" aria-label="ELITEA Documentation" data-md-component="logo">
+      
+  <img src="../../../../img/favicon.ico" alt="logo">
+
+    </a>
+    ELITEA Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Welcome to Elitea
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Welcome to Elitea
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Elitea Values
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../home/introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../getting-started/quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quick Start
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../home/glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Glossary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../home/onboarding-tips/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Onboarding Tips
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Key Concepts
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Key Concepts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../home/key-concepts/what-is-an-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is an agent?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../home/key-concepts/what-is-a-pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is a pipeline?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../home/key-concepts/what-is-a-credential/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is a credential?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../home/key-concepts/what-is-a-toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is a toolkit?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../home/key-concepts/what-is-a-conversation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is a conversation?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../home/key-concepts/what-is-an-artifact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is an artifact?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../home/key-concepts/what-is-a-collection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is a collection?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Quick Starts
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Quick Starts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../getting-started/very-quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Very Quick Start
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../getting-started/quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quick Start
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Initial Setup
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Initial Setup
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../getting-started/create-personal-access-token/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create a Personal Access Token
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../getting-started/create-secret/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create a Secret
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../getting-started/create-credential/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create a Credential
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../getting-started/create-toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create a Toolkit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../getting-started/configure-epam-ai-dial-key/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure EPAM AI DIAL Keys
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Create Entities
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Create Entities
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../getting-started/create-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create an Agent
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../getting-started/create-artifact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create an Artifact
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../getting-started/create-pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create a Pipeline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../getting-started/create-conversation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create a Conversation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../getting-started/indexing-quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create an Index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../getting-started/configure-and-use-mcp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure and Use MCP Servers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Menus
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Menus
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Main Menus
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Main Menus
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../menus/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../menus/chat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chat
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../menus/agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Agents
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../menus/pipelines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pipelines
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../menus/credentials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Credentials
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../menus/toolkits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Toolkits
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../menus/mcps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MCPs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../menus/collections/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Collections
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../menus/artifacts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Artifacts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_10" id="__nav_3_1_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Settings
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_10">
+            <span class="md-nav__icon md-icon"></span>
+            Settings
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../menus/settings/settings-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Settings Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../menus/settings/ai-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AI Configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../menus/settings/personal-tokens/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Personal Tokens
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../menus/settings/secrets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Secrets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../menus/settings/projects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Projects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../menus/settings/monitoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Monitoring
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    How-To Guides
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            How-To Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Chat & Conversations
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Chat & Conversations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chat-conversations/how-to-use-chat-functionality/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chat Usage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chat-conversations/how-to-canvas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Canvas in Conversation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chat-conversations/add-teammates-to-conversation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Add Teammates to Conversation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chat-conversations/attach-images-and-files-in-chat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Attachments in Conversation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chat-conversations/enable-internal-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Internal Tools in Conversation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chat-conversations/how-to-create-and-edit-agents-from-canvas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Canvas - Create and Edit Agents
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chat-conversations/how-to-create-and-edit-pipelines-from-canvas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Canvas - Create and Edit Pipelines
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chat-conversations/how-to-create-and-edit-toolkits-from-canvas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Canvas - Create and Edit Toolkits
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chat-conversations/how-to-create-and-edit-mcps-from-canvas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Canvas - Create and Edit MCPs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Indexing
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Indexing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../indexing/indexing-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Indexing Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../indexing/indexing-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Indexing Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../indexing/using-indexes-tab-interface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to create and use indexes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../indexing/index-github-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Repository Indexing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../indexing/index-confluence-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Confluence Indexing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../indexing/index-jira-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Jira Indexing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../indexing/index-sharepoint-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SharePoint Indexing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../indexing/index-artifacts-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Artifacts Indexing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../indexing/index-figma-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Figma Indexing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../indexing/index-testrail-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TestRail Indexing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../indexing/index-xray-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Xray Indexing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../indexing/index-zephyr-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zephyr Indexing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../indexing/index-ado-wiki-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ADO Wiki Indexing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Agents & Pipelines
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Agents & Pipelines
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../agents-pipelines/agents-pipelines-history/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    View Agents and Pipelines History
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../agents-pipelines/entity-versioning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Entity Versioning
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_3_3" id="__nav_4_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Pipeline Building Blocks
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Pipeline Building Blocks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pipelines Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../states/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    States
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_3_3_3" id="__nav_4_3_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Nodes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_3_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_3_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Nodes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Nodes Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interaction-nodes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Interaction Nodes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../execution-nodes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Execution Nodes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../control-flow-nodes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Control Flow Nodes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Iteration Nodes
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Iteration Nodes
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#loop-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loop Node
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Loop Node">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loop-from-tool-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loop from Tool Node
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Loop from Tool Node">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameters_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-practices_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#router-node-for-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      Router Node (for Loops)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Router Node (for Loops)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How It Works
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Pattern
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loop Patterns
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-practices_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-router-for-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use Router for Loops
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iteration-nodes-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iteration Nodes Comparison
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Iteration Nodes Comparison">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-each-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use Each Node
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="When to Use Each Node">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#loop-node_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loop Node ✅
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop-from-tool-node_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loop from Tool Node ✅
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#router-node-for-loops_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Router Node (for Loops) ✅
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../utility-nodes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Utility Nodes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nodes-connectors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Nodes Connectors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entry-point/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Entry Point
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../flow-editor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Flow Editor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../yaml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    YAML Configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix-comparison-tables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Appendix - Comparison Tables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Credentials & Toolkits
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Credentials & Toolkits
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../credentials-toolkits/how-to-use-credentials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Use Credentials
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../credentials-toolkits/creating-toolkits-with-user-specific-credentials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Individual User Credentials for Shared Toolkits
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../credentials-toolkits/how-to-test-toolkit-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Test Toolkits Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../credentials-toolkits/jira-automation-with-elitea/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Automate JIRA Issue Review
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../credentials-toolkits/how-to-use-webhooks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Use Webhooks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Entity Management
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Entity Management
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../entity-management/search-entities/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Search Entities
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../entity-management/organizing-entities/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Organizing Entities
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../entity-management/manage-users-and-roles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Manage Roles & Permissions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Integrations
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Integrations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    MCP
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            MCP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../integrations/mcp/mcp-server-stdio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Server (STDIO)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../integrations/mcp/mcp-server-sse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Server (SSE)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../integrations/mcp/mcp-client/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Client (STDIO)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../integrations/mcp/make-tools-available-by-mcp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Make Tools Available by MCP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Toolkits
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Toolkits
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../integrations/toolkits/ado_repos_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ADO Repos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../integrations/toolkits/ado_wiki_plan_board_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ADO Wiki / Boards / Test Plans
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../integrations/toolkits/artifact_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Artifact
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../integrations/toolkits/bitbucket_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    BitBucket
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../integrations/toolkits/browser_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Browser
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../integrations/toolkits/confluence_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Confluence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../integrations/toolkits/custom_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Custom
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../integrations/toolkits/figma_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Figma
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../integrations/toolkits/github_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GitHub
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../integrations/toolkits/gitlab_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GitLab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../integrations/toolkits/gitlab_org_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GitLab Org
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../integrations/toolkits/google_places_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Google Places
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../integrations/toolkits/jira_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Jira
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../integrations/toolkits/memory_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Memory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../integrations/toolkits/openapi_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OpenAPI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../integrations/toolkits/pandas_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pandas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../integrations/toolkits/postman_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Postman
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../integrations/toolkits/powerpoint_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PowerPoint
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../integrations/toolkits/qtest_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    qTest
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../integrations/toolkits/rally_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rally
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../integrations/toolkits/reportportal_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ReportPortal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../integrations/toolkits/salesforce_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SalesForce
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../integrations/toolkits/servicenow_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ServiceNow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../integrations/toolkits/sharepoint_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SharePoint
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../integrations/toolkits/slack_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Slack
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../integrations/toolkits/sonar_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sonar
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../integrations/toolkits/sql_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SQL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../integrations/toolkits/testIO_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TestIO
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../integrations/toolkits/testrail_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TestRail
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../integrations/toolkits/xray_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Xray Cloud
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../integrations/toolkits/zephyr_scale_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zephyr Scale
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../integrations/toolkits/zephyr_enterprise_toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zephyr Enterprise
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Extensions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Extensions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../integrations/extensions/elitea-code/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Elitea Code
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../integrations/extensions/elitea-code-chat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Elitea Code Chat
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Release Notes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Release Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Current Version
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            Current Version
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../release-notes/rn_current/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RN 2.0.0 Beta
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Previous versions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Previous versions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../release-notes/archived/rn12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RN 1.7.1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../release-notes/archived/rn11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RN 1.7.0
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../release-notes/archived/rn10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RN 1.6.0
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../release-notes/archived/rn9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RN 1.5.2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../release-notes/archived/rn8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RN 1.5.1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../release-notes/archived/rn7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RN 1.5.0
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../release-notes/archived/rn6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RN 1.4.0
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../release-notes/archived/rn5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RN 1.3.0
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../release-notes/archived/rn4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RN 1.2.0
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../release-notes/archived/rn3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RN 1.1.0
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../release-notes/archived/rn2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RN 1.0.1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../release-notes/archived/rn1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RN 1.0.0
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Migration & Upgrade
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Migration & Upgrade
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Upgrading to v2.0.0
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            Upgrading to v2.0.0
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../migration/v2.0.0/migration-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Migration Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../migration/v2.0.0/update-llm-nodes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Update LLM Nodes in Pipelines
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../migration/v2.0.0/update-pipelines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Update Pipelines from Previous Versions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Upgrading to v1.7.0
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            Upgrading to v1.7.0
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../migration/v1.7.0/migration-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Migration Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../migration/v1.7.0/next-quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quick Start (Next env)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../migration/v1.7.0/migrate-datasources-to-indexing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Migrate Datasources to Indexing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Support
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Support
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../support/faqs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../support/contact-support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contact Support
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../support/additional-resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Additional Resources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Archive
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Archive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/prompt-magic-assistant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Prompt Magic Assistant
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/alita-dial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Alita Dial
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/creating-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Creating Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/datasources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Datasources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/agents-examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Agents Examples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/prompts-examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Prompts Examples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../features/export-import/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Export & Import Entities
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../features/forking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fork Entities
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../features/public-project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Public Project
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../features/monitoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Monitoring
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_12" id="__nav_9_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Pipelines
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_12">
+            <span class="md-nav__icon md-icon"></span>
+            Pipelines
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../features/pipelines/pipeline-agent-framework/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pipelines Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#loop-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loop Node
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Loop Node">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loop-from-tool-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loop from Tool Node
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Loop from Tool Node">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameters_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-practices_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#router-node-for-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      Router Node (for Loops)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Router Node (for Loops)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How It Works
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Pattern
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loop Patterns
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-practices_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-router-for-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use Router for Loops
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iteration-nodes-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iteration Nodes Comparison
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Iteration Nodes Comparison">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-each-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use Each Node
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="When to Use Each Node">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#loop-node_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loop Node ✅
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop-from-tool-node_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loop from Tool Node ✅
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#router-node-for-loops_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Router Node (for Loops) ✅
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="iteration-nodes">Iteration Nodes<a class="headerlink" href="#iteration-nodes" title="Permanent link">&para;</a></h1>
+<p>Iteration Nodes enable your pipeline to perform repetitive tasks, processing multiple items systematically. These nodes form the "looping" layer of your workflow, allowing pipelines to handle lists, batch operations, and iterative processing with precision and control.</p>
+<p><strong>Available Iteration Nodes:</strong></p>
+<ul>
+<li><strong><a href="#loop-node">Loop Node</a></strong> - Execute a toolkit repeatedly based on task instructions</li>
+<li><strong><a href="#loop-from-tool-node">Loop from Tool Node</a></strong> - Generate a list dynamically and process each item</li>
+<li><strong><a href="#router-node-for-loops">Router Node (for Loops)</a></strong> - Create custom loop structures with conditional routing</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Understanding Iteration</p>
+<p>Iteration nodes are powerful but can be complex. They allow you to process multiple items (files, records, tasks) in a single pipeline execution, making them essential for automation and batch processing workflows. You can also create custom loops using Router nodes for more precise control over iteration logic.</p>
+</div>
+<hr />
+<h2 id="loop-node">Loop Node<a class="headerlink" href="#loop-node" title="Permanent link">&para;</a></h2>
+<p>The Loop Node executes a selected toolkit repeatedly, creating input for each iteration based on task instructions. It's designed for scenarios where you know what needs to be iterated over and can describe how to create inputs for each iteration.</p>
+<p><img alt="Loop Node Interface" src="../../../../img/how-tos/agents-pipelines/pipeline-building-blocks/nodes/loop-node-add.png" /></p>
+<h3 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h3>
+<p>Use the Loop Node to:</p>
+<ul>
+<li><strong>Process lists of items</strong> where you define iteration logic in the Task field</li>
+<li><strong>Execute the same action repeatedly</strong> with different inputs</li>
+<li><strong>Automate batch operations</strong> across multiple entities</li>
+<li><strong>Iterate through data</strong> extracted from state or previous nodes</li>
+<li><strong>Repeat toolkit execution</strong> until all items are processed</li>
+</ul>
+<h3 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Purpose</th>
+<th>Type Options &amp; Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Toolkit</strong></td>
+<td>Select the toolkit type that will be executed in each loop iteration</td>
+<td><strong>Options:</strong><br>- Toolkits - ELITEA toolkits (e.g., GitHub, Jira, Confluence)<br>- MCPs - Model Context Protocol servers<br>- Agents - ELITEA agents<br>- Pipelines - Other pipeline executions<br><br><strong>Toolkit Selection Behavior:</strong><br>- When you select <strong>Toolkits</strong> or <strong>MCPs</strong>: A <strong>Tool</strong> dropdown appears; you must select a specific tool<br>- When you select <strong>Agents</strong> or <strong>Pipelines</strong>: No additional dropdown; the toolkit is executed directly<br><br><strong>Example - Toolkit with Tool:</strong><br><code>toolkit: "llm-node"</code><br><code>tool: "createFile"</code><br><br><strong>Example - Agent:</strong><br><code>toolkit: "Code Documentation Agent"</code></td>
+</tr>
+<tr>
+<td><strong>Tool</strong></td>
+<td>Select the specific tool from the chosen toolkit or MCP</td>
+<td><strong>Availability:</strong> Only appears when Toolkit is set to <strong>Toolkits</strong> or <strong>MCPs</strong><br><br><strong>Example:</strong><br><code>toolkit: "GitHub Expert"</code><br><code>tool: "createFile"</code><br><br><strong>Tool Selection:</strong><br>- Dropdown shows all available tools from the selected toolkit/MCP<br>- Each toolkit provides different tools<br>- Tool parameters are configured through the Task field and input mapping</td>
+</tr>
+<tr>
+<td><strong>Task</strong></td>
+<td>Provide instructions on how to formulate the input for each iteration of the loop</td>
+<td><strong>Format:</strong> Natural language instructions describing how to extract or create input data from the current state or chat history<br><br><strong>Example Task:</strong><br><code>task: \|</code><br><code>Formulate ALL file paths from chat_history as a list of inputs.</code><br><code>For each file path, create input as:</code><br><code>- "task": the file path</code><br><code>- "chat_history": the entire conversation history</code><br><br><strong>Common Task Patterns:</strong><br>- Extract from Chat History<br>- Process State Variable List<br>- Generate Range<br>- Parse JSON Array<br><br><strong>How Task Works:</strong> The Loop Node uses the Task instructions with an internal LLM to analyze the current state, identify items to iterate over, generate a list of inputs, and execute the toolkit for each input</td>
+</tr>
+<tr>
+<td><strong>Input</strong></td>
+<td>Specify which state variables the Loop Node reads when executing the Task instructions</td>
+<td><strong>Options:</strong><br>- Default states: <code>input</code>, <code>messages</code><br>- Custom states: Any state variables you've defined<br><br><strong>Example:</strong><br><code>input: ["messages", "file_list", "project_id"]</code><br><br><strong>Usage in Task:</strong> The Loop Node uses these input variables to extract items to iterate over, provide context for iteration logic, and access data needed for each iteration</td>
+</tr>
+<tr>
+<td><strong>Output</strong></td>
+<td>Specify state variable names to store the results from all loop iterations</td>
+<td><strong>Options:</strong><br>- Single output: Results concatenated as string<br>- Multiple outputs: Different aspects of results<br><br><strong>Example:</strong><br><code>output: ["documentation_results", "processed_count"]</code><br><br><strong>Output Accumulation:</strong> All iteration results joined into one string; results from each iteration are appended; final output contains complete results from all iterations</td>
+</tr>
+<tr>
+<td><strong>Structured Output</strong></td>
+<td>Enable structured output parsing for loop results</td>
+<td><strong>Options:</strong><br>- Enabled (toggle on): Parse toolkit responses as structured data<br>- Disabled (toggle off): Treat responses as plain text<br><br><strong>When to Enable:</strong><br>- Toolkit returns JSON or structured data<br>- You need to extract specific fields from results<br>- Results will be used in subsequent nodes with structured input<br><br><strong>Example:</strong><br><code>structured_output: true</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>YAML Configuration</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;process_files&quot;</span>
+<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;loop&quot;</span>
+<span class="w">  </span><span class="nt">toolkit</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Code</span><span class="nv"> </span><span class="s">Documentation</span><span class="nv"> </span><span class="s">Agent&quot;</span>
+<span class="w">  </span><span class="nt">task</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">    </span><span class="no">Formulate ALL file paths from chat_history as a list of inputs.</span>
+<span class="w">    </span><span class="no">For each file path, create input as:</span>
+<span class="w">    </span><span class="no">- &quot;task&quot;: the file path</span>
+<span class="w">    </span><span class="no">- &quot;chat_history&quot;: the entire conversation history</span>
+<span class="w">  </span><span class="nt">input</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;messages&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="nt">output</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;documentation&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="nt">structured_output</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">transition</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;END&quot;</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Task Clarity</p>
+<p>Be specific in your Task instructions. The clearer you are about what to extract and how to format it, the more reliably the Loop Node will execute.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Structured Output Requirements</p>
+<p>Only enable structured output if the toolkit being called actually returns structured data (JSON, dict). Otherwise, parsing may fail.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Performance Considerations</p>
+<p>Each iteration executes the toolkit, which may involve LLM calls, API requests, or external tool execution. For large lists (100+ items), consider batching, pagination, or implementing error handling.</p>
+</div>
+<h3 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Write Clear Task Instructions: Provide explicit, step-by-step instructions on what to extract and how to format inputs.</li>
+<li>Specify Input Variables: List all state variables the Task needs to access for iteration logic.</li>
+<li>Use Structured Output When Appropriate: Enable structured output for JSON-returning toolkits.</li>
+<li>Provide Clear Output Names: Name outputs to indicate what they contain (e.g., "documentation_results" not "result").</li>
+<li>Consider Performance: Be mindful of iteration count; test with small lists first before scaling up.</li>
+<li>Test with Small Lists First: Start with 2-3 items to verify logic, then scale to full list.</li>
+<li>Handle Empty Lists: Account for scenarios with no items; ensure Task returns empty list if nothing found.</li>
+<li>Use Descriptive Toolkit Names: Select toolkits with clear purposes for maintainability.</li>
+<li>Document Expected Input Format: Comment on what the Task expects (e.g., "Expects messages to contain file paths").</li>
+<li>Plan Transition After Loop: Ensure next node handles loop output properly.</li>
+</ul>
+<hr />
+<h2 id="loop-from-tool-node">Loop from Tool Node<a class="headerlink" href="#loop-from-tool-node" title="Permanent link">&para;</a></h2>
+<p>The Loop from Tool Node is a two-stage iteration mechanism: first, it executes a toolkit to generate a list of items, then it processes each item in that list using a second toolkit. This is ideal for dynamic iteration where the list of items isn't known beforehand.</p>
+<h3 id="purpose_1">Purpose<a class="headerlink" href="#purpose_1" title="Permanent link">&para;</a></h3>
+<p>Use the Loop from Tool Node to:</p>
+<ul>
+<li><strong>Dynamically generate iteration lists</strong> using a toolkit</li>
+<li><strong>Process items from tool outputs</strong> (e.g., files from a directory, tickets from Jira)</li>
+<li><strong>Chain two toolkits</strong> where first generates inputs for second</li>
+<li><strong>Automate discovery and processing</strong> workflows</li>
+<li><strong>Handle variable-length lists</strong> determined at runtime</li>
+</ul>
+<p><img alt="Loop from Tool Node Interface" src="../../../../img/how-tos/agents-pipelines/pipeline-building-blocks/nodes/loopfrom-tool-node-add.png" /></p>
+<h3 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Purpose</th>
+<th>Type Options &amp; Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Toolkit (List Generator)</strong></td>
+<td>Select the toolkit that will generate the list of items to iterate over</td>
+<td><strong>Options:</strong><br>- Toolkits - ELITEA toolkits<br>- MCPs - Model Context Protocol servers<br>- Agents - ELITEA agents<br>- Pipelines - Other pipelines<br><br><strong>First-Stage Toolkit:</strong> This toolkit is executed <strong>once</strong> at the beginning to generate the list<br>- For <strong>Toolkits/MCPs</strong>: Must select a specific <strong>Tool</strong><br>- For <strong>Agents/Pipelines</strong>: Toolkit is executed directly<br><br><strong>Example:</strong><br><code>toolkit: "GitHub Expert"</code><br><code>tool: "getFilesFromDirectory"</code></td>
+</tr>
+<tr>
+<td><strong>Tool (List Generator Tool)</strong></td>
+<td>Select the specific tool that generates the item list</td>
+<td><strong>Availability:</strong> Only appears when Toolkit is set to <strong>Toolkits</strong> or <strong>MCPs</strong><br><br><strong>Example:</strong><br><code>toolkit: "GitHub Expert"</code><br><code>tool: "getFilesFromDirectory"</code><br><br><strong>Tool Output Requirements:</strong> The tool must return structured data (list or array)</td>
+</tr>
+<tr>
+<td><strong>Loop Toolkit (Item Processor)</strong></td>
+<td>Select the toolkit that will process each item in the generated list</td>
+<td><strong>Options:</strong><br>- Toolkits - ELITEA toolkits<br>- MCPs - Model Context Protocol servers<br>- Agents - ELITEA agents<br>- Pipelines - Other pipelines<br><br><strong>Second-Stage Toolkit:</strong> This toolkit is executed <strong>for each item</strong> in the list<br>- For <strong>Toolkits/MCPs</strong>: Must select a specific <strong>Loop Tool</strong><br>- For <strong>Agents/Pipelines</strong>: Toolkit is executed directly<br><br><strong>Example:</strong><br><code>loop_toolkit: "llm-node"</code><br><code>loop_tool: "createFile"</code></td>
+</tr>
+<tr>
+<td><strong>Loop Tool (Item Processor Tool)</strong></td>
+<td>Select the specific tool that processes each item</td>
+<td><strong>Availability:</strong> Only appears when Loop Toolkit is set to <strong>Toolkits</strong> or <strong>MCPs</strong><br><br><strong>Example:</strong><br><code>loop_toolkit: "llm-node"</code><br><code>loop_tool: "createFile"</code><br><br><strong>Loop Tool Input:</strong> The loop tool receives input from Variables Mapping for each item</td>
+</tr>
+<tr>
+<td><strong>Variables Mapping</strong></td>
+<td>Map output fields from the list-generating tool to input parameters of the item-processing tool</td>
+<td><strong>Critical Component:</strong> This is the most important configuration for Loop from Tool nodes<br><br><strong>Format:</strong><br><code>variables_mapping:</code><br><code>&lt;output_field&gt;: &lt;input_parameter&gt;</code><br><br><strong>Example:</strong><br><code>variables_mapping:</code><br><code>file_path: "task"</code><br><code>file_content: "source_code"</code><br><code>bucket_name: "BUCKET_NAME"</code><br><br><strong>Mapping Types:</strong><br>- <strong>Type: Fixed</strong> - Direct mapping<br>- <strong>Type: F-String</strong> - Format string<br>- <strong>Type: Variable</strong> - Combine variables</td>
+</tr>
+<tr>
+<td><strong>Task</strong></td>
+<td>Optional instructions for the list-generating toolkit (first stage)</td>
+<td><strong>Usage:</strong> Provide context or instructions to the tool that generates the list<br><br><strong>Example:</strong><br><code>task: "Get all Python files from the src directory"</code><br><br><strong>When to Use Task:</strong><br>- List-generating toolkit needs specific instructions<br>- You want to filter or customize the list generation<br>- Agent or LLM-based toolkit requires context</td>
+</tr>
+<tr>
+<td><strong>Input</strong></td>
+<td>Specify state variables needed by the list-generating toolkit</td>
+<td><strong>Example:</strong><br><code>input: ["repository_name", "directory_path", "file_extension"]</code><br><br><strong>Input Usage:</strong> The first-stage toolkit uses these inputs to generate the list</td>
+</tr>
+<tr>
+<td><strong>Output</strong></td>
+<td>Specify state variable names to store accumulated results from all loop iterations</td>
+<td><strong>Example:</strong><br><code>output: ["documentation_results", "file_count"]</code><br><br><strong>Output Accumulation:</strong> Results from each iteration of the loop tool are accumulated; all loop tool responses combined into single output; final output contains results from processing all items</td>
+</tr>
+<tr>
+<td><strong>Structured Output</strong></td>
+<td>Enable structured output parsing for the list-generating tool</td>
+<td><strong>When to Enable:</strong><br>- List tool returns JSON or structured data<br>- You need to parse array of objects<br>- Variables Mapping depends on structured fields<br><br><strong>Example:</strong><br><code>structured_output: true</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>YAML Configuration</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;document_github_files&quot;</span>
+<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;loop_from_tool&quot;</span>
+<span class="w">  </span><span class="nt">toolkit</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;GitHub</span><span class="nv"> </span><span class="s">Expert&quot;</span>
+<span class="w">  </span><span class="nt">tool</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;getFilesFromDirectory&quot;</span>
+<span class="w">  </span><span class="nt">loop_toolkit</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Code</span><span class="nv"> </span><span class="s">Documentation</span><span class="nv"> </span><span class="s">Agent&quot;</span>
+<span class="w">  </span><span class="nt">variables_mapping</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">file_path</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;task&quot;</span>
+<span class="w">    </span><span class="nt">file_content</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;source_code&quot;</span>
+<span class="w">  </span><span class="nt">input</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;repository_name&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="nt">output</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;documentation&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="nt">structured_output</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">transition</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;create_readme&quot;</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Structured Output for List Generation</p>
+<p>Almost always enable <code>structured_output: true</code> for Loop from Tool nodes, since the list tool must return an array or list of items to iterate over.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Variables Mapping Requirement</p>
+<p>Variables Mapping is <strong>mandatory</strong> for Loop from Tool nodes. Without it, the loop tool won't know how to receive data from the list tool.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Performance Warning</p>
+<p>Loop from Tool executes loop toolkit <strong>for each item</strong> in the list. Large lists can result in many iterations. Test with small lists first and consider rate limits.</p>
+</div>
+<h3 id="best-practices_1">Best Practices<a class="headerlink" href="#best-practices_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Ensure List Tool Returns Structured Data: The first toolkit must return an array of objects with consistent fields.</li>
+<li>Map All Required Loop Tool Parameters: Include all necessary mappings for the item processor tool.</li>
+<li>Enable Structured Output: Always enable for list generation since the tool must return an array.</li>
+<li>Test List Generation First: Verify the list tool works before adding loop processing; check field names in output.</li>
+<li>Use Descriptive Variable Names: Clear mapping names improve readability (e.g., "customer_id" not "id").</li>
+<li>Handle Empty Lists: Ensure list tool returns empty array <code>[]</code> not null; loop skips execution if list is empty.</li>
+<li>Consider List Size Limits: Be aware of iteration count; test with small subsets first.</li>
+<li>Provide Input for List Tool: Ensure list tool has needed context (repository name, directory path, etc.).</li>
+<li>Use Task for Additional Context: Provide instructions to list tool (e.g., "Get only Python files modified in last 7 days").</li>
+<li>Document Mapping Expectations: Comment expected structure from list tool and what loop tool expects.</li>
+<li>Plan for Failures: Consider what happens if list tool fails; test with empty repositories, missing directories.</li>
+<li>Chain Outputs Properly: Ensure accumulated output is usable by next node.</li>
+</ul>
+<hr />
+<h2 id="router-node-for-loops">Router Node (for Loops)<a class="headerlink" href="#router-node-for-loops" title="Permanent link">&para;</a></h2>
+<p>The Router Node, typically used for conditional branching, can also create custom loop structures by routing execution back to previous nodes. This approach provides more precise control over loop conditions and iteration logic compared to dedicated Loop nodes.</p>
+<h3 id="purpose_2">Purpose<a class="headerlink" href="#purpose_2" title="Permanent link">&para;</a></h3>
+<p>Use the Router Node for loops to:</p>
+<ul>
+<li><strong>Create custom iteration logic</strong> with explicit loop control conditions</li>
+<li><strong>Route back to previous nodes</strong> to repeat execution</li>
+<li><strong>Control loop termination</strong> using state variables (counters, flags, conditions)</li>
+<li><strong>Implement complex loop patterns</strong> that Loop and Loop from Tool nodes don't support</li>
+<li><strong>Combine conditional logic with iteration</strong> in a single node</li>
+</ul>
+<h3 id="how-it-works">How It Works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h3>
+<p>Router-based loops follow this pattern:</p>
+<ol>
+<li><strong>Initialize</strong>: Set up loop control variables (counter, list index, continuation flag) in state</li>
+<li><strong>Process</strong>: Execute processing nodes (LLM, Function, Tool, Code nodes)</li>
+<li><strong>Update State</strong>: Modify loop control variables (increment counter, update flag, process next item)</li>
+<li><strong>Route Decision</strong>: Router evaluates loop condition:</li>
+<li><strong>Continue Loop</strong>: Routes back to processing node if condition met (e.g., counter &lt; max)</li>
+<li><strong>Exit Loop</strong>: Routes to next node or END if loop should terminate</li>
+<li><strong>Repeat</strong>: Steps 2-4 repeat until exit condition is met</li>
+</ol>
+<h3 id="configuration-pattern">Configuration Pattern<a class="headerlink" href="#configuration-pattern" title="Permanent link">&para;</a></h3>
+<p><strong>Basic Loop Structure:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nt">nodes</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">InitializeLoop</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">state_modifier</span>
+<span class="w">    </span><span class="nt">template</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">0</span><span class="nv"> </span><span class="s">}}&quot;</span><span class="w">  </span><span class="c1"># Initialize counter</span>
+<span class="w">    </span><span class="nt">output</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">loop_counter</span>
+<span class="w">    </span><span class="nt">transition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ProcessItem</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ProcessItem</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">llm</span>
+<span class="w">    </span><span class="c1"># Processing logic here</span>
+<span class="w">    </span><span class="nt">transition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UpdateCounter</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UpdateCounter</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">code</span>
+<span class="w">    </span><span class="nt">code</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fixed</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">        </span><span class="no">counter = alita_state.get(&#39;loop_counter&#39;, 0)</span>
+<span class="w">        </span><span class="no">max_iterations = alita_state.get(&#39;max_iterations&#39;, 10)</span>
+<span class="w">        </span><span class="no">return {</span>
+<span class="w">          </span><span class="no">&quot;loop_counter&quot;: counter + 1,</span>
+<span class="w">          </span><span class="no">&quot;continue_loop&quot;: counter + 1 &lt; max_iterations</span>
+<span class="w">        </span><span class="no">}</span>
+<span class="w">    </span><span class="nt">input</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">loop_counter</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">max_iterations</span>
+<span class="w">    </span><span class="nt">output</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">loop_counter</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">continue_loop</span>
+<span class="w">    </span><span class="nt">structured_output</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">transition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LoopRouter</span>
+
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LoopRouter</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">router</span>
+<span class="w">    </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">      </span><span class="no">{% if continue_loop %}</span>
+<span class="w">      </span><span class="no">ProcessItem</span>
+<span class="w">      </span><span class="no">{% else %}</span>
+<span class="w">      </span><span class="no">END</span>
+<span class="w">      </span><span class="no">{% endif %}</span>
+<span class="w">    </span><span class="nt">routes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ProcessItem</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">END</span>
+<span class="w">    </span><span class="nt">input</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">continue_loop</span>
+<span class="w">    </span><span class="nt">default_output</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">END</span>
+
+<span class="nt">state</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">loop_counter</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">int</span>
+<span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">max_iterations</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">int</span>
+<span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">  </span><span class="nt">continue_loop</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bool</span>
+<span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div>
+<h3 id="loop-patterns">Loop Patterns<a class="headerlink" href="#loop-patterns" title="Permanent link">&para;</a></h3>
+<p><strong>Counter-Based Loop:</strong>
+- Initialize counter to 0
+- Process item
+- Increment counter
+- Router checks if counter &lt; max_iterations
+- Routes back to process or exits</p>
+<p><strong>List Processing Loop:</strong>
+- Initialize list index to 0
+- Process current item at index
+- Increment index
+- Router checks if index &lt; list length
+- Routes back to process next item or exits</p>
+<p><strong>Condition-Based Loop:</strong>
+- Initialize continuation flag
+- Process and update state
+- Code node sets flag based on condition (e.g., task complete, error occurred)
+- Router checks flag
+- Routes back to process or exits</p>
+<h3 id="best-practices_2">Best Practices<a class="headerlink" href="#best-practices_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Initialize Loop Variables: Always set up counters, flags, or indices before entering the loop.</li>
+<li>Prevent Infinite Loops: Include explicit termination conditions (max iterations, completion flag) to ensure loops exit.</li>
+<li>Use State Variables for Control: Track loop state with dedicated variables (loop_counter, current_index, continue_flag).</li>
+<li>Update State Between Iterations: Use Code or State Modifier nodes to update loop control variables after each iteration.</li>
+<li>Route Explicitly: Define both continue and exit paths clearly in Router condition.</li>
+<li>Set Maximum Iterations: Always include a max iteration limit as a safety measure.</li>
+<li>Test Loop Termination: Verify loops exit correctly under all conditions (normal completion, error, max iterations).</li>
+<li>Document Loop Logic: Comment YAML to explain loop purpose, termination condition, and iteration count.</li>
+<li>Consider Performance: Router-based loops execute synchronously; for large iteration counts, consider Loop or Loop from Tool nodes.</li>
+<li>Use Descriptive Variable Names: Name loop control variables clearly (loop_counter not i, continue_processing not flag).</li>
+</ul>
+<h3 id="when-to-use-router-for-loops">When to Use Router for Loops<a class="headerlink" href="#when-to-use-router-for-loops" title="Permanent link">&para;</a></h3>
+<p><strong>Choose Router-based loops when you</strong>:</p>
+<ul>
+<li>Need custom loop termination logic not supported by Loop nodes</li>
+<li>Want explicit control over every iteration</li>
+<li>Require complex conditional logic combined with iteration</li>
+<li>Need to route to different processing paths within the loop</li>
+<li>Have simple iteration requirements (&lt; 20 iterations typically)</li>
+</ul>
+<p><strong>Use dedicated Loop nodes when you</strong>:</p>
+<ul>
+<li>Processing large lists (20+ items)</li>
+<li>Loop logic fits Loop or Loop from Tool patterns</li>
+<li>Performance is critical (dedicated Loop nodes are optimized)</li>
+<li>Iteration logic is straightforward (process each item in a list)</li>
+</ul>
+<hr />
+<h2 id="iteration-nodes-comparison">Iteration Nodes Comparison<a class="headerlink" href="#iteration-nodes-comparison" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Loop Node</th>
+<th>Loop from Tool Node</th>
+<th>Router Node (for Loops)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Purpose</strong></td>
+<td>Execute toolkit repeatedly based on task instructions</td>
+<td>Generate list dynamically, then process each item</td>
+<td>Create custom loop structures with conditional routing</td>
+</tr>
+<tr>
+<td><strong>Input Source</strong></td>
+<td>Task instructions describe how to extract/create inputs</td>
+<td>First toolkit generates the list of inputs</td>
+<td>State variables (counters, flags, conditions)</td>
+</tr>
+<tr>
+<td><strong>Iteration Logic</strong></td>
+<td>Defined in Task field using natural language</td>
+<td>Defined by output of list-generating toolkit</td>
+<td>Defined by Router condition template</td>
+</tr>
+<tr>
+<td><strong>Toolkit Selection</strong></td>
+<td>Single toolkit (Toolkits/MCPs/Agents/Pipelines)</td>
+<td>Two toolkits: list generator + item processor</td>
+<td>N/A (uses other nodes for processing)</td>
+</tr>
+<tr>
+<td><strong>Tool Selection</strong></td>
+<td>Optional (for Toolkits/MCPs only)</td>
+<td>Two tools: list tool + loop tool (for Toolkits/MCPs)</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>Variables Mapping</strong></td>
+<td>Not applicable</td>
+<td><strong>Required</strong> - maps list tool outputs to loop tool inputs</td>
+<td>Not applicable (uses state variables)</td>
+</tr>
+<tr>
+<td><strong>Loop Control</strong></td>
+<td>Internal (LLM-based from Task)</td>
+<td>Internal (list length)</td>
+<td>Explicit (Router condition evaluates state)</td>
+</tr>
+<tr>
+<td><strong>Configuration Complexity</strong></td>
+<td>Medium (Task instructions)</td>
+<td>High (two toolkits + variables mapping)</td>
+<td>Medium-High (multiple nodes + state management)</td>
+</tr>
+<tr>
+<td><strong>Use When</strong></td>
+<td>You can describe iteration logic in Task</td>
+<td>You need to dynamically discover items to process</td>
+<td>You need custom loop control logic</td>
+</tr>
+<tr>
+<td><strong>List Generation</strong></td>
+<td>Internal (from Task + LLM)</td>
+<td>External (from toolkit execution)</td>
+<td>Manual (via state variables)</td>
+</tr>
+<tr>
+<td><strong>Example Use Case</strong></td>
+<td>Process file paths mentioned in chat</td>
+<td>Get files from GitHub directory and process each</td>
+<td>Counter-based loop, process until condition met</td>
+</tr>
+<tr>
+<td><strong>Performance</strong></td>
+<td>Task execution + N toolkit calls</td>
+<td>List tool call + N loop toolkit calls</td>
+<td>N iterations through pipeline nodes</td>
+</tr>
+<tr>
+<td><strong>Termination Control</strong></td>
+<td>Task-defined or list exhaustion</td>
+<td>List exhaustion</td>
+<td>Explicit condition in Router</td>
+</tr>
+<tr>
+<td><strong>Output</strong></td>
+<td>Accumulated results from all iterations</td>
+<td>Accumulated results from all loop iterations</td>
+<td>Accumulated via state updates</td>
+</tr>
+<tr>
+<td><strong>Flexibility</strong></td>
+<td>Medium</td>
+<td>Medium</td>
+<td>Very High (complete control)</td>
+</tr>
+<tr>
+<td><strong>Best For</strong></td>
+<td>Simple iteration with natural language</td>
+<td>Dynamic list discovery + processing</td>
+<td>Custom loop logic, complex conditions</td>
+</tr>
+</tbody>
+</table>
+<h3 id="when-to-use-each-node">When to Use Each Node<a class="headerlink" href="#when-to-use-each-node" title="Permanent link">&para;</a></h3>
+<h4 id="loop-node_1">Loop Node ✅<a class="headerlink" href="#loop-node_1" title="Permanent link">&para;</a></h4>
+<p><strong>Choose Loop Node when you</strong>:</p>
+<ul>
+<li>Can describe iteration logic in natural language</li>
+<li>Know what items to process (from state or chat history)</li>
+<li>Want simple configuration with task instructions</li>
+<li>Don't need dynamic list discovery</li>
+<li>Prefer LLM-based input generation</li>
+</ul>
+<p><strong>Example</strong>: Process file paths mentioned in chat, iterate through known list of tasks, generate reports for ID range 1-100.</p>
+<h4 id="loop-from-tool-node_1">Loop from Tool Node ✅<a class="headerlink" href="#loop-from-tool-node_1" title="Permanent link">&para;</a></h4>
+<p><strong>Choose Loop from Tool Node when you</strong>:</p>
+<ul>
+<li>Need to dynamically discover items at runtime</li>
+<li>Items come from external source (GitHub, Jira, database)</li>
+<li>List generation requires toolkit execution</li>
+<li>Want to chain two toolkits (discovery + processing)</li>
+<li>Need structured mapping between tools</li>
+</ul>
+<p><strong>Example</strong>: Get all files from GitHub directory then document each, list Confluence pages then process each, discover Jira tickets then update each.</p>
+<h4 id="router-node-for-loops_1">Router Node (for Loops) ✅<a class="headerlink" href="#router-node-for-loops_1" title="Permanent link">&para;</a></h4>
+<p><strong>Choose Router Node for loops when you</strong>:</p>
+<ul>
+<li>Need custom loop termination conditions</li>
+<li>Want explicit control over iteration logic</li>
+<li>Require complex conditional routing within loops</li>
+<li>Have simple iteration requirements (&lt; 20 iterations)</li>
+<li>Need to combine branching and iteration logic</li>
+</ul>
+<p><strong>Example</strong>: Process items until condition met, retry operation with counter limit, iterate through workflow steps with conditional branching.</p>
+<hr />
+<div class="admonition info">
+<p class="admonition-title">Related</p>
+<ul>
+<li><strong><a href="../overview/">Nodes Overview</a></strong> - Understand all available node types</li>
+<li><strong><a href="../execution-nodes/">Execution Nodes</a></strong> - Function, Tool, Code nodes for task execution</li>
+<li><strong><a href="../control-flow-nodes/">Control Flow Nodes</a></strong> - Router, Condition, Decision nodes</li>
+<li><strong><a href="../../states/">States</a></strong> - Manage data flow through pipeline state</li>
+<li><strong><a href="../../nodes-connectors/">Connections</a></strong> - Link nodes together</li>
+<li><strong><a href="../../yaml/">YAML Configuration</a></strong> - See complete node syntax examples</li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../control-flow-nodes/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Control Flow Nodes">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Control Flow Nodes
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../utility-nodes/" class="md-footer__link md-footer__link--next" aria-label="Next: Utility Nodes">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Utility Nodes
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.footer", "navigation.path", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../../../../extra_js/fullscreen.js"></script>
+      
+    
+  </body>
+</html>
