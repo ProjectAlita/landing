@@ -6586,6 +6586,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../support/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../support/contact-support/" class="md-nav__link">
         
   
@@ -7641,7 +7669,7 @@
 </li>
 <li><strong>Advanced Settings:</strong><ul>
 <li><strong>Limit:</strong> Set the maximum number of issues to retrieve per request (default: 5)</li>
-<li><strong>API version:</strong> REST API version, optional (default: 2) ( Currentl for jira cloud , you need to use 3 as api version)</li>
+<li><strong>API version:</strong> REST API version ( Currentl for jira cloud , you need to use 3 as api version, for Epam Jira version 2 )</li>
 <li><strong>Labels:</strong> Specify labels to apply to created or updated entities (comma-separated list e.g., <code>alita,elitea</code>)</li>
 <li><strong>Additional fields:</strong> Custom field IDs accessible within the toolkit (e.g., <code>customfield_100450</code>)</li>
 <li><strong>Custom Headers:</strong> Additional HTTP headers to include with API requests (JSON format e.g., <code>{"X-Custom-Header": "value"}</code>)</li>
@@ -8140,6 +8168,63 @@ Both issues are now connected, showing their relationship in the issue view. Thi
 <li><strong>Check Hosting Option:</strong> Verify that the hosting option matches your Jira instance type (Cloud for *.atlassian.net, Server for self-hosted instances).</li>
 <li><strong>Review Advanced Settings:</strong> Check that custom field IDs and other advanced settings are properly formatted.</li>
 </ol>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Limited Number of Issues Returned:</strong></p>
+<ul>
+<li><strong>Problem:</strong> When using JQL search or listing issues, the toolkit returns only a limited number of issues (e.g., not more than 5) even when more issues match the criteria.</li>
+<li><strong>Symptoms:</strong><ul>
+<li>JQL searches return fewer results than expected</li>
+<li>Issue lists appear incomplete</li>
+<li>Large projects show only partial issue sets</li>
+</ul>
+</li>
+<li>
+<p><strong>Troubleshooting Steps:</strong></p>
+<ol>
+<li><strong>Check Limit Configuration:</strong> In the toolkit configuration, locate the <strong>"Limit"</strong> field in the Advanced Settings section.</li>
+<li><strong>Increase Limit Value:</strong> Change the limit from the default value (typically 5) to a higher value that meets your needs (e.g., 50, 100, or 500).</li>
+<li><strong>Save Configuration:</strong> Save the toolkit configuration to apply the new limit.</li>
+<li><strong>Test Results:</strong> Run your JQL query or list operation again to verify more issues are returned.</li>
+</ol>
+<p><img alt="Jira limit" src="../../../img/integrations/toolkits/jira/jira-limit.png" /></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Atlassian API Connection Issues (Too Many Redirects):</strong></p>
+<ul>
+<li><strong>Error Message:</strong>
+    <div class="highlight"><pre><span></span><code>requests.exceptions.TooManyRedirects: Exceeded 30 redirects
+</code></pre></div></li>
+<li><strong>Symptoms:</strong><ul>
+<li>Jira or Confluence tools refuse to connect</li>
+<li>Multiple redirect errors during connection attempts</li>
+<li>Some tools work while others fail (e.g., basic operations work but image-related tools fail)</li>
+</ul>
+</li>
+<li><strong>Cause:</strong>
+    The API version is set incorrectly or is null in the toolkit configuration. As of November 2025:<ul>
+<li><strong>Atlassian Cloud:</strong> API version 3</li>
+<li><strong>EPAM Jira platform:</strong> API version 2</li>
+</ul>
+</li>
+<li>
+<p><strong>Troubleshooting Steps:</strong></p>
+<ol>
+<li><strong>Check API Version:</strong> In the toolkit configuration, locate the <strong>"API version"</strong> field in the Advanced Settings section.</li>
+<li><strong>Set Correct Version:</strong> Update the API version to match your deployment:<ul>
+<li>For Atlassian Cloud instances: Set to <strong>3</strong></li>
+<li>For EPAM Jira or self-hosted instances: Set to <strong>2</strong></li>
+</ul>
+</li>
+<li><strong>Save Configuration:</strong> Save the toolkit configuration to apply the new API version.</li>
+<li><strong>Contact Support:</strong> If unsure about your deployment type, contact your system administrator or ELITEA support to confirm the correct API version.</li>
+<li><strong>Test Functionality:</strong> Note that some requests may work with both v2 and v3, so partial functionality doesn't guarantee the configuration is correct. Test multiple tools to ensure full compatibility.</li>
+</ol>
+<p><img alt="Jira api v" src="../../../img/integrations/toolkits/jira/jira-api_v.png" /></p>
 </li>
 </ul>
 </li>
