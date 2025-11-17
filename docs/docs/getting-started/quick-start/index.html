@@ -1,7 +1,4 @@
-
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
+<!DOCTYPE html><html lang="en" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -46,7 +43,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -59,7 +56,17 @@
 
     
     
-  </head>
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
   
   
     
@@ -101,7 +108,7 @@
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -126,20 +133,20 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to system preference" type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
       </label>
     
   
@@ -150,46 +157,6 @@
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
-    
-      
-      
-        <label class="md-header__button md-icon" for="__search">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        </label>
-        <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-      
     
     
   </nav>
@@ -403,7 +370,7 @@
           
   
   
-  Migration & Upgrade
+  Migration &amp; Upgrade
 
         </a>
       </li>
@@ -471,7 +438,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -510,7 +477,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1">
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -560,7 +527,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1">
         
           
           <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
@@ -976,7 +943,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2">
         
           
           <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
@@ -1626,7 +1593,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2">
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -1824,7 +1791,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3">
         
           
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
@@ -2003,14 +1970,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../configure-and-use-mcp/" class="md-nav__link">
+      <a href="../create-and-use-server-stdio/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Configure and Use MCP Servers
+    Configure and Use MCP Server(STDIO)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create-and-use-client-stdio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configure and Use MCP Client(STDIO)
   
 
     
@@ -2057,7 +2052,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -2107,7 +2102,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1">
         
           
           <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
@@ -2409,7 +2404,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_10">
         
           
           <label class="md-nav__link" for="__nav_3_1_10" id="__nav_3_1_10_label" tabindex="0">
@@ -2650,7 +2645,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -2700,7 +2695,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1">
         
           
           <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
@@ -2710,7 +2705,7 @@
   <span class="md-ellipsis">
     
   
-    Chat & Conversations
+    Chat &amp; Conversations
   
 
     
@@ -2726,7 +2721,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Chat & Conversations
+    Chat &amp; Conversations
   
 
           </label>
@@ -3038,7 +3033,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2">
         
           
           <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
@@ -3460,7 +3455,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3">
         
           
           <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
@@ -3470,7 +3465,7 @@
   <span class="md-ellipsis">
     
   
-    Agents & Pipelines
+    Agents &amp; Pipelines
   
 
     
@@ -3486,7 +3481,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Agents & Pipelines
+    Agents &amp; Pipelines
   
 
           </label>
@@ -3566,7 +3561,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3">
         
           
           <label class="md-nav__link" for="__nav_4_3_3" id="__nav_4_3_3_label" tabindex="0">
@@ -3672,7 +3667,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3_3">
         
           
           <label class="md-nav__link" for="__nav_4_3_3_3" id="__nav_4_3_3_3_label" tabindex="0">
@@ -4054,7 +4049,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4">
         
           
           <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
@@ -4064,7 +4059,7 @@
   <span class="md-ellipsis">
     
   
-    Credentials & Toolkits
+    Credentials &amp; Toolkits
   
 
     
@@ -4080,7 +4075,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Credentials & Toolkits
+    Credentials &amp; Toolkits
   
 
           </label>
@@ -4252,7 +4247,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5">
         
           
           <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
@@ -4354,7 +4349,7 @@
   <span class="md-ellipsis">
     
   
-    Manage Roles & Permissions
+    Manage Roles &amp; Permissions
   
 
     
@@ -4401,7 +4396,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -4451,7 +4446,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1">
         
           
           <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
@@ -4621,7 +4616,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2">
         
           
           <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
@@ -5575,7 +5570,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3">
         
           
           <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
@@ -5696,7 +5691,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -5746,7 +5741,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1">
         
           
           <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
@@ -5832,7 +5827,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2">
         
           
           <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
@@ -6233,7 +6228,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7">
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
@@ -6243,7 +6238,7 @@
   <span class="md-ellipsis">
     
   
-    Migration & Upgrade
+    Migration &amp; Upgrade
   
 
     
@@ -6259,7 +6254,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Migration & Upgrade
+    Migration &amp; Upgrade
   
 
           </label>
@@ -6283,7 +6278,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1">
         
           
           <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
@@ -6425,7 +6420,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2">
         
           
           <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
@@ -6574,7 +6569,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8">
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
@@ -6743,7 +6738,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9">
         
           
           <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
@@ -6985,7 +6980,7 @@
   <span class="md-ellipsis">
     
   
-    Export & Import Entities
+    Export &amp; Import Entities
   
 
     
@@ -7101,7 +7096,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_12">
         
           
           <label class="md-nav__link" for="__nav_9_12" id="__nav_9_12_label" tabindex="0">
@@ -7184,7 +7179,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -7389,7 +7384,7 @@
 
 
 
-  <nav class="md-path" aria-label="Navigation" >
+  <nav class="md-path" aria-label="Navigation">
     <ol class="md-path__list">
       
       
@@ -7447,9 +7442,9 @@
 
 
 
-<h1 id="quick-start-with-elitea">Quick Start with ELITEA<a class="headerlink" href="#quick-start-with-elitea" title="Permanent link">&para;</a></h1>
+<h1 id="quick-start-with-elitea">Quick Start with ELITEA<a class="headerlink" href="#quick-start-with-elitea" title="Permanent link">¶</a></h1>
 <p>Welcome to ELITEA! This guide will help you quickly get up and running with the platform, from your first login to creating your first AI-powered agent. Follow these steps to start leveraging the full power of ELITEA's AI capabilities.</p>
-<h2 id="in-this-guide-you-will">In this guide, you will:<a class="headerlink" href="#in-this-guide-you-will" title="Permanent link">&para;</a></h2>
+<h2 id="in-this-guide-you-will">In this guide, you will:<a class="headerlink" href="#in-this-guide-you-will" title="Permanent link">¶</a></h2>
 <ul>
 <li><strong>Access the ELITEA platform</strong> and set up your workspace.</li>
 <li><strong>Create and configure your Private project</strong> for personal usage and experiments.</li>
@@ -7463,16 +7458,16 @@
 <li><strong>Learn organization techniques</strong> for managing your AI resources effectively.</li>
 </ul>
 <p>By the end of this guide, you'll have a fully functional AI agent connected to external services, ready to assist with your daily tasks.</p>
-<hr />
-<h2 id="step-1-access-the-platform">Step 1: Access the Platform<a class="headerlink" href="#step-1-access-the-platform" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="step-1-access-the-platform">Step 1: Access the Platform<a class="headerlink" href="#step-1-access-the-platform" title="Permanent link">¶</a></h2>
 <ol>
 <li><strong>Open Your Browser</strong>: Use any modern web browser (Chrome, Firefox, Safari, Edge).</li>
 <li><strong>Navigate to ELITEA</strong>: Enter <code>https://next.elitea.ai</code> in your address bar.</li>
 <li><strong>Login</strong>: Sign in with your account credentials</li>
 <li><strong>Initial Navigation</strong>: You'll land in the <strong>Chat</strong> menu automatically.</li>
 </ol>
-<hr />
-<h2 id="step-2-wait-for-project-initialization">Step 2: Wait for Project Initialization<a class="headerlink" href="#step-2-wait-for-project-initialization" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="step-2-wait-for-project-initialization">Step 2: Wait for Project Initialization<a class="headerlink" href="#step-2-wait-for-project-initialization" title="Permanent link">¶</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Important</p>
 <p>First-time users need to wait for project setup. The <strong>Private</strong> project is provisioned automatically.</p>
@@ -7482,15 +7477,15 @@
 <li><strong>Initial View</strong>: You'll start in the <strong>Public</strong> project view during this initialization period.</li>
 <li><strong>Check Status</strong>: You'll know your <strong>Private</strong> project is ready when you can switch from <strong>Public</strong> to <strong>Private</strong> using the project switcher.</li>
 </ol>
-<hr />
-<h2 id="step-3-switch-to-your-private-project">Step 3: Switch to Your Private Project<a class="headerlink" href="#step-3-switch-to-your-private-project" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="step-3-switch-to-your-private-project">Step 3: Switch to Your Private Project<a class="headerlink" href="#step-3-switch-to-your-private-project" title="Permanent link">¶</a></h2>
 <ol>
 <li><strong>Locate Project Switcher</strong>: Find the <strong>Smart Drawer's Project Switcher</strong> in the top left corner of the interface.</li>
 <li><strong>Switch Projects</strong>: Change from <strong>Public</strong> to <strong>Private</strong> once your project initialization is complete.</li>
 <li><strong>Confirm Switch</strong>: You should now see your private workspace where you can create and manage your own assets.</li>
 </ol>
-<p><img alt="Project Switcher" src="../../img/getting-started/quick-start/project.png" /></p>
-<h3 id="understanding-project-types">Understanding Project Types<a class="headerlink" href="#understanding-project-types" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/getting-started/quick-start/project.png" data-desc-position="bottom"><img alt="Project Switcher" src="../../img/getting-started/quick-start/project.png"></a></p>
+<h3 id="understanding-project-types">Understanding Project Types<a class="headerlink" href="#understanding-project-types" title="Permanent link">¶</a></h3>
 <p><strong>Private Project</strong>: Your personal workspace where only you have access to create and manage credentials, toolkits, agents, pipelines and collections.</p>
 <p><strong>Team Projects</strong>: If you're invited to team projects, you'll see them in the project switcher. Team projects enable:</p>
 <ul>
@@ -7501,8 +7496,8 @@
 <li>Shared credentials, toolkits, agents, pipelines, and collections for team use</li>
 </ul>
 <p><strong>Public Project</strong>: A community space to explore and learn from other users' shared content.</p>
-<hr />
-<h2 id="step-4-generate-a-personal-access-token">Step 4: Generate a Personal Access Token<a class="headerlink" href="#step-4-generate-a-personal-access-token" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="step-4-generate-a-personal-access-token">Step 4: Generate a Personal Access Token<a class="headerlink" href="#step-4-generate-a-personal-access-token" title="Permanent link">¶</a></h2>
 <p>Before creating agents and toolkits, you'll need a personal token for secure access:</p>
 <ol>
 <li><strong>Navigate to Settings:</strong> <ul>
@@ -7525,13 +7520,13 @@
 </ul>
 </li>
 </ol>
-<p><img alt="Personal Access Token" src="../../img/getting-started/quick-start/token.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/getting-started/quick-start/token.png" data-desc-position="bottom"><img alt="Personal Access Token" src="../../img/getting-started/quick-start/token.png"></a></p>
 <div class="admonition note">
 <p class="admonition-title">Reference</p>
 <p>For more information, see the <a href="../create-personal-access-token/">Personal Access Tokens Guide</a> and <a href="../../integrations/extensions/elitea-code/">Elitea Code Extensions</a>.</p>
 </div>
-<hr />
-<h2 id="step-5-create-your-first-secret">Step 5: Create Your First Secret<a class="headerlink" href="#step-5-create-your-first-secret" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="step-5-create-your-first-secret">Step 5: Create Your First Secret<a class="headerlink" href="#step-5-create-your-first-secret" title="Permanent link">¶</a></h2>
 <p>Secrets provide secure storage for sensitive information like API keys and passwords:</p>
 <ol>
 <li><strong>Navigate to Settings</strong>: Open the sidebar and select <strong>Settings</strong>.</li>
@@ -7550,13 +7545,13 @@
 <p class="admonition-title">Important</p>
 <p>Secrets are write-only for security. Once saved, you cannot view the actual value again, only reference it by name.</p>
 </div>
-<p><img alt="Create Secret" src="../../img/getting-started/quick-start/secret.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/getting-started/quick-start/secret.png" data-desc-position="bottom"><img alt="Create Secret" src="../../img/getting-started/quick-start/secret.png"></a></p>
 <div class="admonition note">
 <p class="admonition-title">Reference</p>
 <p>For more information, see the <a href="../../menus/settings/secrets/">Secrets Management</a></p>
 </div>
-<hr />
-<h2 id="step-6-create-your-first-credential">Step 6: Create Your First Credential<a class="headerlink" href="#step-6-create-your-first-credential" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="step-6-create-your-first-credential">Step 6: Create Your First Credential<a class="headerlink" href="#step-6-create-your-first-credential" title="Permanent link">¶</a></h2>
 <p>Credentials allow your agents to securely connect to external services:</p>
 <ol>
 <li><strong>Navigate to Credentials</strong>: Open the sidebar and select <strong>Credentials</strong>.</li>
@@ -7569,13 +7564,13 @@
 </ul>
 </li>
 </ol>
-<p><img alt="Create Credential" src="../../img/getting-started/quick-start/credentials.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/getting-started/quick-start/credentials.png" data-desc-position="bottom"><img alt="Create Credential" src="../../img/getting-started/quick-start/credentials.png"></a></p>
 <div class="admonition note">
 <p class="admonition-title">Reference</p>
 <p>For more information, see the <a href="../../menus/credentials/">Credentials Guide</a></p>
 </div>
-<hr />
-<h2 id="step-7-build-your-first-toolkit">Step 7: Build Your First Toolkit<a class="headerlink" href="#step-7-build-your-first-toolkit" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="step-7-build-your-first-toolkit">Step 7: Build Your First Toolkit<a class="headerlink" href="#step-7-build-your-first-toolkit" title="Permanent link">¶</a></h2>
 <p>Toolkits connect your agents to external systems and services:</p>
 <ol>
 <li><strong>Navigate to Toolkits</strong>: Open the sidebar and select <strong>Toolkits</strong>.</li>
@@ -7593,13 +7588,13 @@
 </li>
 <li><strong>Save</strong>: Click <strong>Save</strong> to create your toolkit.</li>
 </ol>
-<p><img alt="Create Toolkit" src="../../img/getting-started/quick-start/toolkit.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/getting-started/quick-start/toolkit.png" data-desc-position="bottom"><img alt="Create Toolkit" src="../../img/getting-started/quick-start/toolkit.png"></a></p>
 <div class="admonition note">
 <p class="admonition-title">Reference</p>
 <p>For more information, see the <a href="../../menus/toolkits/">Toolkits Guide</a>.</p>
 </div>
-<hr />
-<h2 id="step-8-create-your-first-agent">Step 8: Create Your First Agent<a class="headerlink" href="#step-8-create-your-first-agent" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="step-8-create-your-first-agent">Step 8: Create Your First Agent<a class="headerlink" href="#step-8-create-your-first-agent" title="Permanent link">¶</a></h2>
 <p>Agents are AI-powered assistants that can perform tasks using your toolkits:</p>
 <ol>
 <li><strong>Navigate to Agents</strong>: Open the sidebar and select <strong>Agents</strong>.</li>
@@ -7625,13 +7620,13 @@
 </ul>
 </li>
 </ol>
-<p><img alt="Create Agent" src="../../img/getting-started/quick-start/agent.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/getting-started/quick-start/agent.png" data-desc-position="bottom"><img alt="Create Agent" src="../../img/getting-started/quick-start/agent.png"></a></p>
 <div class="admonition note">
 <p class="admonition-title">Reference</p>
 <p>For more information, see the <a href="../../menus/agents/">Agents Documentation</a>.</p>
 </div>
-<hr />
-<h2 id="step-9-optional-create-a-pipeline">Step 9: (Optional) Create a Pipeline<a class="headerlink" href="#step-9-optional-create-a-pipeline" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="step-9-optional-create-a-pipeline">Step 9: (Optional) Create a Pipeline<a class="headerlink" href="#step-9-optional-create-a-pipeline" title="Permanent link">¶</a></h2>
 <p>Pipelines are visual workflows that can orchestrate multiple agents and automate complex processes:</p>
 <ol>
 <li><strong>Navigate to Pipelines</strong>: Open the sidebar and select <strong>Pipelines</strong>.</li>
@@ -7656,13 +7651,13 @@
 </li>
 <li><strong>Save</strong>: Click <strong>Save</strong> when your pipeline is ready.</li>
 </ol>
-<p><img alt="Create Pipeline" src="../../img/getting-started/quick-start/pipeline.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/getting-started/quick-start/pipeline.png" data-desc-position="bottom"><img alt="Create Pipeline" src="../../img/getting-started/quick-start/pipeline.png"></a></p>
 <div class="admonition note">
 <p class="admonition-title">Reference</p>
 <p>For detailed pipeline creation with YAML instructions and advanced flow configurations, refer to the <a href="../../features/pipelines/pipeline-agent-framework/">Pipeline Agent Framework User Guide</a> or <a href="../../menus/pipelines/">Pipelines Documentation</a>.</p>
 </div>
-<hr />
-<h2 id="step-10-start-your-first-conversation">Step 10: Start Your First Conversation<a class="headerlink" href="#step-10-start-your-first-conversation" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="step-10-start-your-first-conversation">Step 10: Start Your First Conversation<a class="headerlink" href="#step-10-start-your-first-conversation" title="Permanent link">¶</a></h2>
 <p>Now it's time to test your setup:</p>
 <ol>
 <li><strong>Navigate to Chat</strong>: Click on <strong>Chat</strong> in the sidebar.</li>
@@ -7685,13 +7680,13 @@
 </ul>
 </li>
 </ol>
-<p><img alt="Start Conversation" src="../../img/getting-started/quick-start/chat.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/getting-started/quick-start/chat.png" data-desc-position="bottom"><img alt="Start Conversation" src="../../img/getting-started/quick-start/chat.png"></a></p>
 <div class="admonition note">
 <p class="admonition-title">Reference</p>
 <p>For more information, see the <a href="../../menus/chat/">Chat Documentation</a>.</p>
 </div>
-<hr />
-<h2 id="step-11-organize-and-expand">Step 11: Organize and Expand<a class="headerlink" href="#step-11-organize-and-expand" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="step-11-organize-and-expand">Step 11: Organize and Expand<a class="headerlink" href="#step-11-organize-and-expand" title="Permanent link">¶</a></h2>
 <p>As you become comfortable with the platform:</p>
 <ol>
 <li><strong>Create Folders</strong>: Organize your conversations using folders in the Chat section.</li>
@@ -7699,8 +7694,8 @@
 <li><strong>Create Datasources</strong>: Connect your own data to make your agents more context-aware.</li>
 <li><strong>Explore Advanced Features</strong>: Try pipeline agents for complex workflows, artifacts for file sharing, and extensions for development environments.</li>
 </ol>
-<hr />
-<h2 id="quick-troubleshooting">Quick Troubleshooting<a class="headerlink" href="#quick-troubleshooting" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="quick-troubleshooting">Quick Troubleshooting<a class="headerlink" href="#quick-troubleshooting" title="Permanent link">¶</a></h2>
 <p><strong>Agent not working?</strong></p>
 <ul>
 <li>Verify toolkit credentials are correct</li>
@@ -7719,8 +7714,8 @@
 <li>Check that your token hasn't expired</li>
 <li>Verify integration settings match your intended use</li>
 </ul>
-<hr />
-<h2 id="whats-next">What's Next?<a class="headerlink" href="#whats-next" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="whats-next">What's Next?<a class="headerlink" href="#whats-next" title="Permanent link">¶</a></h2>
 <p>You're now ready to explore ELITEA's full potential! Consider these next steps:</p>
 <ul>
 <li><strong>Dive Deeper</strong>: Explore the <a href="https://elitea.ai/docs">platform documentation</a> for advanced features.</li>
@@ -7756,13 +7751,13 @@
   
     
       
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
           <a href="../very-quick-start/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Very Quick Start">
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
             </div>
             <div class="md-footer__title">
               <span class="md-footer__direction">
@@ -7787,7 +7782,7 @@
             </div>
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
             </div>
           </a>
         
@@ -7819,7 +7814,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.footer", "navigation.path", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.footer", "navigation.path", "navigation.tabs", "navigation.tabs.sticky", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
@@ -7827,5 +7822,7 @@
         <script src="../../extra_js/fullscreen.js"></script>
       
     
-  </body>
-</html>
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

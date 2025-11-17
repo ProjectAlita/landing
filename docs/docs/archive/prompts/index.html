@@ -1,7 +1,4 @@
-
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
+<!DOCTYPE html><html lang="en" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -46,7 +43,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -59,7 +56,17 @@
 
     
     
-  </head>
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
   
   
     
@@ -101,7 +108,7 @@
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -126,20 +133,20 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to system preference" type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
       </label>
     
   
@@ -150,46 +157,6 @@
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
-    
-      
-      
-        <label class="md-header__button md-icon" for="__search">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        </label>
-        <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-      
     
     
   </nav>
@@ -399,7 +366,7 @@
           
   
   
-  Migration & Upgrade
+  Migration &amp; Upgrade
 
         </a>
       </li>
@@ -469,7 +436,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -508,7 +475,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1">
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -558,7 +525,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1">
         
           
           <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
@@ -756,7 +723,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2">
         
           
           <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
@@ -1017,7 +984,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -1067,7 +1034,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1">
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -1181,7 +1148,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2">
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -1379,7 +1346,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3">
         
           
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
@@ -1558,14 +1525,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/configure-and-use-mcp/" class="md-nav__link">
+      <a href="../../getting-started/create-and-use-server-stdio/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Configure and Use MCP Servers
+    Configure and Use MCP Server(STDIO)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/create-and-use-client-stdio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configure and Use MCP Client(STDIO)
   
 
     
@@ -1612,7 +1607,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -1662,7 +1657,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1">
         
           
           <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
@@ -1964,7 +1959,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_10">
         
           
           <label class="md-nav__link" for="__nav_3_1_10" id="__nav_3_1_10_label" tabindex="0">
@@ -2205,7 +2200,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -2255,7 +2250,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1">
         
           
           <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
@@ -2265,7 +2260,7 @@
   <span class="md-ellipsis">
     
   
-    Chat & Conversations
+    Chat &amp; Conversations
   
 
     
@@ -2281,7 +2276,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Chat & Conversations
+    Chat &amp; Conversations
   
 
           </label>
@@ -2593,7 +2588,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2">
         
           
           <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
@@ -3015,7 +3010,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3">
         
           
           <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
@@ -3025,7 +3020,7 @@
   <span class="md-ellipsis">
     
   
-    Agents & Pipelines
+    Agents &amp; Pipelines
   
 
     
@@ -3041,7 +3036,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Agents & Pipelines
+    Agents &amp; Pipelines
   
 
           </label>
@@ -3121,7 +3116,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3">
         
           
           <label class="md-nav__link" for="__nav_4_3_3" id="__nav_4_3_3_label" tabindex="0">
@@ -3227,7 +3222,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3_3">
         
           
           <label class="md-nav__link" for="__nav_4_3_3_3" id="__nav_4_3_3_3_label" tabindex="0">
@@ -3609,7 +3604,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4">
         
           
           <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
@@ -3619,7 +3614,7 @@
   <span class="md-ellipsis">
     
   
-    Credentials & Toolkits
+    Credentials &amp; Toolkits
   
 
     
@@ -3635,7 +3630,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Credentials & Toolkits
+    Credentials &amp; Toolkits
   
 
           </label>
@@ -3807,7 +3802,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5">
         
           
           <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
@@ -3909,7 +3904,7 @@
   <span class="md-ellipsis">
     
   
-    Manage Roles & Permissions
+    Manage Roles &amp; Permissions
   
 
     
@@ -3956,7 +3951,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -4006,7 +4001,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1">
         
           
           <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
@@ -4176,7 +4171,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2">
         
           
           <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
@@ -5130,7 +5125,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3">
         
           
           <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
@@ -5251,7 +5246,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -5301,7 +5296,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1">
         
           
           <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
@@ -5387,7 +5382,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2">
         
           
           <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
@@ -5788,7 +5783,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7">
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
@@ -5798,7 +5793,7 @@
   <span class="md-ellipsis">
     
   
-    Migration & Upgrade
+    Migration &amp; Upgrade
   
 
     
@@ -5814,7 +5809,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Migration & Upgrade
+    Migration &amp; Upgrade
   
 
           </label>
@@ -5838,7 +5833,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1">
         
           
           <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
@@ -5980,7 +5975,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2">
         
           
           <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
@@ -6129,7 +6124,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8">
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
@@ -6931,7 +6926,7 @@
   <span class="md-ellipsis">
     
   
-    Export & Import Entities
+    Export &amp; Import Entities
   
 
     
@@ -7047,7 +7042,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_12">
         
           
           <label class="md-nav__link" for="__nav_9_12" id="__nav_9_12_label" tabindex="0">
@@ -7130,7 +7125,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -7510,11 +7505,11 @@
 
 
 
-<h1 id="prompts">Prompts<a class="headerlink" href="#prompts" title="Permanent link">&para;</a></h1>
-<h2 id="private-project-prompts-menu">Private project - Prompts menu<a class="headerlink" href="#private-project-prompts-menu" title="Permanent link">&para;</a></h2>
+<h1 id="prompts">Prompts<a class="headerlink" href="#prompts" title="Permanent link">¶</a></h1>
+<h2 id="private-project-prompts-menu">Private project - Prompts menu<a class="headerlink" href="#private-project-prompts-menu" title="Permanent link">¶</a></h2>
 <p>The <strong>Prompts</strong> menu within <strong>Private</strong> project serves as a dedicated inventory for all your prompts, irrespective of their current status. Consider it your personal repository for saving and organizing the prompts you've crafted. </p>
-<p><img alt="Prompts-Menu_Detailed_View" src="../../img/archive/prompts/Prompts-Menu_Detailed_View.png" /></p>
-<h3 id="how-to-create-a-new-prompt">How to Create a New Prompt<a class="headerlink" href="#how-to-create-a-new-prompt" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/archive/prompts/Prompts-Menu_Detailed_View.png" data-desc-position="bottom"><img alt="Prompts-Menu_Detailed_View" src="../../img/archive/prompts/Prompts-Menu_Detailed_View.png"></a></p>
+<h3 id="how-to-create-a-new-prompt">How to Create a New Prompt<a class="headerlink" href="#how-to-create-a-new-prompt" title="Permanent link">¶</a></h3>
 <p>In the context of AI and machine learning, a prompt is an instruction, question, or statement that is given to an AI model to elicit a response or output. It serves as the initial input for systems like conversational agents or generative models.</p>
 <ol>
 <li>Click the <strong>+ Prompt</strong> button located on the top right of the <strong>Prompts</strong> menu. This action will navigate you to the <strong>Configuration</strong> tab, where you can define and set up your new prompt.</li>
@@ -7527,7 +7522,7 @@
 <li>After filling in the required information, click the <strong>Save</strong> button to create your prompt.</li>
 </ol>
 <p><strong>Note</strong>: The <strong>Name</strong> and <strong>Description</strong> fields are non-editable after the prompt is saved. Ensure you have entered the correct information before saving. While creating your prompt in the <strong>Configuration</strong> tab, you can also configure other settings like <strong>Tags</strong>, <strong>Welcome Message</strong>, <strong>Conversation Starters</strong>, and <strong>Messages</strong> to further customize your prompt's behavior and interaction flow.</p>
-<p><img alt="Prompts-Create_New_Prompt" src="../../img/archive/prompts/Prompts-Create_New_Prompt.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/archive/prompts/Prompts-Create_New_Prompt.png" data-desc-position="bottom"><img alt="Prompts-Create_New_Prompt" src="../../img/archive/prompts/Prompts-Create_New_Prompt.png"></a></p>
 <p>After creating a prompt and saving it, the prompt's interface will be organized into three distinct tabs, each serving a specific purpose in managing and utilizing your prompt:</p>
 <ul>
 <li><strong>Run tab</strong>: This is your primary interface for executing the prompt. Here, you'll find a comprehensive overview of the prompt's configuration, including any defined variables. If variables are configured, you can input or modify their values before execution. Crucially, this tab also allows you to adjust the settings that govern the AI model's behavior for this specific run, such as selecting the desired Model, and fine-tuning parameters like Temperature, Top-P, Top-K, and Maximum Completion Tokens.</li>
@@ -7535,7 +7530,7 @@
 <li><strong>Monitoring tab</strong>: This tab provides valuable insights into the usage and performance of your prompt. Here, you can access monitoring data related to the prompt's executions, allowing you to track its activity, understand its usage patterns, and potentially identify areas for optimization or refinement. For more information about Monitoring, refer to the <a href="../../menus/settings/monitoring/">Monitoring</a>.</li>
 </ul>
 <p><strong>Note:</strong> Changes made within both the <strong>Run</strong> and <strong>Configuration</strong> tabs can be either saved to update the prompt or discarded to revert to the previous state, providing flexibility and control over your prompt configurations.</p>
-<h3 id="tags">Tags<a class="headerlink" href="#tags" title="Permanent link">&para;</a></h3>
+<h3 id="tags">Tags<a class="headerlink" href="#tags" title="Permanent link">¶</a></h3>
 <p>In ELITEA, <strong>Tags</strong> are a powerful organizational tool that allows you to categorize and manage your collection of prompts, datasources, and agents effectively. Think of them as labels that help you quickly identify and group related items. By assigning relevant tags to each prompt, you create an intuitive labeling system that significantly simplifies access and retrieval. This is particularly beneficial when you have a large number of prompts covering various topics or use cases. You can later filter your prompts by these tags, making it easy to find the precise prompt you need without sifting through an extensive list.</p>
 <p><strong>Adding Tags to Your Prompt:</strong></p>
 <ol>
@@ -7545,8 +7540,8 @@
 <li>Click the <strong>Save</strong> button to save the prompt with the selected tags.</li>
 </ol>
 <p><strong>Note</strong>: You have the flexibility to assign one or more tags to each prompt, allowing for a multi-dimensional labeling system. This means a single prompt can be associated with multiple categories, enhancing its discoverability.</p>
-<p><img alt="Prompts-Create_a_Tag" src="../../img/archive/prompts/Prompts-Create_a_Tag.png" /></p>
-<h3 id="context">CONTEXT<a class="headerlink" href="#context" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/archive/prompts/Prompts-Create_a_Tag.png" data-desc-position="bottom"><img alt="Prompts-Create_a_Tag" src="../../img/archive/prompts/Prompts-Create_a_Tag.png"></a></p>
+<h3 id="context">CONTEXT<a class="headerlink" href="#context" title="Permanent link">¶</a></h3>
 <p>The <strong>Context</strong> field in ELITEA is a fundamental component where you provide the essential background information, instructions, and guidelines that direct the LLM in generating accurate and relevant responses. This section acts as the foundational knowledge base for the model, enabling it to understand and effectively process your specific requests. A well-defined context is crucial for achieving the desired output from the AI.</p>
 <p><strong>How to Effectively Input Context:</strong></p>
 <ul>
@@ -7555,14 +7550,14 @@
 <li><strong>Leveraging Variables for Dynamic Content</strong>: For situations where you need to introduce dynamic elements into your prompts, you can incorporate variables directly within the <strong>Context</strong>. Variables are denoted by double curly braces, for example, <code>{{variable_name}}</code>. Once you define a variable in the <strong>Context</strong>, it will automatically appear in the <strong>Variables</strong> section, where you can assign a specific value to it. This allows you to create reusable prompts that can be easily adapted for different scenarios by simply changing the variable values.</li>
 </ul>
 <p><strong>Note</strong>: For comprehensive guidance on crafting effective instructions for your prompts, please refer to the <a href="../prompts-examples/">Prompting Frameworks</a> document. This resource provides valuable strategies and examples to help you optimize your prompts for better results.</p>
-<h4 id="editability-and-version-control">Editability and Version Control<a class="headerlink" href="#editability-and-version-control" title="Permanent link">&para;</a></h4>
+<h4 id="editability-and-version-control">Editability and Version Control<a class="headerlink" href="#editability-and-version-control" title="Permanent link">¶</a></h4>
 <p>You can edit the <strong>Context</strong> field at any time to update or refine the instructions:</p>
 <ul>
 <li><strong>Editing Existing Context</strong>: Simply make changes directly in the Context field and save them. This updates the prompt to reflect the latest information.</li>
 <li><strong>Creating New Versions</strong>: If you want to keep the original version, you can save your changes as a new version. This is useful for comparing different versions or keeping a history of changes. <strong>Note</strong>: For more information check the <a href="#managing-prompt-versions-save-create-versions-and-manage">Managing Prompt Versions: Save, Create Versions, and Manage</a>.</li>
 </ul>
 <p>These features allow you to adapt and improve the instructions as needed, ensuring the responses remain relevant and accurate.</p>
-<h3 id="messages">MESSAGES<a class="headerlink" href="#messages" title="Permanent link">&para;</a></h3>
+<h3 id="messages">MESSAGES<a class="headerlink" href="#messages" title="Permanent link">¶</a></h3>
 <p>The <strong>MESSAGES</strong> section is a powerful feature that allows you to meticulously structure the flow of interaction within a prompt by defining specific roles and content for different participants in the conversation. This section is crucial for creating more complex and nuanced interactions with the LLM model.</p>
 <p>The <strong>MESSAGES</strong> utilizes three distinct message types:</p>
 <ul>
@@ -7574,15 +7569,15 @@
 <p><strong>Understanding the Message Types:</strong></p>
 <ul>
 <li><strong>System Message</strong>: Think of this as the "director's notes" for the AI. It defines the AI's persona, the task at hand, and any specific rules or constraints it should follow.
-<div class="highlight"><pre><span></span><code>System Message: &quot;You are a helpful AI assistant specialized in providing concise summaries of scientific articles. Focus on extracting the main findings and conclusions.&quot;
-</code></pre></div></li>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>System Message: "You are a helpful AI assistant specialized in providing concise summaries of scientific articles. Focus on extracting the main findings and conclusions."
+</span></code></pre></div></li>
 <li><strong>Assistant Message</strong>: This allows you to pre-program the AI's responses or provide examples of how it should respond to certain user inputs.
-<div class="highlight"><pre><span></span><code>User Message: &quot;What is the main finding of this article?&quot;
-Assistant Message: &quot;The main finding of the article is that...&quot;
-</code></pre></div></li>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>User Message: "What is the main finding of this article?"
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Assistant Message: "The main finding of the article is that..."
+</span></code></pre></div></li>
 <li><strong>User Message</strong>: This allows you to simulate user input and guide the conversation flow.
-<div class="highlight"><pre><span></span><code>User Message: &quot;Summarize the methodology section.&quot;
-</code></pre></div></li>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>User Message: "Summarize the methodology section."
+</span></code></pre></div></li>
 </ul>
 <p><strong>Managing Messages:</strong></p>
 <p>To enhance the interactivity of a prompt, you can add multiple messages of any type by clicking the <strong><code>+</code></strong> icon, selecting the desired message type from the dropdown, and providing the relevant content.</p>
@@ -7592,8 +7587,8 @@ Assistant Message: &quot;The main finding of the article is that...&quot;
 <li><strong>Copy</strong>: Duplicate a message by clicking the copy icon.</li>
 <li><strong>Reorder</strong>: Change the order of messages by dragging and dropping the message boxes. This allows you to precisely control the flow of the conversation.</li>
 </ul>
-<p><img alt="Prompts-System_Messages" src="../../img/archive/prompts/Prompts-System_Messages.png" /></p>
-<h3 id="welcome-message">WELCOME MESSAGE<a class="headerlink" href="#welcome-message" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/archive/prompts/Prompts-System_Messages.png" data-desc-position="bottom"><img alt="Prompts-System_Messages" src="../../img/archive/prompts/Prompts-System_Messages.png"></a></p>
+<h3 id="welcome-message">WELCOME MESSAGE<a class="headerlink" href="#welcome-message" title="Permanent link">¶</a></h3>
 <p>The <strong>Welcome Message</strong> feature allows you to provide an initial message or instruction that is displayed to the user when they interact with the prompt, datasource, or agent. While currently sent to the LLM along with other instructions, it primarily serves as a way to communicate specific guidance or information to the user before they begin interacting with the prompt.</p>
 <p><strong>Adding a Welcome Message:</strong></p>
 <ol>
@@ -7609,8 +7604,8 @@ Assistant Message: &quot;The main finding of the article is that...&quot;
 <li>"Remember to carefully review the generated output before implementing it."</li>
 <li>"This prompt is designed to assist with summarizing technical documentation. Please provide the document content below."</li>
 </ul>
-<p><img alt="Prompts-Welcome_Message" src="../../img/archive/prompts/Prompts-Welcome_Message.png" /></p>
-<h3 id="conversation-starters">CONVERSATION STARTERS<a class="headerlink" href="#conversation-starters" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/archive/prompts/Prompts-Welcome_Message.png" data-desc-position="bottom"><img alt="Prompts-Welcome_Message" src="../../img/archive/prompts/Prompts-Welcome_Message.png"></a></p>
+<h3 id="conversation-starters">CONVERSATION STARTERS<a class="headerlink" href="#conversation-starters" title="Permanent link">¶</a></h3>
 <p>The <strong>Conversation Starter</strong> feature empowers you to configure and add predefined text options that users can click to initiate a conversation or trigger a specific action when executing a prompt. This is particularly useful for guiding users and providing them with quick access to common or recommended interactions, ensuring a consistent and efficient starting point for their engagement with the prompt.</p>
 <p><strong>Setting Up Conversation Starters:</strong></p>
 <ol>
@@ -7629,9 +7624,9 @@ Assistant Message: &quot;The main finding of the article is that...&quot;
 <li>"Explain the concept of [Technical Term]."</li>
 </ul>
 <p>By providing these pre-defined options, you make it easier for users to understand the capabilities of the prompt and quickly initiate relevant interactions.</p>
-<p><img alt="Prompts-Conversation_Starters" src="../../img/archive/prompts/Prompts-Conversation_Starters.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/archive/prompts/Prompts-Conversation_Starters.png" data-desc-position="bottom"><img alt="Prompts-Conversation_Starters" src="../../img/archive/prompts/Prompts-Conversation_Starters.png"></a></p>
 <p>By setting up conversation starters, you streamline the process of initiating specific tasks or queries, making your interactions with the prompt more efficient and standardized.</p>
-<h3 id="variables">VARIABLES<a class="headerlink" href="#variables" title="Permanent link">&para;</a></h3>
+<h3 id="variables">VARIABLES<a class="headerlink" href="#variables" title="Permanent link">¶</a></h3>
 <p>The <strong>Variables</strong> within prompts introduce a powerful layer of dynamic customization, allowing you to create flexible and reusable prompts that can be easily adapted to specific needs or contexts without requiring modifications to the core prompt structure. This feature significantly enhances the versatility and efficiency of your prompts.</p>
 <p><strong>Understanding Variables:</strong></p>
 <p>Variables are placeholders within your prompt's <strong>Context</strong> or <strong>Messages</strong> that are denoted by double curly brackets, for example, <code>{{user_story}}</code>. These placeholders represent information that might change depending on the specific use case.</p>
@@ -7643,8 +7638,8 @@ Assistant Message: &quot;The main finding of the article is that...&quot;
 </ol>
 <p>This process empowers you to create prompts that can be easily adapted by simply changing the values of the variables, eliminating the need to rewrite the entire prompt for different scenarios.</p>
 <p><strong>Note</strong>: You have the flexibility to define one or more variables within each prompt. Variables can be defined in both the <strong>Context</strong> and <strong>Messages</strong> sections, providing flexibility in how you structure your dynamic prompts.</p>
-<p><img alt="Prompts-Create_Variables" src="../../img/archive/prompts/Prompts-Create_Variables.png" /></p>
-<h3 id="advanced-settings">ADVANCED SETTINGS<a class="headerlink" href="#advanced-settings" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/archive/prompts/Prompts-Create_Variables.png" data-desc-position="bottom"><img alt="Prompts-Create_Variables" src="../../img/archive/prompts/Prompts-Create_Variables.png"></a></p>
+<h3 id="advanced-settings">ADVANCED SETTINGS<a class="headerlink" href="#advanced-settings" title="Permanent link">¶</a></h3>
 <p>For users who require more granular control over the AI model's behavior, ELITEA provides <strong>Advanced Settings</strong>. These settings allow you to fine-tune the parameters that influence the generation of responses. To access these settings, click the <strong>Gear</strong> icon on the <strong>Configurations</strong> tab or <strong>SETTINGS</strong> section under the <strong>Run</strong> tab.</p>
 <p>The following advanced settings are available:</p>
 <ul>
@@ -7678,13 +7673,13 @@ The choice of model can significantly impact the quality, speed, and cost of you
 </li>
 </ul>
 <p>By carefully adjusting these <strong>Advanced Settings</strong>, you can tailor the AI's behavior to suit the specific requirements of your prompt and achieve the desired output characteristics. Experimenting with these parameters can significantly enhance the effectiveness and versatility of your interactions with ELITEA.</p>
-<h3 id="how-to-execute-prompt">How to Execute Prompt<a class="headerlink" href="#how-to-execute-prompt" title="Permanent link">&para;</a></h3>
+<h3 id="how-to-execute-prompt">How to Execute Prompt<a class="headerlink" href="#how-to-execute-prompt" title="Permanent link">¶</a></h3>
 <p>Once your prompt is configured, ELITEA offers two primary methods to execute it and obtain the desired output:</p>
 <ul>
 <li><strong>Chat</strong>: This method is designed for interactive, conversational exchanges with the AI model. It's ideal for scenarios where you want to engage in a dialogue, ask follow-up questions, or refine the output through iterative interactions.</li>
 <li><strong>Completion</strong>: This method is more direct, providing a single output based on the prompt's configuration. It's suitable for tasks where you need a straightforward answer, generation, or completion without the need for back-and-forth conversation.</li>
 </ul>
-<h4 id="executing-a-prompt-using-the-chat-option">Executing a Prompt Using the <strong>Chat</strong> Option:<a class="headerlink" href="#executing-a-prompt-using-the-chat-option" title="Permanent link">&para;</a></h4>
+<h4 id="executing-a-prompt-using-the-chat-option">Executing a Prompt Using the <strong>Chat</strong> Option:<a class="headerlink" href="#executing-a-prompt-using-the-chat-option" title="Permanent link">¶</a></h4>
 <ol>
 <li><strong>Navigate to the Run Tab</strong>: After configuring your prompt, access the <strong>Run</strong> tab. This tab provides the interface for executing your prompt and adjusting runtime settings.</li>
 <li><strong>Review Prompt Configuration</strong>: In the <strong>Run</strong> tab, you'll see a summary of your prompt's setup. Ensure the <strong>Context</strong>, <strong>Messages</strong>, and any defined <strong>Variables</strong> are as intended. If variables are present, provide or adjust their values as needed.</li>
@@ -7694,7 +7689,7 @@ The choice of model can significantly impact the quality, speed, and cost of you
 <li><strong>Initiate Interaction</strong>: In the chat input box, type your question, statement, or command to initiate the conversation with the AI. This input serves as the starting point for the interaction.</li>
 <li><strong>Send Your Message</strong>: Click the <strong>Send</strong> icon (often represented by a paper airplane or similar symbol) to submit your input to the AI model. ELITEA will process your request based on the prompt's configuration and the selected settings. The AI's response will then appear in the chat interface.</li>
 </ol>
-<p><img alt="Prompts-Chat_Option" src="../../img/archive/prompts/Prompts-Chat_Option.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/archive/prompts/Prompts-Chat_Option.png" data-desc-position="bottom"><img alt="Prompts-Chat_Option" src="../../img/archive/prompts/Prompts-Chat_Option.png"></a></p>
 <p><strong>Additional Interaction Features:</strong></p>
 <ul>
 <li><strong>Auto scroll to bottom</strong>: This option can be toggled on or off to automatically scroll to the bottom of the output as it is being generated. This feature is helpful during long outputs to keep the most recent content visible.</li>
@@ -7715,8 +7710,8 @@ The choice of model can significantly impact the quality, speed, and cost of you
 </ul>
 </li>
 </ul>
-<p><img alt="Prompts-Chat_Output" src="../../img/archive/prompts/Prompts-Chat_Output.png" /></p>
-<h4 id="executing-a-prompt-using-the-completion-option">Executing a Prompt Using the <strong>Completion</strong> Option:<a class="headerlink" href="#executing-a-prompt-using-the-completion-option" title="Permanent link">&para;</a></h4>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/archive/prompts/Prompts-Chat_Output.png" data-desc-position="bottom"><img alt="Prompts-Chat_Output" src="../../img/archive/prompts/Prompts-Chat_Output.png"></a></p>
+<h4 id="executing-a-prompt-using-the-completion-option">Executing a Prompt Using the <strong>Completion</strong> Option:<a class="headerlink" href="#executing-a-prompt-using-the-completion-option" title="Permanent link">¶</a></h4>
 <ol>
 <li><strong>Navigate to the Run Tab</strong>: After configuring your prompt, access the <strong>Run</strong> tab. This tab serves as the central hub for executing your prompts and managing related settings.</li>
 <li><strong>Review Prompt Configuration</strong>: In the <strong>Run</strong> tab, carefully review the prompt's setup, including the <strong>Context</strong>, <strong>Messages</strong>, and any defined <strong>Variables</strong>. Ensure everything is configured correctly for your desired outcome. If variables are present, provide or adjust their values as necessary.</li>
@@ -7726,16 +7721,16 @@ The choice of model can significantly impact the quality, speed, and cost of you
 <li><strong>Select the Completion Option</strong>: Ensure that the <strong>Completion</strong> option is selected as the execution method. This is typically a radio button or a tab within the <strong>Run</strong> tab interface.</li>
 <li><strong>Initiate Execution</strong>: Once you have reviewed the configuration and selected the <strong>Completion</strong> option, click the <strong>Run</strong> button. ELITEA will then process your prompt based on the defined settings and generate a single, complete output. The result will be displayed in the output area.</li>
 </ol>
-<p><img alt="Prompts-Completion_Option" src="../../img/archive/prompts/Prompts-Completion_Option.png" /></p>
-<h3 id="managing-prompt-versions-save-create-versions-and-manage">Managing Prompt Versions: Save, Create Versions, and Manage<a class="headerlink" href="#managing-prompt-versions-save-create-versions-and-manage" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/archive/prompts/Prompts-Completion_Option.png" data-desc-position="bottom"><img alt="Prompts-Completion_Option" src="../../img/archive/prompts/Prompts-Completion_Option.png"></a></p>
+<h3 id="managing-prompt-versions-save-create-versions-and-manage">Managing Prompt Versions: Save, Create Versions, and Manage<a class="headerlink" href="#managing-prompt-versions-save-create-versions-and-manage" title="Permanent link">¶</a></h3>
 <p>To optimally manage your prompts, understanding how to save and create versions is crucial. Follow these guidelines to efficiently save your prompt, create versions, and manage them.</p>
-<h4 id="how-to-save-a-prompt">How to Save a Prompt:<a class="headerlink" href="#how-to-save-a-prompt" title="Permanent link">&para;</a></h4>
+<h4 id="how-to-save-a-prompt">How to Save a Prompt:<a class="headerlink" href="#how-to-save-a-prompt" title="Permanent link">¶</a></h4>
 <ul>
 <li>To save your work on a prompt for the first time, simply click the <strong>Save</strong> button. This action creates what's known as the "<strong>latest</strong>" version of your prompt.</li>
 <li>You can continue to modify your prompt and save the changes to the "<strong>latest</strong>" version at any time by clicking the <strong>Save</strong> button again. If you wish to discard any changes made, you have the option to click the <strong>Discard</strong> button before saving.</li>
 </ul>
 <p><strong>Remember</strong>: The "<strong>latest</strong>" version represents the initial version you create. You can keep updating this version with your changes by saving them, without the need to create additional versions for your prompt.</p>
-<h4 id="how-to-create-new-versions">How to Create New Versions:<a class="headerlink" href="#how-to-create-new-versions" title="Permanent link">&para;</a></h4>
+<h4 id="how-to-create-new-versions">How to Create New Versions:<a class="headerlink" href="#how-to-create-new-versions" title="Permanent link">¶</a></h4>
 <p>For instances where you need to create and manage different iterations of your prompt:</p>
 <ol>
 <li><strong>Initiate a New Version</strong>: Start by clicking the <strong>Save As Version</strong> button.</li>
@@ -7747,7 +7742,7 @@ The choice of model can significantly impact the quality, speed, and cost of you
 <li><strong>Characters</strong>: Avoid using special characters such as spaces (" "), underscores ("_"), and others that might cause parsing or recognition issues in certain environments.</li>
 <li><strong>Clarity</strong>: Choose names that clearly and succinctly describe the version's purpose or the changes it introduces, facilitating easier tracking and management of different versions.</li>
 </ul>
-<p><img alt="Prompts-Save_Version" src="../../img/archive/prompts/Prompts-Save_Version.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/archive/prompts/Prompts-Save_Version.png" data-desc-position="bottom"><img alt="Prompts-Save_Version" src="../../img/archive/prompts/Prompts-Save_Version.png"></a></p>
 <p>Upon creating a new version of the prompt, several options become available to you:</p>
 <ul>
 <li><strong>Publish</strong>: Make this particular version of the prompt available for use.</li>
@@ -7755,19 +7750,19 @@ The choice of model can significantly impact the quality, speed, and cost of you
 <li><strong>Execute</strong>: Run this specific version of the prompt to see how it performs.</li>
 <li><strong>Navigate Versions</strong>: Use the <strong>Version</strong> dropdown list to switch between and select different versions of the prompt. This allows for easy comparison and management of various iterations.</li>
 </ul>
-<p><img alt="Prompts-Saved_Version" src="../../img/archive/prompts/Prompts-Saved_Version.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/archive/prompts/Prompts-Saved_Version.png" data-desc-position="bottom"><img alt="Prompts-Saved_Version" src="../../img/archive/prompts/Prompts-Saved_Version.png"></a></p>
 <p>By following these steps, you can effectively manage the lifecycle and iterations of your prompts, ensuring that each version is appropriately saved, published, and utilized as per your requirements.</p>
-<h3 id="how-to-publish-a-prompt">How to Publish a Prompt<a class="headerlink" href="#how-to-publish-a-prompt" title="Permanent link">&para;</a></h3>
+<h3 id="how-to-publish-a-prompt">How to Publish a Prompt<a class="headerlink" href="#how-to-publish-a-prompt" title="Permanent link">¶</a></h3>
 <p>To make your prompt available to the wider Epam Network and Communities, follow these steps for publication:</p>
 <ol>
 <li><strong>Publishing Initiation</strong>: With your prompt crafted and saved, initiate the process by clicking the <strong>Publish</strong> button.</li>
 <li><strong>Version Naming</strong>: Assign an informative version name (e.g., Gen-1.0) in the pop-up window. This name should encapsulate the essence or objective of the prompt, facilitating version management and future iterations.</li>
 <li><strong>Review Submission</strong>: Finalize your submission by clicking <strong>Publish</strong>, forwarding your prompt for the moderation review process. This stage is vital to guarantee the prompts shared within the Epam community meet a standard of quality and relevance.</li>
 </ol>
-<p><img alt="Prompts-Publishing" src="../../img/archive/prompts/Prompts-Publishing.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/archive/prompts/Prompts-Publishing.png" data-desc-position="bottom"><img alt="Prompts-Publishing" src="../../img/archive/prompts/Prompts-Publishing.png"></a></p>
 <p>For publishing a specific version, firstly select the desired version and opt to publish. The chosen version's name appears in the "<strong>Publish version</strong>" pop-up window. It can be published as is or renamed before the final publication step.</p>
 <p><strong>Note</strong>: After publishing, the prompt can be retracted by selecting the <strong>Unpublish</strong> button.</p>
-<h4 id="moderator-review-process">Moderator Review Process<a class="headerlink" href="#moderator-review-process" title="Permanent link">&para;</a></h4>
+<h4 id="moderator-review-process">Moderator Review Process<a class="headerlink" href="#moderator-review-process" title="Permanent link">¶</a></h4>
 <p>Submission to publication triggers a meticulous assessment by the moderators, tasked with ensuring prompt standards for quality, efficiency, and security are upheld.</p>
 <p><strong>Evaluative Steps Undertaken by Moderators</strong>:</p>
 <ol>
@@ -7776,13 +7771,13 @@ The choice of model can significantly impact the quality, speed, and cost of you
 <li><strong>Practical Evaluation</strong>: Assesses the prompt's operational feasibility, including variables, system commands, and projected outcomes.</li>
 <li><strong>Compliance Check</strong>: Final verification against community norms and security protocols, ensuring the protection of sensitive data.</li>
 </ol>
-<h5 id="possible-outcomes-of-the-review">Possible Outcomes of the Review<a class="headerlink" href="#possible-outcomes-of-the-review" title="Permanent link">&para;</a></h5>
+<h5 id="possible-outcomes-of-the-review">Possible Outcomes of the Review<a class="headerlink" href="#possible-outcomes-of-the-review" title="Permanent link">¶</a></h5>
 <p>After the review process, a prompt can be categorized into one of the following statuses:</p>
 <ul>
 <li><strong>Approved</strong>: If the prompt meets all specified criteria, it is accepted and added to the Public project under the Prompts section, making it accessible to the community.</li>
 <li><strong>Rejected</strong>: If the prompt does not meet the necessary standards, it is not approved for publication. Constructive feedback is provided to the creator, enabling them to make the required adjustments and submit a revised version for future consideration.</li>
 </ul>
-<h5 id="tracking-the-status-of-prompts">Tracking the Status of Prompts<a class="headerlink" href="#tracking-the-status-of-prompts" title="Permanent link">&para;</a></h5>
+<h5 id="tracking-the-status-of-prompts">Tracking the Status of Prompts<a class="headerlink" href="#tracking-the-status-of-prompts" title="Permanent link">¶</a></h5>
 <p>Prompts undergo several statuses through the review phase:</p>
 <ul>
 <li><strong>All</strong>: An overview of all submissions regardless of their review stage.</li>
@@ -7792,7 +7787,7 @@ The choice of model can significantly impact the quality, speed, and cost of you
 <li><strong>Approval</strong>: This status indicates that the prompt is awaiting the author's approval before a new version can be published. <strong>Note</strong>: This feature is currently under development and is not available at the moment.</li>
 <li><strong>Rejected</strong>: Prompts evaluated and declined for publication.</li>
 </ul>
-<h3 id="prompt-actions">Prompt Actions<a class="headerlink" href="#prompt-actions" title="Permanent link">&para;</a></h3>
+<h3 id="prompt-actions">Prompt Actions<a class="headerlink" href="#prompt-actions" title="Permanent link">¶</a></h3>
 <p>ELITEA provides a set of convenient actions you can perform on your prompts to manage, share, and organize them effectively. These actions are easily accessible through dedicated icons associated with each prompt.</p>
 <ul>
 <li><strong>Copy link to clipboard</strong>: Clicking the <strong>Copy icon</strong> will copy a direct link to the current prompt to your clipboard. This allows you to easily share the prompt with colleagues or reference it in other documents.</li>
@@ -7801,7 +7796,7 @@ The choice of model can significantly impact the quality, speed, and cost of you
 <li><strong>Fork prompt</strong>: Clicking the <strong>Fork icon</strong> will initiate the process of creating a copy of the prompt within a different project. This is a useful feature for transferring prompts between projects without needing to export and import them. When you fork a prompt, a complete copy of its configuration is created in the target project, allowing you to modify it independently. </li>
 <li><strong>Delete Prompt</strong>: Clicking the <strong>Thrash icon</strong> will delete the prompt. Be cautious when using this action, as deleted prompts cannot be recovered.</li>
 </ul>
-<h3 id="how-to-import-a-prompt">How to Import a Prompt<a class="headerlink" href="#how-to-import-a-prompt" title="Permanent link">&para;</a></h3>
+<h3 id="how-to-import-a-prompt">How to Import a Prompt<a class="headerlink" href="#how-to-import-a-prompt" title="Permanent link">¶</a></h3>
 <p>To use the prompts created in other projects, environments, follow these simple steps.</p>
 <ol>
 <li><strong>Initiate Import</strong>: Select the <strong>Import</strong> option within ELITEA.</li>
@@ -7809,33 +7804,33 @@ The choice of model can significantly impact the quality, speed, and cost of you
 <li><strong>Complete Process</strong>: The prompt will be added under the <strong>Prompts</strong> section in ELITEA.</li>
 <li><strong>Use Prompt</strong>: You can now access and utilize the imported prompt.</li>
 </ol>
-<p><img alt="Prompts-Import_Alita" src="../../img/archive/prompts/Prompts-Import_Alita.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/archive/prompts/Prompts-Import_Alita.png" data-desc-position="bottom"><img alt="Prompts-Import_Alita" src="../../img/archive/prompts/Prompts-Import_Alita.png"></a></p>
 <p><strong>Note</strong>: ELITEA supports <a href="https://jinja.palletsprojects.com/en/3.1.x/">Jinja</a> template. Make sure the content and variables in your prompt adhere to this format, especially avoiding spaces in variable names. For more information please check <a href="../alita-dial/">ELITEA and Epam AI Dial</a> document.</p>
-<h2 id="public-project-prompts-menu">Public project - Prompts menu<a class="headerlink" href="#public-project-prompts-menu" title="Permanent link">&para;</a></h2>
+<h2 id="public-project-prompts-menu">Public project - Prompts menu<a class="headerlink" href="#public-project-prompts-menu" title="Permanent link">¶</a></h2>
 <p>The <strong>Prompts</strong> menu within <strong>Public</strong> project showcases a collection of published and shared prompts within the community.</p>
-<h3 id="layout-of-the-prompts-menu">Layout of the Prompts Menu<a class="headerlink" href="#layout-of-the-prompts-menu" title="Permanent link">&para;</a></h3>
+<h3 id="layout-of-the-prompts-menu">Layout of the Prompts Menu<a class="headerlink" href="#layout-of-the-prompts-menu" title="Permanent link">¶</a></h3>
 <p>The Prompts menu is organized into three distinct pages, each designed to offer a unique perspective on the available prompts:</p>
 <ul>
 <li><strong>Latest</strong>: Displays all recently published prompts, providing a fresh look at the newest contributions to the community.</li>
 <li><strong>My Likes</strong>: Highlights the prompts that you have liked. This personalized page allows you to revisit favorites effortlessly.</li>
 <li><strong>Trending</strong>: Showcases the prompts with the highest number of likes, serving as a valuable resource for discovering top-rated prompts that hold significant value and popularity within the community.</li>
 </ul>
-<p><img alt="Prompts-Menu_Public_Latest" src="../../img/archive/prompts/Prompts-Menu_Public_Latest.png" /></p>
-<h3 id="engaging-with-published-prompts">Engaging with Published Prompts<a class="headerlink" href="#engaging-with-published-prompts" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/archive/prompts/Prompts-Menu_Public_Latest.png" data-desc-position="bottom"><img alt="Prompts-Menu_Public_Latest" src="../../img/archive/prompts/Prompts-Menu_Public_Latest.png"></a></p>
+<h3 id="engaging-with-published-prompts">Engaging with Published Prompts<a class="headerlink" href="#engaging-with-published-prompts" title="Permanent link">¶</a></h3>
 <p>Interaction within the community is highly encouraged to recognize and appreciate valuable prompts. The following actions enable active participation:</p>
-<h3 id="liking-published-prompts">Liking Published Prompts<a class="headerlink" href="#liking-published-prompts" title="Permanent link">&para;</a></h3>
+<h3 id="liking-published-prompts">Liking Published Prompts<a class="headerlink" href="#liking-published-prompts" title="Permanent link">¶</a></h3>
 <p>Upon publication, a prompt becomes a crucial resource for the community. To support and acknowledge a prompt, use the <strong>Like</strong> functionality:</p>
 <ul>
 <li>To like a prompt, click on the <strong>Heart</strong> icon associated with it.</li>
 <li>If you wish to withdraw your like, simply click the <strong>Heart</strong> icon again to Unlike the prompt.</li>
 </ul>
-<h3 id="other-actions-for-published-prompts">Other Actions for Published Prompts<a class="headerlink" href="#other-actions-for-published-prompts" title="Permanent link">&para;</a></h3>
+<h3 id="other-actions-for-published-prompts">Other Actions for Published Prompts<a class="headerlink" href="#other-actions-for-published-prompts" title="Permanent link">¶</a></h3>
 <p><strong>Executing Published Prompts</strong>:</p>
 <ul>
 <li>View and run published prompts by clicking on the prompt card or name. Refer to the <a href="#how-to-execute-prompt">How to Execute Prompt</a> section for guidance on running a prompt.s</li>
 <li><strong>Note</strong>: Modifications to a published prompt cannot be saved for future use.</li>
 </ul>
-<p><img alt="Prompts-Executing_Published_Prompt" src="../../img/archive/prompts/Prompts-Executing_Published_Prompt.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/archive/prompts/Prompts-Executing_Published_Prompt.png" data-desc-position="bottom"><img alt="Prompts-Executing_Published_Prompt" src="../../img/archive/prompts/Prompts-Executing_Published_Prompt.png"></a></p>
 <p><strong>Adding Published Prompts to Collections</strong>:</p>
 <p>Enhance your collections by including published prompts. Visit the <a href="#prompt-actions">How to Add Prompt into Collection</a> section for instructions on incorporation.</p>
 <p><strong>Exporting Published Prompts</strong>:</p>
@@ -7866,13 +7861,13 @@ The choice of model can significantly impact the quality, speed, and cost of you
   
     
       
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
           <a href="../creating-prompts/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Creating Prompts">
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
             </div>
             <div class="md-footer__title">
               <span class="md-footer__direction">
@@ -7897,7 +7892,7 @@ The choice of model can significantly impact the quality, speed, and cost of you
             </div>
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
             </div>
           </a>
         
@@ -7929,7 +7924,7 @@ The choice of model can significantly impact the quality, speed, and cost of you
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.footer", "navigation.path", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.footer", "navigation.path", "navigation.tabs", "navigation.tabs.sticky", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
@@ -7937,5 +7932,7 @@ The choice of model can significantly impact the quality, speed, and cost of you
         <script src="../../extra_js/fullscreen.js"></script>
       
     
-  </body>
-</html>
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

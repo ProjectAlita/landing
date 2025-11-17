@@ -1,7 +1,4 @@
-
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
+<!DOCTYPE html><html lang="en" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -46,7 +43,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -59,7 +56,17 @@
 
     
     
-  </head>
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
   
   
     
@@ -101,7 +108,7 @@
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -126,20 +133,20 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to system preference" type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
       </label>
     
   
@@ -150,46 +157,6 @@
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
-    
-      
-      
-        <label class="md-header__button md-icon" for="__search">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        </label>
-        <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-      
     
     
   </nav>
@@ -399,7 +366,7 @@
           
   
   
-  Migration & Upgrade
+  Migration &amp; Upgrade
 
         </a>
       </li>
@@ -469,7 +436,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -508,7 +475,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1">
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -558,7 +525,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1">
         
           
           <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
@@ -756,7 +723,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2">
         
           
           <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
@@ -1017,7 +984,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -1067,7 +1034,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1">
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -1181,7 +1148,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2">
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -1379,7 +1346,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3">
         
           
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
@@ -1558,14 +1525,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/configure-and-use-mcp/" class="md-nav__link">
+      <a href="../../getting-started/create-and-use-server-stdio/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Configure and Use MCP Servers
+    Configure and Use MCP Server(STDIO)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/create-and-use-client-stdio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configure and Use MCP Client(STDIO)
   
 
     
@@ -1612,7 +1607,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -1662,7 +1657,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1">
         
           
           <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
@@ -1964,7 +1959,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_10">
         
           
           <label class="md-nav__link" for="__nav_3_1_10" id="__nav_3_1_10_label" tabindex="0">
@@ -2205,7 +2200,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -2255,7 +2250,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1">
         
           
           <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
@@ -2265,7 +2260,7 @@
   <span class="md-ellipsis">
     
   
-    Chat & Conversations
+    Chat &amp; Conversations
   
 
     
@@ -2281,7 +2276,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Chat & Conversations
+    Chat &amp; Conversations
   
 
           </label>
@@ -2593,7 +2588,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2">
         
           
           <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
@@ -3015,7 +3010,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3">
         
           
           <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
@@ -3025,7 +3020,7 @@
   <span class="md-ellipsis">
     
   
-    Agents & Pipelines
+    Agents &amp; Pipelines
   
 
     
@@ -3041,7 +3036,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Agents & Pipelines
+    Agents &amp; Pipelines
   
 
           </label>
@@ -3121,7 +3116,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3">
         
           
           <label class="md-nav__link" for="__nav_4_3_3" id="__nav_4_3_3_label" tabindex="0">
@@ -3227,7 +3222,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3_3">
         
           
           <label class="md-nav__link" for="__nav_4_3_3_3" id="__nav_4_3_3_3_label" tabindex="0">
@@ -3609,7 +3604,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4">
         
           
           <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
@@ -3619,7 +3614,7 @@
   <span class="md-ellipsis">
     
   
-    Credentials & Toolkits
+    Credentials &amp; Toolkits
   
 
     
@@ -3635,7 +3630,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Credentials & Toolkits
+    Credentials &amp; Toolkits
   
 
           </label>
@@ -3807,7 +3802,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5">
         
           
           <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
@@ -3909,7 +3904,7 @@
   <span class="md-ellipsis">
     
   
-    Manage Roles & Permissions
+    Manage Roles &amp; Permissions
   
 
     
@@ -3956,7 +3951,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -4006,7 +4001,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1">
         
           
           <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
@@ -4176,7 +4171,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2">
         
           
           <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
@@ -5130,7 +5125,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3">
         
           
           <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
@@ -5251,7 +5246,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -5301,7 +5296,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1">
         
           
           <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
@@ -5387,7 +5382,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2">
         
           
           <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
@@ -5788,7 +5783,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7">
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
@@ -5798,7 +5793,7 @@
   <span class="md-ellipsis">
     
   
-    Migration & Upgrade
+    Migration &amp; Upgrade
   
 
     
@@ -5814,7 +5809,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Migration & Upgrade
+    Migration &amp; Upgrade
   
 
           </label>
@@ -5838,7 +5833,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1">
         
           
           <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
@@ -5980,7 +5975,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2">
         
           
           <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
@@ -6129,7 +6124,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8">
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
@@ -6603,7 +6598,7 @@
   <span class="md-ellipsis">
     
   
-    Export & Import Entities
+    Export &amp; Import Entities
   
 
     
@@ -6719,7 +6714,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_12">
         
           
           <label class="md-nav__link" for="__nav_9_12" id="__nav_9_12_label" tabindex="0">
@@ -6802,7 +6797,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -6854,14 +6849,14 @@
 
 
 
-<h1 id="how-to-create-and-publish-useful-prompts-for-testing-and-qa-activities">How to Create and Publish Useful Prompts for Testing and QA Activities<a class="headerlink" href="#how-to-create-and-publish-useful-prompts-for-testing-and-qa-activities" title="Permanent link">&para;</a></h1>
-<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<h1 id="how-to-create-and-publish-useful-prompts-for-testing-and-qa-activities">How to Create and Publish Useful Prompts for Testing and QA Activities<a class="headerlink" href="#how-to-create-and-publish-useful-prompts-for-testing-and-qa-activities" title="Permanent link">¶</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">¶</a></h2>
 <p>Welcome to our comprehensive guide designed to empower our Testing and Quality Assurance (QA) community in the crafting and sharing of valuable prompts, specifically tailored for an array of testing activities. In today's rapidly evolving software development landscape, the adoption of Generative AI Tools has become increasingly instrumental in augmenting our testing efforts. These cutting-edge tools offer unparalleled capabilities in automating and innovating processes ranging from generating test cases and creating detailed test plans to formulating comprehensive test strategies and writing automation scripts. Additionally, they play a critical role in generating realistic and diverse test data, facilitating a more thorough and effective testing process.</p>
 <p>The intention behind this activity is twofold: to streamline the process of prompt generation that leverages Gen AI Tools, ensuring that these prompts become potent tools in identifying and resolving defects, bolstering product quality, and refining our testing strategies. Moreover, it seeks to evolve our QA community to actively contribute to and share their expertise through valuable prompts. By participating in enriching our Prompt Library, you not only aid in creating a substantial repository of resources but also contribute to a culture of knowledge sharing and collective growth within our community.</p>
 <p>We encourage you to share prompts across various domains, including but not limited to, generating test cases, creating comprehensive test plans and strategies, developing automation scripts, and generating test data. This endeavor will not only help elevate the efficiency and effectiveness of our testing processes but also foster innovation and creativity within our QA practices.</p>
 <p>In leveraging Gen AI tools, it is imperative to always review the generated outputs meticulously to ensure they not only meet our stringent quality standards but also strictly adhere to Epam’s security guidelines and policies. Our collective commitment to maintaining the highest level of security and protecting sensitive information is paramount and non-negotiable.</p>
 <p>Your contribution to this initiative will play a pivotal role in enhancing our testing capabilities, driving quality improvements, and maintaining our competitive edge in delivering superior software solutions. Let us embark on this journey together, fostering a vibrant and collaborative QA community that thrives on innovation, excellence, and shared success.</p>
-<h1 id="accessing-elitea-hub">Accessing ELITEA HUB<a class="headerlink" href="#accessing-elitea-hub" title="Permanent link">&para;</a></h1>
+<h1 id="accessing-elitea-hub">Accessing ELITEA HUB<a class="headerlink" href="#accessing-elitea-hub" title="Permanent link">¶</a></h1>
 <p>To access and navigate through ELITEA HUB, follow these steps:</p>
 <ol>
 <li><strong>Open Your Browser</strong>: Launch your preferred web browser.</li>
@@ -6873,8 +6868,8 @@
 </ol>
 <p>By following these steps, you will be able to effectively utilize the features and functionalities offered by ELITEA HUB.</p>
 <p><strong>Note</strong>: You need to enable Epam VPN to access ELITEA.</p>
-<p><img alt="Intro-Main_Interface" src="../../img/menus/overview/Intro-Main_Interface.png" /></p>
-<h2 id="prompts">Prompts<a class="headerlink" href="#prompts" title="Permanent link">&para;</a></h2>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/overview/Intro-Main_Interface.png" data-desc-position="bottom"><img alt="Intro-Main_Interface" src="../../img/menus/overview/Intro-Main_Interface.png"></a></p>
+<h2 id="prompts">Prompts<a class="headerlink" href="#prompts" title="Permanent link">¶</a></h2>
 <p>Prompts are essentially instructions or scenarios designed to generate outcomes to assist QA activities. The effectiveness of the prompts directly correlates with the efficiency and accuracy of our testing efforts. To ensure that every prompt we create serves its purpose effectively, it’s crucial to adhere to several foundational principles. These guidelines not only help in crafting prompts that are valuable and practical but also ensure that they align with our overarching goals of security, versatility, and clarity in our QA processes. With this context in mind, let’s delve into the core principles that should guide the creation of effective prompts:</p>
 <p><strong>Creating Effective Prompts</strong></p>
 <ol>
@@ -6884,7 +6879,7 @@
 <li><strong>Scalability</strong>: Aim for prompts that can be broadly applied across various projects.</li>
 <li><strong>Security</strong>: Avoid including any customer data or sensitive information.</li>
 </ol>
-<h3 id="how-to-create-a-prompt">How to Create a Prompt<a class="headerlink" href="#how-to-create-a-prompt" title="Permanent link">&para;</a></h3>
+<h3 id="how-to-create-a-prompt">How to Create a Prompt<a class="headerlink" href="#how-to-create-a-prompt" title="Permanent link">¶</a></h3>
 <p>Creating a prompt involves capturing essential details that guide the testing process effectively. Here is how you can create a prompt that adds value:</p>
 <ol>
 <li><strong>Initiate Prompt Creation</strong>: Click the <strong>+ Prompt</strong> button located at the top right of your screen to start crafting your prompt.</li>
@@ -6903,12 +6898,12 @@
 <li><strong>Finalize</strong>: Click Save to keep your draft or proceed to the next step to share your work with the community.</li>
 </ol>
 <p><strong>Providing Name, Description and Context of the prompt:</strong></p>
-<p><img alt="Prompts-Create_New_Prompt" src="../../img/archive/prompts/Prompts-Create_New_Prompt.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/archive/prompts/Prompts-Create_New_Prompt.png" data-desc-position="bottom"><img alt="Prompts-Create_New_Prompt" src="../../img/archive/prompts/Prompts-Create_New_Prompt.png"></a></p>
 <p><strong>Setup Variables:</strong></p>
-<p><img alt="Prompts-Create_Variables" src="../../img/archive/prompts/Prompts-Create_Variables.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/archive/prompts/Prompts-Create_Variables.png" data-desc-position="bottom"><img alt="Prompts-Create_Variables" src="../../img/archive/prompts/Prompts-Create_Variables.png"></a></p>
 <p><strong>Configuring Advanced Settings:</strong></p>
-<p><img alt="Prompts-Advanced_Settings" src="../../img/archive/prompts/Prompts-Advanced_Settings.png" /></p>
-<h4 id="prompt-requirements-for-consistency-and-quality">Prompt Requirements for Consistency and Quality<a class="headerlink" href="#prompt-requirements-for-consistency-and-quality" title="Permanent link">&para;</a></h4>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/archive/prompts/Prompts-Advanced_Settings.png" data-desc-position="bottom"><img alt="Prompts-Advanced_Settings" src="../../img/archive/prompts/Prompts-Advanced_Settings.png"></a></p>
+<h4 id="prompt-requirements-for-consistency-and-quality">Prompt Requirements for Consistency and Quality<a class="headerlink" href="#prompt-requirements-for-consistency-and-quality" title="Permanent link">¶</a></h4>
 <p>When crafting your prompt, ensure it includes the following elements for clarity and effectiveness:</p>
 <ul>
 <li><strong>Descriptive Name</strong>: Clearly indicates the focus of the prompt.<ul>
@@ -6947,7 +6942,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="submitting-your-prompt-for-publishing">Submitting Your Prompt for Publishing<a class="headerlink" href="#submitting-your-prompt-for-publishing" title="Permanent link">&para;</a></h3>
+<h3 id="submitting-your-prompt-for-publishing">Submitting Your Prompt for Publishing<a class="headerlink" href="#submitting-your-prompt-for-publishing" title="Permanent link">¶</a></h3>
 <p>To make your prompt available to the wider QA community, follow the steps below for publication:</p>
 <ol>
 <li><strong>Publishing Initiation</strong>: With your prompt crafted and saved, click the Publish button to start the submission process.</li>
@@ -6960,9 +6955,9 @@
 <li><strong>Review Submission</strong>: Click Publish to submit your prompt for the moderation review process. This step is crucial to ensure the quality and relevance of prompts available to the QA community.</li>
 </ol>
 <p><strong>Publishing the prompt:</strong></p>
-<p><img alt="Prompts-Publishing" src="../../img/archive/prompts/Prompts-Publishing.png" /></p>
-<h2 id="review-process-by-moderators-and-outcome-of-prompt-submission">Review Process by Moderators and Outcome of Prompt Submission<a class="headerlink" href="#review-process-by-moderators-and-outcome-of-prompt-submission" title="Permanent link">&para;</a></h2>
-<h3 id="moderator-review-process">Moderator Review Process<a class="headerlink" href="#moderator-review-process" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/archive/prompts/Prompts-Publishing.png" data-desc-position="bottom"><img alt="Prompts-Publishing" src="../../img/archive/prompts/Prompts-Publishing.png"></a></p>
+<h2 id="review-process-by-moderators-and-outcome-of-prompt-submission">Review Process by Moderators and Outcome of Prompt Submission<a class="headerlink" href="#review-process-by-moderators-and-outcome-of-prompt-submission" title="Permanent link">¶</a></h2>
+<h3 id="moderator-review-process">Moderator Review Process<a class="headerlink" href="#moderator-review-process" title="Permanent link">¶</a></h3>
 <p>After a prompt is submitted for publication, it enters a critical assessment phase led by our designated moderators. Our moderators are QA professionals with a broad understanding of what constitutes a high-quality, effective prompt.
 The review process aims to ensure that each prompt meets our standards for relevance, clarity, security, and overall utility. </p>
 <p>The moderators follow a structured evaluation protocol:</p>
@@ -6972,7 +6967,7 @@ The review process aims to ensure that each prompt meets our standards for relev
 <li><strong>Practical Evaluation</strong>: Moderators assess the prompt’s practical application, reviewing variables, system messages for clarity, and the feasibility of expected outcomes.</li>
 <li><strong>Compliance Check</strong>: There's a final compliance check against our community guidelines and security policies to ensure no sensitive information is shared.</li>
 </ol>
-<h3 id="possible-outcomes-of-the-review">Possible Outcomes of the Review<a class="headerlink" href="#possible-outcomes-of-the-review" title="Permanent link">&para;</a></h3>
+<h3 id="possible-outcomes-of-the-review">Possible Outcomes of the Review<a class="headerlink" href="#possible-outcomes-of-the-review" title="Permanent link">¶</a></h3>
 <p>After the review process, a prompt can be categorized into one of the following statuses:</p>
 <ul>
 <li><strong>Approved</strong>: If the prompt meets all specified criteria, it is accepted and added to the Public project under the Prompts section, making it accessible to the community.</li>
@@ -6989,12 +6984,12 @@ The review process aims to ensure that each prompt meets our standards for relev
 <li><strong>Rejected</strong>: Prompts evaluated and declined for publication.</li>
 </ul>
 <p>To check the status of your submitted prompts, navigate to "<strong>Prompts</strong>" page on the platform, and select the status you wish to view from the dropdown menu.</p>
-<h3 id="engagement-with-prompts-liking-and-trending">Engagement with Prompts: Liking and Trending<a class="headerlink" href="#engagement-with-prompts-liking-and-trending" title="Permanent link">&para;</a></h3>
+<h3 id="engagement-with-prompts-liking-and-trending">Engagement with Prompts: Liking and Trending<a class="headerlink" href="#engagement-with-prompts-liking-and-trending" title="Permanent link">¶</a></h3>
 <p>Once a prompt is published, it becomes an essential resource for the QA community. You are encouraged to engage with these prompts through our "<strong>Like</strong>" functionality. Prompts that receive a significant number of likes can appear in the "<strong>Trending</strong>" page of the Prompt Library, highlighting their popularity and usefulness.</p>
 <p>The "Trending" page serves as a quick reference for discovering highly valued prompts within the community. To like a prompt, simply click on the heart icon associated with the prompt in the Prompt Library. Your engagement helps in identifying the most impactful prompts, enriching our QA processes and driving a culture of continuous improvement and collaboration.</p>
-<p><img alt="Prompts-Trending" src="../../img/how-tos/entity-management/publishing/Prompts-Trending.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/how-tos/entity-management/publishing/Prompts-Trending.png" data-desc-position="bottom"><img alt="Prompts-Trending" src="../../img/how-tos/entity-management/publishing/Prompts-Trending.png"></a></p>
 <p>By understanding and participating in the review process, you are contributing to a shared knowledge base that benefits the entire QA community. Your efforts and interactions, including submitting, refining, and liking prompts, play a crucial role in enhancing our collective testing efficacy.</p>
-<h2 id="collections">Collections<a class="headerlink" href="#collections" title="Permanent link">&para;</a></h2>
+<h2 id="collections">Collections<a class="headerlink" href="#collections" title="Permanent link">¶</a></h2>
 <p>Following the creation and publishing of individual prompts, the next step is the organization and further dissemination of these prompts through Collections. Collections serve as a means to group prompts by theme, project, testing phase, or any other meaningful categorization that enhances accessibility and usefulness for the QA community. This section will guide you through creating collections, adding prompts to them, publishing these collections, and how your peers can interact with them through likes.</p>
 <p><strong>The Purpose and Usefulness of Collections</strong></p>
 <p>Collections are immensely valuable for several reasons:</p>
@@ -7003,20 +6998,20 @@ The review process aims to ensure that each prompt meets our standards for relev
 <li><strong>Efficiency</strong>: By organizing prompts into collections, we save time for our QA engineers by providing consolidated resources that can be easily accessed and applied.</li>
 <li><strong>Sharing Best Practices</strong>: Collections can be shared across teams, promoting best practices and unified testing approaches across different projects.</li>
 </ul>
-<h3 id="creating-collection">Creating Collection<a class="headerlink" href="#creating-collection" title="Permanent link">&para;</a></h3>
+<h3 id="creating-collection">Creating Collection<a class="headerlink" href="#creating-collection" title="Permanent link">¶</a></h3>
 <ol>
 <li>Click the <strong>+ Collection</strong> button located at the top right corner.</li>
 <li>You will be prompted to fill in the <strong>Name</strong> and <strong>Description</strong> fields. Remember, these fields are essential as they give the first impression and understanding of what your collection is about.</li>
 </ol>
-<p><img alt="Collections-Create_Collection" src="../../img/menus/collections/Collections-Create_Collection.png" /></p>
-<h3 id="adding-prompts-to-your-collection">Adding Prompts to Your Collection<a class="headerlink" href="#adding-prompts-to-your-collection" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/collections/Collections-Create_Collection.png" data-desc-position="bottom"><img alt="Collections-Create_Collection" src="../../img/menus/collections/Collections-Create_Collection.png"></a></p>
+<h3 id="adding-prompts-to-your-collection">Adding Prompts to Your Collection<a class="headerlink" href="#adding-prompts-to-your-collection" title="Permanent link">¶</a></h3>
 <p>To add prompts to your collection, follow these steps:</p>
 <ol>
 <li>Once you've created a collection, you can start adding relevant prompts. Navigate to the prompt you wish to add and select an option to Add to Collection.</li>
 <li>Select the Collection you wish to add your prompt to from the pop-up window. You can add multiple prompts to a collection as long as they share the thematic relevance or purpose you've defined for your collection.</li>
 </ol>
-<p><img alt="Prompts-Add_to_Collection" src="../../img/archive/prompts/Prompts-Add_to_Collection.png" /></p>
-<h3 id="publishing-your-collection">Publishing Your Collection<a class="headerlink" href="#publishing-your-collection" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/archive/prompts/Prompts-Add_to_Collection.png" data-desc-position="bottom"><img alt="Prompts-Add_to_Collection" src="../../img/archive/prompts/Prompts-Add_to_Collection.png"></a></p>
+<h3 id="publishing-your-collection">Publishing Your Collection<a class="headerlink" href="#publishing-your-collection" title="Permanent link">¶</a></h3>
 <p>Publishing your collection makes it available to the entire QA network, allowing others to benefit from the curated set of prompts you've organized:</p>
 <ol>
 <li>After adding the desired prompts to your collection, open the collection and review the content to ensure completeness and relevance.</li>
@@ -7024,7 +7019,7 @@ The review process aims to ensure that each prompt meets our standards for relev
 <li>Once approved, your collection will be published and accessible from the Collection menu, ready to be used by the community.</li>
 </ol>
 <p><strong>Note</strong>: A Collection must contain public prompts before publication.</p>
-<h3 id="engagement-with-collections-liking-and-trending">Engagement with Collections: Liking and Trending<a class="headerlink" href="#engagement-with-collections-liking-and-trending" title="Permanent link">&para;</a></h3>
+<h3 id="engagement-with-collections-liking-and-trending">Engagement with Collections: Liking and Trending<a class="headerlink" href="#engagement-with-collections-liking-and-trending" title="Permanent link">¶</a></h3>
 <p>Just as with individual prompts, users are encouraged to engage with collections through likes. This interaction is crucial for several reasons:</p>
 <ul>
 <li><strong>Recognition</strong>: Liking a collection serves as a form of recognition and appreciation for the contributor's effort in curating valuable resources.</li>
@@ -7032,17 +7027,17 @@ The review process aims to ensure that each prompt meets our standards for relev
 <li><strong>Feedback Mechanism</strong>: Likes serve as a feedback mechanism, helping contributors understand the impact and usefulness of their collections, guiding future efforts in prompt and collection creation.</li>
 </ul>
 <p>By actively creating, contributing to, and engaging with collections, QA engineers enhance the shared knowledge base and support the continuous improvement of testing practices within the community. Collections not only facilitate access to valuable testing resources but also foster a collaborative environment where knowledge and best practices are freely exchanged.</p>
-<h2 id="contribution">Contribution<a class="headerlink" href="#contribution" title="Permanent link">&para;</a></h2>
-<h3 id="why-share-your-prompts">Why Share Your Prompts?<a class="headerlink" href="#why-share-your-prompts" title="Permanent link">&para;</a></h3>
+<h2 id="contribution">Contribution<a class="headerlink" href="#contribution" title="Permanent link">¶</a></h2>
+<h3 id="why-share-your-prompts">Why Share Your Prompts?<a class="headerlink" href="#why-share-your-prompts" title="Permanent link">¶</a></h3>
 <p>Sharing your prompts not only contributes to the collective knowledge of our QA community but also highlights your expertise and creativity.
 By contributing, you’re directly impacting the efficiency and efficacy of our testing processes, encouraging a culture of innovation and continuous improvement.</p>
-<h3 id="rewards-and-recognition">Rewards and Recognition<a class="headerlink" href="#rewards-and-recognition" title="Permanent link">&para;</a></h3>
+<h3 id="rewards-and-recognition">Rewards and Recognition<a class="headerlink" href="#rewards-and-recognition" title="Permanent link">¶</a></h3>
 <p>To acknowledge the value of your contributions, we have an Appreciation Program in place. Leading contributors will be recognized by the Management Team.
 Your innovation could lead the way in defining our testing standards - an opportunity to shine and be recognized among your peers.
 By following these enhanced guidelines and utilizing the provided resources, you're well on your way to creating impactful prompts that can significantly improve our QA practices.
 Let's work together to build a richer, more effective Prompt Library for everyone in our network.</p>
-<h2 id="useful-resources">Useful Resources<a class="headerlink" href="#useful-resources" title="Permanent link">&para;</a></h2>
-<h3 id="prompt-engineering">Prompt Engineering<a class="headerlink" href="#prompt-engineering" title="Permanent link">&para;</a></h3>
+<h2 id="useful-resources">Useful Resources<a class="headerlink" href="#useful-resources" title="Permanent link">¶</a></h2>
+<h3 id="prompt-engineering">Prompt Engineering<a class="headerlink" href="#prompt-engineering" title="Permanent link">¶</a></h3>
 <ul>
 <li><a href="https://learn.epam.com/detailsPage?id=92d11cb4-dbaa-45a3-8b22-60f9f391f588">Prompt Engineering Foundations</a></li>
 <li><a href="https://learn.epam.com/detailsPage?id=1c89e986-9a96-4aed-8166-291af0a8a19c">EngX AI-Supported Quality Assurance Engineering</a></li>
@@ -7075,13 +7070,13 @@ Let's work together to build a richer, more effective Prompt Library for everyon
   
     
       
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
           <a href="../alita-dial/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Alita Dial">
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
             </div>
             <div class="md-footer__title">
               <span class="md-footer__direction">
@@ -7106,7 +7101,7 @@ Let's work together to build a richer, more effective Prompt Library for everyon
             </div>
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
             </div>
           </a>
         
@@ -7138,7 +7133,7 @@ Let's work together to build a richer, more effective Prompt Library for everyon
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.footer", "navigation.path", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.footer", "navigation.path", "navigation.tabs", "navigation.tabs.sticky", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
@@ -7146,5 +7141,7 @@ Let's work together to build a richer, more effective Prompt Library for everyon
         <script src="../../extra_js/fullscreen.js"></script>
       
     
-  </body>
-</html>
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

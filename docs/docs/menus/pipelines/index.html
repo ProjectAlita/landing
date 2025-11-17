@@ -1,7 +1,4 @@
-
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
+<!DOCTYPE html><html lang="en" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -46,7 +43,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -59,7 +56,17 @@
 
     
     
-  </head>
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
   
   
     
@@ -101,7 +108,7 @@
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -126,20 +133,20 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to system preference" type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
       </label>
     
   
@@ -150,46 +157,6 @@
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
-    
-      
-      
-        <label class="md-header__button md-icon" for="__search">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        </label>
-        <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-      
     
     
   </nav>
@@ -403,7 +370,7 @@
           
   
   
-  Migration & Upgrade
+  Migration &amp; Upgrade
 
         </a>
       </li>
@@ -471,7 +438,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -510,7 +477,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1">
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -560,7 +527,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1">
         
           
           <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
@@ -758,7 +725,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2">
         
           
           <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
@@ -1019,7 +986,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -1069,7 +1036,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1">
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -1183,7 +1150,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2">
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -1381,7 +1348,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3">
         
           
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
@@ -1560,14 +1527,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/configure-and-use-mcp/" class="md-nav__link">
+      <a href="../../getting-started/create-and-use-server-stdio/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Configure and Use MCP Servers
+    Configure and Use MCP Server(STDIO)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/create-and-use-client-stdio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configure and Use MCP Client(STDIO)
   
 
     
@@ -2408,7 +2403,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_10">
         
           
           <label class="md-nav__link" for="__nav_3_1_10" id="__nav_3_1_10_label" tabindex="0">
@@ -2649,7 +2644,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -2699,7 +2694,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1">
         
           
           <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
@@ -2709,7 +2704,7 @@
   <span class="md-ellipsis">
     
   
-    Chat & Conversations
+    Chat &amp; Conversations
   
 
     
@@ -2725,7 +2720,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Chat & Conversations
+    Chat &amp; Conversations
   
 
           </label>
@@ -3037,7 +3032,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2">
         
           
           <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
@@ -3459,7 +3454,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3">
         
           
           <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
@@ -3469,7 +3464,7 @@
   <span class="md-ellipsis">
     
   
-    Agents & Pipelines
+    Agents &amp; Pipelines
   
 
     
@@ -3485,7 +3480,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Agents & Pipelines
+    Agents &amp; Pipelines
   
 
           </label>
@@ -3565,7 +3560,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3">
         
           
           <label class="md-nav__link" for="__nav_4_3_3" id="__nav_4_3_3_label" tabindex="0">
@@ -3671,7 +3666,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3_3">
         
           
           <label class="md-nav__link" for="__nav_4_3_3_3" id="__nav_4_3_3_3_label" tabindex="0">
@@ -4053,7 +4048,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4">
         
           
           <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
@@ -4063,7 +4058,7 @@
   <span class="md-ellipsis">
     
   
-    Credentials & Toolkits
+    Credentials &amp; Toolkits
   
 
     
@@ -4079,7 +4074,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Credentials & Toolkits
+    Credentials &amp; Toolkits
   
 
           </label>
@@ -4251,7 +4246,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5">
         
           
           <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
@@ -4353,7 +4348,7 @@
   <span class="md-ellipsis">
     
   
-    Manage Roles & Permissions
+    Manage Roles &amp; Permissions
   
 
     
@@ -4400,7 +4395,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -4450,7 +4445,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1">
         
           
           <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
@@ -4620,7 +4615,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2">
         
           
           <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
@@ -5574,7 +5569,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3">
         
           
           <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
@@ -5695,7 +5690,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -5745,7 +5740,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1">
         
           
           <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
@@ -5831,7 +5826,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2">
         
           
           <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
@@ -6232,7 +6227,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7">
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
@@ -6242,7 +6237,7 @@
   <span class="md-ellipsis">
     
   
-    Migration & Upgrade
+    Migration &amp; Upgrade
   
 
     
@@ -6258,7 +6253,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Migration & Upgrade
+    Migration &amp; Upgrade
   
 
           </label>
@@ -6282,7 +6277,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1">
         
           
           <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
@@ -6424,7 +6419,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2">
         
           
           <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
@@ -6573,7 +6568,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8">
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
@@ -6742,7 +6737,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9">
         
           
           <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
@@ -6984,7 +6979,7 @@
   <span class="md-ellipsis">
     
   
-    Export & Import Entities
+    Export &amp; Import Entities
   
 
     
@@ -7100,7 +7095,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_12">
         
           
           <label class="md-nav__link" for="__nav_9_12" id="__nav_9_12_label" tabindex="0">
@@ -7183,7 +7178,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -7605,7 +7600,7 @@
 
 
 
-  <nav class="md-path" aria-label="Navigation" >
+  <nav class="md-path" aria-label="Navigation">
     <ol class="md-path__list">
       
       
@@ -7663,13 +7658,13 @@
 
 
 
-<h1 id="pipelines">Pipelines<a class="headerlink" href="#pipelines" title="Permanent link">&para;</a></h1>
-<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<h1 id="pipelines">Pipelines<a class="headerlink" href="#pipelines" title="Permanent link">¶</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">¶</a></h2>
 <p><strong>Pipelines</strong> in ELITEA provide a powerful way to automate workflows by visually designing and executing sequences of states and actions. This feature is ideal for managing complex processes, integrating toolkits, and ensuring seamless data flow across various tasks.</p>
-<h2 id="navigating-the-pipelines-menu">Navigating the Pipelines Menu<a class="headerlink" href="#navigating-the-pipelines-menu" title="Permanent link">&para;</a></h2>
+<h2 id="navigating-the-pipelines-menu">Navigating the Pipelines Menu<a class="headerlink" href="#navigating-the-pipelines-menu" title="Permanent link">¶</a></h2>
 <p>The Pipelines menu is accessible from the main platform navigation. Upon entering the Pipelines section, you'll see a dashboard with different views depending on your applied filters:</p>
-<p><img alt="Pipeline_Menu" src="../../img/menus/pipeline/pipeline-menu.png" /></p>
-<h3 id="interface-elements">Interface Elements<a class="headerlink" href="#interface-elements" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/pipeline/pipeline-menu.png" data-desc-position="bottom"><img alt="Pipeline_Menu" src="../../img/menus/pipeline/pipeline-menu.png"></a></p>
+<h3 id="interface-elements">Interface Elements<a class="headerlink" href="#interface-elements" title="Permanent link">¶</a></h3>
 <p><strong>Pipeline List Display:</strong></p>
 <ul>
 <li>
@@ -7708,13 +7703,13 @@
 - Click tags to filter pipelines by specific categories or functionalities</p>
 <p><strong>Community Features (Public Projects):</strong>
 - <strong>Trending Authors</strong>: Discover and follow popular pipeline creators in the community</p>
-<h2 id="what-are-elitea-pipelines">What are ELITEA Pipelines?<a class="headerlink" href="#what-are-elitea-pipelines" title="Permanent link">&para;</a></h2>
+<h2 id="what-are-elitea-pipelines">What are ELITEA Pipelines?<a class="headerlink" href="#what-are-elitea-pipelines" title="Permanent link">¶</a></h2>
 <p>ELITEA Pipelines are customizable workflows that you can create within the ELITEA interface to automate complex processes. Each pipeline is designed to handle specific tasks or sequences of tasks by connecting various nodes such as conditions, decisions, loops, and tool integrations. Pipelines enable seamless interaction with external services, toolkits, and data sources, allowing users to design workflows that automate tasks like data processing, decision-making, and integration with tools like Jira, GitHub, or Salesforce. The flexibility of ELITEA Pipelines makes them powerful tools for streamlining operations and reducing manual effort.</p>
-<h2 id="purpose-of-elitea-pipelines">Purpose of ELITEA Pipelines<a class="headerlink" href="#purpose-of-elitea-pipelines" title="Permanent link">&para;</a></h2>
+<h2 id="purpose-of-elitea-pipelines">Purpose of ELITEA Pipelines<a class="headerlink" href="#purpose-of-elitea-pipelines" title="Permanent link">¶</a></h2>
 <p>The primary purpose of ELITEA Pipelines is to provide a structured and efficient way to automate workflows for diverse use cases. Unlike manual task execution, pipelines are designed to handle repetitive, multi-step, or intricate processes that require coordination between various tools and data sources. This is particularly beneficial in scenarios where tasks involve conditional logic, iterative operations, or integration with multiple external systems. By automating these workflows, ELITEA Pipelines help reduce errors, save time, and increase productivity.</p>
-<h2 id="how-do-pipelines-work">How do Pipelines Work?<a class="headerlink" href="#how-do-pipelines-work" title="Permanent link">&para;</a></h2>
+<h2 id="how-do-pipelines-work">How do Pipelines Work?<a class="headerlink" href="#how-do-pipelines-work" title="Permanent link">¶</a></h2>
 <p>Creating a Pipeline involves defining a sequence of nodes, each representing a specific action, decision, or condition. These nodes can include operations like looping through data, making decisions based on conditions, or interacting with external toolkits. Users can visually design the workflow using the Flow Designer or configure it programmatically using the YAML Editor for advanced customization. Once configured, the pipeline executes the defined steps autonomously, leveraging integrated toolkits and external services to complete tasks. This allows users to automate complex workflows, adapt to dynamic conditions, and achieve their goals with minimal manual intervention.</p>
-<h2 id="key-features-of-elitea-pipelines">Key Features of ELITEA Pipelines<a class="headerlink" href="#key-features-of-elitea-pipelines" title="Permanent link">&para;</a></h2>
+<h2 id="key-features-of-elitea-pipelines">Key Features of ELITEA Pipelines<a class="headerlink" href="#key-features-of-elitea-pipelines" title="Permanent link">¶</a></h2>
 <ul>
 <li><strong>Automation</strong>: ELITEA Pipelines enable seamless automation of workflows by connecting states and actions, reducing manual effort and streamlining complex processes.</li>
 <li><strong>Flexibility</strong>: Pipelines can be customized to handle a wide range of tasks, from simple linear workflows to intricate multi-step processes, adapting to diverse use cases.</li>
@@ -7723,9 +7718,9 @@
 <li><strong>Monitoring</strong>: Pipelines include robust monitoring capabilities, allowing users to track performance, analyze execution metrics, and troubleshoot issues in real-time.</li>
 </ul>
 <p>By leveraging ELITEA Pipelines, users can automate and optimize their workflows, ensuring efficiency and scalability while maintaining full control over their processes. This empowers users to focus on higher-level strategic tasks, driving innovation and productivity within the ELITEA platform.</p>
-<h2 id="pipeline-interface-structure">Pipeline Interface Structure<a class="headerlink" href="#pipeline-interface-structure" title="Permanent link">&para;</a></h2>
+<h2 id="pipeline-interface-structure">Pipeline Interface Structure<a class="headerlink" href="#pipeline-interface-structure" title="Permanent link">¶</a></h2>
 <p>When working with pipelines, the interface is organized into several key tabs:</p>
-<h3 id="run-tab">Run Tab<a class="headerlink" href="#run-tab" title="Permanent link">&para;</a></h3>
+<h3 id="run-tab">Run Tab<a class="headerlink" href="#run-tab" title="Permanent link">¶</a></h3>
 <p>The <strong>Run</strong> tab serves as the primary execution environment where you can:</p>
 <ul>
 <li>Execute your pipeline with real data</li>
@@ -7733,7 +7728,7 @@
 <li>Interact with the pipeline through the chat interface</li>
 <li>Monitor real-time execution progress</li>
 </ul>
-<h3 id="configuration-tab">Configuration Tab<a class="headerlink" href="#configuration-tab" title="Permanent link">&para;</a></h3>
+<h3 id="configuration-tab">Configuration Tab<a class="headerlink" href="#configuration-tab" title="Permanent link">¶</a></h3>
 <p>The <strong>Configuration</strong> tab is where you design and configure your pipeline:</p>
 <ul>
 <li>Use the <strong>Flow Designer</strong> to visually create your pipeline workflow</li>
@@ -7742,7 +7737,7 @@
 <li>Configure toolkits and integrations</li>
 <li>Add welcome messages and conversation starters</li>
 </ul>
-<h3 id="monitoring-tab">Monitoring Tab<a class="headerlink" href="#monitoring-tab" title="Permanent link">&para;</a></h3>
+<h3 id="monitoring-tab">Monitoring Tab<a class="headerlink" href="#monitoring-tab" title="Permanent link">¶</a></h3>
 <p>The <strong>Monitoring</strong> tab provides comprehensive analytics and performance tracking:</p>
 <ul>
 <li>View detailed execution logs and metrics</li>
@@ -7750,7 +7745,7 @@
 <li>Analyze usage patterns and bottlenecks</li>
 <li>Access debugging information for troubleshooting</li>
 </ul>
-<h2 id="creating-a-pipeline">Creating a Pipeline<a class="headerlink" href="#creating-a-pipeline" title="Permanent link">&para;</a></h2>
+<h2 id="creating-a-pipeline">Creating a Pipeline<a class="headerlink" href="#creating-a-pipeline" title="Permanent link">¶</a></h2>
 <p>To set up a new Pipeline:</p>
 <ol>
 <li>Click the <strong>+ Create</strong> button located in the sidebar navigation.</li>
@@ -7773,10 +7768,10 @@
 <li><strong>Integration of Toolkits</strong> becomes available after the first save. Navigate to the <strong>Toolkits</strong> section to enhance the pipeline's functionality by connecting it to external services or internal tools.</li>
 <li>Click <strong>Save</strong> again to preserve your additional configurations.</li>
 </ol>
-<p><img alt="Pipeline_Create" src="../../img/menus/pipeline/pipeline_create.png" /></p>
-<h3 id="adding-toolkits-agents-and-pipelines">Adding Toolkits, Agents, and Pipelines<a class="headerlink" href="#adding-toolkits-agents-and-pipelines" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/pipeline/pipeline_create.png" data-desc-position="bottom"><img alt="Pipeline_Create" src="../../img/menus/pipeline/pipeline_create.png"></a></p>
+<h3 id="adding-toolkits-agents-and-pipelines">Adding Toolkits, Agents, and Pipelines<a class="headerlink" href="#adding-toolkits-agents-and-pipelines" title="Permanent link">¶</a></h3>
 <p>After saving your initial pipeline, the <strong>TOOLKITS</strong> section becomes available with three integration options:</p>
-<h4 id="add-a-toolkit"><strong>Add a Toolkit</strong><a class="headerlink" href="#add-a-toolkit" title="Permanent link">&para;</a></h4>
+<h4 id="add-a-toolkit"><strong>Add a Toolkit</strong><a class="headerlink" href="#add-a-toolkit" title="Permanent link">¶</a></h4>
 <p>Click the <strong>+ Toolkit</strong> button to integrate external services and tools into your pipeline:</p>
 <ul>
 <li><strong>Purpose</strong>: Connect your pipeline to external APIs, databases, and services like Jira, GitHub, Slack, or custom APIs</li>
@@ -7792,19 +7787,19 @@
 <p class="admonition-title">Reference</p>
 <p>For detailed information on creating and managing toolkits, refer to the <strong><a href="../toolkits/">Toolkits Menu Guide</a></strong>.</p>
 </div>
-<h4 id="add-an-agent"><strong>Add an Agent</strong><a class="headerlink" href="#add-an-agent" title="Permanent link">&para;</a></h4>
+<h4 id="add-an-agent"><strong>Add an Agent</strong><a class="headerlink" href="#add-an-agent" title="Permanent link">¶</a></h4>
 <p>Click the <strong>+ Agent</strong> button to incorporate existing agents into your pipeline workflow:</p>
 <ul>
 <li><strong>Purpose</strong>: Leverage pre-built AI agents with specialized capabilities and knowledge domains</li>
 <li><strong>Selection Process</strong>: Choose from existing agents in your workspace</li>
 </ul>
-<h4 id="add-a-pipeline"><strong>Add a Pipeline</strong><a class="headerlink" href="#add-a-pipeline" title="Permanent link">&para;</a></h4>
+<h4 id="add-a-pipeline"><strong>Add a Pipeline</strong><a class="headerlink" href="#add-a-pipeline" title="Permanent link">¶</a></h4>
 <p>Click the <strong>+ Pipeline</strong> button to nest other pipelines within your current pipeline:</p>
 <ul>
 <li><strong>Purpose</strong>: Create complex workflows by chaining multiple pipelines together</li>
 <li><strong>Selection Process</strong>: Select from existing pipelines in your workspace</li>
 </ul>
-<p><img alt="Add Toolkit" src="../../img/menus/pipeline/add-toolkit.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/pipeline/add-toolkit.png" data-desc-position="bottom"><img alt="Add Toolkit" src="../../img/menus/pipeline/add-toolkit.png"></a></p>
 <div class="admonition tip">
 <p class="admonition-title">Integration Best Practices</p>
 <ul>
@@ -7820,15 +7815,15 @@
 <li>Click the <strong>Upload a Custom Image</strong> icon to upload a custom image from your local system to personalize the Pipeline's profile.</li>
 <li><strong>Use Default Images</strong> from a set of default images provided by the platform.</li>
 </ol>
-<p><img alt="Pipeline_Change_Icon" src="../../img/menus/pipeline/pipeline_change_icon.png" /></p>
-<h3 id="welcome-message">WELCOME MESSAGE<a class="headerlink" href="#welcome-message" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/pipeline/pipeline_change_icon.png" data-desc-position="bottom"><img alt="Pipeline_Change_Icon" src="../../img/menus/pipeline/pipeline_change_icon.png"></a></p>
+<h3 id="welcome-message">WELCOME MESSAGE<a class="headerlink" href="#welcome-message" title="Permanent link">¶</a></h3>
 <p>The <strong>Welcome Message</strong> feature allows you to provide additional context and instructions that appear when users interact with your pipeline in the chat interface. This message helps set expectations and guide users on how to best utilize the pipeline.</p>
 <p><strong>How to Add the Welcome Message</strong>:</p>
 <ol>
 <li><strong>Add the Welcome Message</strong>: Type the welcome message text in the input field.</li>
 <li><strong>Save the Configuration</strong>: After entering the desired text, ensure to save the changes to the pipeline. This action makes the configured welcome message available to users in the <strong>Run</strong> tab.</li>
 </ol>
-<p><img alt="Pipeline_Welcome_Message" src="../../img/menus/pipeline/pipeline_welcome_message.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/pipeline/pipeline_welcome_message.png" data-desc-position="bottom"><img alt="Pipeline_Welcome_Message" src="../../img/menus/pipeline/pipeline_welcome_message.png"></a></p>
 <p><strong>Using the Welcome Message</strong>:</p>
 <p>When users go to the <strong>Run</strong> tab of the pipeline, they will see the configured <strong>Welcome Message</strong>. It provides helpful context and instructions to guide their interaction with the pipeline.</p>
 <p><strong>Examples of Welcome Message</strong>:</p>
@@ -7837,7 +7832,7 @@
 <li>"Don't forget to double-check the generated test cases"</li>
 <li>"I can help you analyze data and generate reports"</li>
 </ul>
-<h3 id="conversation-starters">CONVERSATION STARTERS<a class="headerlink" href="#conversation-starters" title="Permanent link">&para;</a></h3>
+<h3 id="conversation-starters">CONVERSATION STARTERS<a class="headerlink" href="#conversation-starters" title="Permanent link">¶</a></h3>
 <p>The <strong>Conversation Starter</strong> feature enables you to configure and add predefined text that can be used to initiate a conversation when executing a pipeline. This feature is particularly useful for setting a consistent starting point for interactions facilitated by the pipeline.</p>
 <p><strong>How to Add a Conversation Starter</strong>:</p>
 <ol>
@@ -7845,7 +7840,7 @@
 <li><strong>Add a Conversation Starter</strong>: Click the <code>+</code> icon to open the text input field where you can type the text you wish to use as a conversation starter.</li>
 <li><strong>Save the Configuration</strong>: After entering the desired text, ensure to save the changes to the pipeline. This action makes the configured conversation starter available for use.</li>
 </ol>
-<p><img alt="Pipeline_Conversation_Starter" src="../../img/menus/pipeline/pipeline_conversation_starter.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/pipeline/pipeline_conversation_starter.png" data-desc-position="bottom"><img alt="Pipeline_Conversation_Starter" src="../../img/menus/pipeline/pipeline_conversation_starter.png"></a></p>
 <p><strong>Using a Conversation Starter</strong>:</p>
 <p><strong>Initiate a Conversation</strong>: Go to the <strong>Run</strong> tab of the pipeline. Here, you will find the saved conversation starters displayed as clickable options. Click on the desired starter to automatically populate the chat input and execute the pipeline.</p>
 <p><strong>Examples of Conversation Starters</strong>:</p>
@@ -7856,21 +7851,21 @@
 <li>"Help me write documentation for this feature."</li>
 </ul>
 <p>By setting up conversation starters, you streamline the process of initiating specific tasks or queries, making your interactions with the pipeline more efficient and standardized.</p>
-<h3 id="flow-designer"><strong>Flow Designer</strong>:<a class="headerlink" href="#flow-designer" title="Permanent link">&para;</a></h3>
+<h3 id="flow-designer"><strong>Flow Designer</strong>:<a class="headerlink" href="#flow-designer" title="Permanent link">¶</a></h3>
 <ul>
 <li>Use the <strong>Flow</strong> tab to visually design your pipeline by connecting various nodes, such as <strong>Agent</strong>, <strong>Condition</strong>, <strong>Decision</strong>, <strong>Function</strong>, <strong>LLM</strong>, <strong>Loop</strong>, <strong>Loop from Tool</strong>, <strong>Pipeline</strong>, <strong>Router</strong>, <strong>State Modifier</strong>, <strong>Tool</strong>, and <strong>Custom</strong>.</li>
 </ul>
-<p><img alt="Pipeline_Flow" src="../../img/menus/pipeline/pipeline_flow.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/pipeline/pipeline_flow.png" data-desc-position="bottom"><img alt="Pipeline_Flow" src="../../img/menus/pipeline/pipeline_flow.png"></a></p>
 <ul>
 <li>Add new nodes by clicking the <strong>+</strong> icon and selecting the desired node type from the dropdown menu.</li>
 </ul>
-<p><img alt="Pipeline_Nodes" src="../../img/menus/pipeline/pipeline_nodes.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/pipeline/pipeline_nodes.png" data-desc-position="bottom"><img alt="Pipeline_Nodes" src="../../img/menus/pipeline/pipeline_nodes.png"></a></p>
 <ul>
 <li>Use the <strong>End</strong> node to define the completion of the pipeline.</li>
 <li>Drag and drop connections between nodes to establish the workflow's logic and transitions.</li>
 <li>Zoom in or out and adjust the view for better navigation and management of complex workflows.</li>
 </ul>
-<h3 id="best-practices-for-using-nodes">Best Practices for Using Nodes<a class="headerlink" href="#best-practices-for-using-nodes" title="Permanent link">&para;</a></h3>
+<h3 id="best-practices-for-using-nodes">Best Practices for Using Nodes<a class="headerlink" href="#best-practices-for-using-nodes" title="Permanent link">¶</a></h3>
 <ul>
 <li><strong>Plan Your Workflow</strong>: Before adding nodes, outline the desired workflow to ensure a clear and logical structure.</li>
 <li><strong>Use Descriptive Names</strong>: Name each node clearly to make the pipeline easier to understand and maintain.</li>
@@ -7898,25 +7893,25 @@
 <p>For detailed information on each node type and its use cases, refer to the <a href="../../features/pipelines/pipeline-agent-framework/">Pipeline Architecture Guide</a>.</p>
 </div>
 <p>By following best practices and leveraging the available nodes, you can design efficient and scalable workflows tailored to your specific needs.</p>
-<h3 id="yaml-editor"><strong>YAML Editor</strong>:<a class="headerlink" href="#yaml-editor" title="Permanent link">&para;</a></h3>
+<h3 id="yaml-editor"><strong>YAML Editor</strong>:<a class="headerlink" href="#yaml-editor" title="Permanent link">¶</a></h3>
 <ul>
 <li>Switch to the <strong>YAML</strong> tab to configure the pipeline using code for advanced customization.</li>
 <li>Define complex workflows, conditions, and logic that may not be easily achievable through the visual Flow Designer.</li>
 <li>Use the YAML editor to fine-tune node configurations, set advanced parameters, and integrate custom logic.</li>
 <li>Validate your YAML syntax to ensure the pipeline runs smoothly without errors.</li>
 </ul>
-<p><img alt="Pipeline_Yaml" src="../../img/menus/pipeline/pipeline_yaml.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/pipeline/pipeline_yaml.png" data-desc-position="bottom"><img alt="Pipeline_Yaml" src="../../img/menus/pipeline/pipeline_yaml.png"></a></p>
 <ul>
 <li>This is particularly useful for users who prefer a code-first approach, need to implement intricate logic, or want to replicate and modify existing pipelines efficiently.</li>
 </ul>
-<h3 id="how-to-execute-pipeline">How to Execute Pipeline<a class="headerlink" href="#how-to-execute-pipeline" title="Permanent link">&para;</a></h3>
+<h3 id="how-to-execute-pipeline">How to Execute Pipeline<a class="headerlink" href="#how-to-execute-pipeline" title="Permanent link">¶</a></h3>
 <p>To execute the pipeline and get the output:</p>
 <ol>
 <li><strong>Configure the Pipeline</strong>: Ensure your pipeline is properly configured with clear instructions and any necessary toolkits.</li>
 <li><strong>Navigate to Chat</strong>: Access the pipeline's chat interface by clicking on the pipeline from your pipelines list, then go to the <strong>Run</strong> tab.</li>
 <li><strong>Select the AI Model</strong>: In the chat interface, choose the appropriate AI model (e.g., gpt-4o-2024-11-20, gpt-4o-2024-08-06, etc.) from the model selection dropdown.</li>
 </ol>
-<p><img alt="Pipeline-Ai-Model" src="../../img/menus/pipeline/pipeline-model-select.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/pipeline/pipeline-model-select.png" data-desc-position="bottom"><img alt="Pipeline-Ai-Model" src="../../img/menus/pipeline/pipeline-model-select.png"></a></p>
 <ol>
 <li>
 <p><strong>Adjust Parameters</strong> (Optional): Fine-tune the response generation with these settings:</p>
@@ -7937,7 +7932,7 @@
 </ul>
 </li>
 </ul>
-<p><img alt="Pipeline-Model-Settings" src="../../img/menus/pipeline/pipelin-model-settings.png" />   </p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/pipeline/pipelin-model-settings.png" data-desc-position="bottom"><img alt="Pipeline-Model-Settings" src="../../img/menus/pipeline/pipelin-model-settings.png"></a>   </p>
 </li>
 <li>
 <p><strong>Start Interaction</strong>: Begin your conversation by either:</p>
@@ -7966,10 +7961,10 @@
 </ul>
 </li>
 </ul>
-<p><img alt="Pipeline-Execution" src="../../img/menus/pipeline/pipeline_execution.png" /></p>
-<h3 id="managing-pipeline-versions-save-create-versions-publish-and-manage">Managing Pipeline Versions: Save, Create Versions, Publish and Manage<a class="headerlink" href="#managing-pipeline-versions-save-create-versions-publish-and-manage" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/pipeline/pipeline_execution.png" data-desc-position="bottom"><img alt="Pipeline-Execution" src="../../img/menus/pipeline/pipeline_execution.png"></a></p>
+<h3 id="managing-pipeline-versions-save-create-versions-publish-and-manage">Managing Pipeline Versions: Save, Create Versions, Publish and Manage<a class="headerlink" href="#managing-pipeline-versions-save-create-versions-publish-and-manage" title="Permanent link">¶</a></h3>
 <p>To optimally manage your pipeline, understanding how to save and create versions is crucial. Follow these guidelines to efficiently save your pipeline, create versions, and manage them.</p>
-<h4 id="how-to-save-a-pipeline">How to Save a Pipeline:<a class="headerlink" href="#how-to-save-a-pipeline" title="Permanent link">&para;</a></h4>
+<h4 id="how-to-save-a-pipeline">How to Save a Pipeline:<a class="headerlink" href="#how-to-save-a-pipeline" title="Permanent link">¶</a></h4>
 <ul>
 <li>To save your work on a Pipeline for the first time, simply click the <strong>Save</strong> button. This action creates what's known as the "<strong>latest</strong>" version of your pipeline.</li>
 <li>You can continue to modify your pipeline and save the changes to the "<strong>latest</strong>" version at any time by clicking the <strong>Save</strong> button again. If you wish to discard any changes made, you have the option to click the <strong>Discard</strong> button before saving.</li>
@@ -7978,13 +7973,13 @@
 <p class="admonition-title">Note</p>
 <p>The "<strong>latest</strong>" version represents the initial version you create. You can keep updating this version with your changes by saving them, without the need to create additional versions for your pipeline.</p>
 </div>
-<h4 id="how-to-create-new-versions">How to Create New Versions:<a class="headerlink" href="#how-to-create-new-versions" title="Permanent link">&para;</a></h4>
+<h4 id="how-to-create-new-versions">How to Create New Versions:<a class="headerlink" href="#how-to-create-new-versions" title="Permanent link">¶</a></h4>
 <p>For instances where you need to create and manage different iterations of your Pipeline:</p>
 <ol>
 <li><strong>Initiate a New Version</strong>: Start by clicking the <strong>Save As Version</strong> button.</li>
 <li><strong>Name Your Version</strong>: When saving your work, provide a version name that clearly identifies the iteration or changes made. Click <strong>Save</strong> to confirm your entry. </li>
 </ol>
-<p><img alt="Pipeline New Version" src="../../img/menus/pipeline/pipeline-version-create.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/pipeline/pipeline-version-create.png" data-desc-position="bottom"><img alt="Pipeline New Version" src="../../img/menus/pipeline/pipeline-version-create.png"></a></p>
 <p><strong>Best Practices for Version Naming</strong>:</p>
 <ul>
 <li><strong>Length</strong>: Keep the version name concise, not exceeding 48 characters. This ensures readability and compatibility across various systems.</li>
@@ -7998,9 +7993,9 @@
 <li><strong>Navigate Versions</strong>: Use the <strong>Version</strong> dropdown list to switch between and select different versions of the Pipeline. This allows for easy comparison and management of various iterations.</li>
 </ul>
 <p>By following these steps, you can effectively manage the lifecycle and iterations of your pipelines, ensuring that each version is appropriately saved, published, and utilized as per your requirements.</p>
-<h3 id="publishing-a-pipeline-version">Publishing a Pipeline Version<a class="headerlink" href="#publishing-a-pipeline-version" title="Permanent link">&para;</a></h3>
+<h3 id="publishing-a-pipeline-version">Publishing a Pipeline Version<a class="headerlink" href="#publishing-a-pipeline-version" title="Permanent link">¶</a></h3>
 <p>The <strong>Publish</strong> functionality allows you to make a specific version of your pipeline available for public use after moderator approval. This ensures that only reviewed and approved versions are accessible to users.</p>
-<h4 id="how-to-publish-a-pipeline-version">How to Publish a Pipeline Version:<a class="headerlink" href="#how-to-publish-a-pipeline-version" title="Permanent link">&para;</a></h4>
+<h4 id="how-to-publish-a-pipeline-version">How to Publish a Pipeline Version:<a class="headerlink" href="#how-to-publish-a-pipeline-version" title="Permanent link">¶</a></h4>
 <ol>
 <li>Navigate to the top menu and click the <strong>Publish</strong> button. A dialog box will appear prompting you to confirm the publishing process.</li>
 <li><strong>Provide a Version Name</strong>. Enter a meaningful name for the version you want to publish. This helps in identifying the version during the review process.</li>
@@ -8010,8 +8005,8 @@
 </ul>
 </li>
 </ol>
-<p><img alt="Pipeline-Publish" src="../../img/menus/pipeline/pipeline_publish.png" /></p>
-<h4 id="what-happens-after-publishing">What Happens After Publishing:<a class="headerlink" href="#what-happens-after-publishing" title="Permanent link">&para;</a></h4>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/pipeline/pipeline_publish.png" data-desc-position="bottom"><img alt="Pipeline-Publish" src="../../img/menus/pipeline/pipeline_publish.png"></a></p>
+<h4 id="what-happens-after-publishing">What Happens After Publishing:<a class="headerlink" href="#what-happens-after-publishing" title="Permanent link">¶</a></h4>
 <ul>
 <li>
 <p><strong>If Approved</strong>:</p>
@@ -8029,17 +8024,17 @@
 </li>
 </ul>
 <p>By following these steps, you can effectively manage the lifecycle and iterations of your pipelines, ensuring that each version is appropriately saved, published, and utilized as per your requirements.</p>
-<h4 id="best-practices-for-publishing">Best Practices for Publishing:<a class="headerlink" href="#best-practices-for-publishing" title="Permanent link">&para;</a></h4>
+<h4 id="best-practices-for-publishing">Best Practices for Publishing:<a class="headerlink" href="#best-practices-for-publishing" title="Permanent link">¶</a></h4>
 <ul>
 <li><strong>Test Thoroughly</strong>: Ensure the pipeline is fully functional and free of errors before submitting it for publishing.</li>
 <li><strong>Provide Clear Version Names</strong>: Use descriptive names to make it easier for moderators and users to understand the purpose of the version.</li>
 <li><strong>Incorporate Feedback</strong>: If a version is rejected, carefully review the feedback provided by the moderator and address the issues before resubmitting.</li>
 </ul>
 <p>By following these steps, you can ensure a smooth publishing process and make your pipeline versions available for broader use.</p>
-<h3 id="monitoring-pipelines">Monitoring Pipelines<a class="headerlink" href="#monitoring-pipelines" title="Permanent link">&para;</a></h3>
+<h3 id="monitoring-pipelines">Monitoring Pipelines<a class="headerlink" href="#monitoring-pipelines" title="Permanent link">¶</a></h3>
 <p>The <strong>Monitoring</strong> menu allows you to track the performance and activity of your Pipeline in real-time. By accessing this feature, you can view detailed logs, analyze execution metrics, and identify potential issues or bottlenecks in your pipeline's workflows.
 For detailed instructions on how to use the Monitoring feature, please refer to the <strong><a href="../../features/monitoring/">Monitoring User Guide</a></strong></p>
-<h3 id="viewing-pipeline-history">Viewing Pipeline History<a class="headerlink" href="#viewing-pipeline-history" title="Permanent link">&para;</a></h3>
+<h3 id="viewing-pipeline-history">Viewing Pipeline History<a class="headerlink" href="#viewing-pipeline-history" title="Permanent link">¶</a></h3>
 <p>The <strong>History</strong> tab provides a complete audit trail of all past executions of your pipeline. This feature allows you to:</p>
 <ul>
 <li><strong>Review past conversations</strong>: View complete chat histories from previous pipeline runs</li>
@@ -8050,8 +8045,8 @@ For detailed instructions on how to use the Monitoring feature, please refer to 
 </ul>
 <p>The History tab displays runs in a two-panel layout with a list of all executions on the left (showing date, version, and duration) and the complete conversation replay on the right when you select a run.</p>
 <p>For detailed instructions on using the History tab, please refer to the <strong><a href="../../how-tos/agents-pipelines/agents-pipelines-history/">Agents and Pipelines History Guide</a></strong>.</p>
-<p><img alt="History Tab" src="../../img/menus/pipeline/pipeline-history-tab.png" /></p>
-<h3 id="best-practices-for-pipelines">Best Practices for Pipelines<a class="headerlink" href="#best-practices-for-pipelines" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/pipeline/pipeline-history-tab.png" data-desc-position="bottom"><img alt="History Tab" src="../../img/menus/pipeline/pipeline-history-tab.png"></a></p>
+<h3 id="best-practices-for-pipelines">Best Practices for Pipelines<a class="headerlink" href="#best-practices-for-pipelines" title="Permanent link">¶</a></h3>
 <ul>
 <li><strong>Keep It Modular</strong>: Break down complex workflows into smaller, manageable states for better readability and maintainability.</li>
 <li><strong>Use Tags</strong>: Organize pipelines with tags to make them easier to find and manage.</li>
@@ -8061,7 +8056,7 @@ For detailed instructions on how to use the Monitoring feature, please refer to 
 <li><strong>Validate Data Flow</strong>: Ensure proper data flow between nodes by testing with sample data.</li>
 <li><strong>Handle Errors Gracefully</strong>: Implement error handling and fallback mechanisms in your pipeline design.</li>
 </ul>
-<hr />
+<hr>
 <div class="admonition info">
 <p class="admonition-title">Related Documentation</p>
 <p>For more detailed information on related topics, please refer to the following documentation:</p>
@@ -8099,13 +8094,13 @@ For detailed instructions on how to use the Monitoring feature, please refer to 
   
     
       
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
           <a href="../agents/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Agents">
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
             </div>
             <div class="md-footer__title">
               <span class="md-footer__direction">
@@ -8130,7 +8125,7 @@ For detailed instructions on how to use the Monitoring feature, please refer to 
             </div>
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
             </div>
           </a>
         
@@ -8162,7 +8157,7 @@ For detailed instructions on how to use the Monitoring feature, please refer to 
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.footer", "navigation.path", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.footer", "navigation.path", "navigation.tabs", "navigation.tabs.sticky", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
@@ -8170,5 +8165,7 @@ For detailed instructions on how to use the Monitoring feature, please refer to 
         <script src="../../extra_js/fullscreen.js"></script>
       
     
-  </body>
-</html>
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

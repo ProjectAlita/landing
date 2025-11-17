@@ -1,7 +1,4 @@
-
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
+<!DOCTYPE html><html lang="en" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -46,7 +43,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -59,7 +56,17 @@
 
     
     
-  </head>
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
   
   
     
@@ -101,7 +108,7 @@
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -126,20 +133,20 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to system preference" type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
       </label>
     
   
@@ -150,46 +157,6 @@
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
-    
-      
-      
-        <label class="md-header__button md-icon" for="__search">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        </label>
-        <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-      
     
     
   </nav>
@@ -403,7 +370,7 @@
           
   
   
-  Migration & Upgrade
+  Migration &amp; Upgrade
 
         </a>
       </li>
@@ -471,7 +438,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -510,7 +477,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1">
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -560,7 +527,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1">
         
           
           <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
@@ -758,7 +725,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2">
         
           
           <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
@@ -1019,7 +986,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -1069,7 +1036,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1">
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -1183,7 +1150,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2">
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -1381,7 +1348,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3">
         
           
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
@@ -1560,14 +1527,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/configure-and-use-mcp/" class="md-nav__link">
+      <a href="../../getting-started/create-and-use-server-stdio/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Configure and Use MCP Servers
+    Configure and Use MCP Server(STDIO)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/create-and-use-client-stdio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configure and Use MCP Client(STDIO)
   
 
     
@@ -2242,7 +2237,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_10">
         
           
           <label class="md-nav__link" for="__nav_3_1_10" id="__nav_3_1_10_label" tabindex="0">
@@ -2483,7 +2478,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -2533,7 +2528,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1">
         
           
           <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
@@ -2543,7 +2538,7 @@
   <span class="md-ellipsis">
     
   
-    Chat & Conversations
+    Chat &amp; Conversations
   
 
     
@@ -2559,7 +2554,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Chat & Conversations
+    Chat &amp; Conversations
   
 
           </label>
@@ -2871,7 +2866,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2">
         
           
           <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
@@ -3293,7 +3288,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3">
         
           
           <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
@@ -3303,7 +3298,7 @@
   <span class="md-ellipsis">
     
   
-    Agents & Pipelines
+    Agents &amp; Pipelines
   
 
     
@@ -3319,7 +3314,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Agents & Pipelines
+    Agents &amp; Pipelines
   
 
           </label>
@@ -3399,7 +3394,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3">
         
           
           <label class="md-nav__link" for="__nav_4_3_3" id="__nav_4_3_3_label" tabindex="0">
@@ -3505,7 +3500,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3_3">
         
           
           <label class="md-nav__link" for="__nav_4_3_3_3" id="__nav_4_3_3_3_label" tabindex="0">
@@ -3887,7 +3882,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4">
         
           
           <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
@@ -3897,7 +3892,7 @@
   <span class="md-ellipsis">
     
   
-    Credentials & Toolkits
+    Credentials &amp; Toolkits
   
 
     
@@ -3913,7 +3908,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Credentials & Toolkits
+    Credentials &amp; Toolkits
   
 
           </label>
@@ -4085,7 +4080,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5">
         
           
           <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
@@ -4187,7 +4182,7 @@
   <span class="md-ellipsis">
     
   
-    Manage Roles & Permissions
+    Manage Roles &amp; Permissions
   
 
     
@@ -4234,7 +4229,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -4284,7 +4279,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1">
         
           
           <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
@@ -4454,7 +4449,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2">
         
           
           <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
@@ -5408,7 +5403,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3">
         
           
           <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
@@ -5529,7 +5524,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -5579,7 +5574,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1">
         
           
           <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
@@ -5665,7 +5660,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2">
         
           
           <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
@@ -6066,7 +6061,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7">
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
@@ -6076,7 +6071,7 @@
   <span class="md-ellipsis">
     
   
-    Migration & Upgrade
+    Migration &amp; Upgrade
   
 
     
@@ -6092,7 +6087,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Migration & Upgrade
+    Migration &amp; Upgrade
   
 
           </label>
@@ -6116,7 +6111,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1">
         
           
           <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
@@ -6258,7 +6253,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2">
         
           
           <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
@@ -6407,7 +6402,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8">
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
@@ -6576,7 +6571,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9">
         
           
           <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
@@ -6818,7 +6813,7 @@
   <span class="md-ellipsis">
     
   
-    Export & Import Entities
+    Export &amp; Import Entities
   
 
     
@@ -6934,7 +6929,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_12">
         
           
           <label class="md-nav__link" for="__nav_9_12" id="__nav_9_12_label" tabindex="0">
@@ -7017,7 +7012,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -7273,7 +7268,7 @@
 
 
 
-  <nav class="md-path" aria-label="Navigation" >
+  <nav class="md-path" aria-label="Navigation">
     <ol class="md-path__list">
       
       
@@ -7331,15 +7326,15 @@
 
 
 
-<h1 id="mcps">MCPs<a class="headerlink" href="#mcps" title="Permanent link">&para;</a></h1>
-<h2 id="introduction-to-the-mcps-menu">Introduction to the MCPs Menu<a class="headerlink" href="#introduction-to-the-mcps-menu" title="Permanent link">&para;</a></h2>
+<h1 id="mcps">MCPs<a class="headerlink" href="#mcps" title="Permanent link">¶</a></h1>
+<h2 id="introduction-to-the-mcps-menu">Introduction to the MCPs Menu<a class="headerlink" href="#introduction-to-the-mcps-menu" title="Permanent link">¶</a></h2>
 <p>The <strong>MCPs</strong> menu lets you manage external <strong>Model Context Protocol (MCP) servers</strong> that your ELITEA project can use. Unlike standard toolkits (native integrations), MCP entries appear only <strong>after you connect at least one MCP server through the Elitea MCP Client</strong>. Once connected, MCPs expose their tools to agents, pipelines, and conversations for orchestration and automation.</p>
 <div class="admonition note">
 <p class="admonition-title">Menu Availability</p>
 <p>The MCPs menu is empty by default. It becomes available (and populated) only after the Elitea MCP Client connects your project to one or more configured MCP servers.</p>
 </div>
-<hr />
-<h2 id="what-are-mcps">What Are MCPs?<a class="headerlink" href="#what-are-mcps" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="what-are-mcps">What Are MCPs?<a class="headerlink" href="#what-are-mcps" title="Permanent link">¶</a></h2>
 <p><strong>MCPs</strong> represent external MCP servers (e.g., Playwright MCP, Figma MCP, GitHub MCP) that expose tools following the Model Context Protocol. When the Elitea MCP Client is running, these tools become available inside ELITEA just like native toolkit tools—allowing agents and pipelines to perform actions such as browser automation, repository operations, or other domain tasks.</p>
 <p><strong>Key characteristics:</strong></p>
 <ul>
@@ -7349,22 +7344,22 @@
 <li>Tools can be selectively enabled per MCP entry</li>
 </ul>
 <p>For MCP Client setup see the <strong><a href="../../integrations/mcp/mcp-client/">MCP Client Integration Guide</a></strong>.</p>
-<hr />
-<h2 id="navigating-the-mcps-menu">Navigating the MCPs Menu<a class="headerlink" href="#navigating-the-mcps-menu" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="navigating-the-mcps-menu">Navigating the MCPs Menu<a class="headerlink" href="#navigating-the-mcps-menu" title="Permanent link">¶</a></h2>
 <p>When populated, the MCPs menu shows a card/grid or table list of all configured MCP connections for your project.</p>
-<p><img alt="MCPs Menu Dashboard Placeholder" src="../../img/menus/mcps/mcps_menu.png" /></p>
-<h3 id="main-elements">Main Elements<a class="headerlink" href="#main-elements" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/mcps/mcps_menu.png" data-desc-position="bottom"><img alt="MCPs Menu Dashboard Placeholder" src="../../img/menus/mcps/mcps_menu.png"></a></p>
+<h3 id="main-elements">Main Elements<a class="headerlink" href="#main-elements" title="Permanent link">¶</a></h3>
 <ul>
 <li><strong>MCP Cards / Rows:</strong> Show name, description (if provided), connection state, and number of enabled tools.</li>
 <li><strong>Search &amp; Filter:</strong> Locate MCPs by name or state.</li>
 <li><strong><code>+ Create</code> Button:</strong> Opens the create panel to create a new MCP reference (logical entry) within the project.</li>
 <li><strong>State Indicator:</strong> Displays Connected or Disconnected (orange) based on live client status.</li>
 </ul>
-<hr />
-<h2 id="creating-a-new-mcp">Creating a New MCP<a class="headerlink" href="#creating-a-new-mcp" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="creating-a-new-mcp">Creating a New MCP<a class="headerlink" href="#creating-a-new-mcp" title="Permanent link">¶</a></h2>
 <p>You create an MCP entry in ELITEA after (or while) configuring the underlying MCP server in your local Elitea MCP Client.</p>
-<p><img alt="Create MCP Placeholder" src="../../img/menus/mcps/mcps_create.png" /></p>
-<h3 id="how-to-create-a-new-mcp">How to Create a New MCP<a class="headerlink" href="#how-to-create-a-new-mcp" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/mcps/mcps_create.png" data-desc-position="bottom"><img alt="Create MCP Placeholder" src="../../img/menus/mcps/mcps_create.png"></a></p>
+<h3 id="how-to-create-a-new-mcp">How to Create a New MCP<a class="headerlink" href="#how-to-create-a-new-mcp" title="Permanent link">¶</a></h3>
 <ol>
 <li>Ensure the <strong>Elitea MCP Client</strong> is installed and started (see <a href="../../integrations/mcp/mcp-client/">integration guide</a>).</li>
 <li>Open the <strong>MCPs</strong> menu.</li>
@@ -7378,13 +7373,13 @@
 </li>
 <li>Click <strong>Save</strong>.</li>
 </ol>
-<p><img alt="Creating MCP Server" src="../../img/menus/mcps/mcps_creating_an_mcp.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/mcps/mcps_creating_an_mcp.png" data-desc-position="bottom"><img alt="Creating MCP Server" src="../../img/menus/mcps/mcps_creating_an_mcp.png"></a></p>
 <div class="admonition tip">
 <p class="admonition-title">Disconnected Creation</p>
 <p>If the MCP Client is not running at creation time, tools may not be auto-discovered. Start the client and revisit the MCP to refresh the tool list.</p>
 </div>
-<hr />
-<h2 id="mcp-states">MCP States<a class="headerlink" href="#mcp-states" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="mcp-states">MCP States<a class="headerlink" href="#mcp-states" title="Permanent link">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -7413,10 +7408,10 @@
 <p class="admonition-title">Using Disconnected MCPs</p>
 <p>Disconnected MCPs cannot be invoked by agents, pipelines, or conversations. Start the Elitea MCP Client to re-establish connectivity.</p>
 </div>
-<hr />
-<h2 id="editing-and-configuring-an-mcp">Editing and Configuring an MCP<a class="headerlink" href="#editing-and-configuring-an-mcp" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="editing-and-configuring-an-mcp">Editing and Configuring an MCP<a class="headerlink" href="#editing-and-configuring-an-mcp" title="Permanent link">¶</a></h2>
 <p>Open an MCP entry to view or modify its configuration.</p>
-<p><img alt="MCP Detail Placeholder" src="../../img/menus/mcps/mcps_detail.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/mcps/mcps_detail.png" data-desc-position="bottom"><img alt="MCP Detail Placeholder" src="../../img/menus/mcps/mcps_detail.png"></a></p>
 <p>You can:</p>
 <ul>
 <li><strong>Rename</strong> the MCP.</li>
@@ -7424,11 +7419,11 @@
 <li><strong>Enable / Disable Tools</strong> (subset selection for least privilege).</li>
 <li><strong>Delete MCP</strong> (if no longer needed).</li>
 </ul>
-<hr />
-<h2 id="testing-mcp-functionality">Testing MCP Functionality<a class="headerlink" href="#testing-mcp-functionality" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="testing-mcp-functionality">Testing MCP Functionality<a class="headerlink" href="#testing-mcp-functionality" title="Permanent link">¶</a></h2>
 <p>Each MCP detail page includes a <strong>Test Settings</strong> panel—identical in behavior to <strong>Toolkits</strong> testing.</p>
-<p><img alt="MCP Test Panel Placeholder" src="../../img/menus/mcps/mcps_test_panel.png" /></p>
-<h3 id="test-panel-controls">Test Panel Controls<a class="headerlink" href="#test-panel-controls" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/mcps/mcps_test_panel.png" data-desc-position="bottom"><img alt="MCP Test Panel Placeholder" src="../../img/menus/mcps/mcps_test_panel.png"></a></p>
+<h3 id="test-panel-controls">Test Panel Controls<a class="headerlink" href="#test-panel-controls" title="Permanent link">¶</a></h3>
 <ul>
 <li><strong>Model Selection:</strong> Choose LLM model (e.g., <code>gpt-4o</code>).</li>
 <li><strong>Temperature / Top P / Top K / Max Completion Tokens:</strong> Adjust generation parameters.</li>
@@ -7436,7 +7431,7 @@
 <li><strong>Parameter Inputs:</strong> Provide required arguments (auto-generated form fields where applicable).</li>
 <li><strong>Run Tool:</strong> Executes and streams response in a chat-like interface.</li>
 </ul>
-<h3 id="interface-features">Interface Features<a class="headerlink" href="#interface-features" title="Permanent link">&para;</a></h3>
+<h3 id="interface-features">Interface Features<a class="headerlink" href="#interface-features" title="Permanent link">¶</a></h3>
 <ul>
 <li><strong>Chat Output:</strong> Shows input + tool results.</li>
 <li><strong>Fullscreen Mode:</strong> Expand for deeper inspection.</li>
@@ -7447,9 +7442,9 @@
 <p class="admonition-title">Connection First</p>
 <p>If the MCP is Disconnected, start the Elitea MCP Client and refresh before testing.</p>
 </div>
-<hr />
-<h2 id="using-mcps-with-agents-pipelines-conversations">Using MCPs with Agents, Pipelines &amp; Conversations<a class="headerlink" href="#using-mcps-with-agents-pipelines-conversations" title="Permanent link">&para;</a></h2>
-<h3 id="assigning-to-agents-or-pipelines">Assigning to Agents or Pipelines<a class="headerlink" href="#assigning-to-agents-or-pipelines" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="using-mcps-with-agents-pipelines-conversations">Using MCPs with Agents, Pipelines &amp; Conversations<a class="headerlink" href="#using-mcps-with-agents-pipelines-conversations" title="Permanent link">¶</a></h2>
+<h3 id="assigning-to-agents-or-pipelines">Assigning to Agents or Pipelines<a class="headerlink" href="#assigning-to-agents-or-pipelines" title="Permanent link">¶</a></h3>
 <ol>
 <li>Open <strong>Agents</strong>.</li>
 <li>Create or edit an agent.</li>
@@ -7465,7 +7460,7 @@
 <p class="admonition-title">Pipeline Configuration</p>
 <p>Adding MCP servers to a pipeline follows the same pattern as adding them to an agent: use the <strong>+MCP</strong> selector (or equivalent pipeline tool selection control), choose the MCP, then enable only the required tools.</p>
 </div>
-<h3 id="using-in-conversations">Using in Conversations<a class="headerlink" href="#using-in-conversations" title="Permanent link">&para;</a></h3>
+<h3 id="using-in-conversations">Using in Conversations<a class="headerlink" href="#using-in-conversations" title="Permanent link">¶</a></h3>
 <ol>
 <li>Open <strong>Chat → Conversations</strong>.</li>
 <li>Start a new or open an existing conversation.</li>
@@ -7476,8 +7471,8 @@
 <p class="admonition-title">Multiple MCPs</p>
 <p>You can attach multiple MCPs to a single agent to combine toolsets.</p>
 </div>
-<hr />
-<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">¶</a></h2>
 <ul>
 <li><strong>Least Privilege:</strong> Disable tools not needed by current workflows.</li>
 <li><strong>Consistent Naming:</strong> Use clear names to distinguish similar servers (e.g., "Playwright (QA)" vs "Playwright (Prod)").</li>
@@ -7485,8 +7480,8 @@
 <li><strong>Version Awareness:</strong> When updating external MCP server packages, re-test key tools.</li>
 <li><strong>Secure Context:</strong> Avoid exposing sensitive environment paths or commands through custom MCP server arguments.</li>
 </ul>
-<hr />
-<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -7527,11 +7522,11 @@
 <p class="admonition-title">Persistent Failures</p>
 <p>If all tools fail consistently while the state shows Connected, verify the underlying MCP server command and arguments in your local configuration file.</p>
 </div>
-<hr />
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
 <p>The <strong>MCPs</strong> menu bridges ELITEA and external MCP servers, letting you orchestrate advanced, protocol-compliant tools inside agents, pipelines, and conversations. By managing connection state, curating enabled tools, and validating functionality through Test Settings, you maintain reliable augmented automation.</p>
-<hr />
-<h2 id="additional-resources">Additional Resources<a class="headerlink" href="#additional-resources" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="additional-resources">Additional Resources<a class="headerlink" href="#additional-resources" title="Permanent link">¶</a></h2>
 <ul>
 <li><strong><a href="../../integrations/mcp/mcp-client/">MCP Client Integration Guide</a></strong> – Install &amp; configure the Elitea MCP Client</li>
 <li><strong><a href="../toolkits/">Toolkits</a></strong> – Native integrations overview</li>
@@ -7563,13 +7558,13 @@
   
     
       
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
           <a href="../toolkits/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Toolkits">
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
             </div>
             <div class="md-footer__title">
               <span class="md-footer__direction">
@@ -7594,7 +7589,7 @@
             </div>
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
             </div>
           </a>
         
@@ -7626,7 +7621,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.footer", "navigation.path", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.footer", "navigation.path", "navigation.tabs", "navigation.tabs.sticky", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
@@ -7634,5 +7629,7 @@
         <script src="../../extra_js/fullscreen.js"></script>
       
     
-  </body>
-</html>
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

@@ -1,20 +1,17 @@
-
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
+<!DOCTYPE html><html lang="en" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
       
-        <link rel="canonical" href="https://elitea.ai/docs/getting-started/configure-and-use-mcp/">
+        <link rel="canonical" href="https://elitea.ai/docs/getting-started/create-and-use-server-stdio/">
       
       
         <link rel="prev" href="../indexing-quick-start/">
       
       
-        <link rel="next" href="../../menus/overview/">
+        <link rel="next" href="../create-and-use-client-stdio/">
       
       
         
@@ -25,7 +22,7 @@
     
     
       
-        <title>Configure and Use MCP Servers - ELITEA Documentation</title>
+        <title>Configure and Use MCP Server(STDIO) - ELITEA Documentation</title>
       
     
     
@@ -46,7 +43,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -59,7 +56,17 @@
 
     
     
-  </head>
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
   
   
     
@@ -78,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#configure-and-use-mcp-servers-quick-guide" class="md-skip">
+        <a href="#quick-start-setting-up-your-first-mcp-server" class="md-skip">
           Skip to content
         </a>
       
@@ -101,7 +108,7 @@
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -113,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Configure and Use MCP Servers
+              Configure and Use MCP Server(STDIO)
             
           </span>
         </div>
@@ -126,20 +133,20 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to system preference" type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
       </label>
     
   
@@ -150,46 +157,6 @@
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
-    
-      
-      
-        <label class="md-header__button md-icon" for="__search">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        </label>
-        <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-      
     
     
   </nav>
@@ -403,7 +370,7 @@
           
   
   
-  Migration & Upgrade
+  Migration &amp; Upgrade
 
         </a>
       </li>
@@ -471,7 +438,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -510,7 +477,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1">
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -560,7 +527,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1">
         
           
           <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
@@ -758,7 +725,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2">
         
           
           <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
@@ -1074,7 +1041,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1">
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -1188,7 +1155,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2">
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -1583,7 +1550,7 @@
   <span class="md-ellipsis">
     
   
-    Configure and Use MCP Servers
+    Configure and Use MCP Server(STDIO)
   
 
     
@@ -1601,7 +1568,7 @@
   <span class="md-ellipsis">
     
   
-    Configure and Use MCP Servers
+    Configure and Use MCP Server(STDIO)
   
 
     
@@ -1627,10 +1594,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#what-youll-accomplish" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Overview
+        What You'll Accomplish
       
     </span>
   </a>
@@ -1638,10 +1605,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-1-install-the-elitea-mcp-client" class="md-nav__link">
+  <a href="#before-you-start" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 1: Install the Elitea MCP Client
+        Before You Start
       
     </span>
   </a>
@@ -1649,10 +1616,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2-configure-and-start-an-mcp-server-playwright-example" class="md-nav__link">
+  <a href="#what-is-mcp-and-why-do-i-need-it" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 2: Configure and Start an MCP Server (Playwright example)
+        What is MCP and Why Do I Need It?
       
     </span>
   </a>
@@ -1660,10 +1627,149 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-3-switch-to-your-private-project-in-elitea" class="md-nav__link">
+  <a href="#step-by-step-setup" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 3: Switch to Your Private Project in Elitea
+        Step-by-Step Setup
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step-by-Step Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-1-install-the-alita-mcp-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 1: Install the Alita MCP Client
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-2-configure-the-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 2: Configure the Client
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-3-connect-to-vs-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 3: Connect to VS Code
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-4-add-your-project-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 4: Add Your Project ID
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 4: Add Your Project ID">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-a-if-you-chose-workspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option A: If You Chose Workspace
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-b-if-you-chose-global" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option B: If You Chose Global
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-5-tag-your-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 5: Tag Your Agents
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 5: Tag Your Agents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tagging-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tagging Agents:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complete-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Complete Setup:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-6-use-your-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 6: Use Your Agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-know-its-working" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Know It's Working
       
     </span>
   </a>
@@ -1671,10 +1777,82 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-4-create-the-mcp-in-elitea-ui" class="md-nav__link">
+  <a href="#common-problems-fixes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 4: Create the MCP in Elitea (UI)
+        Common Problems &amp; Fixes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Problems &amp; Fixes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-alita-mcp-command-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem: "alita-mcp: command not found"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-no-agents-showing-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem: No agents showing up
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-error-indicator-in-vs-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem: "Error indicator" in VS Code
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-server-keeps-disconnecting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem: Server keeps disconnecting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-multiple-alita-mcp-versions-installed-pip-and-pipx-conflict" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem: Multiple alita-mcp versions installed (pip and pipx conflict)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-you-can-do-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What You Can Do Next
       
     </span>
   </a>
@@ -1682,43 +1860,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#optional-step-5-test-mcp-tools-from-the-mcp-page" class="md-nav__link">
+  <a href="#advanced-options" class="md-nav__link">
     <span class="md-ellipsis">
       
-        (Optional) Step 5: Test MCP Tools from the MCP Page
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-6-start-a-conversation-using-your-mcp" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 6: Start a Conversation Using Your MCP
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quick-troubleshooting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quick Troubleshooting
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#next-steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Next Steps
+        Advanced Options
       
     </span>
   </a>
@@ -1729,6 +1874,34 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create-and-use-client-stdio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configure and Use MCP Client(STDIO)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -1767,7 +1940,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -1817,7 +1990,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1">
         
           
           <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
@@ -2119,7 +2292,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_10">
         
           
           <label class="md-nav__link" for="__nav_3_1_10" id="__nav_3_1_10_label" tabindex="0">
@@ -2360,7 +2533,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -2410,7 +2583,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1">
         
           
           <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
@@ -2420,7 +2593,7 @@
   <span class="md-ellipsis">
     
   
-    Chat & Conversations
+    Chat &amp; Conversations
   
 
     
@@ -2436,7 +2609,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Chat & Conversations
+    Chat &amp; Conversations
   
 
           </label>
@@ -2748,7 +2921,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2">
         
           
           <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
@@ -3170,7 +3343,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3">
         
           
           <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
@@ -3180,7 +3353,7 @@
   <span class="md-ellipsis">
     
   
-    Agents & Pipelines
+    Agents &amp; Pipelines
   
 
     
@@ -3196,7 +3369,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Agents & Pipelines
+    Agents &amp; Pipelines
   
 
           </label>
@@ -3276,7 +3449,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3">
         
           
           <label class="md-nav__link" for="__nav_4_3_3" id="__nav_4_3_3_label" tabindex="0">
@@ -3382,7 +3555,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3_3">
         
           
           <label class="md-nav__link" for="__nav_4_3_3_3" id="__nav_4_3_3_3_label" tabindex="0">
@@ -3764,7 +3937,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4">
         
           
           <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
@@ -3774,7 +3947,7 @@
   <span class="md-ellipsis">
     
   
-    Credentials & Toolkits
+    Credentials &amp; Toolkits
   
 
     
@@ -3790,7 +3963,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Credentials & Toolkits
+    Credentials &amp; Toolkits
   
 
           </label>
@@ -3962,7 +4135,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5">
         
           
           <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
@@ -4064,7 +4237,7 @@
   <span class="md-ellipsis">
     
   
-    Manage Roles & Permissions
+    Manage Roles &amp; Permissions
   
 
     
@@ -4111,7 +4284,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -4161,7 +4334,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1">
         
           
           <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
@@ -4331,7 +4504,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2">
         
           
           <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
@@ -5285,7 +5458,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3">
         
           
           <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
@@ -5406,7 +5579,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -5456,7 +5629,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1">
         
           
           <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
@@ -5542,7 +5715,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2">
         
           
           <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
@@ -5943,7 +6116,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7">
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
@@ -5953,7 +6126,7 @@
   <span class="md-ellipsis">
     
   
-    Migration & Upgrade
+    Migration &amp; Upgrade
   
 
     
@@ -5969,7 +6142,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Migration & Upgrade
+    Migration &amp; Upgrade
   
 
           </label>
@@ -5993,7 +6166,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1">
         
           
           <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
@@ -6135,7 +6308,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2">
         
           
           <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
@@ -6284,7 +6457,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8">
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
@@ -6453,7 +6626,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9">
         
           
           <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
@@ -6695,7 +6868,7 @@
   <span class="md-ellipsis">
     
   
-    Export & Import Entities
+    Export &amp; Import Entities
   
 
     
@@ -6811,7 +6984,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_12">
         
           
           <label class="md-nav__link" for="__nav_9_12" id="__nav_9_12_label" tabindex="0">
@@ -6894,7 +7067,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -6913,10 +7086,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#what-youll-accomplish" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Overview
+        What You'll Accomplish
       
     </span>
   </a>
@@ -6924,10 +7097,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-1-install-the-elitea-mcp-client" class="md-nav__link">
+  <a href="#before-you-start" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 1: Install the Elitea MCP Client
+        Before You Start
       
     </span>
   </a>
@@ -6935,10 +7108,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2-configure-and-start-an-mcp-server-playwright-example" class="md-nav__link">
+  <a href="#what-is-mcp-and-why-do-i-need-it" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 2: Configure and Start an MCP Server (Playwright example)
+        What is MCP and Why Do I Need It?
       
     </span>
   </a>
@@ -6946,10 +7119,149 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-3-switch-to-your-private-project-in-elitea" class="md-nav__link">
+  <a href="#step-by-step-setup" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 3: Switch to Your Private Project in Elitea
+        Step-by-Step Setup
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step-by-Step Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-1-install-the-alita-mcp-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 1: Install the Alita MCP Client
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-2-configure-the-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 2: Configure the Client
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-3-connect-to-vs-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 3: Connect to VS Code
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-4-add-your-project-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 4: Add Your Project ID
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 4: Add Your Project ID">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-a-if-you-chose-workspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option A: If You Chose Workspace
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-b-if-you-chose-global" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option B: If You Chose Global
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-5-tag-your-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 5: Tag Your Agents
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 5: Tag Your Agents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tagging-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tagging Agents:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complete-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Complete Setup:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-6-use-your-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 6: Use Your Agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-know-its-working" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Know It's Working
       
     </span>
   </a>
@@ -6957,10 +7269,82 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-4-create-the-mcp-in-elitea-ui" class="md-nav__link">
+  <a href="#common-problems-fixes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 4: Create the MCP in Elitea (UI)
+        Common Problems &amp; Fixes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Problems &amp; Fixes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-alita-mcp-command-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem: "alita-mcp: command not found"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-no-agents-showing-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem: No agents showing up
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-error-indicator-in-vs-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem: "Error indicator" in VS Code
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-server-keeps-disconnecting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem: Server keeps disconnecting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-multiple-alita-mcp-versions-installed-pip-and-pipx-conflict" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem: Multiple alita-mcp versions installed (pip and pipx conflict)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-you-can-do-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What You Can Do Next
       
     </span>
   </a>
@@ -6968,43 +7352,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#optional-step-5-test-mcp-tools-from-the-mcp-page" class="md-nav__link">
+  <a href="#advanced-options" class="md-nav__link">
     <span class="md-ellipsis">
       
-        (Optional) Step 5: Test MCP Tools from the MCP Page
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-6-start-a-conversation-using-your-mcp" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 6: Start a Conversation Using Your MCP
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quick-troubleshooting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quick Troubleshooting
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#next-steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Next Steps
+        Advanced Options
       
     </span>
   </a>
@@ -7027,7 +7378,7 @@
 
 
 
-  <nav class="md-path" aria-label="Navigation" >
+  <nav class="md-path" aria-label="Navigation">
     <ol class="md-path__list">
       
       
@@ -7085,156 +7436,463 @@
 
 
 
-<h1 id="configure-and-use-mcp-servers-quick-guide">Configure and Use MCP Servers (Quick Guide)<a class="headerlink" href="#configure-and-use-mcp-servers-quick-guide" title="Permanent link">&para;</a></h1>
-<p>Get set up in minutes. This guide shows how to configure the Elitea MCP Client, create an MCP in Elitea, and start using it in a conversation (example: Playwright MCP).</p>
-<hr />
-<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>You will:</p>
+<h1 id="quick-start-setting-up-your-first-mcp-server">Quick Start: Setting Up Your First MCP Server<a class="headerlink" href="#quick-start-setting-up-your-first-mcp-server" title="Permanent link">¶</a></h1>
+<h2 id="what-youll-accomplish">What You'll Accomplish<a class="headerlink" href="#what-youll-accomplish" title="Permanent link">¶</a></h2>
+<p>By the end of this guide, you'll have a working MCP server that connects Elitea to VS Code, allowing you to use Elitea agents directly in your coding environment.</p>
+<hr>
+<h2 id="before-you-start">Before You Start<a class="headerlink" href="#before-you-start" title="Permanent link">¶</a></h2>
+<p>Before you begin, make sure you have:</p>
 <ul>
-<li>Install and start the Elitea MCP Client (macOS or Windows)</li>
-<li>Connect the client to your Private project</li>
-<li>Create an MCP entry in Elitea</li>
-<li>Start a conversation and use your MCP tools (Playwright example)</li>
+<li>☑️ <strong>VS Code installed</strong> (version 1.99 or newer)</li>
+<li>☑️ <strong>GitHub Copilot</strong> installed and configured in VS Code</li>
+<li>☑️ <strong>Python installed</strong> on your computer (version 3.8 or newer) - <a href="https://www.python.org/downloads/">Download Python</a></li>
+<li>☑️ <strong>Your Elitea Project ID</strong> (find this in Elitea Settings → <a href="../../menus/settings/ai-configuration/#key-configuration-fields">Configuration</a>)</li>
+<li>☑️ <strong>Your Elitea Authentication Token</strong> (create one in Elitea Settings → <a href="../create-personal-access-token/">Personal Tokens</a>)</li>
+<li>☑️ <strong>Your Elitea deployment URL</strong> (example: <code>https://next.elitea.ai</code>)</li>
 </ul>
+<hr>
+<h2 id="what-is-mcp-and-why-do-i-need-it">What is MCP and Why Do I Need It?<a class="headerlink" href="#what-is-mcp-and-why-do-i-need-it" title="Permanent link">¶</a></h2>
+<p><strong>MCP</strong> stands for Model Context Protocol. It's a way for different AI tools to talk to each other.</p>
+<p><strong>Why it matters to you:</strong> By setting up an MCP server, you can use your Elitea agents directly inside VS Code while you code. No need to switch windows or copy-paste between apps.</p>
+<hr>
+<h2 id="step-by-step-setup">Step-by-Step Setup<a class="headerlink" href="#step-by-step-setup" title="Permanent link">¶</a></h2>
+<h3 id="part-1-install-the-alita-mcp-client">Part 1: Install the Alita MCP Client<a class="headerlink" href="#part-1-install-the-alita-mcp-client" title="Permanent link">¶</a></h3>
+<p>The "client" is a small program that handles communication between VS Code and Elitea.</p>
+<ol>
+<li>
+<p><strong>Open PowerShell</strong></p>
+<ul>
+<li>Press <code>Windows key</code>, type "PowerShell", and press Enter</li>
+<li>This opens a window where you'll type commands</li>
+</ul>
+</li>
+<li>
+<p><strong>Install pipx</strong> (a tool that helps install Python programs)</p>
+<ul>
+<li>Copy this command and paste it into PowerShell, then press Enter:
+   <div class="language-powershell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">python</span> <span class="n">-m</span> <span class="n">pip</span> <span class="n">install</span> <span class="p">-</span><span class="n">-user</span> <span class="n">pipx</span>
+</span></code></pre></div></li>
+<li>Wait for it to finish</li>
+</ul>
+</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/getting-started/mcp/install-pipx.png" data-desc-position="bottom"><img alt="Install pipx" src="../../img/getting-started/mcp/install-pipx.png"></a></p>
+<ol>
+<li><strong>Set up pipx's path</strong><ul>
+<li>This makes sure your computer can find pipx. Copy and run:
+   <div class="language-powershell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">python</span> <span class="n">-m</span> <span class="n">pipx</span> <span class="n">ensurepath</span>
+</span></code></pre></div></li>
+</ul>
+</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/getting-started/mcp/pipx-ensurepath.png" data-desc-position="bottom"><img alt="Setup pipx path" src="../../img/getting-started/mcp/pipx-ensurepath.png"></a></p>
+<ol>
+<li><strong>Install alita-mcp</strong><ul>
+<li>This is the actual client program. Copy and run:
+   <div class="language-powershell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">pipx</span> <span class="n">install</span> <span class="n">alita-mcp</span>
+</span></code></pre></div></li>
+<li>Wait for installation to complete</li>
+</ul>
+</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/getting-started/mcp/install-alita-mcp.png" data-desc-position="bottom"><img alt="Install alita-mcp" src="../../img/getting-started/mcp/install-alita-mcp.png"></a></p>
+<ol>
+<li><strong>Close and reopen PowerShell</strong><ul>
+<li>This refreshes your environment so the new program is recognized</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="part-2-configure-the-client">Part 2: Configure the Client<a class="headerlink" href="#part-2-configure-the-client" title="Permanent link">¶</a></h3>
+<p>Now you'll tell the client how to connect to your Elitea account.</p>
+<ol>
+<li><strong>Run the setup wizard</strong><ul>
+<li>In PowerShell, type:
+   <div class="language-powershell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">alita-mcp</span> <span class="n">bootstrap</span>
+</span></code></pre></div></li>
+<li>Press Enter</li>
+</ul>
+</li>
+<li>
+<p><strong>Answer the prompts</strong></p>
+<ul>
+<li><strong>Deployment URL:</strong> Type your Elitea URL (example: <code>https://next.elitea.ai</code>) and press Enter</li>
+<li><strong>Authentication token:</strong> Paste your token (the one you copied earlier) and press Enter</li>
+<li><strong>Host:</strong> Just press Enter to accept the default (<code>0.0.0.0</code>)</li>
+<li><strong>Port:</strong> Just press Enter to accept the default (<code>8000</code>)</li>
+<li><strong>Project ID:</strong> You can either:</li>
+<li>Enter your Project ID number now (find it in Elitea Settings → Configuration), OR</li>
+<li>Press <code>Ctrl+C</code> to skip this step and add the Project ID later in VS Code (see Part 4)</li>
+</ul>
+</li>
+<li>
+<p><strong>Verify success</strong></p>
+<ul>
+<li>You should see a message confirming the configuration was saved</li>
+<li>If you see errors, double-check your URL and token</li>
+</ul>
+</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/getting-started/mcp/alita-mcp-bootstrap-server.gif" data-desc-position="bottom"><img alt=" alita-mcp-server" loading="lazy" src="../../img/getting-started/mcp/alita-mcp-bootstrap-server.gif"></a></p>
 <div class="admonition note">
-<p class="admonition-title">References</p>
+<p class="admonition-title">Skipping Project ID During Bootstrap</p>
+<p>If the Project ID prompt keeps asking for a valid integer and won't accept an empty value, press <code>Ctrl+C</code> to cancel. Don't worry—your Deployment URL and Authentication Token have already been saved. You'll add the Project ID in VS Code's configuration file in Part 4 of this guide.</p>
+</div>
+<hr>
+<h3 id="part-3-connect-to-vs-code">Part 3: Connect to VS Code<a class="headerlink" href="#part-3-connect-to-vs-code" title="Permanent link">¶</a></h3>
+<p>Now you'll add the MCP server to VS Code so it can talk to Elitea.</p>
+<ol>
+<li>
+<p><strong>Open VS Code</strong></p>
 <ul>
-<li>MCP Client Setup: <a href="../../integrations/mcp/mcp-client/">MCP Client Integration Guide</a></li>
-<li>MCPs Menu Overview: <a href="../../menus/mcps/">MCPs</a></li>
-<li>Chat Basics: <a href="../../menus/chat/">Chat</a></li>
-</ul>
-</div>
-<hr />
-<h2 id="step-1-install-the-elitea-mcp-client">Step 1: Install the Elitea MCP Client<a class="headerlink" href="#step-1-install-the-elitea-mcp-client" title="Permanent link">&para;</a></h2>
-<p>Use the tray app for the simplest experience.</p>
-<div class="tabbed-set" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">macOS</label><div class="tabbed-content"></div>
-</div>
-<p><strong>Step 1:</strong> Install pipx and the MCP client:</p>
-<div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>pipx
-pipx<span class="w"> </span>ensurepath
-pipx<span class="w"> </span>install<span class="w"> </span>alita-mcp
-</code></pre></div>
-<p><strong>Step 2:</strong> Start the tray app:</p>
-<div class="highlight"><pre><span></span><code>alita-mcp<span class="w"> </span>tray
-</code></pre></div>
-<p><img alt="Tray app (macOS)" src="../../img/migration/v2.0.0/mcp-tray-macos.png" /></p>
-<div class="tabbed-set" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Windows</label><div class="tabbed-content"></div>
-</div>
-<p><strong>Step 1:</strong> Install pipx and the MCP client:</p>
-<div class="highlight"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="p">-</span><span class="n">-user</span> <span class="n">pipx</span>
-<span class="n">python</span> <span class="n">-m</span> <span class="n">pipx</span> <span class="n">ensurepath</span>
-<span class="n">pipx</span> <span class="n">install</span> <span class="n">alita-mcp</span>
-</code></pre></div>
-<p><strong>Step 2:</strong> Start the tray app:</p>
-<div class="highlight"><pre><span></span><code><span class="n">alita-mcp</span> <span class="n">tray</span>
-</code></pre></div>
-<p><img alt="Tray app (Windows)" src="../../img/migration/v2.0.0/mcp-tray-windows.png" /></p>
-<div class="admonition tip">
-<p class="admonition-title">Auto-start on login</p>
-<p>You can set the tray app to start automatically. See details in the <a href="../../integrations/mcp/mcp-client/">MCP Client Integration Guide</a>.</p>
-</div>
-<hr />
-<h2 id="step-2-configure-and-start-an-mcp-server-playwright-example">Step 2: Configure and Start an MCP Server (Playwright example)<a class="headerlink" href="#step-2-configure-and-start-an-mcp-server-playwright-example" title="Permanent link">&para;</a></h2>
-<p>Use your IDE's terminal to run the <code>alita-mcp bootstrap</code> command and start your server.</p>
-<ol>
-<li>Provide:<ul>
-<li><strong>Deployment URL</strong> (e.g., https://next.elitea.ai)</li>
-<li><strong>Authentication Token</strong> (your Personal Access Token)</li>
-<li><strong>Project ID</strong> (your Private project)</li>
+<li>Launch the VS Code application</li>
 </ul>
 </li>
-<li>Add an MCP server (example: Playwright):<ul>
-<li><strong>Type:</strong> stdio</li>
-<li><strong>Command:</strong> <code>npx</code></li>
-<li><strong>Args:</strong> <code>@playwright/mcp@latest</code></li>
-<li><strong>Keep connection alive:</strong> Yes (stateful)</li>
+<li>
+<p><strong>Open your project</strong></p>
+<ul>
+<li>Open the folder or workspace where you want to use Elitea agents</li>
 </ul>
 </li>
-<li>Save the configuration.</li>
-<li>Run the <code>alita-mcp tray</code> command.</li>
-<li>In the tray app, click <strong>Start MCP Server</strong>.</li>
-</ol>
-<p><img alt="Tray running" src="../../img/migration/v2.0.0/mcp-tray-terminal.png" /></p>
-<div class="admonition info">
-<p class="admonition-title">No server listed?</p>
-<p>If you don’t see your server after bootstrap, re-open the tray, or use the CLI <code>alita-mcp bootstrap</code> and try again.</p>
-</div>
-<hr />
-<h2 id="step-3-switch-to-your-private-project-in-elitea">Step 3: Switch to Your Private Project in Elitea<a class="headerlink" href="#step-3-switch-to-your-private-project-in-elitea" title="Permanent link">&para;</a></h2>
-<ol>
-<li>Open Elitea and sign in.</li>
-<li>Use the <strong>Project Switcher</strong> (top-left) and select <strong>Private</strong>.</li>
-</ol>
-<p><img alt="Project Switcher" src="../../img/migration/v2.0.0/project.png" /></p>
-<div class="admonition info">
-<p class="admonition-title">First-time users</p>
-<p>Private project provisioning can take up to 5 minutes.</p>
-</div>
-<hr />
-<h2 id="step-4-create-the-mcp-in-elitea-ui">Step 4: Create the MCP in Elitea (UI)<a class="headerlink" href="#step-4-create-the-mcp-in-elitea-ui" title="Permanent link">&para;</a></h2>
-<ol>
-<li>Go to <strong>Menus → MCPs</strong>.</li>
-<li>Click <strong>+ Create</strong>.</li>
-<li>If your MCP Client is connected, select the discovered server (e.g., Playwright) or proceed and refresh later.</li>
-<li>Enter:<ul>
-<li><strong>Name</strong> (e.g., "Playwright Browser Automation")</li>
-<li><strong>Description</strong> (optional)</li>
+<li>
+<p><strong>Open GitHub Copilot Chat</strong></p>
+<ul>
+<li>Click the chat icon in the left sidebar (or press <code>Ctrl+Alt+I</code>)</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/integrations/mcp/open-copilot-chat.png" data-desc-position="bottom"><img alt="screenshot" src="../../img/integrations/mcp/open-copilot-chat.png"></a></p>
+</li>
+<li>
+<p><strong>Switch to Agent mode</strong></p>
+<ul>
+<li>In the chat panel, look for "Agent mode" and click it</li>
+<li>This enables the use of tools (like your Elitea agents)</li>
 </ul>
 </li>
-<li>Review the <strong>Tools</strong> list and unselect anything not needed.</li>
-<li>Click <strong>Save</strong>.</li>
+<li>
+<p><strong>Add the MCP server</strong></p>
+<ul>
+<li>Click the <strong>Select Tools</strong> icon (looks like a wrench or tools)</li>
+<li>Click <strong>Add MCP Server</strong> icon</li>
+<li>Click <strong>+ Add MCP Server</strong></li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/getting-started/mcp/add-mcp-server.png" data-desc-position="bottom"><img alt="alt text" src="../../img/getting-started/mcp/add-mcp-server.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/integrations/mcp/add-mcp-server.png" data-desc-position="bottom"><img alt="screenshot" src="../../img/integrations/mcp/add-mcp-server.png"></a></p>
+<ul>
+<li>Select <strong>Command stdio</strong></li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/integrations/mcp/select-command-stdio.png" data-desc-position="bottom"><img alt="screenshot" src="../../img/integrations/mcp/select-command-stdio.png"></a></p>
+<ul>
+<li>For "Command", type: <code>alita-mcp</code> and press Enter</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/integrations/mcp/enter-command.png" data-desc-position="bottom"><img alt="screenshot" src="../../img/integrations/mcp/enter-command.png"></a></p>
+<ul>
+<li>For "Server ID", use the suggested name or type something like <code>elitea</code></li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/integrations/mcp/add-server-id-stdio.png" data-desc-position="bottom"><img alt="screenshot" src="../../img/integrations/mcp/add-server-id-stdio.png"></a></p>
+</li>
+<li>
+<p><strong>Choose where to save the settings</strong></p>
+<ul>
+<li>You'll see two options:</li>
+<li><strong>Workspace</strong> – Only works in this project folder</li>
+<li><strong>Global</strong> – Works in all your VS Code projects</li>
+<li>Choose based on your needs (Workspace is good for team projects)</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/getting-started/mcp/workspace.png" data-desc-position="bottom"><img alt="screenshot" src="../../img/getting-started/mcp/workspace.png"></a></p>
+</li>
 </ol>
-<p><img alt="Create MCP" src="../../img/migration/v2.0.0/mcps_creating_an_mcp.png" /></p>
+<hr>
+<h3 id="part-4-add-your-project-id">Part 4: Add Your Project ID<a class="headerlink" href="#part-4-add-your-project-id" title="Permanent link">¶</a></h3>
+<p>This tells the server which Elitea project to connect to.</p>
+<h4 id="option-a-if-you-chose-workspace">Option A: If You Chose Workspace<a class="headerlink" href="#option-a-if-you-chose-workspace" title="Permanent link">¶</a></h4>
+<ol>
+<li>
+<p><strong>The config file opens automatically</strong></p>
+<ul>
+<li>After selecting Workspace, VS Code will automatically open <code>.vscode/mcp.json</code></li>
+<li>If it doesn't open automatically, look for the file at <code>.vscode/mcp.json</code> and click to open it</li>
+</ul>
+</li>
+<li>
+<p><strong>Add your project ID</strong></p>
+<ul>
+<li>Find the line that says <code>"args": []</code></li>
+<li>Replace it with:
+   <div class="language-json highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nt">"args"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"run"</span><span class="p">,</span><span class="w"> </span><span class="s2">"--project_id"</span><span class="p">,</span><span class="w"> </span><span class="s2">"YOUR_PROJECT_ID"</span><span class="p">]</span>
+</span></code></pre></div></li>
+<li>Replace <code>YOUR_PROJECT_ID</code> with your actual number (example: <code>25</code>)</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/getting-started/mcp/add-project-id.png" data-desc-position="bottom"><img alt="screenshot" src="../../img/getting-started/mcp/add-project-id.png"></a></p>
+</li>
+<li>
+<p><strong>Save the file</strong></p>
+<ul>
+<li>Press <code>Ctrl+S</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Start the server</strong></p>
+<ul>
+<li>In Copilot Chat, click the <strong>Start</strong> button</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/getting-started/mcp/start-server.png" data-desc-position="bottom"><img alt="screenshot" src="../../img/getting-started/mcp/start-server.png"></a></p>
+</li>
+</ol>
 <div class="admonition warning">
-<p class="admonition-title">Disconnected state</p>
-<p>If the MCP shows <strong>Disconnected</strong>, start the tray app and server, then refresh the MCP page.</p>
+<p class="admonition-title">Before Starting the Server</p>
+<p>Make sure you have at least one agent tagged with <code>mcp</code>. Otherwise, no tools will be available when the server starts. See Part 5 for tagging instructions.</p>
 </div>
-<hr />
-<h2 id="optional-step-5-test-mcp-tools-from-the-mcp-page">(Optional) Step 5: Test MCP Tools from the MCP Page<a class="headerlink" href="#optional-step-5-test-mcp-tools-from-the-mcp-page" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Open the MCP’s detail page (Menus → MCPs → select your MCP).</li>
-<li>Use <strong>Test Settings</strong> to pick a model, select a tool, provide inputs, and <strong>Run Tool</strong>.</li>
-<li>Review the chat-style output, use fullscreen, and clear results as needed.</li>
-</ul>
-<p><img alt="Test Panel" src="../../img/migration/v2.0.0/mcps_test_panel.png" /></p>
-<hr />
-<h2 id="step-6-start-a-conversation-using-your-mcp">Step 6: Start a Conversation Using Your MCP<a class="headerlink" href="#step-6-start-a-conversation-using-your-mcp" title="Permanent link">&para;</a></h2>
+<hr>
+<h4 id="option-b-if-you-chose-global">Option B: If You Chose Global<a class="headerlink" href="#option-b-if-you-chose-global" title="Permanent link">¶</a></h4>
 <ol>
-<li>Open <strong>Chat → Conversations</strong>.</li>
-<li>Click <strong>+ Create</strong> to start a new conversation.</li>
-<li>In <strong>Participants → MCP</strong>, select the MCP you created (e.g., Playwright).</li>
-<li>Start chatting and invoke tools naturally.</li>
+<li>
+<p><strong>The settings file opens automatically</strong></p>
+<ul>
+<li>After selecting Global, VS Code will automatically open your global <code>mcp.json</code> configuration file</li>
+<li>If it doesn't open automatically, look for a new tab in the VS Code editor with the file</li>
+</ul>
+</li>
+<li>
+<p><strong>Add your project ID</strong></p>
+<ul>
+<li>Find the MCP server section you just added</li>
+<li>Find the line that says <code>"args": []</code></li>
+<li>Replace it with:
+   <div class="language-json highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nt">"args"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"run"</span><span class="p">,</span><span class="w"> </span><span class="s2">"--project_id"</span><span class="p">,</span><span class="w"> </span><span class="s2">"YOUR_PROJECT_ID"</span><span class="p">]</span>
+</span></code></pre></div></li>
+<li>Replace <code>YOUR_PROJECT_ID</code> with your actual number</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/getting-started/mcp/add-project-id.png" data-desc-position="bottom"><img alt="screenshot" src="../../img/getting-started/mcp/add-project-id.png"></a></p>
+</li>
+<li>
+<p><strong>Save the file</strong></p>
+<ul>
+<li>Press <code>Ctrl+S</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Start the server</strong></p>
+<ul>
+<li>In Copilot Chat, click the <strong>Start</strong> button</li>
+</ul>
+</li>
 </ol>
-<div class="admonition example">
-<p class="admonition-title">Example prompts with Playwright MCP:</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/integrations/mcp/stdio-start-server-settings-json.png" data-desc-position="bottom"><img alt="screenshot" src="../../img/integrations/mcp/stdio-start-server-settings-json.png"></a></p>
+<div class="admonition warning">
+<p class="admonition-title">Before Starting the Server</p>
+<p>Make sure you have at least one agent tagged with <code>mcp</code>. Otherwise, no tools will be available when the server starts. See Part 5 for setup instructions.</p>
+</div>
+<hr>
+<h3 id="part-5-tag-your-agents">Part 5: Tag Your Agents<a class="headerlink" href="#part-5-tag-your-agents" title="Permanent link">¶</a></h3>
+<p>For an agent to be available as a tool, it must be tagged in Elitea.</p>
+<h4 id="tagging-agents">Tagging Agents:<a class="headerlink" href="#tagging-agents" title="Permanent link">¶</a></h4>
 <ol>
-<li>Navigate to http://localhost:5173/</li>
-<li>Switch to Private project</li>
-<li>Navigate to Credentials page.</li>
-<li>Open the IndexGitHub credential by clicking the card.</li>
-<li>Take a screenshot of the page and save it as index-github-credential.png</li>
+<li>
+<p><strong>Log into Elitea</strong></p>
+<ul>
+<li>Open your Elitea deployment in a web browser</li>
+</ul>
+</li>
+<li>
+<p><strong>Find your agent</strong></p>
+<ul>
+<li>Navigate to the agent or pipeline you want to use</li>
+</ul>
+</li>
+<li>
+<p><strong>Add the "mcp" tag</strong></p>
+<ul>
+<li>Look for the tags section</li>
+<li>Add a tag named <code>mcp</code> (all lowercase)</li>
+<li>Save your changes</li>
+</ul>
+</li>
 </ol>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/getting-started/mcp/mcp-tag-agent.gif" data-desc-position="bottom"><img alt="Tag Agent" loading="lazy" src="../../img/getting-started/mcp/mcp-tag-agent.gif"></a></p>
+<div class="admonition important">
+<p class="admonition-title">Agent Tool Visibility</p>
+<p>Only agents with the <code>mcp</code> tag will be visible in VS Code. Make sure to tag the agents you want to use before starting the server.</p>
 </div>
-<p><img alt="Start Conversation" src="../../img/migration/v2.0.0/mcp-quick-conversation.png" /></p>
-<hr />
-<h2 id="quick-troubleshooting">Quick Troubleshooting<a class="headerlink" href="#quick-troubleshooting" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Disconnected MCP</strong>: Start the tray app and your server; refresh the MCP page.</li>
-<li><strong>No tools listed</strong>: Ensure the MCP server is running; revisit or refresh.</li>
-<li><strong>Tool errors</strong>: Check parameters; retry after restarting the server.</li>
-<li><strong>Windows PATH issues</strong>: Reopen Terminal/PowerShell after <code>pipx ensurepath</code>.</li>
+<h4 id="complete-setup">Complete Setup:<a class="headerlink" href="#complete-setup" title="Permanent link">¶</a></h4>
+<ol>
+<li><strong>Restart the MCP server in VS Code</strong><ul>
+<li>Go back to VS Code</li>
+<li>In Copilot Chat, stop the server and start it again</li>
+<li>This syncs the newly tagged agents</li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">More help</p>
-<p>See the <a href="../../menus/mcps/">MCPs menu guide</a> and the full <a href="../../integrations/mcp/mcp-client/">MCP Client Integration Guide</a>.</p>
+</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/getting-started/mcp/restart-server.gif" data-desc-position="bottom"><img alt="Restart server" loading="lazy" src="../../img/getting-started/mcp/restart-server.gif"></a></p>
+<hr>
+<h3 id="part-6-use-your-agent">Part 6: Use Your Agent<a class="headerlink" href="#part-6-use-your-agent" title="Permanent link">¶</a></h3>
+<p>Now you're ready to use your Elitea agent from VS Code!</p>
+<ol>
+<li>
+<p><strong>Open Copilot Chat</strong></p>
+<ul>
+<li>Make sure you're in Agent mode</li>
+</ul>
+</li>
+<li>
+<p><strong>Click the Tools icon</strong></p>
+<ul>
+<li>You should see your tagged agents listed</li>
+</ul>
+</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/integrations/mcp/mcp-tools-list.png" data-desc-position="bottom"><img alt="screenshot" src="../../img/integrations/mcp/mcp-tools-list.png"></a></p>
+<ol>
+<li>
+<p><strong>Select the tools you want to use</strong></p>
+<ul>
+<li>All tools are selected by default</li>
+<li>You can deselect any you don't need right now</li>
+</ul>
+</li>
+<li>
+<p><strong>Type your request</strong></p>
+<ul>
+<li>In the chat box, type <code>#</code> followed by your agent's name</li>
+<li>Example: <code>#BA Assistant Show me the scope of PLAN-3012</code></li>
+</ul>
+</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/integrations/mcp/call-ba-assistant.png" data-desc-position="bottom"><img alt="screenshot" src="../../img/integrations/mcp/call-ba-assistant.png"></a></p>
+<ol>
+<li><strong>Run the tool</strong><ul>
+<li>Click <strong>Run [tool name]</strong> when prompted</li>
+</ul>
+</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/integrations/mcp/run-tool.png" data-desc-position="bottom"><img alt="screenshot" src="../../img/integrations/mcp/run-tool.png"></a></p>
+<ol>
+<li>
+<p><strong>Confirm execution</strong></p>
+<ul>
+<li>The first time, you'll be asked to confirm</li>
+<li>Click <strong>Continue</strong> (you can choose to auto-confirm for future runs)</li>
+</ul>
+</li>
+<li>
+<p><strong>Review the results</strong></p>
+<ul>
+<li>Your agent will execute and return results directly in the chat</li>
+</ul>
+</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/integrations/mcp/enhanced-user-story-saved.png" data-desc-position="bottom"><img alt="screenshot" src="../../img/integrations/mcp/enhanced-user-story-saved.png"></a></p>
+<hr>
+<h2 id="how-to-know-its-working">How to Know It's Working<a class="headerlink" href="#how-to-know-its-working" title="Permanent link">¶</a></h2>
+<p>✔️ <strong>You've succeeded if:</strong></p>
+<ul>
+<li>The MCP server shows as "Running" in VS Code</li>
+<li>Your tagged agents appear in the Tools list</li>
+<li>When you call an agent, you see output in the chat</li>
+<li>No error messages appear</li>
+</ul>
+<p>✘ <strong>Something's wrong if:</strong></p>
+<ul>
+<li>You see "Command not found" errors → Reinstall the client</li>
+<li>No agents appear in the Tools list → Check that they're tagged with <code>mcp</code></li>
+<li>Server won't start → Check your Project ID and authentication token</li>
+</ul>
+<hr>
+<h2 id="common-problems-fixes">Common Problems &amp; Fixes<a class="headerlink" href="#common-problems-fixes" title="Permanent link">¶</a></h2>
+<h3 id="problem-alita-mcp-command-not-found">Problem: "alita-mcp: command not found"<a class="headerlink" href="#problem-alita-mcp-command-not-found" title="Permanent link">¶</a></h3>
+<p><strong>Fix:</strong> Make sure you completed all installation steps, including <code>pipx ensurepath</code>. Close and reopen PowerShell.</p>
+<h3 id="problem-no-agents-showing-up">Problem: No agents showing up<a class="headerlink" href="#problem-no-agents-showing-up" title="Permanent link">¶</a></h3>
+<p><strong>Fix:</strong> </p>
+<ol>
+<li>Make sure your agents are tagged with <code>mcp</code> in Elitea</li>
+<li>Restart the MCP server in VS Code</li>
+<li>Check you're using the correct Project ID</li>
+</ol>
+<h3 id="problem-error-indicator-in-vs-code">Problem: "Error indicator" in VS Code<a class="headerlink" href="#problem-error-indicator-in-vs-code" title="Permanent link">¶</a></h3>
+<p><strong>Fix:</strong></p>
+<ol>
+<li>Click the error in the Chat view</li>
+<li>Select <strong>Show Output</strong> to see details</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/integrations/mcp/mcp-server-error.png" data-desc-position="bottom"><img alt="screenshot" src="../../img/integrations/mcp/mcp-server-error.png"></a></p>
+<ol>
+<li>Look for specific error messages in the log</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/integrations/mcp/mcp-server-error-output.png" data-desc-position="bottom"><img alt="screenshot" src="../../img/integrations/mcp/mcp-server-error-output.png"></a></p>
+<h3 id="problem-server-keeps-disconnecting">Problem: Server keeps disconnecting<a class="headerlink" href="#problem-server-keeps-disconnecting" title="Permanent link">¶</a></h3>
+<p><strong>Fix:</strong></p>
+<ol>
+<li>Verify your authentication token is still valid</li>
+<li>Check your internet connection</li>
+<li>Confirm your Elitea deployment URL is correct</li>
+</ol>
+<h3 id="problem-multiple-alita-mcp-versions-installed-pip-and-pipx-conflict">Problem: Multiple alita-mcp versions installed (pip and pipx conflict)<a class="headerlink" href="#problem-multiple-alita-mcp-versions-installed-pip-and-pipx-conflict" title="Permanent link">¶</a></h3>
+<p><strong>Fix:</strong></p>
+<p>If you see errors or unexpected behavior, you may have multiple versions of <code>alita-mcp</code> installed. This happens when you installed it with both <code>pip</code> and <code>pipx</code>.</p>
+<ol>
+<li>
+<p><strong>Check for multiple installations:</strong>
+   </p><div class="language-powershell highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">pip</span> <span class="n">list</span> <span class="p">|</span> <span class="nb">Select-String</span> <span class="n">alita-mcp</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">pipx</span> <span class="n">list</span> <span class="p">|</span> <span class="nb">Select-String</span> <span class="n">alita-mcp</span>
+</span></code></pre></div><p></p>
+</li>
+<li>
+<p><strong>Remove the pip version (keep pipx):</strong>
+   </p><div class="language-powershell highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">pip</span> <span class="n">uninstall</span> <span class="n">alita-mcp</span> <span class="n">-y</span>
+</span></code></pre></div><p></p>
+</li>
+<li>
+<p><strong>Verify the correct version is active:</strong>
+   </p><div class="language-powershell highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">where</span><span class="p">.</span><span class="n">exe</span> <span class="n">alita-mcp</span>
+</span></code></pre></div><p></p>
+</li>
+</ol>
+<p>You should see: <code>C:\Users\&lt;YourUsername&gt;\.local\bin\alita-mcp.exe</code></p>
+<ol>
+<li><strong>Restart VS Code and the MCP server</strong></li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Why this happens</p>
+<p>The pipx installation is the recommended method as it isolates the tool in its own environment. If you previously installed with <code>pip</code>, it may conflict with the pipx version and cause the system to use the wrong (often outdated) version.</p>
 </div>
-<hr />
-<h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="what-you-can-do-next">What You Can Do Next<a class="headerlink" href="#what-you-can-do-next" title="Permanent link">¶</a></h2>
+<p>Now that your MCP server is running, you can:
+- Call multiple agents in one conversation
+- Use agents to analyze code, create documentation, or fetch data
+- Automate repetitive tasks directly from VS Code
+- Combine Elitea agents with other Copilot features</p>
+<hr>
+<h2 id="advanced-options">Advanced Options<a class="headerlink" href="#advanced-options" title="Permanent link">¶</a></h2>
+<details>
+<summary>Click to expand advanced configuration options</summary>
+**Using a Specific Application**
+If you want to limit the MCP server to a single agent or pipeline, use this configuration:
+
+<div class="language-json highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nt">"args"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"run"</span><span class="p">,</span><span class="w"> </span><span class="s2">"--project_id"</span><span class="p">,</span><span class="w"> </span><span class="s2">"25"</span><span class="p">,</span><span class="w"> </span><span class="s2">"--app_id"</span><span class="p">,</span><span class="w"> </span><span class="s2">"12"</span><span class="p">,</span><span class="w"> </span><span class="s2">"--version_id"</span><span class="p">,</span><span class="w"> </span><span class="s2">"3"</span><span class="p">]</span>
+</span></code></pre></div>
+
+- `app_id` is the ID of your specific agent
+- `version_id` is the version number you want to use
+
+### Multiple MCP Servers
+
+You can set up multiple MCP servers for different projects:
+1. Repeat the setup process
+2. Use a different Server ID for each
+3. Each server can point to a different Project ID
+
+</details>
+
+<hr>
+<div class="admonition tip">
+<p class="admonition-title">Helpful Resources</p>
 <ul>
-<li>Assign the MCP to an <strong>Agent</strong> or a <strong>Pipeline</strong> to automate workflows.</li>
-<li>Explore additional MCP servers (e.g., GitHub MCP) and enable only the tools you need.</li>
-<li>Keep names clear (e.g., "Playwright (QA)") and monitor connection state.</li>
+<li><a href="../../integrations/mcp/mcp-server-stdio/">Full MCP STDIO Documentation</a></li>
+<li><a href="../../menus/settings/ai-configuration/">Elitea Settings &amp; Configuration</a></li>
+<li><a href="https://modelcontextprotocol.io/">MCP Protocol Official Docs</a></li>
 </ul>
+</div>
+<hr>
 
 
 
@@ -7261,13 +7919,13 @@ pipx<span class="w"> </span>install<span class="w"> </span>alita-mcp
   
     
       
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
           <a href="../indexing-quick-start/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Create an Index">
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
             </div>
             <div class="md-footer__title">
               <span class="md-footer__direction">
@@ -7281,18 +7939,18 @@ pipx<span class="w"> </span>install<span class="w"> </span>alita-mcp
         
         
           
-          <a href="../../menus/overview/" class="md-footer__link md-footer__link--next" aria-label="Next: Overview">
+          <a href="../create-and-use-client-stdio/" class="md-footer__link md-footer__link--next" aria-label="Next: Configure and Use MCP Client(STDIO)">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Overview
+                Configure and Use MCP Client(STDIO)
               </div>
             </div>
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
             </div>
           </a>
         
@@ -7324,7 +7982,7 @@ pipx<span class="w"> </span>install<span class="w"> </span>alita-mcp
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.footer", "navigation.path", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.footer", "navigation.path", "navigation.tabs", "navigation.tabs.sticky", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
@@ -7332,5 +7990,7 @@ pipx<span class="w"> </span>install<span class="w"> </span>alita-mcp
         <script src="../../extra_js/fullscreen.js"></script>
       
     
-  </body>
-</html>
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

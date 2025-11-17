@@ -1,7 +1,4 @@
-
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
+<!DOCTYPE html><html lang="en" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -46,7 +43,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -59,7 +56,17 @@
 
     
     
-  </head>
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
   
   
     
@@ -101,7 +108,7 @@
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -126,20 +133,20 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to system preference" type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
       </label>
     
   
@@ -150,46 +157,6 @@
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
-    
-      
-      
-        <label class="md-header__button md-icon" for="__search">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        </label>
-        <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-      
     
     
   </nav>
@@ -403,7 +370,7 @@
           
   
   
-  Migration & Upgrade
+  Migration &amp; Upgrade
 
         </a>
       </li>
@@ -471,7 +438,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -510,7 +477,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1">
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -560,7 +527,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1">
         
           
           <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
@@ -758,7 +725,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2">
         
           
           <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
@@ -1019,7 +986,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -1069,7 +1036,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1">
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -1183,7 +1150,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2">
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -1381,7 +1348,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3">
         
           
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
@@ -1560,14 +1527,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/configure-and-use-mcp/" class="md-nav__link">
+      <a href="../../getting-started/create-and-use-server-stdio/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Configure and Use MCP Servers
+    Configure and Use MCP Server(STDIO)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/create-and-use-client-stdio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configure and Use MCP Client(STDIO)
   
 
     
@@ -2197,7 +2192,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_10">
         
           
           <label class="md-nav__link" for="__nav_3_1_10" id="__nav_3_1_10_label" tabindex="0">
@@ -2438,7 +2433,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -2488,7 +2483,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1">
         
           
           <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
@@ -2498,7 +2493,7 @@
   <span class="md-ellipsis">
     
   
-    Chat & Conversations
+    Chat &amp; Conversations
   
 
     
@@ -2514,7 +2509,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Chat & Conversations
+    Chat &amp; Conversations
   
 
           </label>
@@ -2826,7 +2821,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2">
         
           
           <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
@@ -3248,7 +3243,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3">
         
           
           <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
@@ -3258,7 +3253,7 @@
   <span class="md-ellipsis">
     
   
-    Agents & Pipelines
+    Agents &amp; Pipelines
   
 
     
@@ -3274,7 +3269,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Agents & Pipelines
+    Agents &amp; Pipelines
   
 
           </label>
@@ -3354,7 +3349,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3">
         
           
           <label class="md-nav__link" for="__nav_4_3_3" id="__nav_4_3_3_label" tabindex="0">
@@ -3460,7 +3455,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3_3">
         
           
           <label class="md-nav__link" for="__nav_4_3_3_3" id="__nav_4_3_3_3_label" tabindex="0">
@@ -3842,7 +3837,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4">
         
           
           <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
@@ -3852,7 +3847,7 @@
   <span class="md-ellipsis">
     
   
-    Credentials & Toolkits
+    Credentials &amp; Toolkits
   
 
     
@@ -3868,7 +3863,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Credentials & Toolkits
+    Credentials &amp; Toolkits
   
 
           </label>
@@ -4040,7 +4035,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5">
         
           
           <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
@@ -4142,7 +4137,7 @@
   <span class="md-ellipsis">
     
   
-    Manage Roles & Permissions
+    Manage Roles &amp; Permissions
   
 
     
@@ -4189,7 +4184,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -4239,7 +4234,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1">
         
           
           <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
@@ -4409,7 +4404,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2">
         
           
           <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
@@ -5363,7 +5358,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3">
         
           
           <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
@@ -5484,7 +5479,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -5534,7 +5529,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1">
         
           
           <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
@@ -5620,7 +5615,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2">
         
           
           <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
@@ -6021,7 +6016,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7">
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
@@ -6031,7 +6026,7 @@
   <span class="md-ellipsis">
     
   
-    Migration & Upgrade
+    Migration &amp; Upgrade
   
 
     
@@ -6047,7 +6042,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Migration & Upgrade
+    Migration &amp; Upgrade
   
 
           </label>
@@ -6071,7 +6066,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1">
         
           
           <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
@@ -6213,7 +6208,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2">
         
           
           <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
@@ -6362,7 +6357,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8">
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
@@ -6531,7 +6526,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9">
         
           
           <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
@@ -6773,7 +6768,7 @@
   <span class="md-ellipsis">
     
   
-    Export & Import Entities
+    Export &amp; Import Entities
   
 
     
@@ -6889,7 +6884,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_12">
         
           
           <label class="md-nav__link" for="__nav_9_12" id="__nav_9_12_label" tabindex="0">
@@ -6972,7 +6967,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -7183,7 +7178,7 @@
 
 
 
-  <nav class="md-path" aria-label="Navigation" >
+  <nav class="md-path" aria-label="Navigation">
     <ol class="md-path__list">
       
       
@@ -7241,16 +7236,16 @@
 
 
 
-<h1 id="artifacts">Artifacts<a class="headerlink" href="#artifacts" title="Permanent link">&para;</a></h1>
-<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<h1 id="artifacts">Artifacts<a class="headerlink" href="#artifacts" title="Permanent link">¶</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">¶</a></h2>
 <p>The <strong>Artifacts</strong> menu in ELITEA provides a dedicated interface for managing artifact buckets and the files they contain. Artifacts are primarily used in conjunction with the Artifact Toolkit within ELITEA Agents, offering temporary storage for data and context during agent workflows. This menu allows users to directly interact with artifact storage, enabling actions such as creating buckets, uploading and downloading files, managing retention policies, and organizing project-related data. Artifact storage is project-specific, accessible to project members, and is also available for private projects.</p>
-<h3 id="accessing-the-artifacts">Accessing the Artifacts<a class="headerlink" href="#accessing-the-artifacts" title="Permanent link">&para;</a></h3>
+<h3 id="accessing-the-artifacts">Accessing the Artifacts<a class="headerlink" href="#accessing-the-artifacts" title="Permanent link">¶</a></h3>
 <ol>
 <li>Click the <strong>ELITEA</strong> icon in the sidebar to open the ELITEA menu. </li>
 <li>Select <strong>"Artifacts"</strong> to access the management page. If the menu item is missing, contact your administrator.</li>
 </ol>
-<p><img alt="artifact-artifacts_page" src="../../img/menus/artifacts/artifacts_page.png" /></p>
-<h2 id="components">Components<a class="headerlink" href="#components" title="Permanent link">&para;</a></h2>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/artifacts/artifacts_page.png" data-desc-position="bottom"><img alt="artifact-artifacts_page" src="../../img/menus/artifacts/artifacts_page.png"></a></p>
+<h2 id="components">Components<a class="headerlink" href="#components" title="Permanent link">¶</a></h2>
 <ul>
 <li><strong>Buckets Sidebar:</strong><ul>
 <li>A sidebar on the left lists all artifact buckets for the project.</li>
@@ -7259,21 +7254,21 @@
 </ul>
 </li>
 </ul>
-<p><img alt="artifact-buckets_side_bar" src="../../img/menus/artifacts/buckets_side_bar.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/artifacts/buckets_side_bar.png" data-desc-position="bottom"><img alt="artifact-buckets_side_bar" src="../../img/menus/artifacts/buckets_side_bar.png"></a></p>
 <ul>
 <li>
 <p><strong>Add Bucket Button:</strong> </p>
 <ul>
 <li>Located at the top of the sidebar, this button initiates the process of creating a new artifact bucket.</li>
 </ul>
-<p><img alt="artifact-create_bucket" src="../../img/menus/artifacts/create_bucket.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/artifacts/create_bucket.png" data-desc-position="bottom"><img alt="artifact-create_bucket" src="../../img/menus/artifacts/create_bucket.png"></a></p>
 </li>
 <li>
 <p><strong>Search Bar for Buckets:</strong></p>
 <ul>
 <li>A prominent search bar at the top of the sidebar allows you to search for buckets by name or keyword.</li>
 </ul>
-<p><img alt="artifact-buckets_search" src="../../img/menus/artifacts/buckets_search.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/artifacts/buckets_search.png" data-desc-position="bottom"><img alt="artifact-buckets_search" src="../../img/menus/artifacts/buckets_search.png"></a></p>
 </li>
 <li>
 <p><strong>Storage Settings Button:</strong></p>
@@ -7285,18 +7280,18 @@
 <p><strong>File List:</strong> </p>
 <ul>
 <li>Located to the right of the bucket list, this panel displays the files contained within the selected bucket. The list shows file name, size, last update date, and available actions (Preview, Download, Delete). A bulk delete option for selected files and an info icon are located in the upper right corner. Pagination is available for long file lists, along with options to adjust the number of files displayed per page and sort files by column headers.
-<img alt="artifact-file_list" src="../../img/menus/artifacts/file_list.png" /></li>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/artifacts/file_list.png" data-desc-position="bottom"><img alt="artifact-file_list" src="../../img/menus/artifacts/file_list.png"></a></li>
 </ul>
 </li>
 </ul>
-<h2 id="artifact-functionality">Artifact Functionality<a class="headerlink" href="#artifact-functionality" title="Permanent link">&para;</a></h2>
-<h3 id="buckets-sidebar-and-grouping">Buckets Sidebar and Grouping<a class="headerlink" href="#buckets-sidebar-and-grouping" title="Permanent link">&para;</a></h3>
+<h2 id="artifact-functionality">Artifact Functionality<a class="headerlink" href="#artifact-functionality" title="Permanent link">¶</a></h2>
+<h3 id="buckets-sidebar-and-grouping">Buckets Sidebar and Grouping<a class="headerlink" href="#buckets-sidebar-and-grouping" title="Permanent link">¶</a></h3>
 <ul>
 <li><strong>Sidebar:</strong> The sidebar on the left lists all artifact buckets for the project. The sidebar is expandable and collapsible, allowing users to show or hide it as needed for a more flexible workspace.</li>
 <li><strong>Auto-selection:</strong> When no bucket is selected, the system automatically selects the most recently active bucket based on file activity for better user experience.</li>
 </ul>
-<p><img alt="artifact-buckets_side_bar" src="../../img/menus/artifacts/buckets_side_bar.png" /></p>
-<h3 id="storage-settings-button">Storage Settings Button<a class="headerlink" href="#storage-settings-button" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/artifacts/buckets_side_bar.png" data-desc-position="bottom"><img alt="artifact-buckets_side_bar" src="../../img/menus/artifacts/buckets_side_bar.png"></a></p>
+<h3 id="storage-settings-button">Storage Settings Button<a class="headerlink" href="#storage-settings-button" title="Permanent link">¶</a></h3>
 <ul>
 <li>At the top of the sidebar, a dedicated storage info panel displays the storage name, total storage used, and the project storage limit (if configured).</li>
 <li>The storage settings button provides access to storage configuration selection, allowing users to switch between different storage integrations.</li>
@@ -7304,15 +7299,15 @@
 <li><strong>Storage Type Information:</strong> Displays the storage type (e.g., "S3 Storage") and additional metadata.</li>
 <li>Currently supports multiple storage configurations if project has access to both personal and shared storage integrations.</li>
 </ul>
-<p><img alt="artifact-storage_settings" src="../../img/menus/artifacts/storage_settings.png" /></p>
-<h3 id="searching-and-filtering">Searching and Filtering<a class="headerlink" href="#searching-and-filtering" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/artifacts/storage_settings.png" data-desc-position="bottom"><img alt="artifact-storage_settings" src="../../img/menus/artifacts/storage_settings.png"></a></p>
+<h3 id="searching-and-filtering">Searching and Filtering<a class="headerlink" href="#searching-and-filtering" title="Permanent link">¶</a></h3>
 <ul>
 <li><strong>Search Bar:</strong> Use the search bar at the top of the sidebar to find buckets by name or ID. Results update instantly as you type.</li>
 <li><strong>Search Activation:</strong> The search function can be activated by clicking the search icon, which expands to show a full search input field.</li>
 <li><strong>Storage Type Filter:</strong> Use the storage settings dropdown to switch between different storage configurations if multiple are available.</li>
 </ul>
-<p><img alt="artifact-buckets_search" src="../../img/menus/artifacts/buckets_search.png" /></p>
-<h3 id="creating-a-new-bucket">Creating a New Bucket<a class="headerlink" href="#creating-a-new-bucket" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/artifacts/buckets_search.png" data-desc-position="bottom"><img alt="artifact-buckets_search" src="../../img/menus/artifacts/buckets_search.png"></a></p>
+<h3 id="creating-a-new-bucket">Creating a New Bucket<a class="headerlink" href="#creating-a-new-bucket" title="Permanent link">¶</a></h3>
 <ul>
 <li><strong>Initiate Bucket Creation:</strong> Click the <strong>"+ Create Bucket"</strong> button located at the top of the sidebar.</li>
 <li><strong>Enter Bucket Name:</strong> A "New Bucket" dialog will appear. In the "Name" field, enter a unique name for your new bucket.<ul>
@@ -7328,8 +7323,8 @@
 </li>
 <li><strong>Save Bucket:</strong> Click the <strong>"Save"</strong> button in the "New Bucket" dialog to create the bucket with the specified name and retention policy. The newly created bucket will then appear in the Bucket List and will be automatically selected.</li>
 </ul>
-<p><img alt="artifact-new" src="../../img/menus/artifacts/new.png" /></p>
-<h3 id="editing-and-deleting-buckets">Editing and Deleting Buckets<a class="headerlink" href="#editing-and-deleting-buckets" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/artifacts/new.png" data-desc-position="bottom"><img alt="artifact-new" src="../../img/menus/artifacts/new.png"></a></p>
+<h3 id="editing-and-deleting-buckets">Editing and Deleting Buckets<a class="headerlink" href="#editing-and-deleting-buckets" title="Permanent link">¶</a></h3>
 <p><strong>Editing a Bucket:</strong></p>
 <ul>
 <li><strong>Access Edit Mode:</strong> In the Bucket List, click on the three dots icon next to the bucket you want to modify. A context menu with an <strong>"Edit"</strong> icon (pencil icon) will appear. Click on this "Edit" icon.</li>
@@ -7355,10 +7350,10 @@
 </div>
 </li>
 </ul>
-<p><img alt="artifact-edit_delete" src="../../img/menus/artifacts/edit_delete.png" />
-<img alt="artifact-edit" src="../../img/menus/artifacts/edit.png" />
-<img alt="artifact-delete_bucket" src="../../img/menus/artifacts/delete_bucket.png" /></p>
-<h3 id="viewing-and-managing-files-in-a-bucket">Viewing and Managing Files In a Bucket<a class="headerlink" href="#viewing-and-managing-files-in-a-bucket" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/artifacts/edit_delete.png" data-desc-position="bottom"><img alt="artifact-edit_delete" src="../../img/menus/artifacts/edit_delete.png"></a>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/artifacts/edit.png" data-desc-position="bottom"><img alt="artifact-edit" src="../../img/menus/artifacts/edit.png"></a>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/artifacts/delete_bucket.png" data-desc-position="bottom"><img alt="artifact-delete_bucket" src="../../img/menus/artifacts/delete_bucket.png"></a></p>
+<h3 id="viewing-and-managing-files-in-a-bucket">Viewing and Managing Files In a Bucket<a class="headerlink" href="#viewing-and-managing-files-in-a-bucket" title="Permanent link">¶</a></h3>
 <ul>
 <li><strong>Select a Bucket:</strong> Click a bucket in the sidebar to view its files in the main panel.</li>
 <li><strong>File Table:</strong> The table shows file name, type, size, last update, uploader, and actions. File type icons/labels are shown automatically based on file extensions.</li>
@@ -7371,10 +7366,10 @@
 <li><strong>Items Per Page:</strong> Use the "items per page" selector to adjust the number of files displayed on each page.</li>
 <li><strong>Sorting:</strong> Click on the column headers ("Name," "Size," "Last Update Date") to sort the file list by that column in ascending or descending order.</li>
 </ul>
-<p><img alt="artifact-pagination_sorting" src="../../img/menus/artifacts/pagination_sorting.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/artifacts/pagination_sorting.png" data-desc-position="bottom"><img alt="artifact-pagination_sorting" src="../../img/menus/artifacts/pagination_sorting.png"></a></p>
 </li>
 </ul>
-<h3 id="uploading-files-to-a-bucket">Uploading Files to a Bucket<a class="headerlink" href="#uploading-files-to-a-bucket" title="Permanent link">&para;</a></h3>
+<h3 id="uploading-files-to-a-bucket">Uploading Files to a Bucket<a class="headerlink" href="#uploading-files-to-a-bucket" title="Permanent link">¶</a></h3>
 <ul>
 <li><strong>Select Target Bucket:</strong> Ensure you have selected the bucket in the Bucket List where you want to upload files.</li>
 <li><strong>Multiple Upload Methods:</strong><ul>
@@ -7387,14 +7382,14 @@
 <li><strong>Upload Progress:</strong> After initiating upload, ELITEA will provide visual feedback regarding the upload status through the upload status indicator.</li>
 <li>
 <p><strong>Permission Requirements:</strong> Upload functionality requires appropriate permissions (artifacts.create or artifacts.buckets.create).</p>
-<p><img alt="artifact-pagination_sorting" src="../../img/menus/artifacts/upload.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/artifacts/upload.png" data-desc-position="bottom"><img alt="artifact-pagination_sorting" src="../../img/menus/artifacts/upload.png"></a></p>
 </li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Files with the same name and extension will replace existing files without additional confirmation once the initial duplicate warning is accepted.</p>
 </div>
-<h3 id="file-preview">File Preview<a class="headerlink" href="#file-preview" title="Permanent link">&para;</a></h3>
+<h3 id="file-preview">File Preview<a class="headerlink" href="#file-preview" title="Permanent link">¶</a></h3>
 <ul>
 <li>Navigate to the File List of the bucket containing the file you want to preview.</li>
 <li>Click on the Preview icon (eye symbol). Files must be under the size limit for preview (varies by file type, with flexible limits based on file content).</li>
@@ -7424,17 +7419,17 @@
 </ul>
 <p><strong>File Size Limits:</strong> Preview is available for files under specific size limits (flexible based on file type) to ensure good performance. Larger files will show a download option instead.</p>
 <p>This feature enables comprehensive inspection of file contents directly within the Artifacts interface, significantly streamlining workflow and reducing context switching.</p>
-<p><img alt="artifact-preview" src="../../img/menus/artifacts/preview_icon.png" />
-<img alt="artifact-preview_file" src="../../img/menus/artifacts/preview.png" /></p>
-<h3 id="downloading-files-from-a-bucket">Downloading Files from a Bucket<a class="headerlink" href="#downloading-files-from-a-bucket" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/artifacts/preview_icon.png" data-desc-position="bottom"><img alt="artifact-preview" src="../../img/menus/artifacts/preview_icon.png"></a>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/artifacts/preview.png" data-desc-position="bottom"><img alt="artifact-preview_file" src="../../img/menus/artifacts/preview.png"></a></p>
+<h3 id="downloading-files-from-a-bucket">Downloading Files from a Bucket<a class="headerlink" href="#downloading-files-from-a-bucket" title="Permanent link">¶</a></h3>
 <ul>
 <li><strong>Single File Download:</strong> Navigate to the File List and locate the <strong>"Download"</strong> icon (download arrow icon) on the right side of the file entry. Click this icon to download the file to your local computer.</li>
 <li><strong>Multiple File Download:</strong> Select multiple files using the checkboxes, then click the <strong>"Download files"</strong> button in the toolbar to download all selected files.</li>
 <li><strong>Permission Requirements:</strong> Download functionality is generally available to all users with bucket access.</li>
 <li><strong>Download Progress:</strong> The system provides feedback during the download process.</li>
 </ul>
-<p><img alt="artifact-download" src="../../img/menus/artifacts/download.png" /></p>
-<h3 id="deleting-files-from-a-bucket">Deleting Files from a Bucket<a class="headerlink" href="#deleting-files-from-a-bucket" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/artifacts/download.png" data-desc-position="bottom"><img alt="artifact-download" src="../../img/menus/artifacts/download.png"></a></p>
+<h3 id="deleting-files-from-a-bucket">Deleting Files from a Bucket<a class="headerlink" href="#deleting-files-from-a-bucket" title="Permanent link">¶</a></h3>
 <ul>
 <li><strong>Access File List:</strong> Navigate to the File List of the bucket containing the files you want to delete.</li>
 <li><strong>Single File Deletion:</strong> Click the <strong>"Delete"</strong> icon (trash can) on the right side of the file entry to delete individual files.</li>
@@ -7445,9 +7440,9 @@
 </li>
 <li><strong>Permission Requirements:</strong> Delete functionality requires appropriate permissions (artifacts.delete or bucket ownership).</li>
 <li><strong>Confirmation:</strong> You may be prompted to confirm the file deletion before it is permanently removed.
-<img alt="artifact-delete-file" src="../../img/menus/artifacts/delete_file.png" /></li>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/artifacts/delete_file.png" data-desc-position="bottom"><img alt="artifact-delete-file" src="../../img/menus/artifacts/delete_file.png"></a></li>
 </ul>
-<h2 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h2>
+<h2 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">¶</a></h2>
 <p><strong>Q: What types of files can I upload?</strong></p>
 <p><strong>A:</strong> All file types are supported for upload. For optimal agent workflow integration, plain text files are recommended. The preview feature supports 50+ file types including programming languages, configuration files, documentation formats, data files (CSV/TSV), images, and Mermaid diagrams. See the <a href="../../integrations/toolkits/artifact_toolkit/">Artifact Toolkit Guide</a> for agent-specific usage details.</p>
 <p><strong>Q: How can I preview files?</strong></p>
@@ -7492,13 +7487,13 @@
   
     
       
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
           <a href="../collections/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Collections">
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
             </div>
             <div class="md-footer__title">
               <span class="md-footer__direction">
@@ -7523,7 +7518,7 @@
             </div>
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
             </div>
           </a>
         
@@ -7555,7 +7550,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.footer", "navigation.path", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.footer", "navigation.path", "navigation.tabs", "navigation.tabs.sticky", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
@@ -7563,5 +7558,7 @@
         <script src="../../extra_js/fullscreen.js"></script>
       
     
-  </body>
-</html>
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

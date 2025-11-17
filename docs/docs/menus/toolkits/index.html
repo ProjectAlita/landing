@@ -1,7 +1,4 @@
-
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
+<!DOCTYPE html><html lang="en" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -46,7 +43,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -59,7 +56,17 @@
 
     
     
-  </head>
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
   
   
     
@@ -101,7 +108,7 @@
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -126,20 +133,20 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to system preference" type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
       </label>
     
   
@@ -150,46 +157,6 @@
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
-    
-      
-      
-        <label class="md-header__button md-icon" for="__search">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        </label>
-        <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-      
     
     
   </nav>
@@ -403,7 +370,7 @@
           
   
   
-  Migration & Upgrade
+  Migration &amp; Upgrade
 
         </a>
       </li>
@@ -471,7 +438,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -510,7 +477,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1">
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -560,7 +527,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1">
         
           
           <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
@@ -758,7 +725,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2">
         
           
           <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
@@ -1019,7 +986,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -1069,7 +1036,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1">
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -1183,7 +1150,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2">
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -1381,7 +1348,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3">
         
           
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
@@ -1560,14 +1527,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/configure-and-use-mcp/" class="md-nav__link">
+      <a href="../../getting-started/create-and-use-server-stdio/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Configure and Use MCP Servers
+    Configure and Use MCP Server(STDIO)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/create-and-use-client-stdio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configure and Use MCP Client(STDIO)
   
 
     
@@ -2326,7 +2321,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_10">
         
           
           <label class="md-nav__link" for="__nav_3_1_10" id="__nav_3_1_10_label" tabindex="0">
@@ -2567,7 +2562,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -2617,7 +2612,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1">
         
           
           <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
@@ -2627,7 +2622,7 @@
   <span class="md-ellipsis">
     
   
-    Chat & Conversations
+    Chat &amp; Conversations
   
 
     
@@ -2643,7 +2638,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Chat & Conversations
+    Chat &amp; Conversations
   
 
           </label>
@@ -2955,7 +2950,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2">
         
           
           <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
@@ -3377,7 +3372,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3">
         
           
           <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
@@ -3387,7 +3382,7 @@
   <span class="md-ellipsis">
     
   
-    Agents & Pipelines
+    Agents &amp; Pipelines
   
 
     
@@ -3403,7 +3398,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Agents & Pipelines
+    Agents &amp; Pipelines
   
 
           </label>
@@ -3483,7 +3478,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3">
         
           
           <label class="md-nav__link" for="__nav_4_3_3" id="__nav_4_3_3_label" tabindex="0">
@@ -3589,7 +3584,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3_3">
         
           
           <label class="md-nav__link" for="__nav_4_3_3_3" id="__nav_4_3_3_3_label" tabindex="0">
@@ -3971,7 +3966,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4">
         
           
           <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
@@ -3981,7 +3976,7 @@
   <span class="md-ellipsis">
     
   
-    Credentials & Toolkits
+    Credentials &amp; Toolkits
   
 
     
@@ -3997,7 +3992,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Credentials & Toolkits
+    Credentials &amp; Toolkits
   
 
           </label>
@@ -4169,7 +4164,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5">
         
           
           <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
@@ -4271,7 +4266,7 @@
   <span class="md-ellipsis">
     
   
-    Manage Roles & Permissions
+    Manage Roles &amp; Permissions
   
 
     
@@ -4318,7 +4313,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -4368,7 +4363,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1">
         
           
           <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
@@ -4538,7 +4533,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2">
         
           
           <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
@@ -5492,7 +5487,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3">
         
           
           <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
@@ -5613,7 +5608,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -5663,7 +5658,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1">
         
           
           <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
@@ -5749,7 +5744,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2">
         
           
           <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
@@ -6150,7 +6145,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7">
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
@@ -6160,7 +6155,7 @@
   <span class="md-ellipsis">
     
   
-    Migration & Upgrade
+    Migration &amp; Upgrade
   
 
     
@@ -6176,7 +6171,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Migration & Upgrade
+    Migration &amp; Upgrade
   
 
           </label>
@@ -6200,7 +6195,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1">
         
           
           <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
@@ -6342,7 +6337,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2">
         
           
           <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
@@ -6491,7 +6486,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8">
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
@@ -6660,7 +6655,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9">
         
           
           <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
@@ -6902,7 +6897,7 @@
   <span class="md-ellipsis">
     
   
-    Export & Import Entities
+    Export &amp; Import Entities
   
 
     
@@ -7018,7 +7013,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_12">
         
           
           <label class="md-nav__link" for="__nav_9_12" id="__nav_9_12_label" tabindex="0">
@@ -7101,7 +7096,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -7441,7 +7436,7 @@
 
 
 
-  <nav class="md-path" aria-label="Navigation" >
+  <nav class="md-path" aria-label="Navigation">
     <ol class="md-path__list">
       
       
@@ -7499,33 +7494,33 @@
 
 
 
-<h1 id="toolkits">Toolkits<a class="headerlink" href="#toolkits" title="Permanent link">&para;</a></h1>
-<h2 id="introduction-to-the-toolkits-menu">Introduction to the Toolkits Menu<a class="headerlink" href="#introduction-to-the-toolkits-menu" title="Permanent link">&para;</a></h2>
+<h1 id="toolkits">Toolkits<a class="headerlink" href="#toolkits" title="Permanent link">¶</a></h1>
+<h2 id="introduction-to-the-toolkits-menu">Introduction to the Toolkits Menu<a class="headerlink" href="#introduction-to-the-toolkits-menu" title="Permanent link">¶</a></h2>
 <p>The <strong>Toolkits</strong> menu in the ELITEA platform provides a centralized interface for managing and configuring integrations that power your AI agents. Toolkits extend the capabilities of agents by enabling them to interact with a variety of services—such as project management, version control, testing tools, data processing utilities, and more. This guide walks you through the Toolkits menu, explains how to navigate its features, and describes how to configure available toolkits to best fit your workflows.</p>
-<hr />
-<h2 id="what-are-toolkits">What Are Toolkits?<a class="headerlink" href="#what-are-toolkits" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="what-are-toolkits">What Are Toolkits?<a class="headerlink" href="#what-are-toolkits" title="Permanent link">¶</a></h2>
 <p><strong>Toolkits</strong> in ELITEA are modular integrations that connect your agents to external platforms and internal services. Each toolkit provides an interface for configuring connection parameters (like API keys, URLs, or credentials) and setting options specific to the target service. Once configured, toolkits can be assigned to agents, empowering them to automate tasks across different systems and domains.</p>
-<hr />
-<h2 id="navigating-the-toolkits-menu">Navigating the Toolkits Menu<a class="headerlink" href="#navigating-the-toolkits-menu" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="navigating-the-toolkits-menu">Navigating the Toolkits Menu<a class="headerlink" href="#navigating-the-toolkits-menu" title="Permanent link">¶</a></h2>
 <p>The Toolkits menu is accessible from the main platform navigation. Upon entering the Toolkits section, you'll see a dashboard listing all available toolkits, along with their configuration status.</p>
-<p><img alt="Toolkits-Menu_Interface" src="../../img/menus/toolkits/toolkits_menu.png" /></p>
-<h3 id="main-elements">Main Elements:<a class="headerlink" href="#main-elements" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/toolkits/toolkits_menu.png" data-desc-position="bottom"><img alt="Toolkits-Menu_Interface" src="../../img/menus/toolkits/toolkits_menu.png"></a></p>
+<h3 id="main-elements">Main Elements:<a class="headerlink" href="#main-elements" title="Permanent link">¶</a></h3>
 <ul>
 <li><strong>Toolkit Cards:</strong> Each card provides a brief description, current status, and toolkit type.</li>
 <li><strong>Search and Filter:</strong> Quickly locate a toolkit using the search bar or filter by type.</li>
 <li><strong>Create Toolkit Button:</strong> Use the <code>+ Create</code> button to add a new integration or configure an existing one.</li>
 </ul>
-<hr />
-<h2 id="creating-a-new-toolkit">Creating a New Toolkit<a class="headerlink" href="#creating-a-new-toolkit" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="creating-a-new-toolkit">Creating a New Toolkit<a class="headerlink" href="#creating-a-new-toolkit" title="Permanent link">¶</a></h2>
 <p>You can add new integrations to the platform by creating a new toolkit through the Toolkits menu.</p>
-<h3 id="how-to-create-a-new-toolkit">How to Create a New Toolkit<a class="headerlink" href="#how-to-create-a-new-toolkit" title="Permanent link">&para;</a></h3>
+<h3 id="how-to-create-a-new-toolkit">How to Create a New Toolkit<a class="headerlink" href="#how-to-create-a-new-toolkit" title="Permanent link">¶</a></h3>
 <p>Follow these steps to add a new integration to the platform:</p>
 <ol>
 <li><strong>Open the Toolkits Menu:</strong> Go to the Toolkits section from the main navigation bar.</li>
 <li><strong>Click <code>+ Create</code>:</strong> Find the <code>+ Create</code> button at the top right of the sidebar.</li>
 <li>
 <p><strong>Select Toolkit Type:</strong> Choose the desired toolkit type from the categorized list (e.g., GitHub, Jira, ADO).</p>
-<p><img alt="Toolkits-Create" src="../../img/menus/toolkits/new_toolkit.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/toolkits/new_toolkit.png" data-desc-position="bottom"><img alt="Toolkits-Create" src="../../img/menus/toolkits/new_toolkit.png"></a></p>
 </li>
 <li>
 <p><strong>Enter Toolkit Details:</strong></p>
@@ -7546,7 +7541,7 @@
 </li>
 <li><strong>Save the Toolkit:</strong> Click <strong>Save</strong> (top right) to create the toolkit. It will now appear in your toolkits dashboard, where you can access its detailed configuration page to manage tool selection and other settings.</li>
 </ol>
-<p><img alt="Toolkits-Create" src="../../img/menus/toolkits/new_configs.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/toolkits/new_configs.png" data-desc-position="bottom"><img alt="Toolkits-Create" src="../../img/menus/toolkits/new_configs.png"></a></p>
 <div class="admonition note">
 <p class="admonition-title">Important Notes</p>
 <ul>
@@ -7554,8 +7549,8 @@
 <li>Only users with the necessary permissions can create or configure toolkits. If the <code>+ Create</code> button is disabled for you, please contact your platform administrator.</li>
 </ul>
 </div>
-<hr />
-<h2 id="toolkit-categories-descriptions">Toolkit Categories &amp; Descriptions<a class="headerlink" href="#toolkit-categories-descriptions" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="toolkit-categories-descriptions">Toolkit Categories &amp; Descriptions<a class="headerlink" href="#toolkit-categories-descriptions" title="Permanent link">¶</a></h2>
 <p>The platform supports a wide range of toolkits, organized by category. Below is the latest list of categories and available toolkits. </p>
 <table>
 <thead>
@@ -7607,10 +7602,10 @@
 <p class="admonition-title">Note</p>
 <p>Toolkit availability may evolve. Refer to the platform UI for the most current list.</p>
 </div>
-<hr />
-<h2 id="advanced-configuration-options">Advanced Configuration Options<a class="headerlink" href="#advanced-configuration-options" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="advanced-configuration-options">Advanced Configuration Options<a class="headerlink" href="#advanced-configuration-options" title="Permanent link">¶</a></h2>
 <p>Many toolkits in the ELITEA platform now support advanced configuration options that enhance their capabilities for document processing, search, and AI-powered features:</p>
-<h3 id="pgvector-configuration">PgVector Configuration<a class="headerlink" href="#pgvector-configuration" title="Permanent link">&para;</a></h3>
+<h3 id="pgvector-configuration">PgVector Configuration<a class="headerlink" href="#pgvector-configuration" title="Permanent link">¶</a></h3>
 <p><strong>PgVector Configuration</strong> enables vector database integration for toolkits that support document indexing and similarity search capabilities.</p>
 <ul>
 <li><strong>Purpose:</strong> Provides vector storage for embedding-based search and document retrieval</li>
@@ -7618,7 +7613,7 @@
 <li><strong>Supported Toolkits:</strong> Available in toolkits such as Figma, Jira, TestRail, ADO, Sharepoint, Zephyr variants, and others that handle document or content processing</li>
 <li><strong>Benefits:</strong> Enables semantic search, document similarity analysis, and improved content discovery within integrated platforms</li>
 </ul>
-<h3 id="embedding-model-configuration">Embedding Model Configuration<a class="headerlink" href="#embedding-model-configuration" title="Permanent link">&para;</a></h3>
+<h3 id="embedding-model-configuration">Embedding Model Configuration<a class="headerlink" href="#embedding-model-configuration" title="Permanent link">¶</a></h3>
 <p><strong>Embedding Model Configuration</strong> allows toolkits to process and understand text content for advanced search and analysis features.</p>
 <ul>
 <li><strong>Purpose:</strong> Converts text content into vector representations for semantic understanding</li>
@@ -7635,9 +7630,9 @@
 <li>Both configurations are created before toolkit setup for seamless integration</li>
 </ul>
 </div>
-<hr />
-<h2 id="editing-and-configuring-a-toolkit">Editing and Configuring a Toolkit<a class="headerlink" href="#editing-and-configuring-a-toolkit" title="Permanent link">&para;</a></h2>
-<h3 id="how-to-edit-an-existing-toolkit">How to Edit an Existing Toolkit<a class="headerlink" href="#how-to-edit-an-existing-toolkit" title="Permanent link">&para;</a></h3>
+<hr>
+<h2 id="editing-and-configuring-a-toolkit">Editing and Configuring a Toolkit<a class="headerlink" href="#editing-and-configuring-a-toolkit" title="Permanent link">¶</a></h2>
+<h3 id="how-to-edit-an-existing-toolkit">How to Edit an Existing Toolkit<a class="headerlink" href="#how-to-edit-an-existing-toolkit" title="Permanent link">¶</a></h3>
 <p>To edit a toolkit, open its detailed page from the Toolkits dashboard. On this page, you can:</p>
 <ul>
 <li><strong>Edit Toolkit Details:</strong> Update the name, description, credentials (API keys, tokens, service URLs), and any custom or advanced options directly in the configuration panel.</li>
@@ -7648,18 +7643,18 @@
 <li><strong>Copy Link:</strong> Click the copy link icon to copy a direct link to the toolkit’s detailed page—useful for sharing with teammates who have access.</li>
 <li><strong>Export and Fork Icons:</strong> These icons (currently unavailable) will allow you to export a toolkit’s configuration or create a fork (duplicate) of an existing toolkit in other projects in future releases.</li>
 </ul>
-<p><img alt="Toolkits-Manage" src="../../img/menus/toolkits/config_toolkit.png" /></p>
-<h3 id="tool-selection-best-practices">Tool Selection Best Practices<a class="headerlink" href="#tool-selection-best-practices" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/toolkits/config_toolkit.png" data-desc-position="bottom"><img alt="Toolkits-Manage" src="../../img/menus/toolkits/config_toolkit.png"></a></p>
+<h3 id="tool-selection-best-practices">Tool Selection Best Practices<a class="headerlink" href="#tool-selection-best-practices" title="Permanent link">¶</a></h3>
 <p>When selecting tools for your toolkit:</p>
 <ul>
 <li><strong>Review available tools</strong> carefully and enable only those needed for your specific use case</li>
 <li><strong>Test each enabled tool</strong> using the Test Settings panel to ensure proper functionality</li>
 <li>
 <p><strong>Update tool selection</strong> as your requirements change or new tools become available</p>
-<p><img alt="Toolkits-Create" src="../../img/menus/toolkits/select-tools.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/toolkits/select-tools.png" data-desc-position="bottom"><img alt="Toolkits-Create" src="../../img/menus/toolkits/select-tools.png"></a></p>
 </li>
 </ul>
-<h4 id="make-tools-available-by-mcp">Make Tools Available by MCP<a class="headerlink" href="#make-tools-available-by-mcp" title="Permanent link">&para;</a></h4>
+<h4 id="make-tools-available-by-mcp">Make Tools Available by MCP<a class="headerlink" href="#make-tools-available-by-mcp" title="Permanent link">¶</a></h4>
 <p>When configuring toolkit tools, you may see a checkbox labeled <strong>"Make tools available by MCP"</strong> in the Tools section. This option controls whether the selected tools can be accessed through the Model Context Protocol (MCP) interface.</p>
 <ul>
 <li><strong>Purpose:</strong> Enables toolkit tools to be exposed and accessible via MCP servers</li>
@@ -7675,13 +7670,13 @@
 <p class="admonition-title">Tip</p>
 <p>Regularly use the edit function to rotate credentials, update tool selections, or modify toolkit capabilities as your needs change.</p>
 </div>
-<hr />
-<h3 id="testing-toolkit-functionality">Testing Toolkit Functionality<a class="headerlink" href="#testing-toolkit-functionality" title="Permanent link">&para;</a></h3>
+<hr>
+<h3 id="testing-toolkit-functionality">Testing Toolkit Functionality<a class="headerlink" href="#testing-toolkit-functionality" title="Permanent link">¶</a></h3>
 <p>The toolkit configuration page includes a <strong>Test Settings</strong> panel on the right side that allows you to test toolkit functionality in real-time.</p>
 <ol>
 <li><strong>Select a Model:</strong> Choose the LLM model from the model dropdown (e.g., <code>gpt-4o</code>).</li>
 </ol>
-<p><img alt="Select a Model" src="../../img/menus/toolkits/LLM_model.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/toolkits/LLM_model.png" data-desc-position="bottom"><img alt="Select a Model" src="../../img/menus/toolkits/LLM_model.png"></a></p>
 <ol>
 <li><strong>Adjust Model Parameters:</strong> Fine-tune how the model generates responses using the following controls:<ul>
 <li><strong>Temperature (0.1 - 1.0):</strong> Controls randomness and creativity. Lower values (e.g., 0.2) yield more predictable results.</li>
@@ -7697,23 +7692,23 @@
 </ul>
 </li>
 </ol>
-<p><img alt="Select Tool" src="../../img/menus/toolkits/select_tool.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/toolkits/select_tool.png" data-desc-position="bottom"><img alt="Select Tool" src="../../img/menus/toolkits/select_tool.png"></a></p>
 <ol>
 <li><strong>Execute the tool:</strong> Click the <strong>RUN TOOL</strong> button and review the results in the output area. <code>(The RUN TOOL button appears after selecting a tool.)</code></li>
 </ol>
-<p><img alt="Execute Tool" src="../../img/menus/toolkits/run_tool.png" /></p>
-<h4 id="test-interface-features">Test Interface Features<a class="headerlink" href="#test-interface-features" title="Permanent link">&para;</a></h4>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/toolkits/run_tool.png" data-desc-position="bottom"><img alt="Execute Tool" src="../../img/menus/toolkits/run_tool.png"></a></p>
+<h4 id="test-interface-features">Test Interface Features<a class="headerlink" href="#test-interface-features" title="Permanent link">¶</a></h4>
 <ul>
 <li><strong>Chat Interface:</strong> Test results appear in a chat-like interface showing your input and the toolkit's response.</li>
 <li><strong>Fullscreen Mode:</strong> Click the fullscreen icon to expand the test interface for better viewing.</li>
 <li><strong>Clear Results:</strong> Use the clear icon to remove previous test results and start fresh.</li>
 <li><strong>Real-time Testing:</strong> Tests are executed immediately and show both successful responses and error messages.</li>
 </ul>
-<p><img alt="Test Interface" src="../../img/menus/toolkits/test_interface.png" /></p>
-<hr />
-<h2 id="managing-toolkit-indexes">Managing Toolkit Indexes<a class="headerlink" href="#managing-toolkit-indexes" title="Permanent link">&para;</a></h2>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/toolkits/test_interface.png" data-desc-position="bottom"><img alt="Test Interface" src="../../img/menus/toolkits/test_interface.png"></a></p>
+<hr>
+<h2 id="managing-toolkit-indexes">Managing Toolkit Indexes<a class="headerlink" href="#managing-toolkit-indexes" title="Permanent link">¶</a></h2>
 <p>Toolkits that support document processing and content indexing provide an <strong>Indexes</strong> tab for managing indexed data. </p>
-<h3 id="accessing-the-indexes-tab">Accessing the Indexes Tab<a class="headerlink" href="#accessing-the-indexes-tab" title="Permanent link">&para;</a></h3>
+<h3 id="accessing-the-indexes-tab">Accessing the Indexes Tab<a class="headerlink" href="#accessing-the-indexes-tab" title="Permanent link">¶</a></h3>
 <p>The Indexes tab enabled in the toolkit detail page alongside the Run tab when:</p>
 <ul>
 <li>The toolkit schema includes indexing tools (such as <code>index_data</code>, <code>search_index</code>, <code>remove_index</code>)</li>
@@ -7721,7 +7716,7 @@
 <li>Embedding Model is configured</li>
 <li><strong>index_data</strong> tool is selected in the toolkit's tool selection</li>
 </ul>
-<h3 id="using-the-indexes-tab">Using the Indexes Tab<a class="headerlink" href="#using-the-indexes-tab" title="Permanent link">&para;</a></h3>
+<h3 id="using-the-indexes-tab">Using the Indexes Tab<a class="headerlink" href="#using-the-indexes-tab" title="Permanent link">¶</a></h3>
 <p>The Indexes tab provides a dedicated interface for:</p>
 <ul>
 <li><strong>Creating new indexes:</strong> Set up document indexing for the external service</li>
@@ -7730,8 +7725,8 @@
 <li><strong>Index history:</strong> Track indexing operations and their status</li>
 <li><strong>Removing indexes:</strong> Delete indexes that are no longer needed</li>
 </ul>
-<h2 id="_1"><img alt="Indexex Tab" src="../../img/menus/toolkits/indexes-tab.png" /><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<h2 id="assigning-toolkits-to-agents">Assigning Toolkits to Agents<a class="headerlink" href="#assigning-toolkits-to-agents" title="Permanent link">&para;</a></h2>
+<h2 id="_1"><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/toolkits/indexes-tab.png" data-desc-position="bottom"><img alt="Indexex Tab" src="../../img/menus/toolkits/indexes-tab.png"></a><a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<h2 id="assigning-toolkits-to-agents">Assigning Toolkits to Agents<a class="headerlink" href="#assigning-toolkits-to-agents" title="Permanent link">¶</a></h2>
 <p>Once a toolkit is configured:</p>
 <ol>
 <li>Navigate to the <strong>Agents</strong> menu.</li>
@@ -7744,26 +7739,26 @@
 <p class="admonition-title">Tip</p>
 <p>Agents can use multiple toolkits for complex workflows.</p>
 </div>
-<hr />
-<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">¶</a></h2>
 <ul>
 <li><strong>Secure Your Credentials:</strong> Always use secure tokens or API keys. Never share credentials in public areas.</li>
 <li><strong>Test Before Use:</strong> Use the Test Settings panel to test toolkit functionality before assigning them to agents.</li>
 <li><strong>Keep Toolkits Updated:</strong> Update credentials and settings if your external service changes.</li>
 <li><strong>Minimal Permissions:</strong> Grant only the permissions necessary for the agent's tasks.</li>
 </ul>
-<hr />
-<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">¶</a></h2>
 <ul>
 <li><strong>Failed Connection:</strong> Double-check credentials, URLs, and network connectivity.</li>
 <li><strong>Toolkit Not Appearing:</strong> Refresh the toolkits list or verify your permissions.</li>
 <li><strong>Agent Cannot Use Toolkit:</strong> Ensure the toolkit is configured and assigned to the agent.</li>
 </ul>
 <p>For further assistance, contact your platform administrator.</p>
-<hr />
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<hr>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
 <p>The Toolkits menu is your gateway to extending agent capabilities across a range of enterprise services. By following the steps in this guide, you can quickly configure, manage, and assign toolkits to agents—enabling powerful, automated workflows tailored to your organization's needs.</p>
-<hr />
+<hr>
 <div class="admonition info">
 <p class="admonition-title">Additional Resources</p>
 <p>Explore these related guides to maximize your toolkit usage:</p>
@@ -7801,13 +7796,13 @@
   
     
       
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
           <a href="../credentials/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Credentials">
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
             </div>
             <div class="md-footer__title">
               <span class="md-footer__direction">
@@ -7832,7 +7827,7 @@
             </div>
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
             </div>
           </a>
         
@@ -7864,7 +7859,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.footer", "navigation.path", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.footer", "navigation.path", "navigation.tabs", "navigation.tabs.sticky", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
@@ -7872,5 +7867,7 @@
         <script src="../../extra_js/fullscreen.js"></script>
       
     
-  </body>
-</html>
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

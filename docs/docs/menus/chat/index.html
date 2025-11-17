@@ -1,7 +1,4 @@
-
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
+<!DOCTYPE html><html lang="en" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -46,7 +43,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -59,7 +56,17 @@
 
     
     
-  </head>
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
   
   
     
@@ -101,7 +108,7 @@
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -126,20 +133,20 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to system preference" type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
       </label>
     
   
@@ -150,46 +157,6 @@
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
-    
-      
-      
-        <label class="md-header__button md-icon" for="__search">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        </label>
-        <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-      
     
     
   </nav>
@@ -403,7 +370,7 @@
           
   
   
-  Migration & Upgrade
+  Migration &amp; Upgrade
 
         </a>
       </li>
@@ -471,7 +438,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -510,7 +477,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1">
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -560,7 +527,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1">
         
           
           <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
@@ -758,7 +725,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2">
         
           
           <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
@@ -1019,7 +986,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -1069,7 +1036,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1">
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -1183,7 +1150,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2">
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -1381,7 +1348,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3">
         
           
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
@@ -1560,14 +1527,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/configure-and-use-mcp/" class="md-nav__link">
+      <a href="../../getting-started/create-and-use-server-stdio/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Configure and Use MCP Servers
+    Configure and Use MCP Server(STDIO)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/create-and-use-client-stdio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configure and Use MCP Client(STDIO)
   
 
     
@@ -2343,7 +2338,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_10">
         
           
           <label class="md-nav__link" for="__nav_3_1_10" id="__nav_3_1_10_label" tabindex="0">
@@ -2584,7 +2579,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -2634,7 +2629,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1">
         
           
           <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
@@ -2644,7 +2639,7 @@
   <span class="md-ellipsis">
     
   
-    Chat & Conversations
+    Chat &amp; Conversations
   
 
     
@@ -2660,7 +2655,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Chat & Conversations
+    Chat &amp; Conversations
   
 
           </label>
@@ -2972,7 +2967,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2">
         
           
           <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
@@ -3394,7 +3389,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3">
         
           
           <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
@@ -3404,7 +3399,7 @@
   <span class="md-ellipsis">
     
   
-    Agents & Pipelines
+    Agents &amp; Pipelines
   
 
     
@@ -3420,7 +3415,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Agents & Pipelines
+    Agents &amp; Pipelines
   
 
           </label>
@@ -3500,7 +3495,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3">
         
           
           <label class="md-nav__link" for="__nav_4_3_3" id="__nav_4_3_3_label" tabindex="0">
@@ -3606,7 +3601,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3_3">
         
           
           <label class="md-nav__link" for="__nav_4_3_3_3" id="__nav_4_3_3_3_label" tabindex="0">
@@ -3988,7 +3983,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4">
         
           
           <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
@@ -3998,7 +3993,7 @@
   <span class="md-ellipsis">
     
   
-    Credentials & Toolkits
+    Credentials &amp; Toolkits
   
 
     
@@ -4014,7 +4009,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Credentials & Toolkits
+    Credentials &amp; Toolkits
   
 
           </label>
@@ -4186,7 +4181,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5">
         
           
           <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
@@ -4288,7 +4283,7 @@
   <span class="md-ellipsis">
     
   
-    Manage Roles & Permissions
+    Manage Roles &amp; Permissions
   
 
     
@@ -4335,7 +4330,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -4385,7 +4380,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1">
         
           
           <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
@@ -4555,7 +4550,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2">
         
           
           <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
@@ -5509,7 +5504,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3">
         
           
           <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
@@ -5630,7 +5625,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -5680,7 +5675,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1">
         
           
           <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
@@ -5766,7 +5761,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2">
         
           
           <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
@@ -6167,7 +6162,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7">
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
@@ -6177,7 +6172,7 @@
   <span class="md-ellipsis">
     
   
-    Migration & Upgrade
+    Migration &amp; Upgrade
   
 
     
@@ -6193,7 +6188,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Migration & Upgrade
+    Migration &amp; Upgrade
   
 
           </label>
@@ -6217,7 +6212,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1">
         
           
           <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
@@ -6359,7 +6354,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2">
         
           
           <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
@@ -6508,7 +6503,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8">
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
@@ -6677,7 +6672,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9">
         
           
           <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
@@ -6919,7 +6914,7 @@
   <span class="md-ellipsis">
     
   
-    Export & Import Entities
+    Export &amp; Import Entities
   
 
     
@@ -7035,7 +7030,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_12">
         
           
           <label class="md-nav__link" for="__nav_9_12" id="__nav_9_12_label" tabindex="0">
@@ -7118,7 +7113,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -7475,7 +7470,7 @@
 
 
 
-  <nav class="md-path" aria-label="Navigation" >
+  <nav class="md-path" aria-label="Navigation">
     <ol class="md-path__list">
       
       
@@ -7533,7 +7528,7 @@
 
 
 
-<h1 id="conversations">Conversations<a class="headerlink" href="#conversations" title="Permanent link">&para;</a></h1>
+<h1 id="conversations">Conversations<a class="headerlink" href="#conversations" title="Permanent link">¶</a></h1>
 <p>ELITEA Chat is an ultimate feature, allowing you to combine all ELITEA features in one place and achieve the best output and results.</p>
 <p>In the ELITEA framework, a conversation is a dialogue among various participants such as selected language models, agents, pipelines and human users. The chat uses natural language to interact with a human and receive/give feedback. Within one conversation, you can refer to previous questions and answers. However, different conversations don’t share context.</p>
 <p>All your conversations are stored on the ELITEA server, and you can access them from any device you use. All your conversations are accessible from the <strong>Chat</strong> menu.</p>
@@ -7548,15 +7543,15 @@
 <li><strong>Playback</strong>: During playback, you can move backward and forward through the playback process or stop the conversation by simulating the current conversation without any engagement with models.</li>
 </ul>
 <p>For more details see <a href="../../how-tos/chat-conversations/how-to-use-chat-functionality/">How to Use Chat Functionality</a>.</p>
-<h2 id="creating-a-conversation">Creating a Conversation<a class="headerlink" href="#creating-a-conversation" title="Permanent link">&para;</a></h2>
+<h2 id="creating-a-conversation">Creating a Conversation<a class="headerlink" href="#creating-a-conversation" title="Permanent link">¶</a></h2>
 <ol>
 <li>Go to the <strong>Chat</strong> section in the left sidebar.</li>
 <li>Click the <strong>+ Create</strong> button at the top.</li>
 <li>Enter a name for your conversation (defaults to "New Conversation") and confirm.</li>
 </ol>
-<p><img alt="Create_Conversation" src="../../img/menus/chat/create_conversation.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/chat/create_conversation.png" data-desc-position="bottom"><img alt="Create_Conversation" src="../../img/menus/chat/create_conversation.png"></a></p>
 <p>Your newly created conversation will subsequently appear in the Conversation's list.</p>
-<h3 id="conversation-sorting-and-organization">Conversation Sorting and Organization<a class="headerlink" href="#conversation-sorting-and-organization" title="Permanent link">&para;</a></h3>
+<h3 id="conversation-sorting-and-organization">Conversation Sorting and Organization<a class="headerlink" href="#conversation-sorting-and-organization" title="Permanent link">¶</a></h3>
 <p>Conversations in the <strong>CONVERSATIONS</strong> sidebar are automatically organized by time periods for better navigation:</p>
 <ul>
 <li><strong>Today</strong>: Conversations created or active today appear at the top.</li>
@@ -7565,14 +7560,14 @@
 <li><strong>Older</strong>: All conversations older than yesterday are grouped under this section.</li>
 </ul>
 <p>This automatic time-based sorting helps you quickly locate recent conversations and maintain an organized conversation history. Pinned conversations will always appear at the very top, regardless of their creation date.</p>
-<h2 id="creating-a-folder">Creating a Folder<a class="headerlink" href="#creating-a-folder" title="Permanent link">&para;</a></h2>
+<h2 id="creating-a-folder">Creating a Folder<a class="headerlink" href="#creating-a-folder" title="Permanent link">¶</a></h2>
 <ol>
 <li>Click the <strong>+ Folder</strong> button located at the top of the <strong>CONVERSATIONS</strong> sidebar.</li>
 <li>Provide a <strong>Name</strong> for the folder.</li>
 <li>Click <strong>Save</strong> to create the folder. The new folder will appear in the <strong>CONVERSATIONS</strong> sidebar.</li>
 </ol>
-<p><img alt="Chat_Create_Folder" src="../../img/menus/chat/create_folder.png" /></p>
-<h3 id="how-to-move-conversations-to-a-folder">How to Move Conversations to a Folder<a class="headerlink" href="#how-to-move-conversations-to-a-folder" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/chat/create_folder.png" data-desc-position="bottom"><img alt="Chat_Create_Folder" src="../../img/menus/chat/create_folder.png"></a></p>
+<h3 id="how-to-move-conversations-to-a-folder">How to Move Conversations to a Folder<a class="headerlink" href="#how-to-move-conversations-to-a-folder" title="Permanent link">¶</a></h3>
 <ol>
 <li>Right-click on the conversation you want to move.</li>
 <li>Select <strong>Move to</strong> from the contextual menu.</li>
@@ -7582,8 +7577,8 @@
 <p class="admonition-title">Quick Organization</p>
 <p>Alternatively, you can drag and drop conversations directly into folders in the sidebar for quick organization.</p>
 </div>
-<p><img alt="Chat_MoveTo_Folder" src="../../img/menus/chat/moveto-folder.png" /></p>
-<h3 id="how-to-move-conversations-back-to-the-main-list">How to Move Conversations Back to the Main List<a class="headerlink" href="#how-to-move-conversations-back-to-the-main-list" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/chat/moveto-folder.png" data-desc-position="bottom"><img alt="Chat_MoveTo_Folder" src="../../img/menus/chat/moveto-folder.png"></a></p>
+<h3 id="how-to-move-conversations-back-to-the-main-list">How to Move Conversations Back to the Main List<a class="headerlink" href="#how-to-move-conversations-back-to-the-main-list" title="Permanent link">¶</a></h3>
 <p>To move conversations from folders back to the main <strong>CONVERSATIONS</strong> list:</p>
 <ol>
 <li>Navigate to the folder containing the conversation you want to move.</li>
@@ -7591,18 +7586,18 @@
 <li>Select <strong>Back to the list</strong> from the contextual menu.</li>
 <li>The conversation will be moved from the folder back to the main <strong>CONVERSATIONS</strong> list.</li>
 </ol>
-<p><img alt="Chat_MoveTo_list" src="../../img/menus/chat/moveto_list.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/chat/moveto_list.png" data-desc-position="bottom"><img alt="Chat_MoveTo_list" src="../../img/menus/chat/moveto_list.png"></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This action is only available if you are a member of the conversation or have the necessary permissions.</p>
 </div>
-<h2 id="private-and-public-conversationsfolders">Private and Public Conversations/Folders<a class="headerlink" href="#private-and-public-conversationsfolders" title="Permanent link">&para;</a></h2>
-<h3 id="private-conversations-and-folders">Private Conversations and Folders<a class="headerlink" href="#private-conversations-and-folders" title="Permanent link">&para;</a></h3>
+<h2 id="private-and-public-conversationsfolders">Private and Public Conversations/Folders<a class="headerlink" href="#private-and-public-conversationsfolders" title="Permanent link">¶</a></h2>
+<h3 id="private-conversations-and-folders">Private Conversations and Folders<a class="headerlink" href="#private-conversations-and-folders" title="Permanent link">¶</a></h3>
 <ul>
 <li>When creating a folder in a private project, you can add all types of participants, except users.</li>
 <li>These folders and their contents are only accessible to you.</li>
 </ul>
-<h3 id="team-project-conversations-and-folders">Team Project Conversations and Folders<a class="headerlink" href="#team-project-conversations-and-folders" title="Permanent link">&para;</a></h3>
+<h3 id="team-project-conversations-and-folders">Team Project Conversations and Folders<a class="headerlink" href="#team-project-conversations-and-folders" title="Permanent link">¶</a></h3>
 <p>If you are part of a team project:</p>
 <ul>
 <li>You can view all folders within the project.</li>
@@ -7610,14 +7605,14 @@
 <li>If you are a member of a conversation, you can move the conversation into a folder or remove it from the folder using the <strong>Back to the list</strong> option.</li>
 <li>You cannot delete a folder created by others, but you can move conversations inside the folder if you are a member of those conversations.</li>
 </ul>
-<h3 id="public-conversations-and-folders">Public Conversations and Folders<a class="headerlink" href="#public-conversations-and-folders" title="Permanent link">&para;</a></h3>
+<h3 id="public-conversations-and-folders">Public Conversations and Folders<a class="headerlink" href="#public-conversations-and-folders" title="Permanent link">¶</a></h3>
 <ul>
 <li>Public folders are accessible to all members of the project.</li>
 <li>Conversations within public folders can be viewed and interacted with by all project members.</li>
 <li>Any member of the project can move conversations into public folders or remove them, depending on their permissions.</li>
 <li>Public folders cannot be converted to private folders.</li>
 </ul>
-<h2 id="participants">Participants<a class="headerlink" href="#participants" title="Permanent link">&para;</a></h2>
+<h2 id="participants">Participants<a class="headerlink" href="#participants" title="Permanent link">¶</a></h2>
 <p>Participants are additional "tools" that can be added to the conversation to enhance it. The following types of participants are available:</p>
 <ul>
 <li><strong>Models</strong>: LLM models which can be added to the conversation to interact with Gen AI and get responses from the selected model.</li>
@@ -7627,21 +7622,21 @@
 <p class="admonition-title">Note</p>
 <p>Another category of participant is the user, which can't be added, but in the case of public conversations, users within the project can follow the conversation, interact with it, and thus become participants.</p>
 </div>
-<h3 id="how-to-add-users-to-a-conversation">How to Add Users to a Conversation<a class="headerlink" href="#how-to-add-users-to-a-conversation" title="Permanent link">&para;</a></h3>
+<h3 id="how-to-add-users-to-a-conversation">How to Add Users to a Conversation<a class="headerlink" href="#how-to-add-users-to-a-conversation" title="Permanent link">¶</a></h3>
 <ol>
 <li>In the <strong>PARTICIPANTS</strong> panel, click the users icon next to your avatar.</li>
 <li>Select <strong>Add users</strong> from the dropdown menu.
-   <img alt="Add User" src="../../img/menus/chat/add_user.png" /></li>
+   <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/chat/add_user.png" data-desc-position="bottom"><img alt="Add User" src="../../img/menus/chat/add_user.png"></a></li>
 <li>The <strong>Add users</strong> modal will appear with a search bar.</li>
 <li>Use the search bar to find teammates by name.</li>
 <li>Select one or more users from the list by clicking on them.
-   <img alt="Select User" src="../../img/menus/chat/select_user.png" /></li>
+   <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/chat/select_user.png" data-desc-position="bottom"><img alt="Select User" src="../../img/menus/chat/select_user.png"></a></li>
 <li>
 <p>Click <strong>Add</strong> to confirm. The selected users will be added as participants to your chat.</p>
 </li>
 <li>
 <p>Added users will appear in the <strong>PARTICIPANTS</strong> section.  Hover over user avatars in the participant list or type <strong>@username</strong> in the chat input to mention and notify teammates in the conversation. To mention everyone in the conversation, select the <strong>All Users</strong> option.
-        <img alt="Mention User " src="../../img/menus/chat/mention.png" />        </p>
+        <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/chat/mention.png" data-desc-position="bottom"><img alt="Mention User " src="../../img/menus/chat/mention.png"></a>        </p>
 </li>
 </ol>
 <div class="admonition note">
@@ -7651,7 +7646,7 @@
 <li>Users will receive notifications when they are added as participants in a conversation.</li>
 </ul>
 </div>
-<h4 id="adding-assistants">Adding Assistants:<a class="headerlink" href="#adding-assistants" title="Permanent link">&para;</a></h4>
+<h4 id="adding-assistants">Adding Assistants:<a class="headerlink" href="#adding-assistants" title="Permanent link">¶</a></h4>
 <ol>
 <li>At the bottom of the chat, click the <strong>Switch assistant</strong> icon.</li>
 <li>In the opened "Frequently Used" list, click on the desired assistant (e.g., Agent) to select it.</li>
@@ -7659,30 +7654,30 @@
 <li>The Agent will be visible under "AI Assets" in the <strong>PARTICIPANTS</strong> area.</li>
 <li>
 <p>Select a version of the agent at the bottom of the chat.
-      <img alt="Chat_MoveTo_Folder" src="../../img/menus/chat/add_assistans.png" />
-      <img alt="select version" src="../../img/menus/chat/agent.png" /></p>
+      <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/chat/add_assistans.png" data-desc-position="bottom"><img alt="Chat_MoveTo_Folder" src="../../img/menus/chat/add_assistans.png"></a>
+      <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/chat/agent.png" data-desc-position="bottom"><img alt="select version" src="../../img/menus/chat/agent.png"></a></p>
 </li>
 <li>
 <p>All assistants appear in the right sidebar (PARTICIPANTS area) for easy switching. Click on a participant in the list to activate and interact with it </p>
 </li>
 <li>To remove an assistant, hover over their card in the list and click the remove icon.</li>
 </ol>
-<p><img alt="Remove assistant" src="../../img/menus/chat/remove_assistant.png" /></p>
-<h2 id="display-configured-conversation-starter">Display Configured Conversation Starter<a class="headerlink" href="#display-configured-conversation-starter" title="Permanent link">&para;</a></h2>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/chat/remove_assistant.png" data-desc-position="bottom"><img alt="Remove assistant" src="../../img/menus/chat/remove_assistant.png"></a></p>
+<h2 id="display-configured-conversation-starter">Display Configured Conversation Starter<a class="headerlink" href="#display-configured-conversation-starter" title="Permanent link">¶</a></h2>
 <p>When you add a participant to a conversation, the configured conversation starter for that participant will automatically display in the chat. This feature improves usability and ensures a smooth start to conversations by providing immediate context and guidance on how to interact with each participant.</p>
-<p><img alt="Conversation Starter" src="../../img/menus/chat/conversation_starter.png" /></p>
-<h4 id="adding-llm-models">Adding LLM Models:<a class="headerlink" href="#adding-llm-models" title="Permanent link">&para;</a></h4>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/chat/conversation_starter.png" data-desc-position="bottom"><img alt="Conversation Starter" src="../../img/menus/chat/conversation_starter.png"></a></p>
+<h4 id="adding-llm-models">Adding LLM Models:<a class="headerlink" href="#adding-llm-models" title="Permanent link">¶</a></h4>
 <ol>
 <li>Click the <strong>Switch to model</strong> button at the bottom of the chat.</li>
 <li>Select a desired LLM model (e.g., gpt-4o) from the available options.</li>
 <li>To configure the model settings, click the <strong>Settings</strong> (gear) icon next to the assistant name.</li>
 <li>
 <p>Configure the Model settings in the opened modal window. You can configure the following settings for the model:     Temperature, Top P (0-1), Top K, and MaxCompletion Tokens. To apply changes, click the <strong>&lt; Apply</strong> button.</p>
-<p><img alt="Switch model" src="../../img/menus/chat/model.png" />
-  <img alt="Settings" src="../../img/menus/chat/settings.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/chat/model.png" data-desc-position="bottom"><img alt="Switch model" src="../../img/menus/chat/model.png"></a>
+  <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/chat/settings.png" data-desc-position="bottom"><img alt="Settings" src="../../img/menus/chat/settings.png"></a></p>
 </li>
 </ol>
-<h3 id="actions-for-conversation">Actions for Conversation<a class="headerlink" href="#actions-for-conversation" title="Permanent link">&para;</a></h3>
+<h3 id="actions-for-conversation">Actions for Conversation<a class="headerlink" href="#actions-for-conversation" title="Permanent link">¶</a></h3>
 <p>The following actions are available for created conversations from <strong>CONVERSATIONS</strong> sidebar:</p>
 <ul>
 <li><strong>Delete</strong>: To delete a single conversation, on the left panel, in the conversation contextual menu, select <strong>Delete</strong> and confirm your action.</li>
@@ -7699,8 +7694,8 @@
 </div>
 </li>
 </ul>
-<p><img alt="Chat_Conversation_Actions" src="../../img/menus/chat/conversation_action.png" /></p>
-<h3 id="actions-for-folders">Actions for Folders<a class="headerlink" href="#actions-for-folders" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/chat/conversation_action.png" data-desc-position="bottom"><img alt="Chat_Conversation_Actions" src="../../img/menus/chat/conversation_action.png"></a></p>
+<h3 id="actions-for-folders">Actions for Folders<a class="headerlink" href="#actions-for-folders" title="Permanent link">¶</a></h3>
 <p>The following actions are available for managing folders in the <strong>CONVERSATIONS</strong> sidebar:</p>
 <ul>
 <li><strong>Edit Folder</strong>: Select <strong>Edit</strong> in the folder contextual menu, update the folder name and click the <strong>✔</strong> button to save your changes.</li>
@@ -7713,24 +7708,24 @@
 </div>
 </li>
 </ul>
-<p><img alt="Chat_Folder_Actions" src="../../img/menus/chat/folder_actions.png" /></p>
-<h2 id="likedislike-comment-and-regenerate-outputs">Like/Dislike, Comment, and Regenerate Outputs<a class="headerlink" href="#likedislike-comment-and-regenerate-outputs" title="Permanent link">&para;</a></h2>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/chat/folder_actions.png" data-desc-position="bottom"><img alt="Chat_Folder_Actions" src="../../img/menus/chat/folder_actions.png"></a></p>
+<h2 id="likedislike-comment-and-regenerate-outputs">Like/Dislike, Comment, and Regenerate Outputs<a class="headerlink" href="#likedislike-comment-and-regenerate-outputs" title="Permanent link">¶</a></h2>
 <p>To engage with the generated outputs in conversations, utilize the <strong>Like/Dislike</strong> actions, add comments, or use the <strong>Regenerate</strong> option for refinement or feedback.</p>
-<h3 id="how-to-likedislike-and-comment-an-output">How to Like/Dislike and Comment an Output<a class="headerlink" href="#how-to-likedislike-and-comment-an-output" title="Permanent link">&para;</a></h3>
+<h3 id="how-to-likedislike-and-comment-an-output">How to Like/Dislike and Comment an Output<a class="headerlink" href="#how-to-likedislike-and-comment-an-output" title="Permanent link">¶</a></h3>
 <ol>
 <li>After generating an output in the conversation, <strong>Thumbs Up</strong> and <strong>Thumbs Down</strong> buttons displayed alongside the output.</li>
 <li>Click the <strong>Thumbs Up</strong> icon to like the output or the <strong>Thumbs Down</strong> icon to dislike it.</li>
 <li>After clicking the <strong>Thumbs Down</strong> icon, a <strong>Leave comment</strong> field will appear. Click on it, type your feedback in the input box, and press <strong>Send</strong> to save it.</li>
 </ol>
-<p><img alt="Chat_Like_Dislike" src="../../img/menus/chat/like_dislike.png" /></p>
-<h3 id="how-to-regenerate-the-last-output">How to Regenerate the Last Output<a class="headerlink" href="#how-to-regenerate-the-last-output" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/chat/like_dislike.png" data-desc-position="bottom"><img alt="Chat_Like_Dislike" src="../../img/menus/chat/like_dislike.png"></a></p>
+<h3 id="how-to-regenerate-the-last-output">How to Regenerate the Last Output<a class="headerlink" href="#how-to-regenerate-the-last-output" title="Permanent link">¶</a></h3>
 <p>The <strong>Regenerate Last Output</strong> option becomes available only after initiating a conversation. This feature allows you to refine or correct the last generated output.</p>
 <ol>
 <li>After generating an output in the conversation, click the <strong>Regenerate</strong> icon 🔄 . </li>
 <li>The system will regenerate the output based on the same input, providing a refined or corrected response.</li>
 </ol>
-<p><img alt="Chat_Regenerate" src="../../img/menus/chat/regenerate.png" /></p>
-<h3 id="editing-generated-content-with-canvas">Editing Generated Content with Canvas<a class="headerlink" href="#editing-generated-content-with-canvas" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/chat/regenerate.png" data-desc-position="bottom"><img alt="Chat_Regenerate" src="../../img/menus/chat/regenerate.png"></a></p>
+<h3 id="editing-generated-content-with-canvas">Editing Generated Content with Canvas<a class="headerlink" href="#editing-generated-content-with-canvas" title="Permanent link">¶</a></h3>
 <p>The Canvas feature allows you to directly edit code, tables, and Mermaid diagrams generated during a conversation. This powerful tool enhances your ability to refine and customize outputs without leaving the chat interface.</p>
 <p>Canvas becomes automatically available when a generated response is:</p>
 <ul>
@@ -7743,8 +7738,8 @@
 * Agents
 * Pipelines
 * LLM Models (direct interaction)</p>
-<p><img alt="Canvas" src="../../img/menus/chat/canvas_open.png" /></p>
-<h3 id="real-time-collaboration-in-canvas">Real-time Collaboration in Canvas<a class="headerlink" href="#real-time-collaboration-in-canvas" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/chat/canvas_open.png" data-desc-position="bottom"><img alt="Canvas" src="../../img/menus/chat/canvas_open.png"></a></p>
+<h3 id="real-time-collaboration-in-canvas">Real-time Collaboration in Canvas<a class="headerlink" href="#real-time-collaboration-in-canvas" title="Permanent link">¶</a></h3>
 <p>Canvas supports real-time collaborative editing where multiple users can work on the same content simultaneously:</p>
 <ul>
 <li><strong>Multi-user Editing</strong>: Multiple team members can edit the same canvas content at the same time</li>
@@ -7752,7 +7747,7 @@
 <li><strong>Live Updates</strong>: Changes made by other users appear in real-time</li>
 <li><strong>Edit Conflicts</strong>: The system manages edit conflicts automatically to ensure data integrity</li>
 </ul>
-<h4 id="editing-code-with-canvas">Editing Code with Canvas<a class="headerlink" href="#editing-code-with-canvas" title="Permanent link">&para;</a></h4>
+<h4 id="editing-code-with-canvas">Editing Code with Canvas<a class="headerlink" href="#editing-code-with-canvas" title="Permanent link">¶</a></h4>
 <ol>
 <li>Click the <strong>Pencil</strong> icon ✏️ next to a code block to open the Canvas Code Editor.</li>
 <li>The editor will display the code, and the currently selected code language will be shown.</li>
@@ -7764,8 +7759,8 @@
 </ul>
 </li>
 </ol>
-<p><img alt="Canvas_Code_Editor" src="../../img/menus/chat/canvas_code.png" /></p>
-<h4 id="editing-tables-with-canvas">Editing Tables with Canvas<a class="headerlink" href="#editing-tables-with-canvas" title="Permanent link">&para;</a></h4>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/chat/canvas_code.png" data-desc-position="bottom"><img alt="Canvas_Code_Editor" src="../../img/menus/chat/canvas_code.png"></a></p>
+<h4 id="editing-tables-with-canvas">Editing Tables with Canvas<a class="headerlink" href="#editing-tables-with-canvas" title="Permanent link">¶</a></h4>
 <ol>
 <li>Click the <strong>Pencil</strong> icon ✏️ next to a table to open the Canvas Table Editor. Tables are presented in Markdown format within the editor but rendered as interactive tables.</li>
 <li>You can directly edit the table content and structure.</li>
@@ -7781,7 +7776,7 @@
 <li><strong>Undo/Redo</strong>: Click the respective icons to revert or reapply changes.</li>
 <li><strong>Save</strong>: Click the <strong>X</strong> icon to save your changes and close the Canvas editor. <em>(Placeholder for actual save icon/mechanism if 'X' is incorrect)</em></li>
 </ul>
-<p><img alt="Canvas_Table_Editor" src="../../img/menus/chat/canvas_table.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/chat/canvas_table.png" data-desc-position="bottom"><img alt="Canvas_Table_Editor" src="../../img/menus/chat/canvas_table.png"></a></p>
 </li>
 </ol>
 <p><strong>Table Manipulations:</strong></p>
@@ -7792,8 +7787,8 @@
 <li><strong>Column Resizing</strong>: Drag the column borders to resize columns to your preferred width.</li>
 <li><strong>Cell Editing</strong>: Double-click any cell to edit its content directly within the table interface.</li>
 </ul>
-<p><img alt="Canvas_Table_Editor_Filtering" src="../../img/menus/chat/canvas_table_filtering.png" /></p>
-<h4 id="editing-mermaid-diagrams-with-canvas">Editing Mermaid Diagrams with Canvas<a class="headerlink" href="#editing-mermaid-diagrams-with-canvas" title="Permanent link">&para;</a></h4>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/chat/canvas_table_filtering.png" data-desc-position="bottom"><img alt="Canvas_Table_Editor_Filtering" src="../../img/menus/chat/canvas_table_filtering.png"></a></p>
+<h4 id="editing-mermaid-diagrams-with-canvas">Editing Mermaid Diagrams with Canvas<a class="headerlink" href="#editing-mermaid-diagrams-with-canvas" title="Permanent link">¶</a></h4>
 <ol>
 <li>Click the <strong>Pencil</strong> icon ✏️ next to a Mermaid diagram to open the Canvas Mermaid Diagram Editor.</li>
 <li>You can directly edit the Mermaid diagram code in the editor view.</li>
@@ -7806,10 +7801,10 @@
 <li><strong>Undo/Redo</strong>: Click the respective icons to revert or reapply changes.</li>
 <li><strong>Save</strong>: Click the <strong>X</strong> icon to save your changes and close the Canvas editor. <em>(Placeholder for actual save icon/mechanism if 'X' is incorrect)</em></li>
 </ul>
-<p><img alt="Canvas_Mermaid_Editor" src="../../img/menus/chat/canvas_mermaid.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/chat/canvas_mermaid.png" data-desc-position="bottom"><img alt="Canvas_Mermaid_Editor" src="../../img/menus/chat/canvas_mermaid.png"></a></p>
 </li>
 </ol>
-<h2 id="clear-chat-history">Clear Chat History<a class="headerlink" href="#clear-chat-history" title="Permanent link">&para;</a></h2>
+<h2 id="clear-chat-history">Clear Chat History<a class="headerlink" href="#clear-chat-history" title="Permanent link">¶</a></h2>
 <p>The <strong>Clear Chat History</strong> feature allows you to remove all messages and content from the current conversation while keeping the conversation itself and its participants intact. This is useful when you want to start fresh with the same setup or clean up a conversation that has become too long.</p>
 <ol>
 <li>In the <strong>PARTICIPANTS</strong> panel on the right side of the chat interface, locate the <strong>Clear chat history</strong> button at the bottom.</li>
@@ -7817,7 +7812,7 @@
 <li>A confirmation dialog will appear asking you to confirm the action.</li>
 <li>
 <p>Click <strong>Confirm</strong> to proceed with clearing the chat history.</p>
-<p><img alt="Canvas_Mermaid_Editor" src="../../img/menus/chat/clear_history.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/menus/chat/clear_history.png" data-desc-position="bottom"><img alt="Canvas_Mermaid_Editor" src="../../img/menus/chat/clear_history.png"></a></p>
 </li>
 </ol>
 <div class="admonition note">
@@ -7853,13 +7848,13 @@
   
     
       
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
           <a href="../overview/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Overview">
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
             </div>
             <div class="md-footer__title">
               <span class="md-footer__direction">
@@ -7884,7 +7879,7 @@
             </div>
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
             </div>
           </a>
         
@@ -7916,7 +7911,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.footer", "navigation.path", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.footer", "navigation.path", "navigation.tabs", "navigation.tabs.sticky", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
@@ -7924,5 +7919,7 @@
         <script src="../../extra_js/fullscreen.js"></script>
       
     
-  </body>
-</html>
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
