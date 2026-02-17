@@ -6,6 +6,87 @@ info:
   version: 1.0.0
 basePath: /api/v1
 paths:
+  /artifacts/buckets:
+    get:
+      summary: List buckets
+      description: Retrieve a list of all available buckets.
+      responses:
+        '200':
+          description: A list of buckets.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                      description: The unique identifier for the bucket.
+                    name:
+                      type: string
+                      description: The name of the bucket.
+  /artifacts/buckets/{bucket_id}:
+    get:
+      summary: Get bucket details
+      description: Retrieve details of a specific bucket.
+      parameters:
+        - name: bucket_id
+          in: path
+          required: true
+          description: The ID of the bucket to retrieve.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Details of the bucket.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    description: The unique identifier for the bucket.
+                  name:
+                    type: string
+                    description: The name of the bucket.
+                  created_at:
+                    type: string
+                    format: date-time
+                    description: The creation timestamp of the bucket.
+  /artifacts/files:
+    post:
+      summary: Upload a file
+      description: Upload a new file to a bucket.
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                bucket_id:
+                  type: string
+                  description: The ID of the bucket to upload the file to.
+                file:
+                  type: string
+                  format: binary
+                  description: The file to upload.
+      responses:
+        '201':
+          description: File uploaded successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    description: The unique identifier for the uploaded file.
+                  name:
+                    type: string
+                    description: The name of the uploaded file.
   /ai_dial/models/default/{project_id}:
     parameters:
       - in: path
